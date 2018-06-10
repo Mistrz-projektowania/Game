@@ -13,7 +13,7 @@ public class RockTextController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		myText = GameObject.Find ("RockText").GetComponent<Text> ();
+		//myText = GameObject.Find ("RockText").GetComponent<Text> ();
 		myText.color = Color.clear;
 		//Screen.showCursor = false;
 		//Screen.lockCursor = true;
