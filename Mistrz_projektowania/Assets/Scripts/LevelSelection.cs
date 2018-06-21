@@ -8,7 +8,7 @@ public class LevelSelection : MonoBehaviour {
     public void selectLevel() {
         switch (this.gameObject.name) {
             case "Level1Button":
-                SceneManager.LoadScene("Level1");
+                SceneManager.LoadScene("Entry_questions_Level1"); 
                 break;
             case "Level2Button":
                 SceneManager.LoadScene("Level2");
