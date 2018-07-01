@@ -6,14 +6,20 @@ using UnityEngine.UI;
 public class showPlayerPoints : MonoBehaviour {
 
 	public Text playerPoints;
+	public GameController gameController;
 	private int points;
 	// Use this for initialization
 	void Start () {
-		points = 0;
+		GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
+		if(gameControllerObject != null){
+			gameController = gameControllerObject.GetComponent<GameController>();	
+		}
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		points = gameController.getPoints ();
 		UpdatePlayerPoints ();
 	}
 

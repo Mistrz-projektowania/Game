@@ -9,20 +9,30 @@ public class RockTextController : MonoBehaviour {
 	public Text myText;
 	public float fadeTime;
 	public bool displayInfo;
+	public Button button;
+	private GameController gameController;
 
 	// Use this for initialization
 	void Start () {
 
-		//myText = GameObject.Find ("RockText").GetComponent<Text> ();
-		myText.color = Color.clear;
+		//button = GameObject.Find ("RockButton").GetComponent<Button> ();
+		//myText.color = Color.clear;
 		//Screen.showCursor = false;
 		//Screen.lockCursor = true;
+		StartCoroutine(fadeButton(button, false, 0.0000001f));
+
+		GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
+		if(gameControllerObject != null){
+			gameController = gameControllerObject.GetComponent<GameController>();	
+		}
+
+		if(gameControllerObject == null){
+			Debug.Log ("Nie działa :<");
+		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-
-		FadeText ();
 		/*
 		if (Input.GetKeyDown (KeyCode.Escape)) 
                 {
@@ -31,24 +41,66 @@ public class RockTextController : MonoBehaviour {
           */      
 	}
 
-	void OnMouseOver() {
-		displayInfo = true;
+	void OnMouseDown() {
+		if (gameController.getPoints () > 0) {
+			displayInfo = !displayInfo;
+			if (displayInfo) {
+				gameController.changePoints (-2);
+
+				//myText.text = myString;
+				//myText.color = Color.Lerp (myText.color, Color.white, fadeTime * Time.deltaTime);
+				StartCoroutine (fadeButton (button, true, fadeTime));
+			} else {
+				StartCoroutine (fadeButton (button, false, fadeTime));
+				//myText.color = Color.Lerp (myText.color, Color.clear, fadeTime * Time.deltaTime);
+			}
+		} else {
+			if (displayInfo) {
+				StartCoroutine (fadeButton (button, false, fadeTime));
+				displayInfo = false;
+			}
+		}
+
 	}
 
 	void OnMouseExit() {
-		displayInfo = false;
+		//displayInfo = false;
 	}
-		
-	void FadeText () {
-		if(displayInfo)
-		{
-			myText.text = myString;
-			myText.color = Color.Lerp (myText.color, Color.white, fadeTime * Time.deltaTime);
-		}
 
+	IEnumerator fadeButton(Button button, bool fadeIn, float duration){
+		float counter = 0f;
+
+		float a, b;
+		if (fadeIn)
+		{
+			a = 0;
+			b = 1;
+		}
 		else
 		{
-			myText.color = Color.Lerp (myText.color, Color.clear, fadeTime * Time.deltaTime);
+			a = 1;
+			b = 0;
+		}
+			
+		if (!button.enabled)
+			button.enabled = true;
+
+		CanvasGroup selectedButton = button.GetComponent<CanvasGroup>();
+
+		while (counter < duration)
+		{
+			counter += Time.deltaTime;
+			float alpha = Mathf.Lerp(a, b, counter / duration);
+			//Debug.Log(alpha);
+
+			selectedButton.alpha = alpha;
+
+			yield return null;
+		}
+
+		if (!fadeIn)
+		{
+			button.enabled = false;
 		}
 	}
 }
