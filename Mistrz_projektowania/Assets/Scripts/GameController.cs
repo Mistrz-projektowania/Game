@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour {
 	void Start () {
 		StartCoroutine(fadeMessage(noPointsMessage, false, 0.0000001f));
 		noPointsMessageDisplay = false;
-		points = 10;
+		points = 16; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
 	}
 
 	// Update is called once per frame
