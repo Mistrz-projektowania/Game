@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Obiekty>
+	<Obiekt id="1">
+		<Nazwa>
+			Zamek w Chęcinach
+		</Nazwa>
+		<Fotografia>
+		</Fotografia>
+		<Opis>
+			Zamek królewski z przełomu XIII i XIV wieku, górujący nad
+			miejscowością Chęciny , w województwie świętokrzyskim , pod Kielcami . Twierdza pełniła rolę
+			skarbca narodowego i odosobnienia znamienitych więźniów.
+		</Opis>
+	</Obiekt>
+	<Obiekt id="2">
+		<Nazwa>
+			Jaskinia Raj
+		</Nazwa>
+		<Fotografia>
+		</Fotografia>
+		<Opis>
+		</Opis>
+	</Obiekt>
+	<Obiekt id="3">
+		<Nazwa>
+			Pałac Biskupów Krakowskich w Kielcach
+		</Nazwa>
+		<Fotografia>
+		</Fotografia>
+		<Opis>
+		</Opis>
+	</Obiekt>
+	<Obiekt id="4">
+		<Nazwa>
+			Krzemionki Opatowskie
+		</Nazwa>
+		<Fotografia>
+		</Fotografia>
+		<Opis>
+		</Opis>
+	</Obiekt>
+	<Obiekt id="5">
+		<Nazwa>
+			Figura Pielgrzyma z Nowej Słupi
+		</Nazwa>
+		<Fotografia>
+		</Fotografia>
+		<Opis>
+		</Opis>
+	</Obiekt>
+	<Obiekt id="6">
+		<Nazwa>
+			Bazylika na Świętym Krzyżu
+		</Nazwa>
+		<Fotografia>
+		</Fotografia>
+		<Opis>
+			Najstarsze sanktuarium na ziemiach polskich usytuowane na
+			Łysej Górze w Górach Świętokrzyskich, w którym od 1000 lat są przechowywane i czczone
+			Relikwie Krzyża Świętego. Kościół romański został ufundowany przez Bolesława
+			Krzywoustego.
+		</Opis>
+	</Obiekt>
+	<Obiekt id="7">
+		<Nazwa>	
+			Pałac w Podzamczu Piekoszowskim
+		</Nazwa>
+		<Fotografia>
+		</Fotografia>
+		<Opis>
+		</Opis>
+	</Obiekt>
+	<Obiekt id="8">
+		<Nazwa>
+		Dąb Bartek w Zagnańsku
+		</Nazwa>
+		<Fotografia>
+		</Fotografia>
+		<Opis>
+			Dąb Bartek – jeden z najstarszych w Polsce dębów, od 1954 roku
+			chroniony prawem jako pomnik przyrody, rosnący a terenie leśnictwa Bartków
+			(nadleśnictwo Zagnańsk), przy drodze wojewódzkiej nr 750 z Zagnańska do Samsonowa,
+			w województwie świętokrzyskim
+		</Opis>
+	</Obiekt>
+	<Obiekt id="9">
+		<Nazwa>
+			Klasztor cysterski w Wąchocku
+		</Nazwa>
+		<Fotografia>
+		</Fotografia>
+		<Opis>
+		</Opis>
+	</Obiekt>
+	<Obiekt id="10">
+		<Nazwa>
+			Szydłów polskie Carcassone
+		</Nazwa>
+		<Fotografia>
+		</Fotografia>
+		<Opis>
+		</Opis>
+	</Obiekt>
+	<Obiekt id="11">
+		<Nazwa>
+		</Nazwa>
+		<Fotografia>
+		</Fotografia>
+		<Opis>
+		</Opis>
+	</Obiekt>
+</Obiekty>

@@ -10,7 +10,7 @@ public class setSlotPosition : MonoBehaviour {
 		//myObject.transform.parent = parentObject.transform;
 		Vector3 pos = Camera.main.WorldToScreenPoint(parentObject.transform.position);
 		myObject.transform.position = new Vector3(pos.x, pos.y, 0);
-		Debug.Log (myObject.transform.position);
+		//Debug.Log (myObject.transform.position);
 	}
 	
 	// Update is called once per frame
