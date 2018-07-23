@@ -42,22 +42,24 @@ public class RockTextController : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		if (gameController.getPoints () > 0) {
-			displayInfo = !displayInfo;
-			if (displayInfo) {
+		if (gameController.getPoints () >= 0) {
+			//displayInfo = !displayInfo;
+
+			if (displayInfo == false) {
+				displayInfo = true;
 				gameController.changePoints (-2);
 
 				//myText.text = myString;
 				//myText.color = Color.Lerp (myText.color, Color.white, fadeTime * Time.deltaTime);
 				StartCoroutine (fadeButton (button, true, fadeTime));
 			} else {
-				StartCoroutine (fadeButton (button, false, fadeTime));
+				// StartCoroutine (fadeButton (button, false, fadeTime));
 				//myText.color = Color.Lerp (myText.color, Color.clear, fadeTime * Time.deltaTime);
 			}
 		} else {
 			if (displayInfo) {
-				StartCoroutine (fadeButton (button, false, fadeTime));
-				displayInfo = false;
+				//StartCoroutine (fadeButton (button, false, fadeTime));
+				//displayInfo = false;
 			}
 		}
 

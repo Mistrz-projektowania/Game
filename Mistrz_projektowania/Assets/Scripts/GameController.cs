@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+using System.Text;
 
 public class GameController : MonoBehaviour {
 
 	private int points;
+	public Canvas noPointMessagePanel;
 	public Image noPointsMessage;
 	private bool noPointsMessageDisplay;
 
@@ -13,7 +16,9 @@ public class GameController : MonoBehaviour {
 	void Start () {
 		StartCoroutine(fadeMessage(noPointsMessage, false, 0.0000001f));
 		noPointsMessageDisplay = false;
-		points = 16; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
+		points = 4; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
+
+		//Losowanie (10, 10);
 	}
 
 	// Update is called once per frame
@@ -23,7 +28,8 @@ public class GameController : MonoBehaviour {
 
 	public void changePoints(int value){
 		points += value;
-		if (points <= 0) {
+		Debug.Log (points);
+		if (points < 0) {
 			points = 0;
 			if (noPointsMessageDisplay == false) {
 				StartCoroutine (fadeMessage (noPointsMessage, true, 0.5f));
@@ -47,6 +53,7 @@ public class GameController : MonoBehaviour {
 		float a, b;
 		if (fadeIn)
 		{
+			message.transform.position = new Vector3 (Screen.width / 2, Screen.height / 2,0.0f);
 			a = 0;
 			b = 1;
 		}
@@ -67,6 +74,30 @@ public class GameController : MonoBehaviour {
 			selectedMessage.alpha = alpha;
 
 			yield return null;
+		}
+		if (fadeIn == false) {
+			message.transform.position = new Vector3 (-message.GetComponent<RectTransform>().rect.width, message.GetComponent<RectTransform>().rect.height,0.0f);
+		}
+	}
+
+	static void Losowanie(int n,int k)
+	{
+		// wypełnianie tablicy liczbami 1,2...n
+		int[] numbers = new int[n];
+		for (int i = 0; i < n; i++)
+			numbers[i] = i + 1;
+		// losowanie k liczb
+		for (int i = 0; i < k; i++)
+		{
+			// tworzenie losowego indeksu pomiędzy 0 i n - 1
+			int r = Random.Range(0, n);
+
+			// wybieramy element z losowego miejsca
+			Debug.Log(numbers[r]);
+
+			// przeniesienia ostatniego elementu do miejsca z którego wzięliśmy
+			numbers[r] = numbers[n - 1];
+			n--;
 		}
 	}
 }

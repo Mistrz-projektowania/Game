@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<PlanyWycieczek>
+	<Plan id="1">
+		<IdNazwaImprezy>
+			1
+		</IdNazwaImprezy>
+		<IdNrImprezy>
+			1
+		</IdNrImprezy>
+		<IdZleceniodawca>
+			1
+		</IdZleceniodawca>
+		<IdLiczbaOsob>
+			1
+		</IdLiczbaOsob>
+	</Plan>
+</PlanyWycieczek>
