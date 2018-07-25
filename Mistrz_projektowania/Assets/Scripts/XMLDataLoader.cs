@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Text;
 using System.Xml;
 using System.IO;
@@ -12,6 +13,10 @@ public class XMLDataLoader : MonoBehaviour {
 	public TextAsset CustomerDatabase;
 	public int id;
 	public string tagName;
+
+	public Text rockText1;
+	public Text rockText2;
+	public Text rockText3;
 
 	public List<Dictionary<string,string>> Trips = new List<Dictionary<string,string>>();
 	Dictionary<string,string> obj;
@@ -25,6 +30,8 @@ public class XMLDataLoader : MonoBehaviour {
 		Debug.Log (nazwa);
 		Debug.Log ((Trips [0]) ["id"]);
 		Debug.Log ((Trips [0]) ["Nr"]);
+
+		rockText1.text = nazwa;
 	}
 	// Update is called once per frame
 	void Update () {

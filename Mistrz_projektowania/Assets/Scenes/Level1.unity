@@ -1856,7 +1856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000051407264, y: -0.000032755626}
+  m_AnchoredPosition: {x: -0.000051407264, y: -0.00008555137}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &735039242
@@ -2683,7 +2683,6 @@ GameObject:
   - component: {fileID: 1098353312}
   - component: {fileID: 1098353311}
   - component: {fileID: 1098353313}
-  - component: {fileID: 1098353314}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -2734,23 +2733,9 @@ MonoBehaviour:
   CustomerDatabase: {fileID: 4900000, guid: 0e5f4efab95c9ee42b0261f98ea9efd1, type: 3}
   id: 1
   tagName: Plan
---- !u!114 &1098353314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1098353310}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd5660bc59007e94eaf9c3d08d822610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlanDatabase: {fileID: 0}
-  TripNameDatabase: {fileID: 0}
-  TripNrDatabase: {fileID: 0}
-  CustomerDatabase: {fileID: 0}
-  id: 1
-  tagName: NrImprezy
+  rockText1: {fileID: 1946045193}
+  rockText2: {fileID: 311257010}
+  rockText3: {fileID: 1425873993}
 --- !u!1 &1115146475
 GameObject:
   m_ObjectHideFlags: 0
