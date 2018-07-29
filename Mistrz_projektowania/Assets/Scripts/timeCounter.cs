@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class timeCounter : MonoBehaviour {
 
 	public Text timerText;
-	private float secondsCount;
+	public float secondsCount;
 	private int minuteCount;
 	private int hourCount;
 

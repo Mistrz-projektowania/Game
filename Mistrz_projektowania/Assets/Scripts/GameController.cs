@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using System.Text;
+using UnityEngine.SceneManagement;
+
 
 public class GameController : MonoBehaviour {
 
@@ -12,18 +14,30 @@ public class GameController : MonoBehaviour {
 	public Image noPointsMessage;
 	private bool noPointsMessageDisplay;
 
+  
+
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(fadeMessage(noPointsMessage, false, 0.0000001f));
 		noPointsMessageDisplay = false;
 		points = 4; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
 
-		//Losowanie (10, 10);
-	}
+        //Losowanie (10, 10);
+
+    }
+
+    
+  
+  
+
+   
+   
+
 
 	// Update is called once per frame
 	void Update () {
-		
+
+      
 	}
 
 	public void changePoints(int value){
