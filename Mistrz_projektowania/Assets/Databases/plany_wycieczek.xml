@@ -13,5 +13,14 @@
 		<IdLiczbaOsob>
 			1
 		</IdLiczbaOsob>
+		<IdPrzedstawicielaZleceniodawcy>
+			1
+		</IdPrzedstawicielaZleceniodawcy>
+		<IdTrasyImprezy>
+			1
+		</IdTrasyImprezy>
+		<IdSwiadczen>
+			1
+		</IdSwiadczen>
 	</Plan>
 </PlanyWycieczek>

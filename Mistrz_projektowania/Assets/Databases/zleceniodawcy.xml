@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Zleceniodawcy>
     <Zleceniodawca id="1">
-        <Nazwa>Zespół Szkół Niepublicznych</Nazwa>
+        <NazwaZleceniodawcy>Zespół Szkół Niepublicznych</NazwaZleceniodawcy>
         <Adres>
             <Ulica>ul. Adama Asnyka 17</Ulica>
             <Miejscowość>Tarnów</Miejscowość>
@@ -12,7 +12,7 @@
         <Fax>14 637 12 23</Fax>
     </Zleceniodawca>
     <Zleceniodawca id="2">
-        <Nazwa>Biuro Podróży Sun Tours</Nazwa>
+        <NazwaZleceniodawcy>Biuro Podróży Sun Tours</NazwaZleceniodawcy>
         <Adres>
             <Ulica>ul. H. Sienkiewicza 12</Ulica>
             <Miejscowość>Kielce</Miejscowość>
@@ -23,7 +23,7 @@
         <Fax>41 345-87-80</Fax>
     </Zleceniodawca>
     <Zleceniodawca id="3">
-        <Nazwa>Biuro Turystyczne „ARKADIA”</Nazwa>
+        <NazwaZleceniodawcy>Biuro Turystyczne „ARKADIA”</NazwaZleceniodawcy>
         <Adres>
             <Ulica>ul. Śmiała 12</Ulica>
             <Miejscowość>SOPOT</Miejscowość>
@@ -34,7 +34,7 @@
         <Fax>0-32 665-57-60</Fax>
     </Zleceniodawca>
     <Zleceniodawca id="4">
-        <Nazwa>Biuro Turystyczne „Pan-travel”</Nazwa>
+        <NazwaZleceniodawcy>Biuro Turystyczne „Pan-travel”</NazwaZleceniodawcy>
         <Adres>
             <Ulica>ul. A. Mickiewicza 10</Ulica>
             <Miejscowość>Wrocław</Miejscowość>
@@ -45,7 +45,7 @@
         <Fax>(071) 821 63 47</Fax>
     </Zleceniodawca>
     <Zleceniodawca id="5">
-        <Nazwa></Nazwa>
+        <NazwaZleceniodawcy></NazwaZleceniodawcy>
         <Adres>
             <Ulica></Ulica>
             <Miejscowość></Miejscowość>

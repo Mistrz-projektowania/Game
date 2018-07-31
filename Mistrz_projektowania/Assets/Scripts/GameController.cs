@@ -13,26 +13,32 @@ public class GameController : MonoBehaviour {
 	public Canvas noPointMessagePanel;
 	public Image noPointsMessage;
 	private bool noPointsMessageDisplay;
-
+	private int tripID;
   
+	public XMLDataLoader dataLoader;
+	public List<Dictionary<string,string>> thisLevelTrip;
+
+	private int[] dataOrder;
+
 
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(fadeMessage(noPointsMessage, false, 0.0000001f));
 		noPointsMessageDisplay = false;
 		points = 4; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
+		tripID = 1; // trzeba pobierać ID z ankiety przed rozpoczeciem gry
 
-        //Losowanie (10, 10);
-		Debug.Log(tripData);
+
+		dataLoader = GetComponent<XMLDataLoader> ();      
+		dataLoader.GetData(tripID, "Plan");
+		thisLevelTrip = dataLoader.getCurrentTripData();
+		Debug.Log ((thisLevelTrip [1]) ["Nr"]);
+		Debug.Log ((thisLevelTrip [2]) ["NazwaZleceniodawcy"]);
+		//Debug.Log ((thisLevelTrip [0]) ["Nr"]);
+		dataOrder = drawTheOrder(7, 7);
+		dataLoader.setDataSlots (dataOrder);
     }
-
-    
-  
-  
-
-   
-   
-
+		
 
 	// Update is called once per frame
 	void Update () {
@@ -94,8 +100,9 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	static void Losowanie(int n,int k)
+	static int[] drawTheOrder(int n,int k)
 	{
+		int[] order = new int[k];
 		// wypełnianie tablicy liczbami 1,2...n
 		int[] numbers = new int[n];
 		for (int i = 0; i < n; i++)
@@ -107,11 +114,13 @@ public class GameController : MonoBehaviour {
 			int r = Random.Range(0, n);
 
 			// wybieramy element z losowego miejsca
-			Debug.Log(numbers[r]);
+			//Debug.Log(numbers[r]);
+			order [i] = numbers [r];
 
 			// przeniesienie ostatniego elementu do miejsca z którego wzięliśmy
 			numbers[r] = numbers[n - 1];
 			n--;
 		}
+		return order;
 	}
 }
