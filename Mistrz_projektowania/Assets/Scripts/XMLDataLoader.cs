@@ -14,6 +14,8 @@ public class XMLDataLoader : MonoBehaviour {
 	public int id;
 	public string tagName;
 
+	static string tripData;
+
 	public Text rockText1;
 	public Text rockText2;
 	public Text rockText3;
@@ -32,6 +34,7 @@ public class XMLDataLoader : MonoBehaviour {
 		Debug.Log ((Trips [0]) ["Nr"]);
 
 		rockText1.text = nazwa;
+
 	}
 	// Update is called once per frame
 	void Update () {

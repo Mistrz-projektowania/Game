@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour {
 		points = 4; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
 
         //Losowanie (10, 10);
-
+		Debug.Log(tripData);
     }
 
     
@@ -109,7 +109,7 @@ public class GameController : MonoBehaviour {
 			// wybieramy element z losowego miejsca
 			Debug.Log(numbers[r]);
 
-			// przeniesienia ostatniego elementu do miejsca z którego wzięliśmy
+			// przeniesienie ostatniego elementu do miejsca z którego wzięliśmy
 			numbers[r] = numbers[n - 1];
 			n--;
 		}
