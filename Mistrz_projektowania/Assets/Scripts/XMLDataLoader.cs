@@ -50,14 +50,14 @@ public class XMLDataLoader : MonoBehaviour {
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}", kvp.Key, kvp.Value);
+			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
 		}
 		rockText2.text = data;
 		i++;
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}", kvp.Key, kvp.Value);
+			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
 		}
 		rockText3.text = data;
 		i++;
@@ -65,7 +65,7 @@ public class XMLDataLoader : MonoBehaviour {
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}", kvp.Key, kvp.Value);
+			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
 		}
 		rockText4.text = data;
 		i++;
@@ -73,21 +73,21 @@ public class XMLDataLoader : MonoBehaviour {
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}", kvp.Key, kvp.Value);
+			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
 		}
 		rockText5.text = data;
 		i++;
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}", kvp.Key, kvp.Value);
+			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
 		}
 		rockText6.text = data;
 		i++;
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}", kvp.Key, kvp.Value);
+			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
 		}
 		rockText7.text = data;
 	}
@@ -162,6 +162,11 @@ public class XMLDataLoader : MonoBehaviour {
 			Trips.Add(obj);
 			obj = new Dictionary<string,string>();
 		}
+		/* MASKOWANIE BŁĘDU z SetDataSlots wynikajacego z braku odczytu danych z 3 kolejnych baz */
+		Trips.Add(obj);
+		Trips.Add(obj);
+		Trips.Add(obj);
+		//////////////////////////////////
 
 	}
 }

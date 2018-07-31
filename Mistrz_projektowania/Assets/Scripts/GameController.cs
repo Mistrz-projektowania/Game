@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour {
 	public void changePoints(int value){
 		points += value;
 		Debug.Log (points);
-		if (points < 0) {
+		if (points <= 0) {
 			points = 0;
 			if (noPointsMessageDisplay == false) {
 				StartCoroutine (fadeMessage (noPointsMessage, true, 0.5f));

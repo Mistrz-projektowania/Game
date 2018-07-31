@@ -42,7 +42,7 @@ public class RockTextController : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		if (gameController.getPoints () >= 0) {
+		if (gameController.getPoints () > 0) {
 			//displayInfo = !displayInfo;
 
 			if (displayInfo == false) {
