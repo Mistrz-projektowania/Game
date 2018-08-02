@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DataController : MonoBehaviour {
+public class DataController : MonoBehaviour
+{
 
-    public RoundData[] allRoundData;
+    public Quiz[] allRoundData;
 
     void Start()
     {
@@ -14,14 +15,14 @@ public class DataController : MonoBehaviour {
         SceneManager.LoadScene("Helpful_questions");
     }
 
-    public RoundData GetCurrentRoundData()
+    public Quiz GetCurrentRoundData()
     {
         return allRoundData[0];
     }
-  
+
 
     void Update()
     {
-        
+
     }
 }

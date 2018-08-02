@@ -11,7 +11,7 @@ public class GameControll : MonoBehaviour
 {
 
     private int points;
-     
+
 
     //for helpful questions
     public Text questionDisplayText;
@@ -21,20 +21,22 @@ public class GameControll : MonoBehaviour
     public GameObject questionDisplay;
     public GameObject roundGoodEndDisplay;
     public GameObject roundBadEndDisplay;
+    public GameObject RoundBadOverNoPointsPanel;
     private DataController dataController;
-    private RoundData currentRoundData;
+    private Quiz currentRoundData;
+
     private QuestionData[] questionPool;
     public int number;
     private bool isRoundActive;
     private float addedTime;
     private int questionIndex;
     private int roundIndex;
-    public RoundData[] allRoundData;
+    public Quiz[] allRoundData;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
-     
+
     void Start()
     {
-       
+
         points = 4; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
 
         //Losowanie (10, 10);
@@ -43,10 +45,10 @@ public class GameControll : MonoBehaviour
         currentRoundData = dataController.GetCurrentRoundData();
         questionPool = currentRoundData.questions;
         timeCounter addedTime = new timeCounter();
-        addedTime.secondsCount += currentRoundData.timeAddedForBadAnswer;
+        //  addedTime.secondsCount += QuestionData.timeAddedForBadAnswer;
 
         questionIndex = 0;
-      number = 0;
+        number = 0;
         ShowQuestion();
         isRoundActive = true;
     }
@@ -54,7 +56,7 @@ public class GameControll : MonoBehaviour
     private void ShowQuestion()
     {
         RemoveAnswerButtons();
-       
+
 
         QuestionData questionData = questionPool[questionIndex];
         questionDisplayText.text = questionData.questionText;
@@ -86,21 +88,41 @@ public class GameControll : MonoBehaviour
         if (!isCorrect)
         {
 
-             
-            // points += 3;
-             points -= currentRoundData.pointsDeductedForBadAnswer;
-           
-            ShowQuestion();
 
+            if (questionPool.Length > questionIndex + 1)
+            {
+                EndRound2();
+                questionIndex++;
+                ShowQuestion();
+
+            }
+           else {
+
+                EndRound3();
+            }
         }
 
-        
         else
         {
-            EndRound();
+            EndRound();//przejdz do nastepnej rundy
         }
+
     }
-   
+    public void EndRound2()
+    {
+        isRoundActive = true;
+
+        questionDisplay.SetActive(false);
+        roundBadEndDisplay.SetActive(true);
+    }
+
+    public void EndRound3()
+    {
+        isRoundActive = false;
+
+        questionDisplay.SetActive(false);
+        roundBadEndDisplay.SetActive(true);
+    }
 
     public void EndRound()
     {
@@ -128,12 +150,12 @@ public class GameControll : MonoBehaviour
 
     }
 
-   
+
 
     public int getPoints()
     {
         return points;
     }
-  
-  
+
+
 }

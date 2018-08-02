@@ -154,11 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allRoundData:
-  - number: 1
-    timeAddedForBadAnswer: 0
-    pointsDeductedForBadAnswer: 0
-    questions:
+  - questions:
     - questionText: pierwsze pytanbnie
+      timeAddedForBadAnswer: 0
+      pointsDeductedForBadAnswer: 0
       answers:
       - answerText: 'P1 '
         isCorrect: 1
@@ -168,17 +167,15 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: P4
         isCorrect: 0
-  - number: 2
-    timeAddedForBadAnswer: 30
-    pointsDeductedForBadAnswer: 1
-    questions:
-    - questionText: DRUGIE PYTANIE
+    - questionText: drugie pytanbnie
+      timeAddedForBadAnswer: 0
+      pointsDeductedForBadAnswer: 0
       answers:
-      - answerText: D1
+      - answerText: 'P1 '
         isCorrect: 1
-      - answerText: D2
+      - answerText: P2
         isCorrect: 0
-      - answerText: D3
+      - answerText: P3
         isCorrect: 0
-      - answerText: D4
+      - answerText: P4
         isCorrect: 0
