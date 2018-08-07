@@ -5,6 +5,7 @@ using UnityEngine;
 public class setSlotPosition : MonoBehaviour {
 	public GameObject myObject;
 	public GameObject parentObject;
+
 	// Use this for initialization
 	void Start () {
 		//myObject.transform.parent = parentObject.transform;

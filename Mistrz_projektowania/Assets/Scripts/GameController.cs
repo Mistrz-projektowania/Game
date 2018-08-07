@@ -21,11 +21,12 @@ public class GameController : MonoBehaviour {
 	private int[] dataOrder;
 
 
+
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(fadeMessage(noPointsMessage, false, 0.0000001f));
 		noPointsMessageDisplay = false;
-		points = 4; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
+		points = 10; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
 		tripID = 1; // trzeba pobierać ID z ankiety przed rozpoczeciem gry
 
 
