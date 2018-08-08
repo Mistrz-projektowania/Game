@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 43
+  controlID: 62
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 44
+  controlID: 63
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 45
+  controlID: 64
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -327,19 +327,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/AxeyWorks/Low Poly v2/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/AxeyWorks/Low Poly v2/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Dokumenty\Praca magisterska\Projekt\Game\Mistrz_projektowania
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 362d0000
-    m_LastClickedID: 11574
-    m_ExpandedIDs: 00000000482800008c290000162a0000b42b0000142d0000362d0000cc2e0000ae300000ba300000e43000006a31000076370000783700007a3700007c37000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 62310000
+    m_LastClickedID: 12642
+    m_ExpandedIDs: 0000000048280000842800008c290000b0290000ee290000162a0000b42b0000342c0000142d0000362d0000cc2e0000ae300000ba300000e43000006a310000803100008237000084370000863700008837000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000482800008c290000162a0000b42b0000142d0000362d0000cc2e0000ae300000ba300000e43000006a31000076370000783700007a3700007c370000
+    m_ExpandedIDs: 00000000482800008c290000162a0000b42b0000142d0000362d0000cc2e0000ae300000ba300000e43000006a31000082370000843700008637000088370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -419,7 +419,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 691}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 365
 --- !u!114 &14
@@ -485,23 +485,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 92320000
-    m_LastClickedID: 12946
-    m_ExpandedIDs: 9efbffff000000009a320000a8320000d4320000e2320000f2320000083300008c330000ae330000f4330000f4340000363500004e3500005a350000aa350000
+    m_SelectedIDs: d450ffff
+    m_LastClickedID: -44844
+    m_ExpandedIDs: 28ecffff2aecffff9efbffff00000000aa320000e4320000b6330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Spotlight
+      m_OriginalName: Spotlight
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -44844
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -538,14 +538,14 @@ MonoBehaviour:
     height: 782
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 2984.840864002754
+  lastFramingTime: 71.10140943899164
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 152.19531, y: -185.75, z: 7.1992188}
+    m_Target: {x: 45.719727, y: 3.0888672, z: 11.13501}
     speed: 2
-    m_Value: {x: 152.19531, y: -185.75, z: 7.1992188}
+    m_Value: {x: 45.719727, y: 3.0888672, z: 11.13501}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -569,13 +569,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.27847975, y: -0.720727, z: 0.42850497, w: -0.4683913}
+    m_Target: {x: -0.1630344, y: -0.7453698, z: 0.19739716, w: -0.6155478}
     speed: 2
-    m_Value: {x: -0.278479, y: -0.7207251, z: 0.42850384, w: -0.46839008}
+    m_Value: {x: -0.16303268, y: -0.745362, z: 0.19739509, w: -0.61554134}
   m_Size:
-    m_Target: 111.398895
+    m_Target: 6.5087533
     speed: 2
-    m_Value: 111.398895
+    m_Value: 6.5087533
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -634,7 +634,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoom: 0
     m_UniformScale: 1
     m_UpDirection: 1
