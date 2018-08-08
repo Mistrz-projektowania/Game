@@ -6,6 +6,8 @@ public class setRockPlaces : MonoBehaviour {
 	public GameObject rock;
 	public int index;
 	private int LeftGUIwidth;
+
+	private float rockToTerrainPosY = -0.2f;
 	// Use this for initialization
 	void Start () {
 		LeftGUIwidth = 500;
@@ -22,8 +24,9 @@ public class setRockPlaces : MonoBehaviour {
 		*/
 
 		findCoordinates (rock, LeftGUIwidth, index);
+		randomRotation (rock);
 		Debug.Log (Screen.width);
-		Debug.Log (Screen.width-500);
+		Debug.Log (Screen.width - 500);
 	}
 	
 	// Update is called once per frame
@@ -34,7 +37,11 @@ public class setRockPlaces : MonoBehaviour {
 		Vector3 pos1 = Camera.main.ScreenToWorldPoint (new Vector3((Screen.width-leftGUIWidth)/7 * i + leftGUIWidth, Screen.height/2 - 20 * Mathf.Cos(i) + 30, 8 - Mathf.Cos(i)/2));
 		Debug.Log (new Vector3((Screen.width-leftGUIWidth)/7 * i + leftGUIWidth, Screen.height/2 + Mathf.Sin(i), 7));
 		Debug.Log (pos1);
-		rock.transform.position = new Vector3(pos1.x, pos1.y, pos1.z);
+		rock.transform.position = new Vector3(pos1.x, rockToTerrainPosY, pos1.z);
 		
+	}
+	void randomRotation(GameObject rock){
+		Quaternion rRot = Random.rotation;
+		rock.transform.rotation = new Quaternion (0, rRot.y, 0, 1);
 	}
 }
