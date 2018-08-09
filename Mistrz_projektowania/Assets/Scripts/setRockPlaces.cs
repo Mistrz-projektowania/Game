@@ -1,43 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class setRockPlaces : MonoBehaviour {
 	public GameObject rock;
 	public int index;
-	private int LeftGUIwidth;
+	private float LeftGUIwidth;
+	private int screenWidth;
+	private GameObject leftGUI; 
+	private float localScale;
 
 	private float rockToTerrainPosY = -0.2f;
 	// Use this for initialization
 	void Start () {
-		LeftGUIwidth = 500;
-		//Vector3 pos1 = Camera.main.ScreenToWorldPoint (new Vector3((Screen.width-500)/7 , 0, 3));
-		//rock1.transform.position = new Vector3(pos1.x, rock1.transform.position.y, rock1.transform.position.z);
-		/*
-		findCoordinates(rock1, 500, 0);
-		findCoordinates(rock2, 500, 1);
-		findCoordinates(rock3, 500, 2);
-		findCoordinates(rock4, 500, 3);
-		findCoordinates(rock5, 500, 4);
-		findCoordinates(rock6, 500, 5);
-		findCoordinates(rock7, 500, 6);
-		*/
+		GameObject GUI = GameObject.Find ("GUI");
+		localScale = GUI.GetComponent<RectTransform> ().localScale.x;
+		leftGUI = GameObject.Find("leftGUI");
+		LeftGUIwidth = 500 * localScale;
+		screenWidth = Screen.width;
 
 		findCoordinates (rock, LeftGUIwidth, index);
 		randomRotation (rock);
-		Debug.Log (Screen.width);
-		Debug.Log (Screen.width - 500);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	}
 		
-	void findCoordinates(GameObject rock, int leftGUIWidth, int i){
-		Vector3 pos1 = Camera.main.ScreenToWorldPoint (new Vector3((Screen.width-leftGUIWidth)/7 * i + leftGUIWidth, Screen.height/2 - 20 * Mathf.Cos(i) + 30, 8 - Mathf.Cos(i)/2));
-		Debug.Log (new Vector3((Screen.width-leftGUIWidth)/7 * i + leftGUIWidth, Screen.height/2 + Mathf.Sin(i), 7));
-		Debug.Log (pos1);
-		rock.transform.position = new Vector3(pos1.x, rockToTerrainPosY, pos1.z);
+	void findCoordinates(GameObject rock, float leftGUIWidth, int i){
+		Vector3 newPosition = new Vector3 ((Screen.width - LeftGUIwidth) / 7 * i + LeftGUIwidth, Screen.height / 2 - 20 * Mathf.Cos (i) + 30, 8 - 2 * Mathf.Cos (i));
+		Vector3 pos1 = Camera.main.ScreenToWorldPoint (newPosition);
+
+		BoxCollider rockCollider = rock.GetComponent<BoxCollider>();
+		float rockWidth = rockCollider.size.x * rockCollider.transform.localScale.x;
+		rock.transform.position = new Vector3(pos1.x + rockWidth/2 + 0.1f, rockToTerrainPosY, pos1.z);
 		
 	}
 	void randomRotation(GameObject rock){

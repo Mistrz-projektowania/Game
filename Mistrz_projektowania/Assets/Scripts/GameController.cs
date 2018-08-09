@@ -33,8 +33,8 @@ public class GameController : MonoBehaviour {
 		dataLoader = GetComponent<XMLDataLoader> ();      
 		dataLoader.GetData(tripID, "Plan");
 		thisLevelTrip = dataLoader.getCurrentTripData();
-		Debug.Log ((thisLevelTrip [1]) ["Nr"]);
-		Debug.Log ((thisLevelTrip [2]) ["NazwaZleceniodawcy"]);
+		//Debug.Log ((thisLevelTrip [1]) ["Nr"]);
+		//Debug.Log ((thisLevelTrip [2]) ["NazwaZleceniodawcy"]);
 		//Debug.Log ((thisLevelTrip [0]) ["Nr"]);
 		dataOrder = drawTheOrder(7, 7);
 		dataLoader.setDataSlots (dataOrder);
@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour {
 
 	public void changePoints(int value){
 		points += value;
-		Debug.Log (points);
+		//Debug.Log (points);
 		if (points <= 0) {
 			points = 0;
 			if (noPointsMessageDisplay == false) {
