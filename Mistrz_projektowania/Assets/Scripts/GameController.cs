@@ -74,7 +74,7 @@ public class GameController : MonoBehaviour {
 		float a, b;
 		if (fadeIn)
 		{
-			message.transform.position = new Vector3 (Screen.width / 2, Screen.height / 2,0.0f);
+			message.transform.position = new Vector3 (Screen.width / 2, 120,0.0f);
 			a = 0;
 			b = 1;
 		}

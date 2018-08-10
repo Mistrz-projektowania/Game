@@ -25,6 +25,7 @@ public class XMLDataLoader : MonoBehaviour {
 	public Text rockText5;
 	public Text rockText6;
 	public Text rockText7;
+	List<Text> rockTexts = new List<Text>();
 
 	public List<Dictionary<string,string>> Trips = new List<Dictionary<string,string>>();
 	Dictionary<string,string> obj;
@@ -38,26 +39,55 @@ public class XMLDataLoader : MonoBehaviour {
 		
 	}
 
-	public void setDataSlots(int [] order){
+	void addTextToList(){
+		rockTexts.Add (rockText1);
+		rockTexts.Add (rockText2);
+		rockTexts.Add (rockText3);
+		rockTexts.Add (rockText4);
+		rockTexts.Add (rockText5);
+		rockTexts.Add (rockText6);
+		rockTexts.Add (rockText7);
+	}
+	string getDataString(Text rockText, int order){
 		string data = "";
-		int i = 0;
-		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
+		foreach (KeyValuePair<string, string> kvp in Trips[order])
 		{
-			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			if(kvp.Key != "id" || kvp.Key != "Punkty"){
+				//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+				data += string.Format("{0}\n", kvp.Value);	
+			}
+
+		}
+		return data;
+	}
+	public void setDataSlots(int [] order){
+		addTextToList ();
+		//string data = "";
+		//int i = 0;
+		for(int i = 0; i < rockTexts.Count; i++){
+			rockTexts [i].text = getDataString (rockTexts [i], i);
+		}
+
+		/*foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
+		{
+			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			data += string.Format("{0}\n", kvp.Value);
 		}
 		rockText1.text = data;
 		i++;
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			data += string.Format("{0}\n", kvp.Value);
 		}
 		rockText2.text = data;
 		i++;
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			data += string.Format("{0}\n", kvp.Value);
 		}
 		rockText3.text = data;
 		i++;
@@ -65,7 +95,8 @@ public class XMLDataLoader : MonoBehaviour {
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			data += string.Format("{0}\n", kvp.Value);
 		}
 		rockText4.text = data;
 		i++;
@@ -73,23 +104,27 @@ public class XMLDataLoader : MonoBehaviour {
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			data += string.Format("{0}\n", kvp.Value);
 		}
 		rockText5.text = data;
 		i++;
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			data += string.Format("{0}\n", kvp.Value);
 		}
 		rockText6.text = data;
 		i++;
 		data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
 		{
-			data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+			data += string.Format("{0}\n", kvp.Value);
 		}
 		rockText7.text = data;
+		*/
 	}
 
 	public List<Dictionary<string,string>> getCurrentTripData(){
