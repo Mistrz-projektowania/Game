@@ -27,6 +27,15 @@ public class XMLDataLoader : MonoBehaviour {
 	public Text rockText7;
 	List<Text> rockTexts = new List<Text>();
 
+	public Text rockTypeText1;
+	public Text rockTypeText2;
+	public Text rockTypeText3;
+	public Text rockTypeText4;
+	public Text rockTypeText5;
+	public Text rockTypeText6;
+	public Text rockTypeText7;
+	List<Text> rockTypeTexts = new List<Text>();
+
 	public List<Dictionary<string,string>> Trips = new List<Dictionary<string,string>>();
 	Dictionary<string,string> obj;
 
@@ -47,17 +56,34 @@ public class XMLDataLoader : MonoBehaviour {
 		rockTexts.Add (rockText5);
 		rockTexts.Add (rockText6);
 		rockTexts.Add (rockText7);
+
+		rockTypeTexts.Add (rockTypeText1);
+		rockTypeTexts.Add (rockTypeText2);
+		rockTypeTexts.Add (rockTypeText3);
+		rockTypeTexts.Add (rockTypeText4);
+		rockTypeTexts.Add (rockTypeText5);
+		rockTypeTexts.Add (rockTypeText6);
+		rockTypeTexts.Add (rockTypeText7);
 	}
-	string getDataString(Text rockText, int order){
+	string getDataString(Text rockText, Text rockTypeText, int order){
 		string data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order])
 		{
-			if(kvp.Key != "id" || kvp.Key != "Punkty"){
-				//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
-				data += string.Format("{0}\n", kvp.Value);	
+			if (kvp.Key != "Punkty") {
+				if (kvp.Key != "Typ"){
+				data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+				//data += string.Format("{0}\n", kvp.Value);	
+				}
+			}
+			if (kvp.Key == "Typ") {
+				rockTypeText.text = kvp.Value;
 			}
 
 		}
+		return data;
+	}
+	string setDataType(Text rockTextType, int order){
+		string data = "";
 		return data;
 	}
 	public void setDataSlots(int [] order){
@@ -65,7 +91,7 @@ public class XMLDataLoader : MonoBehaviour {
 		//string data = "";
 		//int i = 0;
 		for(int i = 0; i < rockTexts.Count; i++){
-			rockTexts [i].text = getDataString (rockTexts [i], i);
+			rockTexts [i].text = getDataString (rockTexts [i], rockTypeTexts[i], i);
 		}
 
 		/*foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
@@ -138,7 +164,7 @@ public class XMLDataLoader : MonoBehaviour {
 
 		XmlNode planNode = xmlDoc.SelectSingleNode("//*[@id='"+ id + "']");
 		obj = new Dictionary<string,string>();
-		obj.Add("id", id.ToString());
+		//obj.Add("id", id.ToString());
 		foreach (XmlNode Node in planNode){ 
 			//Debug.Log(Node.Name);
 
@@ -154,6 +180,7 @@ public class XMLDataLoader : MonoBehaviour {
 					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					obj.Add(tNode.Name, tNode.InnerText);
 				}
+				obj.Add("Typ", "NazwaImprezy");
 			}
 			if(Node.Name == "IdNrImprezy")
 			{
