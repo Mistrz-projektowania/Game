@@ -90,8 +90,8 @@ public class XMLDataLoader : MonoBehaviour {
 		addTextToList ();
 		//string data = "";
 		//int i = 0;
-		for(int i = 0; i < rockTexts.Count; i++){
-			rockTexts [i].text = getDataString (rockTexts [i], rockTypeTexts[i], i);
+		for(int i = 0; i < order.Length; i++){
+			rockTexts [order[i]].text = getDataString (rockTexts [order[i]], rockTypeTexts[order[i]], i);
 		}
 
 		/*foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
@@ -180,7 +180,7 @@ public class XMLDataLoader : MonoBehaviour {
 					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					obj.Add(tNode.Name, tNode.InnerText);
 				}
-				obj.Add("Typ", "NazwaImprezy");
+				obj.Add("Typ", "Nazwa imprezy");
 			}
 			if(Node.Name == "IdNrImprezy")
 			{
@@ -194,6 +194,7 @@ public class XMLDataLoader : MonoBehaviour {
 					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					obj.Add(tNode.Name, tNode.InnerText);
 				}
+				obj.Add("Typ", "Nr imprezy");
 			}
 			if(Node.Name == "IdZleceniodawca")
 			{
@@ -207,6 +208,7 @@ public class XMLDataLoader : MonoBehaviour {
 					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					obj.Add(tNode.Name, tNode.InnerText);
 				}
+				obj.Add("Typ", "Zleceniodawca");
 			}
 			if(Node.Name == "IdLiczbaOsob")
 			{
@@ -220,6 +222,7 @@ public class XMLDataLoader : MonoBehaviour {
 					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					obj.Add(tNode.Name, tNode.InnerText);
 				}
+				obj.Add("Typ", "Liczba osób");
 			}
 			Trips.Add(obj);
 			obj = new Dictionary<string,string>();

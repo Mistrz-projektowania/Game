@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
@@ -19,7 +20,17 @@ public class Slot : MonoBehaviour , IDropHandler
 	public void OnDrop(PointerEventData eventData)
 	{
 		if (!item) {
-			DragHandler.item.transform.SetParent(transform);
+			GameObject parentObject = this.transform.parent.gameObject;
+			Text textObject = parentObject.GetComponentInChildren<Text>();
+			string dragType = DragHandler.item.GetComponentsInChildren<Text> ()[1].text;
+			string inputType =parentObject.GetComponentInChildren<Text>().text;
+			if (dragType == inputType) {
+				DragHandler.item.transform.SetParent (transform);
+			} else {
+				Debug.Log ("Nie to pole");
+			
+			}
+
 		}
 	}
 	#endregion

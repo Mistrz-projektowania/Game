@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour {
 	public Canvas noPointMessagePanel;
 	public Image noPointsMessage;
 	private bool noPointsMessageDisplay;
+	public Image wrongInputMessage;
 	private int tripID;
   
 	public XMLDataLoader dataLoader;
@@ -25,6 +26,7 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(fadeMessage(noPointsMessage, false, 0.0000001f));
+		StartCoroutine(fadeMessage(wrongInputMessage, false, 0.0000001f));
 		noPointsMessageDisplay = false;
 		points = 10; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
 		tripID = 1; // trzeba pobierać ID z ankiety przed rozpoczeciem gry
@@ -116,7 +118,7 @@ public class GameController : MonoBehaviour {
 
 			// wybieramy element z losowego miejsca
 			//Debug.Log(numbers[r]);
-			order [i] = numbers [r];
+			order [i] = numbers [r] - 1;
 
 			// przeniesienie ostatniego elementu do miejsca z którego wzięliśmy
 			numbers[r] = numbers[n - 1];
