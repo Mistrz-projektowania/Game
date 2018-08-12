@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 5265
+  controlID: 13986
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 5238
+  controlID: 13987
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 5239
+  controlID: 13988
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -203,9 +203,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 2e710000
-    m_LastClickedID: 28974
-    m_ExpandedIDs: 0ce1feffe6e2feffc8e3fefff2fefeffeaa6ffff3cc8ffff38fbffff00000000e0390000ec390000fe390000243a00002e3a0000023e00007a3f0000944100002a4200001453000020530000325300005a5300001a7100002e710000
+    m_SelectedIDs: f42d0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: ca0dfaff5a0ffaffaa13faffa66bfaffa272faff7477faff1679fafff67afaff607cfaff108dfaffe4a3faff3ec0faff0ac8faffd6c9faff9aa8fbffc8b5fbff0ce1feffe6e2feffc8e3fefff2fefeffeaa6ffff3cc8ffff38fbffff00000000e0390000ec390000fe390000243a00002e3a0000023e00007a3f0000944100002a4200001453000020530000325300005a5300001a7100002e710000767b0000447d0000507d0000987d0000cc980000789900008c9900007c9b0000969b0000489c0000d4a4000008a5000018a500005ea50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -519,19 +519,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Fantasy Wooden GUI  Free/normal_ui_set A
+    - Assets/Scenes/Helpful questions
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Fantasy Wooden GUI  Free/normal_ui_set A
+  - Assets/Scenes/Helpful questions
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\praca magisterska\new\Game\Mistrz_projektowania
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 75}
-    m_SelectedIDs: a82f0000
-    m_LastClickedID: 12200
-    m_ExpandedIDs: 0000000068280000a4280000fc290000682a0000dc2b0000002e00002c2e00004a300000fe3700000a38000034380000c8380000f63c0000f83c0000fa3c0000fc3c000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 107}
+    m_SelectedIDs: 002b0000
+    m_LastClickedID: 11008
+    m_ExpandedIDs: 0000000068280000a4280000fc290000682a0000dc2b0000002e00004a300000fe3700000a380000c8380000f63c0000f83c0000fa3c0000fc3c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -559,7 +559,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000068280000a4280000fc290000682a0000dc2b0000002e00002c2e00004a300000fe3700000a38000034380000c8380000f63c0000f83c0000fa3c0000fc3c000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000068280000a4280000fc290000682a0000dc2b0000002e00004a300000fe3700000a380000c8380000f63c0000f83c0000fa3c0000fc3c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -584,9 +584,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 2e710000
-    m_LastClickedInstanceID: 28974
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: f42d0000
+    m_LastClickedInstanceID: 11764
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300003cdf000004f40000eaa70000f05c0700be2e0000aa3f0000703f0000522b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -611,7 +611,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 87}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 365
 --- !u!114 &13
@@ -659,8 +659,8 @@ MonoBehaviour:
     y: 0
     width: 315
     height: 615
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
