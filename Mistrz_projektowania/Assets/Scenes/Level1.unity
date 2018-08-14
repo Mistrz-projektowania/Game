@@ -14049,7 +14049,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Wybierz dat\u0119..."
+  m_Text: "Wybierz dat\u0119 rozpocz\u0119cia..."
 --- !u!222 &1379593807
 CanvasRenderer:
   m_ObjectHideFlags: 0
