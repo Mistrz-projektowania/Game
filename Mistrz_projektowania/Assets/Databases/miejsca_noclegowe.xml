@@ -1,0 +1,14 @@
+<MiejscaNoclegowe>
+    <MiejsceNoclegowe id="1">
+        <Nazwa>Szkolne Schronisko Młodzieżowe „Wędrowiec”</Nazwa>
+        <Adres>ul. Szymanowskiego 5, 25-361 Kielce</Adres>
+        <Cennik>pokój 2 osobowy z łazienką 65 zł od osoby za dobę - pok. 1-3 osobowy bez łazienki 25 zł od osoby za dobę - pokoje wieloosobowe: pierwsza doba - 20 zł od osoby następne doby - 14,50 zł od osoby</Cennik>
+        <Pokoje>1, 3, 6 i 7 osobowe</Pokoje>
+    </MiejsceNoclegowe>
+    <MiejsceNoclegowe id="2">
+        <Nazwa></Nazwa>
+        <Adres></Adres>
+        <Cennik></Cennik>
+        <Pokoje></Pokoje>
+    </MiejsceNoclegowe>
+</MiejscaNoclegowe>
