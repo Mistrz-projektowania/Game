@@ -10,6 +10,8 @@ public class CalendarPopUp : MonoBehaviour {
 	public GameObject[] DayLabels; 
 	public string[] Months;  
 	public Text HeaderLabel;
+	public Text calendarMonth;
+	public Text calendarYear;
 
 	bool showCalendar;
 
@@ -40,7 +42,7 @@ public class CalendarPopUp : MonoBehaviour {
 
 		nextBtn.onClick.AddListener (nextMonth);
 		prevBtn.onClick.AddListener (previousMonth);
-		calendarBtn.onClick.AddListener (chooseData);
+		calendarBtn.onClick.AddListener (showCalendarPopUp);
 	}
 	
 	// Update is called once per frame
@@ -52,6 +54,8 @@ public class CalendarPopUp : MonoBehaviour {
 	{
 		chosenMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1); // The magical Line :)
 		HeaderLabel.text = Months[DateTime.Now.Month - 1] + " " + DateTime.Now.Year;
+		calendarMonth.text = (DateTime.Now.Month).ToString();
+		calendarYear.text = DateTime.Now.Year.ToString();
 	}
 
 
@@ -93,6 +97,8 @@ public class CalendarPopUp : MonoBehaviour {
 		}
 
 		HeaderLabel.text = Months[monthCounter] + " " + (DateTime.Now.Year + yearCounter);
+		calendarMonth.text = (monthCounter+1).ToString();
+		calendarYear.text = (DateTime.Now.Year + yearCounter).ToString();
 		clearLabels();
 		chosenMonth = chosenMonth.AddMonths(1);
 		CreateCalendar();
@@ -108,11 +114,13 @@ public class CalendarPopUp : MonoBehaviour {
 		}
 
 		HeaderLabel.text = Months[monthCounter] + " " + (DateTime.Now.Year + yearCounter);
+		calendarMonth.text = (monthCounter+1).ToString();
+		calendarYear.text = (DateTime.Now.Year + yearCounter).ToString();
 		clearLabels();
 		chosenMonth = chosenMonth.AddMonths(-1);
 		CreateCalendar();
 	}
-	void chooseData(){
+	void showCalendarPopUp(){
 		showCalendar = !showCalendar;
 		Calendar.SetActive (showCalendar);
 	}	
