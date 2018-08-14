@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ObiektyTurystyczne>
+    <Obiekt id="1">
+        <Nazwa>Jaskinia Raj i Centrum Neandertalczyka</Nazwa>
+        <CenaBiletu>19 zł</CenaBiletu>
+    </Obiekt>
+    <Obiekt id="2">
+        <Nazwa>Zamek w Chęcinach</Nazwa>
+        <CenaBiletu>9 zł</CenaBiletu>
+    </Obiekt>
+    <Obiekt id="3">
+        <Nazwa>Centrum Nauki Leonardo da Vinci Podzamcze Chęcińskie</Nazwa>
+        <CenaBiletu>5 zł</CenaBiletu>
+    </Obiekt>
+    <Obiekt id="4">
+        <Nazwa>Muzeum Narodowe w Kielcach – Pałac Biskupów Krakowskich</Nazwa>
+        <CenaBiletu>8 zł</CenaBiletu>
+    </Obiekt>
+    <Obiekt id="5">
+        <Nazwa>Muzeum Zabawek i Zabawy: zwiedzanie i zajęcia edukacyjne w Kielcach</Nazwa>
+        <CenaBiletu>9 zł</CenaBiletu>
+    </Obiekt>
+    <Obiekt id="6">
+        <Nazwa>Muzeum Starożytnego Hutnictwa Świętokrzyskiego  im. Prof. Mieczysława Radwana W Nowej Słupi</Nazwa>
+        <CenaBiletu>3 zł</CenaBiletu>
+    </Obiekt>
+    <Obiekt id="7">
+        <Nazwa>Muzeum Przyrodnicze ŚPN na Świętym Krzyżu (i więzienna); Święty Krzyż 1, 26-004 Bieliny</Nazwa>
+        <CenaBiletu>Cena biletu wstępu grupy na ekspozycję przyrodniczą - 5 zł, na ekspozycję więzienną - 1 zł</CenaBiletu>
+    </Obiekt>
+    <Obiekt id="8">
+        <Nazwa>Świętokrzyski Park Narodowy</Nazwa>
+        <CenaBiletu>3,50 zł</CenaBiletu>
+    </Obiekt>
+    <Obiekt id="9">
+        <Nazwa></Nazwa>
+        <CenaBiletu></CenaBiletu>
+    </Obiekt>
+</ObiektyTurystyczne>
