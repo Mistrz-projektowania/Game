@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 
 
 public class GameController : MonoBehaviour {
-
 	private int points;
 	public Canvas noPointMessagePanel;
 	public Image noPointsMessage;
@@ -20,8 +19,6 @@ public class GameController : MonoBehaviour {
 	public List<Dictionary<string,string>> thisLevelTrip;
 
 	private int[] dataOrder;
-
-
 
 	// Use this for initialization
 	void Start () {
@@ -47,6 +44,10 @@ public class GameController : MonoBehaviour {
 	void Update () {
 
       
+	}
+
+	public int[] getDataOrder(){
+		return dataOrder;
 	}
 
 	public void changePoints(int value){

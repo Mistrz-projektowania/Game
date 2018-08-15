@@ -93,64 +93,7 @@ public class XMLDataLoader : MonoBehaviour {
 		for(int i = 0; i < order.Length; i++){
 			rockTexts [order[i]].text = getDataString (rockTexts [order[i]], rockTypeTexts[order[i]], i);
 		}
-
-		/*foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
-		{
-			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
-			data += string.Format("{0}\n", kvp.Value);
-		}
-		rockText1.text = data;
-		i++;
-		data = "";
-		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
-		{
-			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
-			data += string.Format("{0}\n", kvp.Value);
-		}
-		rockText2.text = data;
-		i++;
-		data = "";
-		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
-		{
-			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
-			data += string.Format("{0}\n", kvp.Value);
-		}
-		rockText3.text = data;
-		i++;
-
-		data = "";
-		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
-		{
-			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
-			data += string.Format("{0}\n", kvp.Value);
-		}
-		rockText4.text = data;
-		i++;
-
-		data = "";
-		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
-		{
-			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
-			data += string.Format("{0}\n", kvp.Value);
-		}
-		rockText5.text = data;
-		i++;
-		data = "";
-		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
-		{
-			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
-			data += string.Format("{0}\n", kvp.Value);
-		}
-		rockText6.text = data;
-		i++;
-		data = "";
-		foreach (KeyValuePair<string, string> kvp in Trips[order[i]])
-		{
-			//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
-			data += string.Format("{0}\n", kvp.Value);
-		}
-		rockText7.text = data;
-		*/
+			
 	}
 
 	public List<Dictionary<string,string>> getCurrentTripData(){
@@ -179,6 +122,10 @@ public class XMLDataLoader : MonoBehaviour {
 				foreach (XmlNode tNode in nodeName){ 
 					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					obj.Add(tNode.Name, tNode.InnerText);
+					if (tNode.Name == "Nazwa") {
+						GameObject tripName = GameObject.Find("TripTitle");
+						tripName.GetComponent<Text> ().text = tNode.InnerText;
+					}
 				}
 				obj.Add("Typ", "Nazwa imprezy");
 			}
