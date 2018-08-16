@@ -9,8 +9,10 @@ public class keyG : MonoBehaviour {
 	public Button GTSbutton;
 	public GameObject GTS;
 	public GameObject [] rocks;
+
 	// Use this for initialization
 	void Start () {
+		
 		//GTSbutton = GetComponent<Button> ();
 		GTSbutton.onClick.AddListener(GTSon);
 	}
@@ -32,7 +34,7 @@ public class keyG : MonoBehaviour {
 		Debug.Log (minIndexPosition);
 		Debug.Log (GTS.transform.position);
 		Vector3 newPos = rocks [minIndexPosition].transform.position;
-		GameObject.Find ("Frisbee").GetComponent<GTSRotation> ().setNewStartPos(new Vector3(newPos.x, newPos.y + 2, newPos.z));
+		GameObject.Find ("Frisbee").GetComponent<GTSRotation> ().setDestination(new Vector3(newPos.x, newPos.y + 2, newPos.z), 2);
 		//GameObject.Find ("Afterburner").SetActive (true);
 		Debug.Log (GTS.transform.position);
 	}
