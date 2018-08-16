@@ -37,9 +37,9 @@ public class GTSRotation : MonoBehaviour {
 		t += Time.deltaTime / timeToReachDestination;
 
 		transform.Rotate (new Vector3(0,Time.deltaTime * rotateSpeed, 0));
-		transform.position = Vector3.Lerp (startPos, destinationPos, t);
+		transform.position = Vector3.Lerp (startPos, destinationPos + (Vector3.right * Mathf.Sin (Time.timeSinceLevelLoad / 2 * speed) * xScale - Vector3.up * Mathf.Sin (Time.timeSinceLevelLoad * speed) * yScale), t);
 		if (transform.position == destinationPos) {
-			transform.position = destinationPos + (Vector3.right * Mathf.Sin (Time.timeSinceLevelLoad / 2 * speed) * xScale - Vector3.up * Mathf.Sin (Time.timeSinceLevelLoad * speed) * yScale);	
+			transform.position = transform.position + (Vector3.right * Mathf.Sin (Time.timeSinceLevelLoad / 2 * speed) * xScale - Vector3.up * Mathf.Sin (Time.timeSinceLevelLoad * speed) * yScale);	
 		}
 	}
 
