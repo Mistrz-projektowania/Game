@@ -13,6 +13,7 @@ public class XMLDataLoader : MonoBehaviour {
 	public TextAsset TripNrDatabase;
 	public TextAsset CustomerDatabase;
 	public TextAsset ParticipantsNrDatabase;
+	public TextAsset CustomerContact;
 	public int id;
 	public string tagName;
 
@@ -171,11 +172,26 @@ public class XMLDataLoader : MonoBehaviour {
 				}
 				obj.Add("Typ", "Liczba osób");
 			}
+			if(Node.Name == "IdPrzedstawicielaZleceniodawcy")
+			{
+				int customerContactId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
+
+				XmlDocument DBname = new XmlDocument(); 
+				DBname.LoadXml(CustomerContact.text); 
+
+				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ customerContactId + "']");
+				foreach (XmlNode tNode in nodeName){ 
+					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
+					obj.Add(tNode.Name, tNode.InnerText);
+				}
+				obj.Add("Typ", "Kontakt zleceniodawcy");
+			}
 			Trips.Add(obj);
+
 			obj = new Dictionary<string,string>();
 		}
 		/* MASKOWANIE BŁĘDU z SetDataSlots wynikajacego z braku odczytu danych z 3 kolejnych baz */
-		Trips.Add(obj);
+		//Trips.Add(obj);
 		Trips.Add(obj);
 		Trips.Add(obj);
 		//////////////////////////////////

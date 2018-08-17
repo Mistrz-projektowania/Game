@@ -23,7 +23,7 @@ public class Slot : MonoBehaviour , IDropHandler
 			GameObject parentObject = this.transform.parent.gameObject;
 			Text textObject = parentObject.GetComponentInChildren<Text>();
 			string dragType = DragHandler.item.GetComponentsInChildren<Text> ()[1].text;
-			string inputType =parentObject.GetComponentInChildren<Text>().text;
+			string inputType = parentObject.GetComponentInChildren<Text>().text;
 			if (dragType == inputType) {
 				DragHandler.item.transform.SetParent (transform);
 			} else {

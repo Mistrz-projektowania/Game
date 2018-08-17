@@ -11217,6 +11217,7 @@ MonoBehaviour:
   CustomerDatabase: {fileID: 4900000, guid: 0e5f4efab95c9ee42b0261f98ea9efd1, type: 3}
   ParticipantsNrDatabase: {fileID: 4900000, guid: 7fd1d86d3e6a2434fa59d5dad029b25f,
     type: 3}
+  CustomerContact: {fileID: 4900000, guid: 0ab01a1f69b2df64fa879efc862b91c3, type: 3}
   id: 1
   tagName: Plan
   rockText1: {fileID: 1946045193}
