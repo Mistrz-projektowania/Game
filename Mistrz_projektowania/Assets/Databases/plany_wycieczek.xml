@@ -7,20 +7,24 @@
 		<IdNrImprezy>
 			1
 		</IdNrImprezy>
-		<IdZleceniodawca>
+		<IdZleceniodawcy>
 			1
-		</IdZleceniodawca>
-		<IdLiczbaOsob>
+		</IdZleceniodawcy>
+		<IdLiczbyOsob>
 			1
-		</IdLiczbaOsob>
+		</IdLiczbyOsob>
 		<IdPrzedstawicielaZleceniodawcy>
 			1
 		</IdPrzedstawicielaZleceniodawcy>
 		<IdTrasyImprezy>
 			1
 		</IdTrasyImprezy>
-		<IdSwiadczen>
+		<IdMiejscaNoclegowego>
 			1
-		</IdSwiadczen>
+		</IdMiejscaNoclegowego>
+		<IdWyzywienia>
+			<id></id>
+			<id></id>
+		</IdWyzywienia>
 	</Plan>
 </PlanyWycieczek>

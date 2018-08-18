@@ -35,7 +35,15 @@ public class setRockPlaces : MonoBehaviour {
 		BoxCollider rockCollider = rock.GetComponent<BoxCollider>();
 		float rockWidth = rockCollider.size.x * rockCollider.transform.localScale.x;
 		rock.transform.position = new Vector3(pos1.x + rockWidth/2 + 0.1f, rockToTerrainPosY, pos1.z);
-		
+		/*
+		 * float newPosZ = 5;
+		if (i < 4) {
+			newPosZ = i * 3 + 5;
+		} else {
+			newPosZ = i * 2 - 5;
+		}
+		rock.transform.position = new Vector3(pos1.x + rockWidth/2 + 0.1f, rockToTerrainPosY, newPosZ);
+		*/
 	}
 	void randomRotation(GameObject rock){
 		Quaternion rRot = Random.rotation;

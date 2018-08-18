@@ -58,9 +58,9 @@ public class GameController : MonoBehaviour {
 			if (noPointsMessageDisplay == false) {
 				StartCoroutine (fadeMessage (noPointsMessage, true, 0.5f));
 				noPointsMessageDisplay = true;
-				StartCoroutine (closePointsMessage(10f));
+				//StartCoroutine (closePointsMessage(10f));
 			}
-		}
+		} 
 	}
 
 	public int getPoints(){

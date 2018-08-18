@@ -13,8 +13,10 @@ public class XMLDataLoader : MonoBehaviour {
 	public TextAsset TripNrDatabase;
 	public TextAsset CustomerDatabase;
 	public TextAsset ParticipantsNrDatabase;
-	public TextAsset CustomerContact;
-	public TextAsset tripPlan;
+	public TextAsset CustomerContactDatabase;
+	public TextAsset tripPlanDatabase;
+	public TextAsset hotelDatabase;
+	public TextAsset restaurantDatabase;
 	public int id;
 	public string tagName;
 
@@ -73,8 +75,8 @@ public class XMLDataLoader : MonoBehaviour {
 		{
 			if (kvp.Key != "Punkty") {
 				if (kvp.Key != "Typ"){
-				data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
-				//data += string.Format("{0}\n", kvp.Value);	
+				//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
+					data += string.Format("{0} ", kvp.Value);	
 				}
 			}
 			if (kvp.Key == "Typ") {
@@ -145,7 +147,7 @@ public class XMLDataLoader : MonoBehaviour {
 				}
 				obj.Add("Typ", "Nr imprezy");
 			}
-			if(Node.Name == "IdZleceniodawca")
+			if(Node.Name == "IdZleceniodawcy")
 			{
 				int tripCustomerId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
 
@@ -159,7 +161,7 @@ public class XMLDataLoader : MonoBehaviour {
 				}
 				obj.Add("Typ", "Zleceniodawca");
 			}
-			if(Node.Name == "IdLiczbaOsob")
+			if(Node.Name == "IdLiczbyOsob")
 			{
 				int participantsNrId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
 
@@ -178,7 +180,7 @@ public class XMLDataLoader : MonoBehaviour {
 				int customerContactId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
 
 				XmlDocument DBname = new XmlDocument(); 
-				DBname.LoadXml(CustomerContact.text); 
+				DBname.LoadXml(CustomerContactDatabase.text); 
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ customerContactId + "']");
 				foreach (XmlNode tNode in nodeName){ 
@@ -192,7 +194,7 @@ public class XMLDataLoader : MonoBehaviour {
 				int tripPlanId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
 
 				XmlDocument DBname = new XmlDocument(); 
-				DBname.LoadXml(tripPlan.text); 
+				DBname.LoadXml(tripPlanDatabase.text); 
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ tripPlanId + "']");
 				foreach (XmlNode tNode in nodeName){ 
@@ -201,6 +203,36 @@ public class XMLDataLoader : MonoBehaviour {
 				}
 				obj.Add("Typ", "Trasa");
 			}
+			if(Node.Name == "IdMiejscaNoclegowego")
+			{
+				int hotelId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
+
+				XmlDocument DBname = new XmlDocument(); 
+				DBname.LoadXml(hotelDatabase.text); 
+
+				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ hotelId + "']");
+				foreach (XmlNode tNode in nodeName){ 
+					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
+					obj.Add(tNode.Name, tNode.InnerText);
+				}
+				obj.Add("Typ", "Hotel");
+			}
+			/*
+			if(Node.Name == "IdWyzywienia")
+			{
+				int restaurantId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
+
+				XmlDocument DBname = new XmlDocument(); 
+				DBname.LoadXml(restaurantDatabase.text); 
+
+				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ restaurantId + "']");
+				foreach (XmlNode tNode in nodeName){ 
+					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
+					obj.Add(tNode.Name, tNode.InnerText);
+				}
+				obj.Add("Typ", "Wyżywienie");
+			}
+			*/
 			Trips.Add(obj);
 
 			obj = new Dictionary<string,string>();

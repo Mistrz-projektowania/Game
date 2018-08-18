@@ -33,7 +33,9 @@ public class Slot : MonoBehaviour , IDropHandler
 				DragHandler.item.transform.SetParent (transform);
 			} else {
 				Debug.Log ("Nie to pole");
-			
+				StartCoroutine (handleWrongInputMessage (true, 0.5f));
+				StartCoroutine (waitAndHideMessage());
+
 			}
 
 		} else {
@@ -41,4 +43,40 @@ public class Slot : MonoBehaviour , IDropHandler
 		}
 	}
 	#endregion
+	IEnumerator waitAndHideMessage(){
+		yield return new WaitForSeconds (5);
+		StartCoroutine (handleWrongInputMessage (false, 0.5f));
+	}
+	IEnumerator handleWrongInputMessage(bool show, float duration){
+		float counter = 0f;
+		GameObject message = GameObject.Find ("WrongInputMessage");
+		float a, b;
+		if (show)
+		{
+			message.transform.position = new Vector3 (Screen.width / 2, 120,0.0f);
+			a = 0;
+			b = 1;
+		}
+		else
+		{
+			a = 1;
+			b = 0;
+		}
+
+		CanvasGroup selectedMessage = message.GetComponent<CanvasGroup>();
+
+		while (counter < duration)
+		{
+			counter += Time.deltaTime;
+			float alpha = Mathf.Lerp(a, b, counter / duration);
+			//Debug.Log(alpha);
+
+			selectedMessage.alpha = alpha;
+
+			yield return null;
+		}
+		if (show == false) {
+			message.transform.position = new Vector3 (-message.GetComponent<RectTransform>().rect.width, message.GetComponent<RectTransform>().rect.height,0.0f);
+		}
+	}
 }﻿
