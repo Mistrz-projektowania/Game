@@ -14,6 +14,7 @@ public class XMLDataLoader : MonoBehaviour {
 	public TextAsset CustomerDatabase;
 	public TextAsset ParticipantsNrDatabase;
 	public TextAsset CustomerContact;
+	public TextAsset tripPlan;
 	public int id;
 	public string tagName;
 
@@ -91,7 +92,7 @@ public class XMLDataLoader : MonoBehaviour {
 		addTextToList ();
 		//string data = "";
 		//int i = 0;
-		for(int i = 0; i < order.Length; i++){
+		for(int i = 1; i < order.Length; i++){
 			rockTexts [order[i]].text = getDataString (rockTexts [order[i]], rockTypeTexts[order[i]], i);
 		}
 			
@@ -186,12 +187,27 @@ public class XMLDataLoader : MonoBehaviour {
 				}
 				obj.Add("Typ", "Kontakt zleceniodawcy");
 			}
+			if(Node.Name == "IdTrasyImprezy")
+			{
+				int tripPlanId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
+
+				XmlDocument DBname = new XmlDocument(); 
+				DBname.LoadXml(tripPlan.text); 
+
+				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ tripPlanId + "']");
+				foreach (XmlNode tNode in nodeName){ 
+					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
+					obj.Add(tNode.Name, tNode.InnerText);
+				}
+				obj.Add("Typ", "Trasa");
+			}
 			Trips.Add(obj);
 
 			obj = new Dictionary<string,string>();
 		}
 		/* MASKOWANIE BŁĘDU z SetDataSlots wynikajacego z braku odczytu danych z 3 kolejnych baz */
 		//Trips.Add(obj);
+		Trips.Add(obj);
 		Trips.Add(obj);
 		Trips.Add(obj);
 		//////////////////////////////////
