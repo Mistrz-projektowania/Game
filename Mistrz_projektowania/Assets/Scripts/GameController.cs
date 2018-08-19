@@ -37,6 +37,8 @@ public class GameController : MonoBehaviour {
 		//Debug.Log ((thisLevelTrip [0]) ["Nr"]);
 		dataOrder = drawTheOrder(7, 7);
 		dataLoader.setDataSlots (dataOrder);
+
+		showFPS (true);
     }
 		
 
@@ -44,6 +46,11 @@ public class GameController : MonoBehaviour {
 	void Update () {
 
       
+	}
+
+	public void showFPS(bool show){
+		GameObject fpsCounter = GameObject.Find ("FPScounterController");
+		fpsCounter.SetActive (show);
 	}
 
 	public int[] getDataOrder(){
