@@ -428,6 +428,7 @@ MonoBehaviour:
   myText: {fileID: 0}
   fadeTime: 0.5
   displayInfo: 0
+  buttonOb: {fileID: 1899997057}
   button: {fileID: 1899997061}
 --- !u!65 &22540728
 BoxCollider:
@@ -3975,6 +3976,7 @@ MonoBehaviour:
   myText: {fileID: 0}
   fadeTime: 0.5
   displayInfo: 0
+  buttonOb: {fileID: 1813795481}
   button: {fileID: 1813795482}
 --- !u!65 &442135598
 BoxCollider:
@@ -4411,6 +4413,7 @@ MonoBehaviour:
   myText: {fileID: 0}
   fadeTime: 0.5
   displayInfo: 0
+  buttonOb: {fileID: 1278153551}
   button: {fileID: 1278153555}
 --- !u!65 &461080977
 BoxCollider:
@@ -6602,7 +6605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00007550112, y: 0.00007786862}
+  m_AnchoredPosition: {x: 0.00003344658, y: 0.00007786862}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &735039242
@@ -7502,6 +7505,7 @@ MonoBehaviour:
   myText: {fileID: 0}
   fadeTime: 0.5
   displayInfo: 0
+  buttonOb: {fileID: 17816739}
   button: {fileID: 17816743}
 --- !u!65 &801352898
 BoxCollider:
@@ -11408,7 +11412,7 @@ MonoBehaviour:
     type: 3}
   tripPlanDatabase: {fileID: 4900000, guid: 2b9b776270749b34ea8c15dd782b9b1e, type: 3}
   hotelDatabase: {fileID: 4900000, guid: 7f004ddb70993d4419a164d6190b3b46, type: 3}
-  restaurantDatabase: {fileID: 0}
+  restaurantDatabase: {fileID: 4900000, guid: e59dc58f00209f9478f24b1af30399ad, type: 3}
   id: 1
   tagName: Plan
   rockText1: {fileID: 1946045193}
@@ -14680,6 +14684,7 @@ MonoBehaviour:
   myText: {fileID: 0}
   fadeTime: 0.5
   displayInfo: 0
+  buttonOb: {fileID: 1023065017}
   button: {fileID: 1023065021}
 --- !u!65 &1404226260
 BoxCollider:
@@ -16237,6 +16242,7 @@ MonoBehaviour:
   myText: {fileID: 0}
   fadeTime: 0.5
   displayInfo: 0
+  buttonOb: {fileID: 1550562926}
   button: {fileID: 1550562930}
 --- !u!65 &1560172313
 BoxCollider:
@@ -16964,6 +16970,7 @@ MonoBehaviour:
   myText: {fileID: 0}
   fadeTime: 0.5
   displayInfo: 0
+  buttonOb: {fileID: 895065304}
   button: {fileID: 895065307}
 --- !u!65 &1606676967
 BoxCollider:
@@ -22448,7 +22455,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1327268642}
   m_HandleRect: {fileID: 1327268641}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:

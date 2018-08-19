@@ -23,8 +23,8 @@
 			1
 		</IdMiejscaNoclegowego>
 		<IdWyzywienia>
-			<id></id>
-			<id></id>
+			<id>1</id>
+			<id>2</id>
 		</IdWyzywienia>
 	</Plan>
 </PlanyWycieczek>

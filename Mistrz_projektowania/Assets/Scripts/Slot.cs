@@ -21,18 +21,18 @@ public class Slot : MonoBehaviour , IDropHandler
 	{
 		GameObject parentObject = this.transform.parent.gameObject;
 		string inputDropped = parentObject.GetComponentInChildren<Text> ().text;
-		Debug.Log ("Input dropped = " + inputDropped);
+		//Debug.Log ("Input dropped = " + inputDropped);
 		if (!item) {
 			//GameObject parentObject = this.transform.parent.gameObject;
 			Text textObject = parentObject.GetComponentInChildren<Text> ();
 			string dragType = DragHandler.item.GetComponentsInChildren<Text> () [1].text;
-			Debug.Log ("Drag type = " + dragType);
+			//Debug.Log ("Drag type = " + dragType);
 			string inputType = parentObject.GetComponentInChildren<Text> ().text;
-			Debug.Log ("Input type = " + inputType);
+			//Debug.Log ("Input type = " + inputType);
 			if (dragType == inputType) {
 				DragHandler.item.transform.SetParent (transform);
 			} else {
-				Debug.Log ("Nie to pole");
+				//Debug.Log ("Nie to pole");
 				StartCoroutine (handleWrongInputMessage (true, 0.5f));
 				StartCoroutine (waitAndHideMessage());
 

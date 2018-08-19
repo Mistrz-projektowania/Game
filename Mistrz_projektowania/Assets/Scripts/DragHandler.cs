@@ -15,9 +15,10 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 		item = gameObject;
 		startPosition = transform.position;
 		startParent = transform.parent;
+
 		GetComponent<CanvasGroup>().blocksRaycasts = false;
 
-		transform.SetParent(transform.root);
+		transform.SetParent (transform.root);
 	}
 
 	public void OnDrag(PointerEventData eventData)

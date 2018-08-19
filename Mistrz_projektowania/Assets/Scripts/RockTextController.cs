@@ -9,6 +9,7 @@ public class RockTextController : MonoBehaviour {
 	public Text myText;
 	public float fadeTime;
 	public bool displayInfo;
+	public GameObject buttonOb;
 	public Button button;
 	private GameController gameController;
 
@@ -75,6 +76,7 @@ public class RockTextController : MonoBehaviour {
 		float a, b;
 		if (fadeIn)
 		{
+			buttonOb.AddComponent<DragHandler> ();
 			a = 0;
 			b = 1;
 		}
@@ -100,9 +102,10 @@ public class RockTextController : MonoBehaviour {
 			yield return null;
 		}
 
-		if (!fadeIn)
-		{
+		if (!fadeIn) {
 			button.enabled = false;
+			Destroy (button.GetComponent<DragHandler> ());
 		}
+		Debug.Log (button.enabled);
 	}
 }

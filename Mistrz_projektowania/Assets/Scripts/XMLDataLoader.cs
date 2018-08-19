@@ -71,12 +71,13 @@ public class XMLDataLoader : MonoBehaviour {
 	}
 	string getDataString(Text rockText, Text rockTypeText, int order){
 		string data = "";
-		foreach (KeyValuePair<string, string> kvp in Trips[order])
+		foreach (KeyValuePair<string, string> kvp in Trips[order+1])
 		{
 			if (kvp.Key != "Punkty") {
 				if (kvp.Key != "Typ"){
+					//Debug.Log (kvp.Key + " " + kvp.Value);
 				//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
-					data += string.Format("{0} ", kvp.Value);	
+					data += string.Format("{0}\n", kvp.Value);	
 				}
 			}
 			if (kvp.Key == "Typ") {
@@ -94,8 +95,10 @@ public class XMLDataLoader : MonoBehaviour {
 		addTextToList ();
 		//string data = "";
 		//int i = 0;
-		for(int i = 1; i < order.Length; i++){
+		Debug.Log(order.Length);
+		for(int i = 0; i < order.Length; i++){
 			rockTexts [order[i]].text = getDataString (rockTexts [order[i]], rockTypeTexts[order[i]], i);
+			//Debug.Log ("i: " + i + ", order[i]: " + order [i] + ", text: " + rockTexts [order [i]].text);
 		}
 			
 	}
@@ -217,22 +220,33 @@ public class XMLDataLoader : MonoBehaviour {
 				}
 				obj.Add("Typ", "Hotel");
 			}
-			/*
+
 			if(Node.Name == "IdWyzywienia")
 			{
-				int restaurantId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
-
 				XmlDocument DBname = new XmlDocument(); 
 				DBname.LoadXml(restaurantDatabase.text); 
-
-				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ restaurantId + "']");
-				foreach (XmlNode tNode in nodeName){ 
+				foreach (XmlNode tNode in Node) {
 					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
-					obj.Add(tNode.Name, tNode.InnerText);
+					List<Dictionary<string,string>> restaurant = new List<Dictionary<string,string>> ();
+					int restaurantId = System.Xml.XmlConvert.ToInt32(tNode.InnerText);
+					XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ restaurantId + "']");
+					string restaurantData = "";
+					foreach (XmlNode ttNode in nodeName){ 
+						//Debug.Log(ttNode.Name + ": " + ttNode.InnerText);
+						restaurantData += ttNode.InnerText + " ";
+				
+					}
+					//restaurant.Add (restaurantData);
+					obj.Add("Lokal" + tNode.InnerText, restaurantData);
+					//Debug.Log("Lokal" + tNode.InnerText + ": " + restaurantData);
 				}
+
+
+
+				//obj.Add(tNode.Name, tNode.InnerText);
 				obj.Add("Typ", "Wyżywienie");
 			}
-			*/
+
 			Trips.Add(obj);
 
 			obj = new Dictionary<string,string>();
