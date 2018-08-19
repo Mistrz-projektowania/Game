@@ -26,5 +26,12 @@
 			<id>1</id>
 			<id>2</id>
 		</IdWyzywienia>
+		<IdUslug>
+			<id>1</id>
+			<id>2</id>
+		</IdUslug>
+		<IdUbezpieczenia>
+			1
+		</IdUbezpieczenia>
 	</Plan>
 </PlanyWycieczek>

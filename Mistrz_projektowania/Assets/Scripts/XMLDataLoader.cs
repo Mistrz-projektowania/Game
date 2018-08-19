@@ -17,6 +17,7 @@ public class XMLDataLoader : MonoBehaviour {
 	public TextAsset tripPlanDatabase;
 	public TextAsset hotelDatabase;
 	public TextAsset restaurantDatabase;
+	public TextAsset servicesDatabase;
 	public int id;
 	public string tagName;
 
@@ -246,17 +247,35 @@ public class XMLDataLoader : MonoBehaviour {
 				//obj.Add(tNode.Name, tNode.InnerText);
 				obj.Add("Typ", "Wyżywienie");
 			}
+			if(Node.Name == "IdUslug")
+			{
+				XmlDocument DBname = new XmlDocument(); 
+				DBname.LoadXml(servicesDatabase.text); 
+				foreach (XmlNode tNode in Node) {
+					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
+					List<Dictionary<string,string>> restaurant = new List<Dictionary<string,string>> ();
+					int serviceId = System.Xml.XmlConvert.ToInt32(tNode.InnerText);
+					XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ serviceId + "']");
+					string serviceData = "";
+					foreach (XmlNode ttNode in nodeName){ 
+						//Debug.Log(ttNode.Name + ": " + ttNode.InnerText);
+						serviceData += ttNode.InnerText + " ";
 
+					}
+					//restaurant.Add (restaurantData);
+					obj.Add("Usługa" + tNode.InnerText, serviceData);
+					//Debug.Log("Lokal" + tNode.InnerText + ": " + restaurantData);
+				}
+
+
+
+				//obj.Add(tNode.Name, tNode.InnerText);
+				obj.Add("Typ", "Usługi");
+			}
 			Trips.Add(obj);
 
 			obj = new Dictionary<string,string>();
 		}
-		/* MASKOWANIE BŁĘDU z SetDataSlots wynikajacego z braku odczytu danych z 3 kolejnych baz */
-		//Trips.Add(obj);
-		Trips.Add(obj);
-		Trips.Add(obj);
-		Trips.Add(obj);
-		//////////////////////////////////
 
 	}
 }
