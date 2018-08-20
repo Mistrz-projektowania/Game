@@ -20,6 +20,9 @@ public class GameController : MonoBehaviour {
 
 	private int[] dataOrder;
 
+	void Awake(){
+		Application.targetFrameRate = 300;
+	}
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(fadeMessage(noPointsMessage, false, 0.0000001f));

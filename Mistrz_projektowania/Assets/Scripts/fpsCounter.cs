@@ -12,7 +12,7 @@ public class fpsCounter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		deltaTime += (Time.fixedUnscaledDeltaTime - deltaTime) * 0.1f;	
+		deltaTime += (Time.deltaTime - deltaTime) * 0.1f;	
 	}
 	void OnGUI(){
 		float msec = deltaTime * 1000.0f;
