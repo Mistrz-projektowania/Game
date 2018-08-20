@@ -19,6 +19,7 @@ public class Slot : MonoBehaviour , IDropHandler
 	#region IdropHandler implementation
 	public void OnDrop(PointerEventData eventData)
 	{
+		
 		GameObject parentObject = this.transform.parent.gameObject;
 		string inputDropped = parentObject.GetComponentInChildren<Text> ().text;
 		//Debug.Log ("Input dropped = " + inputDropped);

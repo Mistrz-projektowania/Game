@@ -29,12 +29,15 @@ public class keyG : MonoBehaviour {
 
 	void GTSon(){
 		Debug.Log ("GTS ON");
-		int[] dataOrder = GameObject.Find ("GameController").GetComponent<GameController> ().getDataOrder();
-		int minIndex = 0;
-		int minIndexPosition = dataOrder[0];
+		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
+		checkFieldFillOutOrder.checkIfEmpty ();
 
-		Debug.Log (minIndexPosition);
-		Debug.Log (GTS.transform.position);
+		int[] dataOrder = GameObject.Find ("GameController").GetComponent<GameController> ().getDataOrder();
+		int minIndex = checkFieldFillOutOrder.getNextRockIndex();
+		int minIndexPosition = dataOrder[minIndex];
+
+		Debug.Log (minIndex);
+		//Debug.Log (GTS.transform.position);
 		Vector3 newPos = rocks [minIndexPosition].transform.position;
 
 		GameObject.Find ("Frisbee").GetComponent<GTSRotation> ().setDestination(new Vector3(newPos.x, newPos.y + 2, newPos.z), 2);
