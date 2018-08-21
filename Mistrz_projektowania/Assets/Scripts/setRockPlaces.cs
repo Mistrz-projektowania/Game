@@ -22,7 +22,7 @@ public class setRockPlaces : MonoBehaviour {
 		GameObject GUI = GameObject.Find ("GUI");
 		localScale = GUI.GetComponent<RectTransform> ().localScale.x;
 		leftGUI = GameObject.Find("leftGUI");
-		LeftGUIwidth = 500 * localScale;
+		LeftGUIwidth = 550 * localScale;
 		screenWidth = Screen.width;
 
 		startPos = destinationPos = transform.position;
@@ -47,7 +47,8 @@ public class setRockPlaces : MonoBehaviour {
 	}
 		
 	void findCoordinates(GameObject rock, float leftGUIWidth, int i){
-		Vector3 newPosition = new Vector3 ((Screen.width - LeftGUIwidth) / 7 * i + LeftGUIwidth, Screen.height / 2 - 20 * Mathf.Cos (i) + 30, 8 - 2 * Mathf.Cos (i));
+		//Vector3 newPosition = new Vector3 ((Screen.width - LeftGUIwidth) / 7 * i + LeftGUIwidth, Screen.height *2/ 3 - 20 * Mathf.Cos (i) + 30, 8 - 2 * Mathf.Cos (i));
+		Vector3 newPosition = new Vector3 ((Screen.width - LeftGUIwidth) / 7 * i + LeftGUIwidth - 20, Screen.height /2, 8);
 		Vector3 pos1 = Camera.main.ScreenToWorldPoint (newPosition);
 
 		BoxCollider rockCollider = rock.GetComponent<BoxCollider>();
