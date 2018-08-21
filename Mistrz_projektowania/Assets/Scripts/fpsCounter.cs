@@ -16,7 +16,7 @@ public class fpsCounter : MonoBehaviour {
 	}
 	void OnGUI(){
 		float msec = deltaTime * 1000.0f;
-		float FPS = 1.0f / deltaTime;
+		float FPS = Mathf.Floor(1.0f / deltaTime);
 
 		createCounter (FPS, msec);
 	}

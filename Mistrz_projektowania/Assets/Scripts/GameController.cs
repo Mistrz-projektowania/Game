@@ -114,7 +114,7 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	static int[] drawTheOrder(int n,int k)
+	public static int[] drawTheOrder(int n,int k)
 	{
 		int[] order = new int[k];
 		// wypełnianie tablicy liczbami 1,2...n

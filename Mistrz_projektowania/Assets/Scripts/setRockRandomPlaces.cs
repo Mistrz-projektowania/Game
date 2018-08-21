@@ -19,16 +19,11 @@ public class setRockRandomPlaces : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.W) && (Time.time - lastKeyWPressedTime > animationTime)) {
-			for (int i = 0; i < rockPlaces.Length; i++) {
-				Debug.Log ("Pozycja " + i + ": " + rockPlaces [i]);
 
-			}
-			swapRocks (rocks [0], rocks [5], animationTime);
-			lastKeyWPressedTime = Time.time;
-		}
 	}
-	void swapRocks(GameObject rock1, GameObject rock2, float timeToMove){
+	public void swapRocks(int index1, int index2, float timeToMove){
+		GameObject rock1 = rocks [index1];
+		GameObject rock2 = rocks [index2];
 		Vector3 startPos1 = rock1.transform.position;
 		Vector3 startPos2 = rock2.transform.position;
 		Debug.Log (startPos1);
@@ -42,15 +37,6 @@ public class setRockRandomPlaces : MonoBehaviour {
 		StartCoroutine (waitAndSetDestination (firstMoveTime, rock1, new Vector3(startPos2.x,startPos1.y,startPos1.z - 1.0f),changePlaceTime));
 		StartCoroutine (waitAndSetDestination (changePlaceTime + firstMoveTime, rock2, new Vector3(startPos1.x,startPos1.y,startPos1.z),lastMoveTime));
 		StartCoroutine (waitAndSetDestination (changePlaceTime + firstMoveTime, rock1, new Vector3(startPos2.x,startPos2.y,startPos2.z),lastMoveTime));
-		/*
-		 * rock2.GetComponent<setRockPlaces> ().setDestination (new Vector3(startPos1.x,startPos2.y,startPos1.z),1);
-		rock1.GetComponent<setRockPlaces> ().setDestination (new Vector3(startPos2.x,startPos2.y,startPos1.z),1);
-		StartCoroutine (waitFor (1));
-		rock2.GetComponent<setRockPlaces> ().setDestination (new Vector3(startPos1.x,startPos1.y,startPos1.z),1);
-		rock1.GetComponent<setRockPlaces> ().setDestination (new Vector3(startPos2.x,startPos2.y,startPos2.z),1);
-		*/
-		//rock1.transform.position = startPos2;
-		//rock2.transform.position = startPos1;
 	}
 
 	IEnumerator waitAndSetDestination(float seconds, GameObject rock, Vector3 destination, float animationTime){
