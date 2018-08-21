@@ -2348,6 +2348,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3d730213e8fc34ab192110fe77aec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &217069531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217069528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da47e811431e9146a82f75c24b1fb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocks:
+  - {fileID: 1606676964}
+  - {fileID: 442135595}
+  - {fileID: 461080975}
+  - {fileID: 22540726}
+  - {fileID: 1560172311}
+  - {fileID: 801352896}
+  - {fileID: 1404226258}
+  rockPlaces: []
 --- !u!1001 &229621455
 Prefab:
   m_ObjectHideFlags: 0
@@ -2836,14 +2856,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 0.33088237, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: a523e3638e33a714aaf9e1a9190c0e52, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8425e5b698b5d674fa713a095f1cd47a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3846,14 +3866,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 0.33088237, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: 6f7db6e63853c7c4fa2f618e63d126ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fbcd9c7506e742c42b3c844da52238fe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4205,7 +4225,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: <
+  m_Text: 
 --- !u!222 &433466656
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7012,7 +7032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00003117163, y: 0.00007786862}
+  m_AnchoredPosition: {x: 0.000062782674, y: 0.00007786862}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &735039242
@@ -13737,7 +13757,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 593097841}
   m_Direction: 2
   m_Value: 0.99999887
-  m_Size: 0.8140755
+  m_Size: 0.81407547
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16417,7 +16437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1519281846
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23303,7 +23323,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: <
+  m_Text: 
 --- !u!222 &2018875480
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23533,7 +23553,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1327268641}
   m_Direction: 0
   m_Value: 1
-  m_Size: 0.9999998
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
