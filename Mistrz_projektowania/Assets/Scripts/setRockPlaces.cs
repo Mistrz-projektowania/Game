@@ -12,6 +12,11 @@ public class setRockPlaces : MonoBehaviour {
 	private float localScale;
 
 	private float rockToTerrainPosY = -0.2f;
+	float t;
+	float timeToReachDestination;
+	private Vector3 startPos;
+	private Vector3 destinationPos;
+
 	// Use this for initialization
 	void Start () {
 		GameObject GUI = GameObject.Find ("GUI");
@@ -20,12 +25,25 @@ public class setRockPlaces : MonoBehaviour {
 		LeftGUIwidth = 500 * localScale;
 		screenWidth = Screen.width;
 
+		startPos = destinationPos = transform.position;
+
 		findCoordinates (rock, LeftGUIwidth, index);
 		randomRotation (rock);
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		t += Time.deltaTime / timeToReachDestination;
+		transform.position = Vector3.Lerp (startPos, destinationPos, t);
+	}
+
+	public void setDestination(Vector3 destination, float time){
+		t = 0;
+		startPos = transform.position;
+		timeToReachDestination = time;
+		destinationPos = destination;
 	}
 		
 	void findCoordinates(GameObject rock, float leftGUIWidth, int i){
@@ -35,6 +53,7 @@ public class setRockPlaces : MonoBehaviour {
 		BoxCollider rockCollider = rock.GetComponent<BoxCollider>();
 		float rockWidth = rockCollider.size.x * rockCollider.transform.localScale.x;
 		rock.transform.position = new Vector3(pos1.x + rockWidth/2 + 0.1f, rockToTerrainPosY, pos1.z);
+		destinationPos = rock.transform.position;
 		GameObject.Find ("Witch").GetComponent<setRockRandomPlaces> ().rockPlaces [i] = rock.transform.position;
 		/*
 		 * float newPosZ = 5;

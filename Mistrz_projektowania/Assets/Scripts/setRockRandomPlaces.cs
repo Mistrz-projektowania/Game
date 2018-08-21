@@ -11,6 +11,7 @@ public class setRockRandomPlaces : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rockPlaces = new Vector3[rocks.Length];
+		Debug.Log (rockPlaces.Length);
 
 	}
 	
@@ -29,7 +30,7 @@ public class setRockRandomPlaces : MonoBehaviour {
 		Vector3 startPos2 = rock2.transform.position;
 		Debug.Log (startPos1);
 		Debug.Log (startPos2);
-		rock1.transform.position = new Vector3 (startPos1.x, startPos1.y, startPos1.z-1.0f);
+		rock1.GetComponent<setRockPlaces> ().setDestination (new Vector3(startPos1.x,startPos1.y,startPos1.z - 1.0f),2);
 		//rock1.transform.position = startPos2;
 		//rock2.transform.position = startPos1;
 	}

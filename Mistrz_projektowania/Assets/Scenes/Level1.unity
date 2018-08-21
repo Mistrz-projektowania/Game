@@ -9659,6 +9659,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 920177797}
+  - component: {fileID: 920177798}
   m_Layer: 0
   m_Name: Rocks
   m_TagString: Untagged
@@ -9686,6 +9687,33 @@ Transform:
   m_Father: {fileID: 78464702}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920177798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 920177796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da47e811431e9146a82f75c24b1fb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocks:
+  - {fileID: 1606676964}
+  - {fileID: 442135595}
+  - {fileID: 461080975}
+  - {fileID: 22540726}
+  - {fileID: 1560172311}
+  - {fileID: 801352896}
+  - {fileID: 1404226258}
+  rockPlaces:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!1 &928688153
 GameObject:
   m_ObjectHideFlags: 0
