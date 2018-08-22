@@ -47,7 +47,12 @@ public class GameController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+		string dataOrderString = "";
+		for (int i = 0; i < dataOrder.Length; i++) {
+			dataOrderString += dataOrder [i];
+			dataOrderString += ", ";
+		}
+		Debug.Log (dataOrderString);
       
 	}
 
