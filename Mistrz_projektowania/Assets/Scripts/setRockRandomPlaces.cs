@@ -26,8 +26,8 @@ public class setRockRandomPlaces : MonoBehaviour {
 		GameObject rock2 = rocks [index2];
 		Vector3 startPos1 = rock1.transform.position;
 		Vector3 startPos2 = rock2.transform.position;
-		Debug.Log (startPos1);
-		Debug.Log (startPos2);
+		//Debug.Log (startPos1);
+		//Debug.Log (startPos2);
 		float firstMoveTime, lastMoveTime, changePlaceTime;
 		firstMoveTime = lastMoveTime = 0.5f;
 		changePlaceTime = timeToMove - firstMoveTime - lastMoveTime;

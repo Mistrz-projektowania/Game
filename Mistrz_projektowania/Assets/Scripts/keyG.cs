@@ -37,13 +37,7 @@ public class keyG : MonoBehaviour {
 		int minIndexPosition = dataOrder[minIndex];
 
 		Debug.Log (minIndex);
-		//Debug.Log (GTS.transform.position);
-		Vector3 newPos = rocks [minIndexPosition].transform.position;
 
-		GameObject.Find ("Frisbee").GetComponent<GTSRotation> ().setDestination(new Vector3(newPos.x, newPos.y + 2, newPos.z), 2);
-		StartCoroutine (waitFor (2));
-
-		Debug.Log (GTS.transform.position);
 	}
 
 	IEnumerator waitFor(int seconds){
