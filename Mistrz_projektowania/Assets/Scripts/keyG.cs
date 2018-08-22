@@ -36,8 +36,8 @@ public class keyG : MonoBehaviour {
 		int minIndex = checkFieldFillOutOrder.getNextRockIndex();
 		int minIndexPosition = dataOrder[minIndex];
 
-		Debug.Log (minIndex);
-
+		Debug.Log ("minIndex: " + minIndex);
+		GTS.GetComponent<RockSort> ().selectionSort ();
 	}
 
 	IEnumerator waitFor(int seconds){
