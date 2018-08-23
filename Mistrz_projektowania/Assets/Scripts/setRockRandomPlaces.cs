@@ -24,6 +24,11 @@ public class setRockRandomPlaces : MonoBehaviour {
 	public void swapRocks(int index1, int index2, float timeToMove){
 		GameObject rock1 = rocks [index1];
 		GameObject rock2 = rocks [index2];
+		////////////////////////////////////////////
+		rocks[index1] = rock2;
+		rocks[index2] = rock1;
+		/// /////////////////////////////////////////
+		GameObject.Find ("GameController").GetComponent<GameController> ().swapDataOrder(findDataOrderIndex (index1),findDataOrderIndex (index2));
 		Vector3 startPos1 = rock1.transform.position;
 		Vector3 startPos2 = rock2.transform.position;
 		//Debug.Log (startPos1);
@@ -42,5 +47,17 @@ public class setRockRandomPlaces : MonoBehaviour {
 	IEnumerator waitAndSetDestination(float seconds, GameObject rock, Vector3 destination, float animationTime){
 		yield return new WaitForSeconds (seconds);
 		rock.GetComponent<setRockPlaces> ().setDestination (destination,animationTime);
+	}
+
+	int findDataOrderIndex(int rockIndex){
+		int[] dataOrder = GameObject.Find ("GameController").GetComponent<GameController> ().getDataOrder();
+
+		int dataIndex = 0;
+		for (int i = 0; i < dataOrder.Length; i++) {
+			if (dataOrder [i] == rockIndex) {
+				dataIndex = i;
+			}
+		}
+		return dataIndex;
 	}
 }

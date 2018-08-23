@@ -95,8 +95,8 @@ public class WitchController : MonoBehaviour {
 		startPos = transform.position;
 		timeToReachDestination = time;
 		destinationPos = destination;
-		Debug.Log ("startPos: " + startPos);
-		Debug.Log ("destinationPos: " + destinationPos);
+		//Debug.Log ("startPos: " + startPos);
+		//Debug.Log ("destinationPos: " + destinationPos);
 
 		rotation = transform.localRotation;
 		nextRotation = Quaternion.Euler(rot.x,rot.y,rot.z);

@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
 	public List<Dictionary<string,string>> thisLevelTrip;
 
 	private int[] dataOrder;
+	private int[] rockOrder;
 
 	void Awake(){
 		Application.targetFrameRate = 300;
@@ -52,7 +53,7 @@ public class GameController : MonoBehaviour {
 			dataOrderString += dataOrder [i];
 			dataOrderString += ", ";
 		}
-		Debug.Log (dataOrderString);
+		//Debug.Log (dataOrderString);
       
 	}
 
@@ -63,6 +64,12 @@ public class GameController : MonoBehaviour {
 
 	public int[] getDataOrder(){
 		return dataOrder;
+	}
+
+	public void swapDataOrder(int index1, int index2){
+		int temp = dataOrder[index1];
+		dataOrder [index1] = dataOrder [index2];
+		dataOrder [index2] = temp;
 	}
 
 	public void changePoints(int value){
