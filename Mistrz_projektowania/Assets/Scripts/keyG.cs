@@ -37,7 +37,7 @@ public class keyG : MonoBehaviour {
 		int minIndexPosition = dataOrder[minIndex];
 
 		Debug.Log ("minIndex: " + minIndex);
-		GTS.GetComponent<RockSort> ().selectionSort ();
+		GTS.GetComponent<RockSort> ().sort ();
 	}
 
 	IEnumerator waitFor(int seconds){

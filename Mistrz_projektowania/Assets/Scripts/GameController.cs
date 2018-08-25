@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour {
 			dataOrderString += dataOrder [i];
 			dataOrderString += ", ";
 		}
-		//Debug.Log (dataOrderString);
+		Debug.Log (dataOrderString);
       
 	}
 
