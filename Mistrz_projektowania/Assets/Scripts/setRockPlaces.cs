@@ -55,7 +55,7 @@ public class setRockPlaces : MonoBehaviour {
 		float rockWidth = rockCollider.size.x * rockCollider.transform.localScale.x;
 		rock.transform.position = new Vector3(pos1.x + rockWidth/2 + 0.1f, rockToTerrainPosY, pos1.z);
 		destinationPos = rock.transform.position;
-		GameObject.Find ("Witch").GetComponent<setRockRandomPlaces> ().rockPlaces [i] = rock.transform.position;
+		//GameObject.Find ("Witch").GetComponent<setRockRandomPlaces> ().rockPlaces [i] = rock.transform.position;
 		/*
 		 * float newPosZ = 5;
 		if (i < 4) {

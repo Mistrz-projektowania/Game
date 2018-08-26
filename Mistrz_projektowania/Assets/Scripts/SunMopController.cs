@@ -28,7 +28,8 @@ public class SunMopController : MonoBehaviour {
 		speed = 2;
 		rotateSpeed = 100;
 		startPos = destinationPos = stayPos = transform.position;
-		skyPos = stayPos + new Vector3 (0, 15, 0);
+		skyPos = stayPos + new Vector3 (0, 0, 0);
+		rocks = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>().rocks;
 	}
 	
 	// Update is called once per frame
@@ -55,13 +56,15 @@ public class SunMopController : MonoBehaviour {
 		int minIndex = checkFieldFillOutOrder.getNextRockIndex();
 		int minIndexPosition = dataOrder[minIndex];
 
-		Debug.Log (minIndex);
+		Debug.Log ("MIN INDEX: " + minIndex);
+		Debug.Log ("MIN INDEX POSITION: " + minIndexPosition);
+		rocks = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>().rocks;
 		Vector3 newPos = rocks [minIndexPosition].transform.position;
 
 		setDestination(new Vector3(newPos.x, newPos.y + 2.5f, newPos.z), 2);
 		StartCoroutine (waitFor (2));
 
-		Debug.Log (SunMop.transform.position);
+		//Debug.Log (SunMop.transform.position);
 	}
 
 	void SunMopOff(){

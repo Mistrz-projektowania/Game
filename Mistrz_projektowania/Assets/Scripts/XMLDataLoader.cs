@@ -96,10 +96,10 @@ public class XMLDataLoader : MonoBehaviour {
 		addTextToList ();
 		//string data = "";
 		//int i = 0;
-		Debug.Log(order.Length);
+		//Debug.Log(order.Length);
 		for(int i = 0; i < order.Length; i++){
 			rockTexts [order[i]].text = getDataString (rockTexts [order[i]], rockTypeTexts[order[i]], i);
-			//Debug.Log ("i: " + i + ", order[i]: " + order [i] + ", text: " + rockTexts [order [i]].text);
+			// Debug.Log ("i: " + i + ", order[i]: " + order [i] + ", text: " + rockTexts [order [i]].text);
 		}
 			
 	}

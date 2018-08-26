@@ -21,10 +21,10 @@ public class CurrentFieldController : MonoBehaviour {
 		
 		for(int i = 0; i<fields.Length; i++){
 			if (fields[i].transform.childCount > 0) {
-				Debug.Log (fields[i].name + i +" ma " + fields[i].transform.childCount + " dzieci");
+				//Debug.Log (fields[i].name + i +" ma " + fields[i].transform.childCount + " dzieci");
 				fieldsEmpty[i] = 0;
 			} else {
-				Debug.Log (fields[i].name + i + " nie ma dzieci");
+				//Debug.Log (fields[i].name + i + " nie ma dzieci");
 				fieldsEmpty[i] = 1;
 			}
 		}

@@ -31,7 +31,7 @@ public class ChooseTripDate : MonoBehaviour {
 		calendarYear = GameObject.Find ("CalendarYear");
 		calendarButtonText = GameObject.Find ("CalendarButtonText");
 		Text day = this.GetComponentInChildren<Text> ();
-		Debug.Log (this.GetComponentInChildren<Text> ().text);
+		//Debug.Log (this.GetComponentInChildren<Text> ().text);
 		if(day.text != ""){
 			int d = int.Parse(day.text);
 			int m = int.Parse(calendarMonth.GetComponent<Text>().text);

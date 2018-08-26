@@ -40,6 +40,12 @@ public class GameController : MonoBehaviour {
 		//Debug.Log ((thisLevelTrip [2]) ["NazwaZleceniodawcy"]);
 		//Debug.Log ((thisLevelTrip [0]) ["Nr"]);
 		dataOrder = drawTheOrder(7, 7);
+		string dataOrderString = "";
+		for (int i = 0; i < dataOrder.Length; i++) {
+			dataOrderString += dataOrder [i];
+			dataOrderString += ", ";
+		}
+		Debug.Log ("DATA ORDER: " + dataOrderString);
 		dataLoader.setDataSlots (dataOrder);
 
 		showFPS (true);
@@ -48,13 +54,17 @@ public class GameController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
+      
+	}
+
+	public void printDataOrder(){
 		string dataOrderString = "";
 		for (int i = 0; i < dataOrder.Length; i++) {
 			dataOrderString += dataOrder [i];
 			dataOrderString += ", ";
 		}
-		Debug.Log (dataOrderString);
-      
+		Debug.Log ("DATA ORDER: " + dataOrderString);
 	}
 
 	public void showFPS(bool show){
@@ -128,6 +138,7 @@ public class GameController : MonoBehaviour {
 
 	public static int[] drawTheOrder(int n,int k)
 	{
+		Debug.Log("DRAW THE ORDER");
 		int[] order = new int[k];
 		// wypełnianie tablicy liczbami 1,2...n
 		int[] numbers = new int[n];
@@ -140,13 +151,14 @@ public class GameController : MonoBehaviour {
 			int r = Random.Range(0, n);
 
 			// wybieramy element z losowego miejsca
-			//Debug.Log(numbers[r]);
+			Debug.Log(numbers[r]);
 			order [i] = numbers [r] - 1;
 
 			// przeniesienie ostatniego elementu do miejsca z którego wzięliśmy
 			numbers[r] = numbers[n - 1];
 			n--;
 		}
+			Debug.Log("-----------------");
 		return order;
 	}
 }

@@ -13,7 +13,7 @@ public class setRockRandomPlaces : MonoBehaviour {
 		lastKeyWPressedTime = Time.time;
 		animationTime = 3.0f;
 		rockPlaces = new Vector3[rocks.Length];
-		Debug.Log (rockPlaces.Length);
+		//Debug.Log (rockPlaces.Length);
 
 	}
 	
@@ -27,8 +27,12 @@ public class setRockRandomPlaces : MonoBehaviour {
 		////////////////////////////////////////////
 		rocks[index1] = rock2;
 		rocks[index2] = rock1;
+		for (int i = 0; i < rocks.Length; i++) {
+			Debug.Log ("rocks- " + rocks [i]);
+		}
 		/// /////////////////////////////////////////
 		GameObject.Find ("GameController").GetComponent<GameController> ().swapDataOrder(findDataOrderIndex (index1),findDataOrderIndex (index2));
+		GameObject.Find ("GameController").GetComponent<GameController> ().printDataOrder ();
 		Vector3 startPos1 = rock1.transform.position;
 		Vector3 startPos2 = rock2.transform.position;
 		//Debug.Log (startPos1);

@@ -106,6 +106,6 @@ public class RockTextController : MonoBehaviour {
 			button.enabled = false;
 			Destroy (button.GetComponent<DragHandler> ());
 		}
-		Debug.Log (button.enabled);
+		//Debug.Log (button.enabled);
 	}
 }
