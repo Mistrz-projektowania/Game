@@ -52,6 +52,7 @@ public class RockSort : MonoBehaviour {
 		// One by one move boundary of unsorted subarray
 		for (int i = 0; i < n - 1; i++)
 		{
+
 			// Find the minimum element in unsorted array
 			int min_idx = i;
 			for (int j = i + 1; j < n; j++)
@@ -63,11 +64,20 @@ public class RockSort : MonoBehaviour {
 			int temp = rockOrder[min_idx];
 			rockOrder[min_idx] = rockOrder[i];
 			rockOrder[i] = temp;
-			rockController.swapRocks (rockOrder[min_idx], rockOrder[i], seconds);
+			Debug.Log ("SWAP rocks: " + min_idx + ", " + i);
+			if (min_idx != i) {
+				rockController.swapRocks (min_idx, i, seconds);
+			}
 
 
 			yield return new WaitForSeconds (seconds);
 		}
+
+		string arr = "";
+		for (int i = 0; i < n - 1; i++) {
+			arr += rockOrder [i];
+		}
+		Debug.Log (arr);
 
 	}
 }

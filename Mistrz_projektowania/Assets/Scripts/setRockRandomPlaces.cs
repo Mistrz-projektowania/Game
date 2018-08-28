@@ -19,7 +19,13 @@ public class setRockRandomPlaces : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		string rocksArr = "";
+		for (int i = 0; i < rocks.Length; i++) {
+			rocksArr += rocks [i];
+		}
+			Debug.Log (rocksArr);
+	}
+	public void transformRockOrderToSwapRocks(int index1, int index2, float timeToMove){
 	}
 	public void swapRocks(int index1, int index2, float timeToMove){
 		GameObject rock1 = rocks [index1];
@@ -27,9 +33,11 @@ public class setRockRandomPlaces : MonoBehaviour {
 		////////////////////////////////////////////
 		rocks[index1] = rock2;
 		rocks[index2] = rock1;
-		for (int i = 0; i < rocks.Length; i++) {
+		/*
+		 for (int i = 0; i < rocks.Length; i++) {
 			Debug.Log ("rocks- " + rocks [i]);
 		}
+		*/
 		/// /////////////////////////////////////////
 		GameObject.Find ("GameController").GetComponent<GameController> ().swapDataOrder(findDataOrderIndex (index1),findDataOrderIndex (index2));
 		GameObject.Find ("GameController").GetComponent<GameController> ().printDataOrder ();
