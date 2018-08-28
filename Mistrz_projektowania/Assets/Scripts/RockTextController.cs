@@ -9,14 +9,16 @@ public class RockTextController : MonoBehaviour {
 	public Text myText;
 	public float fadeTime;
 	public bool displayInfo;
+	public bool infoUsed;
 	public GameObject buttonOb;
 	public Button button;
+	private GameObject[] allButtons;
 	private GameController gameController;
 
 	// Use this for initialization
 	void Start () {
-
-		//button = GameObject.Find ("RockButton").GetComponent<Button> ();
+		infoUsed = false;
+		allButtons = GameObject.FindGameObjectsWithTag ("rockInfo");
 		//myText.color = Color.clear;
 		//Screen.showCursor = false;
 		//Screen.lockCursor = true;
@@ -47,12 +49,22 @@ public class RockTextController : MonoBehaviour {
 			//displayInfo = !displayInfo;
 
 			if (displayInfo == false) {
-				displayInfo = true;
-				gameController.changePoints (-2);
+				
+				/*
+				 for (int i = 0; i < allButtons.Length; i++) {
+					Button otherButton = allButtons [i].GetComponent<Button> ();
+					if (otherButton.enabled == true) {
+						StartCoroutine (fadeButton (otherButton, false, 0.0001f));
+					}
+				}
+				*/
+
 
 				//myText.text = myString;
 				//myText.color = Color.Lerp (myText.color, Color.white, fadeTime * Time.deltaTime);
 				StartCoroutine (fadeButton (button, true, fadeTime));
+				displayInfo = true;
+				gameController.changePoints (-2);
 			} else {
 				// StartCoroutine (fadeButton (button, false, fadeTime));
 				//myText.color = Color.Lerp (myText.color, Color.clear, fadeTime * Time.deltaTime);
@@ -71,11 +83,17 @@ public class RockTextController : MonoBehaviour {
 	}
 
 	IEnumerator fadeButton(Button button, bool fadeIn, float duration){
+		if (!fadeIn) {
+			button.enabled = false;
+			Destroy (button.GetComponent<DragHandler> ());
+		}
+		//Debug.Log (button.enabled);
 		float counter = 0f;
 
 		float a, b;
 		if (fadeIn)
 		{
+			button.enabled = true;
 			buttonOb.AddComponent<DragHandler> ();
 			a = 0;
 			b = 1;
@@ -102,10 +120,6 @@ public class RockTextController : MonoBehaviour {
 			yield return null;
 		}
 
-		if (!fadeIn) {
-			button.enabled = false;
-			Destroy (button.GetComponent<DragHandler> ());
-		}
-		//Debug.Log (button.enabled);
+
 	}
 }
