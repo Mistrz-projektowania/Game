@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour {
 			dataOrderString += dataOrder [i];
 			dataOrderString += ", ";
 		}
-		Debug.Log ("DATA ORDER: " + dataOrderString);
+		//Debug.Log ("DATA ORDER: " + dataOrderString);
 		dataLoader.setDataSlots (dataOrder);
 
 		showFPS (true);

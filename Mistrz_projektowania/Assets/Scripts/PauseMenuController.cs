@@ -27,9 +27,6 @@ public class PauseMenuController : MonoBehaviour {
 				backToMenuButton.onClick.AddListener (backToMenu);
 				quitGameButton.onClick.AddListener (quitGame);
 			}
-
-
-
 		}
 
 	}

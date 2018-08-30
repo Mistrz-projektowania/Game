@@ -50,18 +50,6 @@ public class RockTextController : MonoBehaviour {
 
 			if (displayInfo == false) {
 				
-				/*
-				 for (int i = 0; i < allButtons.Length; i++) {
-					Button otherButton = allButtons [i].GetComponent<Button> ();
-					if (otherButton.enabled == true) {
-						StartCoroutine (fadeButton (otherButton, false, 0.0001f));
-					}
-				}
-				*/
-
-
-				//myText.text = myString;
-				//myText.color = Color.Lerp (myText.color, Color.white, fadeTime * Time.deltaTime);
 				StartCoroutine (fadeButton (button, true, fadeTime));
 				displayInfo = true;
 				gameController.changePoints (-2);
@@ -79,7 +67,7 @@ public class RockTextController : MonoBehaviour {
 	}
 
 	void OnMouseExit() {
-		//displayInfo = false;
+		
 	}
 
 	IEnumerator fadeButton(Button button, bool fadeIn, float duration){

@@ -42,7 +42,7 @@ public class RockSort : MonoBehaviour {
 			rockOrderString += rockOrder [i];
 			rockOrderString += ", ";
 		}
-		Debug.Log (rockOrderString);
+		//Debug.Log (rockOrderString);
 	}
 
 	IEnumerator selectionSort(float seconds){

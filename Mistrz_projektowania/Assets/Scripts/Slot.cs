@@ -32,7 +32,7 @@ public class Slot : MonoBehaviour , IDropHandler
 			//Debug.Log ("Input type = " + inputType);
 			if (dragType == inputType) {
 				DragHandler.item.transform.SetParent (transform);
-				DragHandler.item.GetComponent<RockTextController> ().infoUsed = true;
+				//DragHandler.item.GetComponent<RockTextController> ().infoUsed = true;
 			} else {
 				//Debug.Log ("Nie to pole");
 				StartCoroutine (handleWrongInputMessage (true, 0.5f));

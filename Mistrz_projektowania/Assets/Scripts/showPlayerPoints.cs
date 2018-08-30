@@ -26,4 +26,8 @@ public class showPlayerPoints : MonoBehaviour {
 	public void UpdatePlayerPoints(){
 		playerPoints.text = "Punkty: " + points;
 	}
+
+	public int getPlayerPoints(){
+		return points;
+	}
 }

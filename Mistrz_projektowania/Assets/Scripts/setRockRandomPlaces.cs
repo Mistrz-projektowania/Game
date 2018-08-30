@@ -19,11 +19,14 @@ public class setRockRandomPlaces : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+	}
+	public void printRocksArray(){
 		string rocksArr = "";
 		for (int i = 0; i < rocks.Length; i++) {
 			rocksArr += rocks [i];
 		}
-			Debug.Log (rocksArr);
+		Debug.Log (rocksArr);
 	}
 	public void transformRockOrderToSwapRocks(int index1, int index2, float timeToMove){
 	}

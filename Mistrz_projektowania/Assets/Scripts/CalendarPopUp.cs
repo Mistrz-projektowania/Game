@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class CalendarPopUp : MonoBehaviour {
 	public GameObject Calendar;
+	public GameObject calendarButton;
 	public GameObject[] DayLabels; 
 	public string[] Months;  
 	public Text HeaderLabel;
@@ -19,6 +20,8 @@ public class CalendarPopUp : MonoBehaviour {
 	public Button nextBtn;
 	public Button prevBtn;
 
+	Vector3 calendarPosition;
+	RectTransform rt;
 
 	[SerializeField]
 	private int monthCounter = DateTime.Now.Month - 1;
@@ -33,6 +36,8 @@ public class CalendarPopUp : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		rt = (RectTransform)calendarButton.transform;
+
 		showCalendar = false;
 		Calendar.SetActive(showCalendar);
 		clearLabels ();
@@ -47,7 +52,7 @@ public class CalendarPopUp : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		setPosition ();
 	}
 
 	void CreateMonths()
@@ -130,6 +135,11 @@ public class CalendarPopUp : MonoBehaviour {
 		{
 			DayLabels[x].GetComponentInChildren<Text>().text = null;
 		}
+	}
+
+	void setPosition(){
+		calendarPosition = calendarButton.transform.position; //- new Vector3(calendarButton.transform.lossyScale.x,rt.rect.height,0);
+		Calendar.transform.position = calendarPosition;
 	}
 
 

@@ -14,7 +14,8 @@ public class CurrentFieldController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		checkIfEmpty ();
+		//emptyFieldsArray ();
 	}
 
 	public void checkIfEmpty(){
@@ -36,5 +37,24 @@ public class CurrentFieldController : MonoBehaviour {
 			}
 		}
 		return 0;
+	}
+
+	public bool checkIfAllFilled(){
+		int sum = 0;
+		for (int i = 0; i < fieldsEmpty.Length; i++) {
+			sum += fieldsEmpty [i];
+		}
+		if (sum == 1) // później zmienić na 0
+			return true;
+		else
+			return false;
+	}
+
+	public void emptyFieldsArray(){
+		string fieldArr = "";
+		for (int i = 0; i < fieldsEmpty.Length; i++) {
+			fieldArr += fieldsEmpty [i];
+		}
+		Debug.Log (fieldArr);
 	}
 }
