@@ -49,26 +49,22 @@ public class RockSort : MonoBehaviour {
 		Debug.Log ("Sortujemy");
 		int n = rockOrder.Length;
 
-		// One by one move boundary of unsorted subarray
 		for (int i = 0; i < n - 1; i++)
 		{
-
-			// Find the minimum element in unsorted array
-			int min_idx = i;
+			// Znajdź minimum w nieposortowanej tablicy
+			int minIndex = i;
 			for (int j = i + 1; j < n; j++)
-				if (rockOrder[j] < rockOrder[min_idx])
-					min_idx = j;
+				if (rockOrder[j] < rockOrder[minIndex])
+                    minIndex = j;
 
-			// Swap the found minimum element with the first
-			// element
-			int temp = rockOrder[min_idx];
-			rockOrder[min_idx] = rockOrder[i];
+			// Zamień minimum z pierwszym elementem
+			int temp = rockOrder[minIndex];
+			rockOrder[minIndex] = rockOrder[i];
 			rockOrder[i] = temp;
-			Debug.Log ("SWAP rocks: " + min_idx + ", " + i);
-			if (min_idx != i) {
-				rockController.swapRocks (min_idx, i, seconds);
+			Debug.Log ("SWAP rocks: " + minIndex + ", " + i);
+			if (minIndex != i) {
+				rockController.swapRocks (minIndex, i, seconds);
 			}
-
 
 			yield return new WaitForSeconds (seconds);
 		}
