@@ -1,3 +1,3 @@
 # Mistrz projektowania imprez turystycznych
-## Gra poważna
+Gra poważna
 Praca magisterska na kierunku informatyka
