@@ -8,6 +8,7 @@ public class WitchController : MonoBehaviour {
 	private Vector3 destinationPos;
 	private Quaternion rotation;
 	private Quaternion nextRotation;
+	private StateMachine stateMachine;
 
 	float speed = 2;
 	float rotateSpeed = 1.0f;
@@ -38,21 +39,24 @@ public class WitchController : MonoBehaviour {
 		rotation = nextRotation = transform.rotation;
 		ps = GameObject.Find ("WitchSpell").GetComponent<ParticleSystem> ();
 		ps.Stop ();
+		stateMachine = GameObject.Find ("StateMachine").GetComponent<StateMachine> ();
 	}
 
 	// Update is called once per frame
 	void Update () {
 		fly ();
-		if (Input.GetKeyDown (KeyCode.W) && (Time.time - lastKeyWPressedTime > animationTime * swapNr)) {
-
-			setDestination(new Vector3(52.0f, 1.5f, 12.0f), new Vector3(15,150,0), flyingTime); // czarownica leci do przodu
-			StartCoroutine (waitForAndStartSwapingRocks (flyingTime));
-	
-			lastKeyWPressedTime = Time.time;
-		}
 		//Debug.Log (transform.position);
 	}
 
+	public void runWitch(){
+		if (Time.time - lastKeyWPressedTime > animationTime * swapNr + 4 * flyingTime) {
+
+			setDestination(new Vector3(52.0f, 1.5f, 12.0f), new Vector3(15,150,0), flyingTime); // czarownica leci do przodu
+			StartCoroutine (waitForAndStartSwapingRocks (flyingTime));
+
+			lastKeyWPressedTime = Time.time;
+		}
+	}
 
 	IEnumerator waitForAndStartSwapingRocks(float seconds){
 		yield return new WaitForSeconds (seconds);
@@ -66,6 +70,8 @@ public class WitchController : MonoBehaviour {
 		setDestination(new Vector3(50.0f, 1.2f, 14.0f), new Vector3(0,-20,-30), flyingTime);// czarownica leci do tyłu
 		yield return new WaitForSeconds (flyingTime);
 		setDestination(new Vector3(51.0f, 1.8f, 16.0f), new Vector3(0,100,0), flyingTime);// czarownica leci do tyłu
+
+		stateMachine.setState (0);
 	}
 	void swapRocksFewTimes(int times){
 		for (int i = 0; i < times; i++) {

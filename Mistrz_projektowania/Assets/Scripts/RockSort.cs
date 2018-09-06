@@ -11,13 +11,15 @@ public class RockSort : MonoBehaviour {
 	private int[] dataOrder;
 	private int[] rockOrder;
 
+	private StateMachine stateMachine;
+
 	// Use this for initialization
 	void Start () {
 		gameController = GameObject.Find ("GameController").GetComponent<GameController> ();
 		rockController = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>();
 		dataOrder = gameController.getDataOrder ();
 		rockOrder = new int[dataOrder.Length];
-
+		stateMachine = GameObject.Find ("StateMachine").GetComponent<StateMachine> ();
 	}
 	
 	// Update is called once per frame
@@ -68,12 +70,13 @@ public class RockSort : MonoBehaviour {
 
 			yield return new WaitForSeconds (seconds);
 		}
-
+		stateMachine.setState (0);
+		/*
 		string arr = "";
 		for (int i = 0; i < n - 1; i++) {
 			arr += rockOrder [i];
 		}
 		Debug.Log (arr);
-
+		*/
 	}
 }

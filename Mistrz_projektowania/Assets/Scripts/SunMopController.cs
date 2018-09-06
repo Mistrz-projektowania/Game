@@ -7,6 +7,8 @@ public class SunMopController : MonoBehaviour {
 	public GameObject SunMop;
 	public GameObject [] rocks;
 
+	private StateMachine stateMachine;
+
 	public ParticleSystem ps;
 
 	private Vector3 startPos;
@@ -30,14 +32,11 @@ public class SunMopController : MonoBehaviour {
 		startPos = destinationPos = stayPos = transform.position;
 		skyPos = stayPos + new Vector3 (0, 0, 0);
 		rocks = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>().rocks;
+		stateMachine = GameObject.Find ("StateMachine").GetComponent<StateMachine> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.S)) {
-			Debug.Log ("Kliknales S");
-			SunMopON ();
-		}
 		t += Time.deltaTime / timeToReachDestination;
 
 		//transform.Rotate (new Vector3(0,Time.deltaTime * rotateSpeed, 0));
@@ -46,7 +45,7 @@ public class SunMopController : MonoBehaviour {
 			transform.position = transform.position + (Vector3.right * Mathf.Sin (Time.timeSinceLevelLoad / 2 * speed) * xScale - Vector3.up * Mathf.Sin (Time.timeSinceLevelLoad * speed) * yScale);	
 		}
 	}
-	void SunMopON(){
+	public void SunMopON(){
 		SunMop.SetActive (true);
 		Debug.Log ("Sun Mop ON");
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
@@ -64,11 +63,12 @@ public class SunMopController : MonoBehaviour {
 		setDestination(new Vector3(newPos.x, newPos.y + 2.5f, newPos.z), 2);
 		StartCoroutine (waitFor (2));
 
+		SunMopOff ();
 		//Debug.Log (SunMop.transform.position);
 	}
 
 	void SunMopOff(){
-		
+		stateMachine.setState (0);
 	}
 
 	IEnumerator waitFor(int seconds){

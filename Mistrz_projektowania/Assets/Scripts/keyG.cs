@@ -10,6 +10,8 @@ public class keyG : MonoBehaviour {
 	public GameObject GTS;
 	public GameObject [] rocks;
 	ParticleSystem ps;
+
+	private StateMachine stateMachine;
 	// Use this for initialization
 	void Start () {
 		//GameObject.Find ("Afterburner").SetActive (false);
@@ -17,17 +19,21 @@ public class keyG : MonoBehaviour {
 		ps = GameObject.Find ("Afterburner").GetComponent<ParticleSystem> ();
 		ps.Stop ();
 		GTSbutton.onClick.AddListener(GTSon);
+		stateMachine = GameObject.Find ("StateMachine").GetComponent<StateMachine> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.G)) {
 			Debug.Log ("Kliknales G");
-			GTSbutton.onClick.Invoke();		
+			if (stateMachine.getState () == 0) {
+				GTSbutton.onClick.Invoke ();		
+			}
 		}
 	}
 
 	void GTSon(){
+		stateMachine.setState (4);
 		Debug.Log ("GTS ON");
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
 		checkFieldFillOutOrder.checkIfEmpty ();
