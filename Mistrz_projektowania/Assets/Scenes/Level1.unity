@@ -427,6 +427,13 @@ MonoBehaviour:
   infoUsed: 0
   buttonOb: {fileID: 1899997057}
   button: {fileID: 1899997061}
+  otherButtons:
+  - {fileID: 895065304}
+  - {fileID: 1813795481}
+  - {fileID: 1278153551}
+  - {fileID: 1550562926}
+  - {fileID: 17816739}
+  - {fileID: 1023065017}
 --- !u!65 &22540728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3617,7 +3624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 939.79865, y: -48.333332}
+  m_AnchoredPosition: {x: 939.7969, y: -48.333008}
   m_SizeDelta: {x: 1859.5973, y: 76.666664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234037053
@@ -5861,6 +5868,13 @@ MonoBehaviour:
   infoUsed: 0
   buttonOb: {fileID: 1813795481}
   button: {fileID: 1813795482}
+  otherButtons:
+  - {fileID: 895065304}
+  - {fileID: 1278153551}
+  - {fileID: 1899997057}
+  - {fileID: 1550562926}
+  - {fileID: 17816739}
+  - {fileID: 1023065017}
 --- !u!65 &442135598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6300,6 +6314,13 @@ MonoBehaviour:
   infoUsed: 0
   buttonOb: {fileID: 1278153551}
   button: {fileID: 1278153555}
+  otherButtons:
+  - {fileID: 895065304}
+  - {fileID: 1813795481}
+  - {fileID: 1899997057}
+  - {fileID: 1550562926}
+  - {fileID: 17816739}
+  - {fileID: 1023065017}
 --- !u!65 &461080977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10489,7 +10510,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 939.79865, y: -696.6666}
+  m_AnchoredPosition: {x: 939.7969, y: -696.6666}
   m_SizeDelta: {x: 1859.5973, y: 666.6667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &774046918
@@ -10787,6 +10808,13 @@ MonoBehaviour:
   infoUsed: 0
   buttonOb: {fileID: 17816739}
   button: {fileID: 17816743}
+  otherButtons:
+  - {fileID: 895065304}
+  - {fileID: 1813795481}
+  - {fileID: 1278153551}
+  - {fileID: 1899997057}
+  - {fileID: 1550562926}
+  - {fileID: 1023065017}
 --- !u!65 &801352898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18610,7 +18638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 939.79865, y: -225}
+  m_AnchoredPosition: {x: 939.7969, y: -225}
   m_SizeDelta: {x: 1859.5973, y: 266.66666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1293058804
@@ -20596,6 +20624,13 @@ MonoBehaviour:
   infoUsed: 0
   buttonOb: {fileID: 1023065017}
   button: {fileID: 1023065021}
+  otherButtons:
+  - {fileID: 895065304}
+  - {fileID: 1813795481}
+  - {fileID: 1278153551}
+  - {fileID: 1899997057}
+  - {fileID: 1550562926}
+  - {fileID: 17816739}
 --- !u!65 &1404226260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22680,6 +22715,13 @@ MonoBehaviour:
   infoUsed: 0
   buttonOb: {fileID: 1550562926}
   button: {fileID: 1550562930}
+  otherButtons:
+  - {fileID: 895065304}
+  - {fileID: 1813795481}
+  - {fileID: 1278153551}
+  - {fileID: 1899997057}
+  - {fileID: 17816739}
+  - {fileID: 1023065017}
 --- !u!65 &1560172313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23631,6 +23673,13 @@ MonoBehaviour:
   infoUsed: 0
   buttonOb: {fileID: 895065304}
   button: {fileID: 895065307}
+  otherButtons:
+  - {fileID: 1813795481}
+  - {fileID: 1278153551}
+  - {fileID: 1899997057}
+  - {fileID: 1550562926}
+  - {fileID: 17816739}
+  - {fileID: 1023065017}
 --- !u!65 &1606676967
 BoxCollider:
   m_ObjectHideFlags: 0

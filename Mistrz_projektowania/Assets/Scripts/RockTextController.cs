@@ -12,6 +12,7 @@ public class RockTextController : MonoBehaviour {
 	public bool infoUsed;
 	public GameObject buttonOb;
 	public Button button;
+	public GameObject[] otherButtons;
 	private GameObject[] allButtons;
 	private GameController gameController;
 
@@ -53,6 +54,10 @@ public class RockTextController : MonoBehaviour {
 				StartCoroutine (fadeButton (button, true, fadeTime));
 				displayInfo = true;
 				gameController.changePoints (-2);
+
+				for (int i = 0; i < otherButtons.Length; i++) {
+					StartCoroutine(fadeButton(otherButtons [i].GetComponent<Button> (), false, 1.0f));
+				}
 			} else {
 				// StartCoroutine (fadeButton (button, false, fadeTime));
 				//myText.color = Color.Lerp (myText.color, Color.clear, fadeTime * Time.deltaTime);
@@ -71,10 +76,6 @@ public class RockTextController : MonoBehaviour {
 	}
 
 	IEnumerator fadeButton(Button button, bool fadeIn, float duration){
-		if (!fadeIn) {
-			button.enabled = false;
-			Destroy (button.GetComponent<DragHandler> ());
-		}
 		//Debug.Log (button.enabled);
 		float counter = 0f;
 
@@ -88,26 +89,30 @@ public class RockTextController : MonoBehaviour {
 		}
 		else
 		{
+			displayInfo = false;
+			button.enabled = false;
+			Destroy (button.GetComponent<DragHandler> ());
 			a = 1;
 			b = 0;
 		}
-			
-		if (!button.enabled)
-			button.enabled = true;
 
 		CanvasGroup selectedButton = button.GetComponent<CanvasGroup>();
+		Debug.Log (selectedButton.alpha);
 
-		while (counter < duration)
-		{
+		while (counter < duration) {
+			if (selectedButton.alpha == 0 && fadeIn == false) {
+				break;
+			}
 			counter += Time.deltaTime;
-			float alpha = Mathf.Lerp(a, b, counter / duration);
+			float alpha = Mathf.Lerp (a, b, counter / duration);
 			//Debug.Log(alpha);
 
 			selectedButton.alpha = alpha;
 
 			yield return null;
 		}
-
+		//}
+		Debug.Log (selectedButton.alpha);
 
 	}
 }
