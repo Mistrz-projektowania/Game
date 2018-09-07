@@ -96,23 +96,21 @@ public class RockTextController : MonoBehaviour {
 			b = 0;
 		}
 
-		CanvasGroup selectedButton = button.GetComponent<CanvasGroup>();
-		Debug.Log (selectedButton.alpha);
+		if (button.GetComponent<CanvasGroup> () != null) {
+			CanvasGroup selectedButton = button.GetComponent<CanvasGroup> ();
 
-		while (counter < duration) {
-			if (selectedButton.alpha == 0 && fadeIn == false) {
-				break;
+			while (counter < duration) {
+				if (selectedButton.alpha == 0 && fadeIn == false) {
+					break;
+				}
+				counter += Time.deltaTime;
+				float alpha = Mathf.Lerp (a, b, counter / duration);
+				//Debug.Log(alpha);
+
+				selectedButton.alpha = alpha;
+
+				yield return null;
 			}
-			counter += Time.deltaTime;
-			float alpha = Mathf.Lerp (a, b, counter / duration);
-			//Debug.Log(alpha);
-
-			selectedButton.alpha = alpha;
-
-			yield return null;
 		}
-		//}
-		Debug.Log (selectedButton.alpha);
-
 	}
 }
