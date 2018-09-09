@@ -11,8 +11,10 @@ public class finishGameController : MonoBehaviour {
 	public Dictionary<string,string> tripData = new Dictionary<string,string>();
 	public Dictionary<string,string> playerData = new Dictionary<string,string>();
 
+	// Dane potrzebne do rankingu
 	public Text[] playerDataTexts;
 	public Text[] tripDataTexts;
+
 	// Use this for initialization
 	void Start () {
 		finishButton.enabled = false;
@@ -24,7 +26,7 @@ public class finishGameController : MonoBehaviour {
 	void Update () {
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
 		if (checkFieldFillOutOrder.checkIfAllFilled () == true) {
-			Debug.Log("MOZNA SKONCZYC GRE");
+			//Debug.Log("MOZNA SKONCZYC GRE");
 			showFinishButton ();
 			finishButton.onClick.AddListener (showFinishData);
 		}
