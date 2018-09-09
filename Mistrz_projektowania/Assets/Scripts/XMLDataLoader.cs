@@ -74,6 +74,7 @@ public class XMLDataLoader : MonoBehaviour {
 		string data = "";
 		foreach (KeyValuePair<string, string> kvp in Trips[order+1])
 		{
+			//Debug.Log (order);
 			if (kvp.Key != "Punkty") {
 				if (kvp.Key != "Typ"){
 					//Debug.Log (kvp.Key + " " + kvp.Value);
@@ -165,6 +166,7 @@ public class XMLDataLoader : MonoBehaviour {
 				}
 				obj.Add("Typ", "Zleceniodawca");
 			}
+			/*
 			if(Node.Name == "IdLiczbyOsob")
 			{
 				int participantsNrId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
@@ -179,6 +181,7 @@ public class XMLDataLoader : MonoBehaviour {
 				}
 				obj.Add("Typ", "Liczba osób");
 			}
+			*/
 			if(Node.Name == "IdPrzedstawicielaZleceniodawcy")
 			{
 				int customerContactId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
@@ -264,7 +267,7 @@ public class XMLDataLoader : MonoBehaviour {
 					}
 					//restaurant.Add (restaurantData);
 					obj.Add("Usługa" + tNode.InnerText, serviceData);
-					//Debug.Log("Lokal" + tNode.InnerText + ": " + restaurantData);
+					Debug.Log("Usługa" + tNode.InnerText + ": " + serviceData);
 				}
 
 
