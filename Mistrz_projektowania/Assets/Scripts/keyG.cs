@@ -38,11 +38,6 @@ public class keyG : MonoBehaviour {
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
 		checkFieldFillOutOrder.checkIfEmpty ();
 
-		int[] dataOrder = GameObject.Find ("GameController").GetComponent<GameController> ().getDataOrder();
-		int minIndex = checkFieldFillOutOrder.getNextRockIndex();
-		int minIndexPosition = dataOrder[minIndex];
-
-		Debug.Log ("minIndex: " + minIndex);
 		GTS.GetComponent<RockSort> ().sort ();
 	}
 

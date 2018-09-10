@@ -55,8 +55,8 @@ public class SunMopController : MonoBehaviour {
 		int minIndex = checkFieldFillOutOrder.getNextRockIndex();
 		int minIndexPosition = dataOrder[minIndex];
 
-		Debug.Log ("MIN INDEX: " + minIndex);
-		Debug.Log ("MIN INDEX POSITION: " + minIndexPosition);
+		//Debug.Log ("MIN INDEX: " + minIndex);
+		//Debug.Log ("MIN INDEX POSITION: " + minIndexPosition);
 		rocks = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>().rocks;
 		Vector3 newPos = rocks [minIndexPosition].transform.position;
 

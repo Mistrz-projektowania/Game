@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CurrentFieldController : MonoBehaviour {
 
@@ -29,6 +30,11 @@ public class CurrentFieldController : MonoBehaviour {
 				fieldsEmpty[i] = 1;
 			}
 		}
+		if (fields [2].GetComponentInChildren<Text> ().text != "Wybierz datę rozpoczęcia...") {
+			fieldsEmpty [2] = 0;
+		} else {
+			fieldsEmpty [2] = 1;
+		}
 	}
 	public int getNextRockIndex(){
 		for (int i = 0; i < fieldsEmpty.Length; i++) {
@@ -44,7 +50,7 @@ public class CurrentFieldController : MonoBehaviour {
 		for (int i = 0; i < fieldsEmpty.Length; i++) {
 			sum += fieldsEmpty [i];
 		}
-		if (sum == 1) // później zmienić na 0
+		if (sum == 0) // później zmienić na 0
 			return true;
 		else
 			return false;

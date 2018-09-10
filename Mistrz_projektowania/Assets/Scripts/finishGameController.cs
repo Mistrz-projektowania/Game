@@ -8,6 +8,8 @@ public class finishGameController : MonoBehaviour {
 	public GameObject finish;
 	public GameObject finishGUI;
 
+	private StateMachine stateMachine;
+
 	public Dictionary<string,string> tripData = new Dictionary<string,string>();
 	public Dictionary<string,string> playerData = new Dictionary<string,string>();
 
@@ -20,6 +22,8 @@ public class finishGameController : MonoBehaviour {
 		finishButton.enabled = false;
 		finish.SetActive(false);
 		finishGUI.SetActive(false);
+
+		stateMachine = GameObject.Find ("StateMachine").GetComponent<StateMachine> ();
 	}
 
 	// Update is called once per frame
@@ -36,6 +40,7 @@ public class finishGameController : MonoBehaviour {
 	void showFinishButton(){
 		finish.SetActive(true);
 		finishButton.enabled = true;
+		stateMachine.setState (6);
 		StartCoroutine(fadeButton (finishButton, true, 0.5f));
 	}
 

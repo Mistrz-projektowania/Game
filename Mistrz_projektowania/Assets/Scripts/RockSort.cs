@@ -63,7 +63,7 @@ public class RockSort : MonoBehaviour {
 			int temp = rockOrder[minIndex];
 			rockOrder[minIndex] = rockOrder[i];
 			rockOrder[i] = temp;
-			Debug.Log ("SWAP rocks: " + minIndex + ", " + i);
+			//Debug.Log ("SWAP rocks: " + minIndex + ", " + i);
 			if (minIndex != i) {
 				rockController.swapRocks (minIndex, i, seconds);
 			}

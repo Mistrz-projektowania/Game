@@ -31,12 +31,22 @@ public class Slot : MonoBehaviour , IDropHandler
 			string inputType = parentObject.GetComponentInChildren<Text> ().text;
 			//Debug.Log ("Input type = " + inputType);
 			if (dragType == inputType) {
-				DragHandler.item.transform.SetParent (transform);
-				Destroy(DragHandler.item.GetComponent<CanvasGroup> ());
+				fillOutOrderController fill = GameObject.Find ("GameController").GetComponent<fillOutOrderController> ();
+				if (fill.wrongField (inputType) == false) {
+					DragHandler.item.transform.SetParent (transform);
+					Destroy (DragHandler.item.GetComponent<CanvasGroup> ());
+				} else {
+					//Debug.Log ("ZŁA kolejnosc");
+					GameObject message = GameObject.Find ("WrongOrderMessage");
+					StartCoroutine (handleWrongInputMessage (message, true, 0.5f));
+					StartCoroutine (waitAndHideMessage(message));
+				}
+
 			} else {
 				//Debug.Log ("Nie to pole");
-				StartCoroutine (handleWrongInputMessage (true, 0.5f));
-				StartCoroutine (waitAndHideMessage());
+				GameObject message = GameObject.Find ("WrongInputMessage");
+				StartCoroutine (handleWrongInputMessage (message, true, 0.5f));
+				StartCoroutine (waitAndHideMessage(message));
 
 			}
 
@@ -45,13 +55,13 @@ public class Slot : MonoBehaviour , IDropHandler
 		}
 	}
 	#endregion
-	IEnumerator waitAndHideMessage(){
+	IEnumerator waitAndHideMessage(GameObject message){
 		yield return new WaitForSeconds (5);
-		StartCoroutine (handleWrongInputMessage (false, 0.5f));
+		StartCoroutine (handleWrongInputMessage (message, false, 0.5f));
 	}
-	IEnumerator handleWrongInputMessage(bool show, float duration){
+	IEnumerator handleWrongInputMessage(GameObject message, bool show, float duration){
 		float counter = 0f;
-		GameObject message = GameObject.Find ("WrongInputMessage");
+
 		float a, b;
 		if (show)
 		{

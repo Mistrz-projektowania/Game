@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour {
 	public Image noPointsMessage;
 	private bool noPointsMessageDisplay;
 	public Image wrongInputMessage;
+	public Image wrongOrderMessage;
 	private int tripID;
   
 	public XMLDataLoader dataLoader;
@@ -28,6 +29,7 @@ public class GameController : MonoBehaviour {
 	void Start () {
 		StartCoroutine(fadeMessage(noPointsMessage, false, 0.0000001f));
 		StartCoroutine(fadeMessage(wrongInputMessage, false, 0.0000001f));
+		StartCoroutine(fadeMessage(wrongOrderMessage, false, 0.0000001f));
 		noPointsMessageDisplay = false;
 		points = 20; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
 		tripID = 1; // trzeba pobierać ID z ankiety przed rozpoczeciem gry
@@ -138,7 +140,7 @@ public class GameController : MonoBehaviour {
 
 	public static int[] drawTheOrder(int n,int k)
 	{
-		Debug.Log("DRAW THE ORDER");
+		//Debug.Log("DRAW THE ORDER");
 		int[] order = new int[k];
 		// wypełnianie tablicy liczbami 1,2...n
 		int[] numbers = new int[n];
@@ -151,14 +153,14 @@ public class GameController : MonoBehaviour {
 			int r = Random.Range(0, n);
 
 			// wybieramy element z losowego miejsca
-			Debug.Log(numbers[r]);
+			//Debug.Log(numbers[r]);
 			order [i] = numbers [r] - 1;
 
 			// przeniesienie ostatniego elementu do miejsca z którego wzięliśmy
 			numbers[r] = numbers[n - 1];
 			n--;
 		}
-			Debug.Log("-----------------");
+			//Debug.Log("-----------------");
 		return order;
 	}
 }
