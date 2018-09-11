@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class HelpfulQuestionsController : MonoBehaviour {
 
+    public GameObject questions;
+    public GameObject QuestionPanel;
+
     public void StartHelpfulQuestions() {
-        SceneManager.LoadScene("questions");
+        QuestionPanel.SetActive(false);
+        questions.SetActive(true);
     }
 }

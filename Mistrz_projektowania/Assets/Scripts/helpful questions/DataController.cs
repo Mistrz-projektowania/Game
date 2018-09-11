@@ -7,12 +7,15 @@ public class DataController : MonoBehaviour
 {
 
     public Quiz[] allRoundData;
+    public GameObject QuestionPanel;
+
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
 
-        SceneManager.LoadScene("Helpful_questions");
+        QuestionPanel.SetActive(true);
+        //  SceneManager.LoadScene("Helpful_questions");
     }
 
     public Quiz GetCurrentRoundData()
