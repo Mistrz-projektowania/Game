@@ -30,7 +30,13 @@ public class timeCounter : MonoBehaviour {
 			minuteCount = 0;
 		}    
 	}
-	public string getTimerValue(){
+    public void addTimeUI(int value)
+    {
+        secondsCount += (Time.deltaTime +value);
+       
+    }
+
+    public string getTimerValue(){
 		return(hourCount + ":" + minuteCount.ToString ("00") + ":" + ((int)secondsCount).ToString ("00"));
 	}
 }

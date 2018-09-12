@@ -96,8 +96,23 @@ public class GameController : MonoBehaviour {
 			}
 		} 
 	}
+    public void subtractPoints(int value)
+    {
+        points -= value;
+        //Debug.Log (points);
+        if (points <= 0)
+        {
+            points = 0;
+            if (noPointsMessageDisplay == false)
+            {
+                StartCoroutine(fadeMessage(noPointsMessage, true, 0.5f));
+                noPointsMessageDisplay = true;
+                //StartCoroutine (closePointsMessage(10f));
+            }
+        }
+    }
 
-	public int getPoints(){
+    public int getPoints(){
 		return points;
 	}
 	IEnumerator closePointsMessage(float seconds){

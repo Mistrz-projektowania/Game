@@ -22,6 +22,7 @@ public class GameControll : MonoBehaviour
     public GameObject roundGoodEndDisplay;
     public GameObject roundBadEndDisplay;
     public GameObject RoundBadOverNoPointsPanel;
+    public GameObject RoundBadOverNoQuestions;
     private DataController dataController;
     private Quiz currentRoundData;
 
@@ -33,18 +34,27 @@ public class GameControll : MonoBehaviour
     private int roundIndex;
     public Quiz[] allRoundData;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
+    public GameController gameController;
+    
 
     void Start()
     {
 
-        points = 4; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
+        GameObject gameControllerObject = GameObject.FindWithTag("GameController");
+        if (gameControllerObject != null)
+        {
+            gameController = gameControllerObject.GetComponent<GameController>();
+        }
+        
+
+
 
         //Losowanie (10, 10);
 
         dataController = FindObjectOfType<DataController>();
         currentRoundData = dataController.GetCurrentRoundData();
         questionPool = currentRoundData.questions;
-        timeCounter addedTime = new timeCounter();
+        timeCounter addTimeUI = new timeCounter();
         //  addedTime.secondsCount += QuestionData.timeAddedForBadAnswer;
 
         questionIndex = 0;
@@ -87,24 +97,23 @@ public class GameControll : MonoBehaviour
 
         if (!isCorrect)
         {
-
-
+           
             if (questionPool.Length > questionIndex + 1)
             {
-                EndRound2();
+                roundBadEndDisplay.SetActive(true);
+                gameController.subtractPoints(2);
                 questionIndex++;
                 ShowQuestion();
 
             }
            else {
-
-                EndRound3();
+                RoundBadOverNoQuestions.SetActive(true);
             }
         }
 
         else
         {
-            EndRound();//przejdz do nastepnej rundy
+            EndRound();
         }
 
     }
@@ -112,8 +121,12 @@ public class GameControll : MonoBehaviour
     {
         isRoundActive = true;
 
-        questionDisplay.SetActive(false);
+        
         roundBadEndDisplay.SetActive(true);
+        gameController.subtractPoints(2);
+        questionIndex++;
+        ShowQuestion();
+
     }
 
     public void EndRound3()
@@ -122,6 +135,9 @@ public class GameControll : MonoBehaviour
 
         questionDisplay.SetActive(false);
         roundBadEndDisplay.SetActive(true);
+        gameController.subtractPoints(2);
+         
+
     }
 
     public void EndRound()
@@ -130,6 +146,7 @@ public class GameControll : MonoBehaviour
 
         questionDisplay.SetActive(false);
         roundGoodEndDisplay.SetActive(true);
+     
     }
 
     public void ReturnToMenu()
