@@ -103,7 +103,7 @@ public class GameControll : MonoBehaviour
                 gameController.subtractPoints(i + 1);
             if (gameController.getPoints() < questionIndex)
             {
-                RoundBadOverNoQuestions.SetActive(true);
+                RoundBadOverNoPointsPanel.SetActive(true);
             }
 
             if (questionPool.Length > questionIndex + 1)
