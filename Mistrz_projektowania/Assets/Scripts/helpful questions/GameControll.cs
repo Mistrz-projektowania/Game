@@ -97,11 +97,12 @@ public class GameControll : MonoBehaviour
 
         if (!isCorrect)
         {
-           
+            gameController.subtractPoints(2);
+
             if (questionPool.Length > questionIndex + 1)
             {
                 roundBadEndDisplay.SetActive(true);
-                gameController.subtractPoints(2);
+               
                 questionIndex++;
                 ShowQuestion();
 

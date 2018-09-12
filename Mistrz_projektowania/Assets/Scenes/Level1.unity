@@ -4861,8 +4861,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 276113635}
-        m_MethodName: Back
+      - m_Target: {fileID: 1592819659}
+        m_MethodName: ShowMainView
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5708,29 +5708,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allRoundData:
   - questions:
-    - questionText: pierwsze pytanbnie
+    - questionText: "D\u0142ugo\u015B\u0107 trasy wycieczki autokarowej z \u0141odzi
+        w G\xF3ry \u015Awi\u0119tokrzyskie wynios\u0142a 550 km. Oblicz, ile wyniesie
+        koszt transportu, je\u017Celi stawka za 1 km wynosi 5 z\u0142? "
       timeAddedForBadAnswer: 57
       pointsDeductedForBadAnswer: 0
       answers:
-      - answerText: poprawna
+      - answerText: "2550z\u0142"
+        isCorrect: 0
+      - answerText: "2750z\u0142 P"
         isCorrect: 1
-      - answerText: P2
+      - answerText: "25500z\u0142"
         isCorrect: 0
-      - answerText: P3
+      - answerText: "27500z\u0142"
         isCorrect: 0
-      - answerText: P4
-        isCorrect: 0
-    - questionText: drugie pytanbnie
+    - questionText: "Firma B\u0141YSK z o.o. zaplanowa\u0142a 2-dniow\u0105 imprez\u0119
+        turystyczn\u0105 dla swoich 23 pracownik\xF3w. Ile trzeba zap\u0142aci\u0107
+        za noclegi, je\u017Celi by\u0142o jeszcze 2 osoby (kierowca i pilot), a 20
+        os\xF3b nocowa\u0142o w pokojach 2osobowych 60 z\u0142/osob\u0119, za\u015B
+        pozosta\u0142e w pokojach 1-osobowych 100 z\u0142/osob\u0119? "
       timeAddedForBadAnswer: 0
       pointsDeductedForBadAnswer: 0
       answers:
-      - answerText: poprawna
+      - answerText: "1700z\u0142 P"
         isCorrect: 1
-      - answerText: P2
+      - answerText: "1100z\u0142"
         isCorrect: 0
-      - answerText: P3
+      - answerText: "1500z\u0142"
         isCorrect: 0
-      - answerText: P4
+      - answerText: "1305z\u0142"
+        isCorrect: 0
+    - questionText: "Ile wynosi koszt VAT 22% imprezy turystycznej dla 20 os\xF3b,
+        skoro koszt ca\u0142kowity wynosi 13200 z\u0141, a mar\u017Ca 10%? "
+      timeAddedForBadAnswer: 0
+      pointsDeductedForBadAnswer: 0
+      answers:
+      - answerText: "1320z\u0142 "
+        isCorrect: 0
+      - answerText: "2904z\u0142 P"
+        isCorrect: 1
+      - answerText: "3194,40z\u0142"
+        isCorrect: 0
+      - answerText: "319,44z\u0142"
         isCorrect: 0
   QuestionPanel: {fileID: 1487759636}
   questions: {fileID: 1841596158}
@@ -9778,8 +9797,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.6, y: -133.295}
-  m_SizeDelta: {x: -299.9, y: -387.79}
+  m_AnchoredPosition: {x: 0.6, y: -158.1}
+  m_SizeDelta: {x: -299.9, y: -439.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621682846
 MonoBehaviour:
@@ -10059,7 +10078,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.00000095367, y: 10.300001}
-  m_SizeDelta: {x: 487.9, y: 55.3}
+  m_SizeDelta: {x: 487.9, y: 70.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &639210595
 MonoBehaviour:
@@ -10093,8 +10112,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Odpowiedz poprawnie na pytanie, a w nagrod\u0119 otrzymasz krzemie\u0144
-    pasiasty."
+  m_Text: "Potrzebujesz pomocy? Odpowiedz poprawnie na pytanie, a w nagrod\u0119 Sun
+    Mop wska\u017Ce Ci g\u0142az pod kt\xF3rym ukryty jest kolejny punkt do opracowania
+    teczki!"
 --- !u!222 &639210596
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12582,8 +12602,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 94.900406}
-  m_SizeDelta: {x: 537.3, y: 100}
+  m_AnchoredPosition: {x: 0, y: 107.18}
+  m_SizeDelta: {x: 569.1, y: 196.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &818881399
 MonoBehaviour:
@@ -22165,7 +22185,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1369491296}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1592819659}
+        m_MethodName: ShowMainView
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1369491296
@@ -22969,7 +23000,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3, y: 0}
-  m_SizeDelta: {x: 404.6, y: 41.2}
+  m_SizeDelta: {x: 484.8, y: 138.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1401808868
 CanvasRenderer:
@@ -22999,7 +23030,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
@@ -23009,7 +23040,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' '
+  m_Text: 
 --- !u!1 &1404226258 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 6b2dcd3a99834b74783a27bb6c808027, type: 3}
@@ -36156,7 +36187,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2140620152}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1592819659}
+        m_MethodName: ShowMainView
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2140620152
