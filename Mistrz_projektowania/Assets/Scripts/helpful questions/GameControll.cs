@@ -54,7 +54,7 @@ public class GameControll : MonoBehaviour
         dataController = FindObjectOfType<DataController>();
         currentRoundData = dataController.GetCurrentRoundData();
         questionPool = currentRoundData.questions;
-        timeCounter addTimeUI = new timeCounter();
+        //timeCounter addTimeUI = new timeCounter();
         //  addedTime.secondsCount += QuestionData.timeAddedForBadAnswer;
 
         questionIndex = 0;
@@ -94,7 +94,7 @@ public class GameControll : MonoBehaviour
 
     public void AnswerButtonClicked(bool isCorrect)
     {
-        ShowQuestion();
+       
 
         if (!isCorrect)
         {   
@@ -103,9 +103,10 @@ public class GameControll : MonoBehaviour
             if (questionPool.Length > questionIndex + 1)
             {
                 roundBadEndDisplay.SetActive(true);
-               
                 questionIndex++;
                 ShowQuestion();
+
+
 
             }
            else {
@@ -115,11 +116,11 @@ public class GameControll : MonoBehaviour
       
         else
         {
-             
 
-            roundGoodEndDisplay.SetActive(true);
             questionIndex++;
-
+            ShowQuestion();
+            roundGoodEndDisplay.SetActive(true);
+           
              
             
         }
