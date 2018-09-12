@@ -8,13 +8,14 @@ public class DataController : MonoBehaviour
 
     public Quiz[] allRoundData;
     public GameObject QuestionPanel;
-
+    public GameObject questions;
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
-
+       // DontDestroyOnLoad(gameObject);
+       questions.SetActive(false);
         QuestionPanel.SetActive(true);
+
         //  SceneManager.LoadScene("Helpful_questions");
     }
 
