@@ -46,7 +46,7 @@ public class ChangeCamera : MonoBehaviour {
 
     public void ShowQuestionsView()
     {
-         
+        
         leftGUI.SetActive(false);
         Game.SetActive(false);
         mainCamera.SetActive(false);
