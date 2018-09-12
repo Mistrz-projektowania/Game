@@ -13,7 +13,7 @@ public class ChangeCamera : MonoBehaviour {
     public GameObject wrongInputMEssage;
     public GameObject QuestionPanel;
     public GameObject questions;
-    public GameObject questionCamera;
+    public GameObject questionsCamera;
 
 
     public void ShowMainView()
@@ -25,7 +25,9 @@ public class ChangeCamera : MonoBehaviour {
         rockLabels.SetActive(true);
         QuestionPanel.SetActive(false);
         questions.SetActive(false);
-        questionCamera.SetActive(false);
+        questionsCamera.SetActive(false);
+
+        
     }
 
     public void ShowPuzzleView()
@@ -39,20 +41,22 @@ public class ChangeCamera : MonoBehaviour {
         puzzleCamera.SetActive(true);
         QuestionPanel.SetActive(false);
         questions.SetActive(false);
-        questionCamera.SetActive(false);
+        questionsCamera.SetActive(false);
     }
 
     public void ShowQuestionsView()
     {
+         
         leftGUI.SetActive(false);
         Game.SetActive(false);
-        questionCamera.SetActive(true);
+        mainCamera.SetActive(false);
+        questionsCamera.SetActive(true);
         rockLabels.SetActive(false);
         noPointMessage.SetActive(false);
         wrongInputMEssage.SetActive(false);
         puzzleCamera.SetActive(false);
         QuestionPanel.SetActive(true);
-        questions.SetActive(true);
+        questions.SetActive(false);
     }
 }
 

@@ -10,7 +10,7 @@ public class DataController : MonoBehaviour
     public GameObject QuestionPanel;
     public GameObject questions;
 
-    void Start()
+    public void Start()
     {
        // DontDestroyOnLoad(gameObject);
        questions.SetActive(false);
