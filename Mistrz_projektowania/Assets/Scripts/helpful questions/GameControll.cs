@@ -97,20 +97,25 @@ public class GameControll : MonoBehaviour
        
 
         if (!isCorrect)
-        {   
-            gameController.subtractPoints(2);
+        {
+            int i = questionIndex;
+
+                gameController.subtractPoints(i + 1);
+            if (gameController.getPoints() < questionIndex)
+            {
+                RoundBadOverNoQuestions.SetActive(true);
+            }
 
             if (questionPool.Length > questionIndex + 1)
             {
                 roundBadEndDisplay.SetActive(true);
                 questionIndex++;
                 ShowQuestion();
-
-
-
+               
             }
            else {
                 RoundBadOverNoQuestions.SetActive(true);
+                
             }
         }
       
@@ -132,7 +137,7 @@ public class GameControll : MonoBehaviour
 
         
         roundBadEndDisplay.SetActive(true);
-        gameController.subtractPoints(2);
+        
         questionIndex++;
         ShowQuestion();
 
@@ -143,7 +148,7 @@ public class GameControll : MonoBehaviour
         isRoundActive = false;
         questionIndex++;
         roundBadEndDisplay.SetActive(true);
-        gameController.subtractPoints(2);
+       
          
 
     }
