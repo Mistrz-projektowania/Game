@@ -20,6 +20,7 @@ public class ChangeCamera : MonoBehaviour {
     public GameObject questionDisplay;
     public GameObject roundBadEndDisplay;
     public GameObject AnswerPanel;
+    public GameObject roundGoodOverDisplay;
 
     public void ShowMainView()
     {
@@ -35,6 +36,7 @@ public class ChangeCamera : MonoBehaviour {
         questionsCamera.GetComponent<AudioListener>().enabled = false;
         GTSBtn.SetActive(true);
         HelpfulQuestionsButton.SetActive(true);
+        
 
 
     }
@@ -51,6 +53,7 @@ public class ChangeCamera : MonoBehaviour {
         QuestionPanel.SetActive(false);
         questions.SetActive(false);
         questionsCamera.SetActive(false);
+
     }
 
     public void ShowQuestionsView()
@@ -68,6 +71,8 @@ public class ChangeCamera : MonoBehaviour {
         puzzleCamera.SetActive(false);
         QuestionPanel.SetActive(true);
         questions.SetActive(false);
+        roundGoodOverDisplay.SetActive(false);
+        roundBadEndDisplay.SetActive(false);
         mainCamera.GetComponent<AudioListener>().enabled = false;
         questionsCamera.GetComponent<AudioListener>().enabled = true;
 
