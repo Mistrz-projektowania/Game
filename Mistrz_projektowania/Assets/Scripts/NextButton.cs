@@ -9,6 +9,6 @@ public class NextButton : MonoBehaviour
     public void Next()
     {
 
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Select Character");
     }
 }
