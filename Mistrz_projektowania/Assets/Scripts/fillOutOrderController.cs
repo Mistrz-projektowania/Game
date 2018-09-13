@@ -24,12 +24,14 @@ public class fillOutOrderController : MonoBehaviour {
 			return 1;
 		} else if (type == "Kontakt zleceniodawcy") {
 			return 3;
-		} else if (type == "Hotel") {
+		} else if (type == "Trasa") {
 			return 4;
-		} else if (type == "Wyżywienie") {
+		} else if (type == "Hotel") {
 			return 5;
-		} else if (type == "Usługi") {
+		} else if (type == "Wyżywienie") {
 			return 6;
+		} else if (type == "Usługi") {
+			return 7;
 		} else {
 			return -1;
 		}
