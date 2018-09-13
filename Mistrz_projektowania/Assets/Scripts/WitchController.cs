@@ -27,6 +27,7 @@ public class WitchController : MonoBehaviour {
 	setRockRandomPlaces rockController;
 	GameController gameController;
 	ParticleSystem ps;
+	AudioSource sound;
 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +41,7 @@ public class WitchController : MonoBehaviour {
 		ps = GameObject.Find ("WitchSpell").GetComponent<ParticleSystem> ();
 		ps.Stop ();
 		stateMachine = GameObject.Find ("StateMachine").GetComponent<StateMachine> ();
+		sound = GameObject.Find ("witchSound").GetComponent<AudioSource> ();
 	}
 
 	// Update is called once per frame
@@ -50,7 +52,8 @@ public class WitchController : MonoBehaviour {
 
 	public void runWitch(){
 		if (Time.time - lastKeyWPressedTime > animationTime * swapNr + 4 * flyingTime) {
-
+			
+			sound.Play ();
 			setDestination(new Vector3(52.0f, 1.5f, 12.0f), new Vector3(15,150,0), flyingTime); // czarownica leci do przodu
 			StartCoroutine (waitForAndStartSwapingRocks (flyingTime));
 
@@ -70,7 +73,7 @@ public class WitchController : MonoBehaviour {
 		setDestination(new Vector3(50.0f, 1.2f, 14.0f), new Vector3(0,-20,-30), flyingTime);// czarownica leci do tyłu
 		yield return new WaitForSeconds (flyingTime);
 		setDestination(new Vector3(51.0f, 1.8f, 16.0f), new Vector3(0,100,0), flyingTime);// czarownica leci do tyłu
-
+		StartCoroutine (AudioFadeOut(sound, 2));
 		stateMachine.setState (0);
 	}
 	void swapRocksFewTimes(int times){
@@ -106,5 +109,20 @@ public class WitchController : MonoBehaviour {
 
 		rotation = transform.localRotation;
 		nextRotation = Quaternion.Euler(rot.x,rot.y,rot.z);
+	}
+
+	public static IEnumerator AudioFadeOut(AudioSource audioSource, float FadeTime)
+	{
+		float startVolume = audioSource.volume;
+
+		while (audioSource.volume > 0)
+		{
+			audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+
+			yield return null;
+		}
+
+		audioSource.Stop();
+		audioSource.volume = startVolume;
 	}
 }

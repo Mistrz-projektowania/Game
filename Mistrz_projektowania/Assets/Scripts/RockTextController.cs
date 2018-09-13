@@ -50,7 +50,8 @@ public class RockTextController : MonoBehaviour {
 			//displayInfo = !displayInfo;
 
 			if (displayInfo == false) {
-				
+				AudioSource sound = GameObject.Find ("onClickSound").GetComponent<AudioSource> ();
+				sound.Play ();
 				StartCoroutine (fadeButton (button, true, fadeTime));
 				displayInfo = true;
 				gameController.changePoints (-2);
@@ -86,6 +87,7 @@ public class RockTextController : MonoBehaviour {
 			buttonOb.AddComponent<DragHandler> ();
 			a = 0;
 			b = 1;
+			displayInfo = true;
 		}
 		else
 		{

@@ -166,22 +166,7 @@ public class XMLDataLoader : MonoBehaviour {
 				}
 				obj.Add("Typ", "Zleceniodawca");
 			}
-			/*
-			if(Node.Name == "IdLiczbyOsob")
-			{
-				int participantsNrId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
 
-				XmlDocument DBname = new XmlDocument(); 
-				DBname.LoadXml(ParticipantsNrDatabase.text); 
-
-				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ participantsNrId + "']");
-				foreach (XmlNode tNode in nodeName){ 
-					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
-					obj.Add(tNode.Name, tNode.InnerText);
-				}
-				obj.Add("Typ", "Liczba osób");
-			}
-			*/
 			if(Node.Name == "IdPrzedstawicielaZleceniodawcy")
 			{
 				int customerContactId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
@@ -267,7 +252,7 @@ public class XMLDataLoader : MonoBehaviour {
 					}
 					//restaurant.Add (restaurantData);
 					obj.Add("Usługa" + tNode.InnerText, serviceData);
-					Debug.Log("Usługa" + tNode.InnerText + ": " + serviceData);
+					//Debug.Log("Usługa" + tNode.InnerText + ": " + serviceData);
 				}
 
 

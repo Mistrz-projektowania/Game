@@ -38,6 +38,8 @@ public class Slot : MonoBehaviour , IDropHandler
 				} else {
 					//Debug.Log ("ZŁA kolejnosc");
 					GameObject message = GameObject.Find ("WrongOrderMessage");
+					AudioSource sound = GameObject.Find ("errorSound").GetComponent<AudioSource> ();
+					sound.Play ();
 					StartCoroutine (handleWrongInputMessage (message, true, 0.5f));
 					StartCoroutine (waitAndHideMessage(message));
 				}
@@ -45,6 +47,8 @@ public class Slot : MonoBehaviour , IDropHandler
 			} else {
 				//Debug.Log ("Nie to pole");
 				GameObject message = GameObject.Find ("WrongInputMessage");
+				AudioSource sound = GameObject.Find ("errorSound").GetComponent<AudioSource> ();
+				sound.Play ();
 				StartCoroutine (handleWrongInputMessage (message, true, 0.5f));
 				StartCoroutine (waitAndHideMessage(message));
 
@@ -52,6 +56,8 @@ public class Slot : MonoBehaviour , IDropHandler
 
 		} else {
 			Debug.Log ("Pole zajęte!");
+			AudioSource sound = GameObject.Find ("errorSound").GetComponent<AudioSource> ();
+			sound.Play ();
 		}
 	}
 	#endregion
