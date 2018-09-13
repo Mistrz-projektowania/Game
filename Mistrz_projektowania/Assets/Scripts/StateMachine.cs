@@ -33,6 +33,7 @@ public class StateMachine : MonoBehaviour {
 	void Update () {
 		//Debug.Log ("Previous State: " + previousState);
 		//Debug.Log ("Current State: " + currentState);
+		/*
 		if (Input.GetKeyDown (KeyCode.W)){
 			if (currentState == 0) {
 				setState (2);
@@ -44,6 +45,7 @@ public class StateMachine : MonoBehaviour {
 				setState (3);
 			}
 		}
+		*/
 		if(currentState == 2){
 			witchCtrl.runWitch ();
 
@@ -75,7 +77,9 @@ public class StateMachine : MonoBehaviour {
 	}
 
 	void witchStateControl(){
-		StartCoroutine (waitForAndDraw(15));
+		if (GameObject.Find ("Witch") != null) {
+			StartCoroutine (waitForAndDraw (15));
+		}
 
 	}
 }

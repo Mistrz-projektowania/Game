@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-M:/10.09/Game/Mistrz_projektowania/Game.exe
+F:/Projekty/Magisterka/Game/Game/Mistrz_projektowania/MistrzProjektowaniaImprezTurystycznych.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/Select Level.unity
