@@ -46,6 +46,7 @@ public class SunMopController : MonoBehaviour {
 		}
 	}
 	public void SunMopON(){
+		stateMachine.setState (3);
 		SunMop.SetActive (true);
 		Debug.Log ("Sun Mop ON");
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();

@@ -20,7 +20,8 @@ public class StateMachine : MonoBehaviour {
 		 * 3 - gracz podaje krzemień / sunMop
 		 * 4 - gracz używa GTS / sortowanie
 		 * 5 - blok GTS
-		 * 6 - koniec gry
+		 * 6 - gracz odpowiada na pytania Quizu
+		 * 7 - koniec gry
 		 */
 		currentState = 0;
 		previousState = 0;
@@ -78,7 +79,9 @@ public class StateMachine : MonoBehaviour {
 
 	void witchStateControl(){
 		if (GameObject.Find ("Witch") != null) {
-			StartCoroutine (waitForAndDraw (15));
+			if (GameObject.Find ("Witch").activeSelf == true) {
+				StartCoroutine (waitForAndDraw (15));
+			}
 		}
 
 	}

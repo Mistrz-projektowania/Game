@@ -40,7 +40,7 @@ public class finishGameController : MonoBehaviour {
 	void showFinishButton(){
 		finish.SetActive(true);
 		finishButton.enabled = true;
-		stateMachine.setState (6);
+		stateMachine.setState (7);
 		StartCoroutine(fadeButton (finishButton, true, 0.5f));
 	}
 
