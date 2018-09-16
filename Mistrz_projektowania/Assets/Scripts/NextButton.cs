@@ -11,4 +11,6 @@ public class NextButton : MonoBehaviour
 
         SceneManager.LoadScene("Select Character");
     }
+
+    
 }
