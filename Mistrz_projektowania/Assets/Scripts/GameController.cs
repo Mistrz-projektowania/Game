@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
 	private bool noPointsMessageDisplay;
 	public Image wrongInputMessage;
 	public Image wrongOrderMessage;
+	public Image systemInfo;
 	private int tripID;
   
 	public XMLDataLoader dataLoader;
@@ -30,6 +31,7 @@ public class GameController : MonoBehaviour {
 		StartCoroutine(fadeMessage(noPointsMessage, false, 0.0000001f));
 		StartCoroutine(fadeMessage(wrongInputMessage, false, 0.0000001f));
 		StartCoroutine(fadeMessage(wrongOrderMessage, false, 0.0000001f));
+		StartCoroutine(fadeMessage(systemInfo, false, 0.0000001f));
 		noPointsMessageDisplay = false;
 		points = 20; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
 		tripID = 1; // trzeba pobierać ID z ankiety przed rozpoczeciem gry
@@ -120,7 +122,7 @@ public class GameController : MonoBehaviour {
 		StartCoroutine (fadeMessage (noPointsMessage, false, 0.5f));
 		noPointsMessageDisplay = false;
 	}
-	IEnumerator fadeMessage(Image message, bool fadeIn, float duration){
+	public IEnumerator fadeMessage(Image message, bool fadeIn, float duration){
 		float counter = 0f;
 
 		float a, b;

@@ -47,6 +47,24 @@ public class StateMachine : MonoBehaviour {
 			}
 		}
 		*/
+		switch (currentState)
+		{
+		case 1:
+			
+			break;
+		case 2:
+			witchCtrl.runWitch ();
+			Debug.Log ("state: 2 witch");
+			break;
+		case 3:
+			sunMopCtrl.SunMopON ();
+			Debug.Log ("state: 3 sun mop");
+			break;
+		default:
+			Debug.Log ("state: DEFAULT");
+			break;
+		}
+		/*
 		if(currentState == 2){
 			witchCtrl.runWitch ();
 
@@ -54,6 +72,7 @@ public class StateMachine : MonoBehaviour {
 		if (currentState == 3) {
 			sunMopCtrl.SunMopON ();
 		}
+		*/
 	}
 
 	public void setState(int state){

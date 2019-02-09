@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WitchController : MonoBehaviour {
 
+	public Image systemInfo;
 	private Vector3 startPos;
 	private Vector3 destinationPos;
 	private Quaternion rotation;
@@ -54,6 +56,10 @@ public class WitchController : MonoBehaviour {
 		if (Time.time - lastKeyWPressedTime > animationTime * swapNr + 4 * flyingTime) {
 			
 			sound.Play ();
+			// info message
+			systemInfo.GetComponentInChildren<Text>().text = "Czarownica";
+			StartCoroutine (gameController.fadeMessage (systemInfo, true, 0.5f));
+			// witch animation
 			setDestination(new Vector3(52.0f, 1.5f, 12.0f), new Vector3(15,150,0), flyingTime); // czarownica leci do przodu
 			StartCoroutine (waitForAndStartSwapingRocks (flyingTime));
 
@@ -74,6 +80,7 @@ public class WitchController : MonoBehaviour {
 		yield return new WaitForSeconds (flyingTime);
 		setDestination(new Vector3(51.0f, 1.8f, 16.0f), new Vector3(0,100,0), flyingTime);// czarownica leci do tyłu
 		StartCoroutine (AudioFadeOut(sound, 2));
+		StartCoroutine (gameController.fadeMessage (systemInfo, false, 0.5f));
 		stateMachine.setState (0);
 	}
 	void swapRocksFewTimes(int times){
