@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WitchController : MonoBehaviour {
 
-	public Image systemInfo;
+	private Image systemInfo;
 	private Vector3 startPos;
 	private Vector3 destinationPos;
 	private Quaternion rotation;
@@ -34,6 +34,7 @@ public class WitchController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gameController = GameObject.Find ("GameController").GetComponent<GameController> ();
+		systemInfo = gameController.systemInfo;
 		rockController = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>();
 		swapNr = 3;
 		animationTime = 2.0f;

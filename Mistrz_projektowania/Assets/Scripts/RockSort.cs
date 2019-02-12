@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RockSort : MonoBehaviour {
 
@@ -10,12 +11,14 @@ public class RockSort : MonoBehaviour {
 
 	private int[] dataOrder;
 	private int[] rockOrder;
+	private Image systemInfo;
 
 	private StateMachine stateMachine;
 
 	// Use this for initialization
 	void Start () {
 		gameController = GameObject.Find ("GameController").GetComponent<GameController> ();
+		systemInfo = gameController.systemInfo;
 		rockController = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>();
 		dataOrder = gameController.getDataOrder ();
 		rockOrder = new int[dataOrder.Length];
@@ -27,6 +30,9 @@ public class RockSort : MonoBehaviour {
 		//findRockOrder ();
 	}
 	public void sort(){
+		systemInfo.GetComponentInChildren<Text>().text = "GTS włączony";
+		StartCoroutine (gameController.fadeMessage (systemInfo, true, 0.5f));
+
 		dataOrder = gameController.getDataOrder ();
 		findRockOrder ();
 		StartCoroutine(selectionSort (2));
@@ -70,6 +76,7 @@ public class RockSort : MonoBehaviour {
 
 			yield return new WaitForSeconds (seconds);
 		}
+		StartCoroutine (gameController.fadeMessage (systemInfo, false, 0.5f));
 		stateMachine.setState (0);
 		/*
 		string arr = "";
