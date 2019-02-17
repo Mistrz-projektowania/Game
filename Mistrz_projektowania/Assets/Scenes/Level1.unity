@@ -6921,7 +6921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000036955, y: -146.99998}
+  m_AnchoredPosition: {x: -0.0000036955, y: -147}
   m_SizeDelta: {x: -182.7, y: -301.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &436314646
@@ -9715,7 +9715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000036955, y: -146.99998}
+  m_AnchoredPosition: {x: -0.0000036955, y: -147}
   m_SizeDelta: {x: -182.7, y: -301.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &580202935
@@ -11310,7 +11310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000624585, y: 0.00007786862}
+  m_AnchoredPosition: {x: 0.000009192929, y: 0.00007786862}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &735039242
@@ -18593,6 +18593,8 @@ MonoBehaviour:
   TripNrDatabase: {fileID: 4900000, guid: 223d0975098d3dd4790b2cfc4c7352d3, type: 3}
   CustomerDatabase: {fileID: 4900000, guid: 0e5f4efab95c9ee42b0261f98ea9efd1, type: 3}
   ParticipantsNrDatabase: {fileID: 4900000, guid: 7fd1d86d3e6a2434fa59d5dad029b25f,
+    type: 3}
+  notPayingParticipantsNrDatabase: {fileID: 4900000, guid: 46f4a1b703d745d48a50356903bb6c62,
     type: 3}
   CustomerContactDatabase: {fileID: 4900000, guid: 0ab01a1f69b2df64fa879efc862b91c3,
     type: 3}
@@ -34151,8 +34153,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1327268642}
   m_HandleRect: {fileID: 1327268641}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 0.9999999
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

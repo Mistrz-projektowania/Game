@@ -8,7 +8,8 @@ public class NextButton : MonoBehaviour
 
     public void Next()
     {
-
+		GameplayModel.gameTripName = "Nazwa";
+		print (GameplayModel.gameTripName);
         SceneManager.LoadScene("Select Character");
     }
 

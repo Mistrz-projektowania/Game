@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour {
 		noPointsMessageDisplay = false;
 		points = 20; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
 		tripID = 1; // trzeba pobierać ID z ankiety przed rozpoczeciem gry
-
+		print (GameplayModel.gameTripName);
 
 		dataLoader = GetComponent<XMLDataLoader> ();      
 		dataLoader.GetData(tripID, "Plan");

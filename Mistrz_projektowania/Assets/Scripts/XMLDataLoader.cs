@@ -13,6 +13,7 @@ public class XMLDataLoader : MonoBehaviour {
 	public TextAsset TripNrDatabase;
 	public TextAsset CustomerDatabase;
 	public TextAsset ParticipantsNrDatabase;
+	public TextAsset notPayingParticipantsNrDatabase;
 	public TextAsset CustomerContactDatabase;
 	public TextAsset tripPlanDatabase;
 	public TextAsset hotelDatabase;
@@ -109,6 +110,20 @@ public class XMLDataLoader : MonoBehaviour {
 		
 		return Trips;
 	}
+
+	public void getQuestionsData(string dropdownName){
+		XmlDocument xmlDoc = new XmlDocument(); // xmlDoc is the new xml document.
+		switch(dropdownName){
+			case "participantsNr":
+				xmlDoc.LoadXml(ParticipantsNrDatabase.text); // load the file.
+				break;
+			case "tripName":
+				xmlDoc.LoadXml(TripNameDatabase.text);
+				break;
+		}
+		Debug.Log(xmlDoc);
+	}
+
 	public void GetData(int id, string tagName){
 		XmlDocument xmlDoc = new XmlDocument(); // xmlDoc is the new xml document.
 		xmlDoc.LoadXml(PlanDatabase.text); // load the file.
