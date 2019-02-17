@@ -111,17 +111,35 @@ public class XMLDataLoader : MonoBehaviour {
 		return Trips;
 	}
 
-	public void getQuestionsData(string dropdownName){
+	public List<string> getQuestionsData(string dropdownName){
 		XmlDocument xmlDoc = new XmlDocument(); // xmlDoc is the new xml document.
+		List<string> questionsData = new List<string>();
 		switch(dropdownName){
 			case "participantsNr":
-				xmlDoc.LoadXml(ParticipantsNrDatabase.text); // load the file.
+				xmlDoc.LoadXml (ParticipantsNrDatabase.text); // load the file.
+				XmlNode nodes = xmlDoc.SelectSingleNode("LiczbaUczestnikowPlacacych");
+				foreach (XmlNode tNode in nodes) { 
+				questionsData.Add(tNode.SelectSingleNode("LiczbaOsob").InnerText);
+				}
 				break;
-			case "tripName":
-				xmlDoc.LoadXml(TripNameDatabase.text);
+		case "notPayingParticipantsNr":
+			xmlDoc.LoadXml (notPayingParticipantsNrDatabase.text); // load the file.
+			XmlNode participantsNodes = xmlDoc.SelectSingleNode("LiczbaUczestnikowNieplacacych");
+			foreach (XmlNode tNode in participantsNodes) { 
+				questionsData.Add(tNode.SelectSingleNode("LiczbaOsob").InnerText);
+			}
+			break;
+		case "tripName":
+			xmlDoc.LoadXml (TripNameDatabase.text);
+			XmlNode tripNodes = xmlDoc.SelectSingleNode ("NazwyImprez");
+				foreach (XmlNode tNode in tripNodes) { 
+					questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText);
+				}
 				break;
+		default:
+			break;
 		}
-		Debug.Log(xmlDoc);
+		return questionsData;
 	}
 
 	public void GetData(int id, string tagName){
