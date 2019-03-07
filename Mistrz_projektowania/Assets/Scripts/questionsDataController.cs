@@ -16,8 +16,12 @@ public class questionsDataController : MonoBehaviour {
 		pNrDropdown.AddOptions (dataLoader.getQuestionsData ("participantsNr"));
 		Dropdown nppNrDropdown = GameObject.Find ("DropdownNotPayingParticipantsNr").GetComponent<Dropdown> ();
 		nppNrDropdown.AddOptions (dataLoader.getQuestionsData ("notPayingParticipantsNr"));
-
-	
+		Dropdown ptDropdown = GameObject.Find ("DropdownParticipantsType").GetComponent<Dropdown> ();
+		ptDropdown.AddOptions (dataLoader.getQuestionsData ("participantsType"));
+		Dropdown vehDropdown = GameObject.Find ("DropdownVehicle").GetComponent<Dropdown> ();
+		vehDropdown.AddOptions (dataLoader.getQuestionsData ("vehicle"));
+		Dropdown tlDropdown = GameObject.Find ("DropdownTripLength").GetComponent<Dropdown> ();
+		tlDropdown.AddOptions (dataLoader.getQuestionsData ("tripLength"));
 	}
 	
 	// Update is called once per frame

@@ -16,9 +16,12 @@ public class XMLDataLoader : MonoBehaviour {
 	public TextAsset notPayingParticipantsNrDatabase;
 	public TextAsset CustomerContactDatabase;
 	public TextAsset tripPlanDatabase;
+	public TextAsset tripLengthDatabase;
 	public TextAsset hotelDatabase;
 	public TextAsset restaurantDatabase;
 	public TextAsset servicesDatabase;
+	public TextAsset vehicleDatabase;
+	public TextAsset participantsTypeDatabase;
 	public int id;
 	public string tagName;
 
@@ -132,10 +135,31 @@ public class XMLDataLoader : MonoBehaviour {
 		case "tripName":
 			xmlDoc.LoadXml (TripNameDatabase.text);
 			XmlNode tripNodes = xmlDoc.SelectSingleNode ("NazwyImprez");
-				foreach (XmlNode tNode in tripNodes) { 
-					questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText);
-				}
-				break;
+			foreach (XmlNode tNode in tripNodes) { 
+				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText);
+			}
+			break;
+		case "participantsType":
+			xmlDoc.LoadXml (participantsTypeDatabase.text);
+			XmlNode participantsTypeNodes = xmlDoc.SelectSingleNode ("Uczestnicy");
+			foreach (XmlNode tNode in participantsTypeNodes) { 
+				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText);
+			}
+			break;
+		case "vehicle":
+			xmlDoc.LoadXml (vehicleDatabase.text);
+			XmlNode vehicleNodes = xmlDoc.SelectSingleNode ("Transport");
+			foreach (XmlNode tNode in vehicleNodes) { 
+				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText);
+			}
+			break;
+		case "tripLength":
+			xmlDoc.LoadXml (tripLengthDatabase.text);
+			XmlNode tripLengthNodes = xmlDoc.SelectSingleNode ("CzasyTrwania");
+			foreach (XmlNode tNode in tripLengthNodes) { 
+				questionsData.Add(tNode.SelectSingleNode("Czas").InnerText);
+			}
+			break;
 		default:
 			break;
 		}

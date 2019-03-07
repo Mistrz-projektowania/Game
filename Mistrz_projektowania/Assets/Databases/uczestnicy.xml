@@ -1,65 +1,31 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Uczestnicy>
     <Uczestnik id="1">
-        <Nazwa>
-            Uczniowie kl. 1-3 szkoły podstawowej
-        </Nazwa>
-        <Punkty>
-            3
-        </Punkty>
+        <Nazwa>Uczniowie kl. 1-3 szkoły podstawowej</Nazwa>
+        <Punkty>3</Punkty>
     </Uczestnik>
     <Uczestnik id="2">
-        <Nazwa>
-            Uczniowie kl. 4-6 szkoły podstawowej
-        </Nazwa>
-        <Punkty>
-            2
-        </Punkty>
+        <Nazwa>Uczniowie kl. 4-6 szkoły podstawowej</Nazwa>
+        <Punkty>2</Punkty>
     </Uczestnik>
     <Uczestnik id="3">
-        <Nazwa>
-            Uczniowie gimnazjum i szkół ponadgimnazjalnych
-        </Nazwa>
-        <Punkty>
-            1
-        </Punkty>
+        <Nazwa>Uczniowie gimnazjum i szkół ponadgimnazjalnych</Nazwa>
+        <Punkty>1</Punkty>
     </Uczestnik>
     <Uczestnik id="4">
-        <Nazwa>
-            Osoby starsze 60+
-        </Nazwa>
-        <Punkty>
-            3
-        </Punkty>
+        <Nazwa>Osoby starsze 60+</Nazwa>
+        <Punkty>3</Punkty>
     </Uczestnik>
     <Uczestnik id="5">
-        <Nazwa>
-            Pracownicy jednej firmy
-        </Nazwa>
-        <Punkty>
-            1
-        </Punkty>
+        <Nazwa>Pracownicy jednej firmy</Nazwa>
+        <Punkty>1</Punkty>
     </Uczestnik>
     <Uczestnik id="6">
         <Nazwa>Osoby dorosłe (zgłoszone z wolnego naboru)</Nazwa>
-        <Punkty>
-            2
-        </Punkty>
+        <Punkty>2</Punkty>
     </Uczestnik>
     <Uczestnik id="7">
-        <Nazwa>
-            Rodziny z dziećmi
-        </Nazwa>
-        <Punkty>
-            3
-        </Punkty>
-    </Uczestnik>
-    <Uczestnik id="8">
-        <Nazwa>
-
-        </Nazwa>
-        <Punkty>
-
-        </Punkty>
+        <Nazwa>Rodziny z dziećmi</Nazwa>
+        <Punkty>3</Punkty>
     </Uczestnik>
 </Uczestnicy>

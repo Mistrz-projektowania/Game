@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<CzasyTrwania>
+	<CzasTrwania id="1">
+		<Czas>1 dzień</Czas>
+		<Dni>1</Dni>
+		<Punkty>1</Punkty>
+	</CzasTrwania>
+	<CzasTrwania id="2">
+		<Czas>2 dni</Czas>
+		<Dni>2</Dni>
+		<Punkty>2</Punkty>
+	</CzasTrwania>
+	<CzasTrwania id="3">
+		<Czas>3 dni</Czas>
+		<Dni>3</Dni>
+		<Punkty>3</Punkty>
+	</CzasTrwania>
+	<CzasTrwania id="4">
+		<Czas>4 dni</Czas>
+		<Dni>4</Dni>
+		<Punkty>4</Punkty>
+	</CzasTrwania>
+	<CzasTrwania id="5">
+		<Czas>5 dni</Czas>
+		<Dni>5</Dni>
+		<Punkty>5</Punkty>
+	</CzasTrwania>
+	<CzasTrwania id="7">
+		<Czas>7 dni</Czas>
+		<Dni>7</Dni>
+		<Punkty>7</Punkty>
+	</CzasTrwania>
+</CzasyTrwania>
+
