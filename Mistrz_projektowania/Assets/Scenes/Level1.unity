@@ -13294,7 +13294,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 826326783}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &826326785
 Behaviour:
   m_ObjectHideFlags: 0
@@ -18599,9 +18599,12 @@ MonoBehaviour:
   CustomerContactDatabase: {fileID: 4900000, guid: 0ab01a1f69b2df64fa879efc862b91c3,
     type: 3}
   tripPlanDatabase: {fileID: 4900000, guid: 2b9b776270749b34ea8c15dd782b9b1e, type: 3}
+  tripLengthDatabase: {fileID: 0}
   hotelDatabase: {fileID: 4900000, guid: 7f004ddb70993d4419a164d6190b3b46, type: 3}
   restaurantDatabase: {fileID: 4900000, guid: e59dc58f00209f9478f24b1af30399ad, type: 3}
   servicesDatabase: {fileID: 4900000, guid: 4199ff70537a3c1458af93ce0e02c1dc, type: 3}
+  vehicleDatabase: {fileID: 0}
+  participantsTypeDatabase: {fileID: 0}
   id: 1
   tagName: Plan
   rockText1: {fileID: 1946045193}
@@ -25196,7 +25199,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300004, guid: c3cf0cdc247a2d240a434c98288be1ea, type: 3}
+  m_Sprite: {fileID: 21300006, guid: da52757e810b6e14d9ebbe575b0ead1f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -31637,15 +31640,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.63529414, g: 0.7568628, b: 0.011764707, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 16ab86db50f82e14f9479635cba4e56a, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: e4f1fee3de32377429fd1348fae62b10, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -34492,7 +34495,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 43a7d98bd4222b64e933596512dc09ad, type: 3}
+  m_Sprite: {fileID: 21300006, guid: da52757e810b6e14d9ebbe575b0ead1f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

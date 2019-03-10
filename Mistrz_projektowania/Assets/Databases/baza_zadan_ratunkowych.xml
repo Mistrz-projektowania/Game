@@ -1,64 +1,34 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ZadaniaRatunkowe>
 	<Zadanie id="0">
-		<Pytanie>
-			Długość trasy wycieczki autokarowej z Łodzi w Góry Świętokrzyskie wyniosła 550 km. Oblicz, ile 
-			wyniesie koszt transportu, jeżeli stawka za 1 km wynosi 5 zł?
-		</Pytanie>
+		<Pytanie>Długość trasy wycieczki autokarowej z Łodzi w Góry Świętokrzyskie wyniosła 550 km. Oblicz, ile 
+			wyniesie koszt transportu, jeżeli stawka za 1 km wynosi 5 zł?</Pytanie>
 		<Odpowiedzi>
-			<Odpowiedz poprawna="nie">
-				2550 zł
-			</Odpowiedz>
-			<Odpowiedz poprawna="tak">
-				2750 zł
-			</Odpowiedz>
-			<Odpowiedz poprawna="nie">
-				25500 zł
-			</Odpowiedz>
-			<Odpowiedz poprawna="nie">
-				27500 zł
-			</Odpowiedz>
+			<Odpowiedz poprawna="nie">2550 zł</Odpowiedz>
+			<Odpowiedz poprawna="tak">2750 zł</Odpowiedz>
+			<Odpowiedz poprawna="nie">25500 zł</Odpowiedz>
+			<Odpowiedz poprawna="nie">27500 zł</Odpowiedz>
 		</Odpowiedzi>
 	</Zadanie>
 	<Zadanie id="1">
-		<Pytanie>
-			Firma BŁYSK z o.o. zaplanowała 2-dniową imprezę turystyczną dla swoich 23 pracowników. Ile trzeba
+		<Pytanie>Firma BŁYSK z o.o. zaplanowała 2-dniową imprezę turystyczną dla swoich 23 pracowników. Ile trzeba
 			zapłacić za noclegi, jeżeli było jeszcze 2 osoby (kierowca i pilot), a 20 osób nocowało w pokojach 2-
-			osobowych 60 zł/osobę, zaś pozostałe w pokojach 1-osobowych 100 zł/osobę?
-		</Pytanie>
+			osobowych 60 zł/osobę, zaś pozostałe w pokojach 1-osobowych 100 zł/osobę?</Pytanie>
 		<Odpowiedzi>
-			<Odpowiedz poprawna="tak">
-				1700 zł
-			</Odpowiedz>
-			<Odpowiedz poprawna="nie">
-				1100 zł
-			</Odpowiedz>
-			<Odpowiedz poprawna="nie">
-				1500 zł
-			</Odpowiedz>
-			<Odpowiedz poprawna="nie">
-				1305 zł
-			</Odpowiedz>
+			<Odpowiedz poprawna="tak">1700 zł</Odpowiedz>
+			<Odpowiedz poprawna="nie">1100 zł</Odpowiedz>
+			<Odpowiedz poprawna="nie">1500 zł</Odpowiedz>
+			<Odpowiedz poprawna="nie">1305 zł</Odpowiedz>
 		</Odpowiedzi>
 	</Zadanie>
 	<Zadanie id="2">
-		<Pytanie>
-			Ile wynosi koszt VAT 22% imprezy turystycznej dla 20 osób, skoro koszt całkowity wynosi 13200 zŁ, a
-			marża 10%?
-		</Pytanie>
+		<Pytanie>Ile wynosi koszt VAT 22% imprezy turystycznej dla 20 osób, skoro koszt całkowity wynosi 13200 zŁ, a
+			marża 10%?</Pytanie>
 		<Odpowiedzi>
-			<Odpowiedz poprawna="nie">
-				1320 zł
-			</Odpowiedz>
-			<Odpowiedz poprawna="tak">
-				2904 zł
-			</Odpowiedz>
-			<Odpowiedz poprawna="nie">
-				3194,40 zł
-			</Odpowiedz>
-			<Odpowiedz poprawna="nie">
-				319,44 zł
-			</Odpowiedz>
+			<Odpowiedz poprawna="nie">1320 zł</Odpowiedz>
+			<Odpowiedz poprawna="tak">2904 zł</Odpowiedz>
+			<Odpowiedz poprawna="nie">3194,40 zł</Odpowiedz>
+			<Odpowiedz poprawna="nie">319,44 zł</Odpowiedz>
 		</Odpowiedzi>
 	</Zadanie>
 </ZadaniaRatunkowe>

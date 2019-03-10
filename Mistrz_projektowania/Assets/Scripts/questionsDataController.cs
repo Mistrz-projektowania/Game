@@ -35,12 +35,17 @@ public class questionsDataController : MonoBehaviour {
 
 		tNameDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
+			GameplayModel.gameTripName = tNameDropdown.options[tNameDropdown.value].text;
+			//Debug.Log (GameplayModel.gameTripName);
 		});
 		pNrDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
+			GameplayModel.gameParticipantsNr = pNrDropdown.value;
+			//Debug.Log (GameplayModel.gameParticipantsNr);
 		});
 		nppNrDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
+			GameplayModel.gameNotPayingParticipantsNr = nppNrDropdown.value;
 		});
 		ptDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
