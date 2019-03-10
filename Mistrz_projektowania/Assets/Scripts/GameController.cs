@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour {
 		StartCoroutine(fadeMessage(systemInfo, false, 0.0000001f));
 		noPointsMessageDisplay = false;
 		points = 20; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
-		tripID = 1; // trzeba pobierać ID z ankiety przed rozpoczeciem gry
+		tripID = 0; // trzeba pobierać ID z ankiety przed rozpoczeciem gry
 		print (GameplayModel.gameTripName);
 
 		dataLoader = GetComponent<XMLDataLoader> ();      

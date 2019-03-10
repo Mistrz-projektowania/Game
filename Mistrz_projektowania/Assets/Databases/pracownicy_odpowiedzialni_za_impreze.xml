@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <PracownicyOdpowiedzialniZaImpreze>
-    <Pracownik id="1">Łukasz Kowalik</Pracownik>
-    <Pracownik id="2">Agata Stokowiec</Pracownik>
-    <Pracownik id="3">Kamil Krzeszowski</Pracownik>
-    <Pracownik id="4">Magdalena Jeromska</Pracownik>
-    <Pracownik id="5"></Pracownik>
+    <Pracownik id="0">Łukasz Kowalik</Pracownik>
+    <Pracownik id="1">Agata Stokowiec</Pracownik>
+    <Pracownik id="2">Kamil Krzeszowski</Pracownik>
+    <Pracownik id="3">Magdalena Jeromska</Pracownik>
 </PracownicyOdpowiedzialniZaImpreze>

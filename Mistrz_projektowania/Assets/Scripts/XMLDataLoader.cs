@@ -115,49 +115,49 @@ public class XMLDataLoader : MonoBehaviour {
 	}
 
 	public List<string> getQuestionsData(string dropdownName){
-		XmlDocument xmlDoc = new XmlDocument(); // xmlDoc is the new xml document.
+		XmlDocument xmlDoc = new XmlDocument();
 		List<string> questionsData = new List<string>();
 		switch(dropdownName){
 			case "participantsNr":
 				xmlDoc.LoadXml (ParticipantsNrDatabase.text); // load the file.
 				XmlNode nodes = xmlDoc.SelectSingleNode("LiczbaUczestnikowPlacacych");
 				foreach (XmlNode tNode in nodes) { 
-				questionsData.Add(tNode.SelectSingleNode("LiczbaOsob").InnerText);
+				questionsData.Add(tNode.SelectSingleNode("LiczbaOsob").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
 				}
 				break;
 		case "notPayingParticipantsNr":
 			xmlDoc.LoadXml (notPayingParticipantsNrDatabase.text); // load the file.
 			XmlNode participantsNodes = xmlDoc.SelectSingleNode("LiczbaUczestnikowNieplacacych");
 			foreach (XmlNode tNode in participantsNodes) { 
-				questionsData.Add(tNode.SelectSingleNode("LiczbaOsob").InnerText);
+				questionsData.Add(tNode.SelectSingleNode("LiczbaOsob").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
 			}
 			break;
 		case "tripName":
 			xmlDoc.LoadXml (TripNameDatabase.text);
 			XmlNode tripNodes = xmlDoc.SelectSingleNode ("NazwyImprez");
 			foreach (XmlNode tNode in tripNodes) { 
-				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText);
+				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
 			}
 			break;
 		case "participantsType":
 			xmlDoc.LoadXml (participantsTypeDatabase.text);
 			XmlNode participantsTypeNodes = xmlDoc.SelectSingleNode ("Uczestnicy");
 			foreach (XmlNode tNode in participantsTypeNodes) { 
-				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText);
+				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
 			}
 			break;
 		case "vehicle":
 			xmlDoc.LoadXml (vehicleDatabase.text);
 			XmlNode vehicleNodes = xmlDoc.SelectSingleNode ("Transport");
 			foreach (XmlNode tNode in vehicleNodes) { 
-				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText);
+				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
 			}
 			break;
 		case "tripLength":
 			xmlDoc.LoadXml (tripLengthDatabase.text);
 			XmlNode tripLengthNodes = xmlDoc.SelectSingleNode ("CzasyTrwania");
 			foreach (XmlNode tNode in tripLengthNodes) { 
-				questionsData.Add(tNode.SelectSingleNode("Czas").InnerText);
+				questionsData.Add(tNode.SelectSingleNode("Czas").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
 			}
 			break;
 		default:
@@ -166,6 +166,38 @@ public class XMLDataLoader : MonoBehaviour {
 		return questionsData;
 	}
 
+	public int checkPoints(string database, int itemIndex){
+		int points = 0;
+		XmlDocument xmlDoc = getDatabaseData (database);
+		points = System.Xml.XmlConvert.ToInt32 (xmlDoc.SelectSingleNode ("//*[@id='" + itemIndex + "']").SelectSingleNode ("Punkty").InnerText);
+		return points;
+	}
+	XmlDocument getDatabaseData(string database){
+		XmlDocument xmlDoc = new XmlDocument();
+		switch (database) {
+		case "participantsNr":
+			xmlDoc.LoadXml (ParticipantsNrDatabase.text); // load the file.
+			break;
+		case "notPayingParticipantsNr":
+			xmlDoc.LoadXml (notPayingParticipantsNrDatabase.text); // load the file.
+			break;
+		case "tripName":
+			xmlDoc.LoadXml (TripNameDatabase.text);	
+			break;
+		case "participantsType":
+			xmlDoc.LoadXml (participantsTypeDatabase.text);
+			break;
+		case "vehicle":
+			xmlDoc.LoadXml (vehicleDatabase.text);
+			break;
+		case "tripLength":
+			xmlDoc.LoadXml (tripLengthDatabase.text);
+			break;
+		default:
+			break;
+		}
+		return xmlDoc;
+	}
 	public void GetData(int id, string tagName){
 		XmlDocument xmlDoc = new XmlDocument(); // xmlDoc is the new xml document.
 		xmlDoc.LoadXml(PlanDatabase.text); // load the file.

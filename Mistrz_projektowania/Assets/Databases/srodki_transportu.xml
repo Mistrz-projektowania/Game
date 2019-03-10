@@ -1,31 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Transport>
-	<SrodekTransportu id="1">
+	<SrodekTransportu id="0">
 		<Nazwa>Rower</Nazwa>
 		<Punkty>1</Punkty>
 	</SrodekTransportu>
-	<SrodekTransportu id="2">
+	<SrodekTransportu id="1">
 		<Nazwa>Samochód/rower</Nazwa>
 		<Punkty>3</Punkty>
 	</SrodekTransportu>
-	<SrodekTransportu id="3">
+	<SrodekTransportu id="2">
 		<Nazwa>Pociąg</Nazwa>
 		<Punkty>2</Punkty>
 	</SrodekTransportu>
-	<SrodekTransportu id="4">
+	<SrodekTransportu id="3">
 		<Nazwa>Autokar/bus</Nazwa>
 		<Punkty>2</Punkty>
 	</SrodekTransportu>
-	<SrodekTransportu id="5">
+	<SrodekTransportu id="4">
 		<Nazwa>Statek/prom</Nazwa>
 		<Punkty>3</Punkty>
 	</SrodekTransportu>
-	<SrodekTransportu id="6">
+	<SrodekTransportu id="5">
 		<Nazwa>Samolot</Nazwa>
 		<Punkty>3</Punkty>
-	</SrodekTransportu>
-	<SrodekTransportu id="7">
-		<Nazwa></Nazwa>
-		<Punkty></Punkty>
 	</SrodekTransportu>
 </Transport>

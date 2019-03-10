@@ -1,34 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <PlanyWycieczek>
-	<Plan id="1">
-		<IdNazwaImprezy>
-			1
-		</IdNazwaImprezy>
-		<IdNrImprezy>
-			1
-		</IdNrImprezy>
-		<IdZleceniodawcy>
-			1
-		</IdZleceniodawcy>
-		<IdPrzedstawicielaZleceniodawcy>
-			1
-		</IdPrzedstawicielaZleceniodawcy>
-		<IdTrasyImprezy>
-			1
-		</IdTrasyImprezy>
-		<IdMiejscaNoclegowego>
-			1
-		</IdMiejscaNoclegowego>
+	<Plan id="0">
+		<IdNazwaImprezy>0</IdNazwaImprezy>
+		<IdNrImprezy>0</IdNrImprezy>
+		<IdZleceniodawcy>0</IdZleceniodawcy>
+		<IdPrzedstawicielaZleceniodawcy>0</IdPrzedstawicielaZleceniodawcy>
+		<IdTrasyImprezy>0</IdTrasyImprezy>
+		<IdMiejscaNoclegowego>0</IdMiejscaNoclegowego>
 		<IdWyzywienia>
+			<id>0</id>
 			<id>1</id>
-			<id>2</id>
 		</IdWyzywienia>
 		<IdUslug>
+			<id>0</id>
 			<id>1</id>
-			<id>2</id>
 		</IdUslug>
-		<IdUbezpieczenia>
-			1
-		</IdUbezpieczenia>
+		<IdUbezpieczenia>0</IdUbezpieczenia>
 	</Plan>
 </PlanyWycieczek>

@@ -1,35 +1,31 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <LiczbaUczestnikowPlacacych>
-	<LiczbaUczestnikow id="1">
+	<LiczbaUczestnikow id="0">
 		<LiczbaOsob>20</LiczbaOsob>
 		<Punkty>2</Punkty>
 	</LiczbaUczestnikow>
-	<LiczbaUczestnikow id="2">
+	<LiczbaUczestnikow id="1">
 		<LiczbaOsob>25</LiczbaOsob>
 		<Punkty>2</Punkty>
 	</LiczbaUczestnikow>
-	<LiczbaUczestnikow id="3">
+	<LiczbaUczestnikow id="2">
 		<LiczbaOsob>30</LiczbaOsob>
-		<Punkty>2</Punkty>
+		<Punkty>3</Punkty>
+	</LiczbaUczestnikow>
+	<LiczbaUczestnikow id="3">
+		<LiczbaOsob>35</LiczbaOsob>
+		<Punkty>3</Punkty>
 	</LiczbaUczestnikow>
 	<LiczbaUczestnikow id="4">
-		<LiczbaOsob>35</LiczbaOsob>
-		<Punkty>2</Punkty>
+		<LiczbaOsob>40</LiczbaOsob>
+		<Punkty>4</Punkty>
 	</LiczbaUczestnikow>
 	<LiczbaUczestnikow id="5">
-		<LiczbaOsob>40</LiczbaOsob>
-		<Punkty>2</Punkty>
+		<LiczbaOsob>45</LiczbaOsob>
+		<Punkty>4</Punkty>
 	</LiczbaUczestnikow>
 	<LiczbaUczestnikow id="6">
-		<LiczbaOsob>45</LiczbaOsob>
-		<Punkty>2</Punkty>
-	</LiczbaUczestnikow>
-	<LiczbaUczestnikow id="7">
 		<LiczbaOsob>50</LiczbaOsob>
-		<Punkty>2</Punkty>
-	</LiczbaUczestnikow>
-	<LiczbaUczestnikow id="8">
-		<LiczbaOsob></LiczbaOsob>
-		<Punkty></Punkty>
+		<Punkty>5</Punkty>
 	</LiczbaUczestnikow>
 </LiczbaUczestnikowPlacacych>

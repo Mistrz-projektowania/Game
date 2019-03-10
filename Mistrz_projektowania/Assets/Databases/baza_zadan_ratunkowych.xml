@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ZadaniaRatunkowe>
-	<Zadanie id="1">
+	<Zadanie id="0">
 		<Pytanie>
 			Długość trasy wycieczki autokarowej z Łodzi w Góry Świętokrzyskie wyniosła 550 km. Oblicz, ile 
 			wyniesie koszt transportu, jeżeli stawka za 1 km wynosi 5 zł?
@@ -20,7 +20,7 @@
 			</Odpowiedz>
 		</Odpowiedzi>
 	</Zadanie>
-	<Zadanie id="2">
+	<Zadanie id="1">
 		<Pytanie>
 			Firma BŁYSK z o.o. zaplanowała 2-dniową imprezę turystyczną dla swoich 23 pracowników. Ile trzeba
 			zapłacić za noclegi, jeżeli było jeszcze 2 osoby (kierowca i pilot), a 20 osób nocowało w pokojach 2-
@@ -41,7 +41,7 @@
 			</Odpowiedz>
 		</Odpowiedzi>
 	</Zadanie>
-	<Zadanie id="3">
+	<Zadanie id="2">
 		<Pytanie>
 			Ile wynosi koszt VAT 22% imprezy turystycznej dla 20 osób, skoro koszt całkowity wynosi 13200 zŁ, a
 			marża 10%?
@@ -58,24 +58,6 @@
 			</Odpowiedz>
 			<Odpowiedz poprawna="nie">
 				319,44 zł
-			</Odpowiedz>
-		</Odpowiedzi>
-	</Zadanie>
-	<Zadanie id="4">
-		<Pytanie>
-			
-		</Pytanie>
-		<Odpowiedzi>
-			<Odpowiedz poprawna="nie">
-				
-			</Odpowiedz>
-			<Odpowiedz poprawna="tak">
-				
-			</Odpowiedz>
-			<Odpowiedz poprawna="nie">
-
-			</Odpowiedz>
-			<Odpowiedz poprawna="nie">
 			</Odpowiedz>
 		</Odpowiedzi>
 	</Zadanie>

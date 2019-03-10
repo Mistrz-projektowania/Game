@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <AtrakcjeTurystyczne>
     <Województwo nazwa="świętokrzyskie">
-        <Atrakcja id="1">Bałtowski Park Jurajski, Fabryka Porcelany Ćmielów, Krzemionki Opatowskie</Atrakcja>
-        <Atrakcja id="2">Kielce: Pałac Biskupów Krakowskich, Bazylika Katedralna, Muzeum Zabawek i Zabawy, Park Linowy, Amfiteatr Kadzielnia, rezerwat Kadzielnia, Wietrznia, Geopark</Atrakcja>
-        <Atrakcja id="3">Muzeum Starożytnego Hutnictwa Świętokrzyskiego  im. Prof. Mieczysława Radwana w  Nowej Słupi</Atrakcja>
-        <Atrakcja id="4">Święty Krzyż: Przekaźnik telewizyjny, Muzeum Przyrodnicze ŚPN na Świętym Krzyżu (ekspozycja przyrodnicza i więzienna), Bazylika mniejsza pw. Trójcy Świętej i sanktuarium Relikwii Drzewa Krzyża Świętego</Atrakcja>
-        <Atrakcja id="5">Park Etnograficzny, Muzeum Wsi Kieleckiej w Tokarni</Atrakcja>
-        <Atrakcja id="6">Zamek w Chęcinach, Jaskinia Raj</Atrakcja>
-        <Atrakcja id="7">Centrum Nauki Leonardo da Vinci Podzamcze Chęcińskie</Atrakcja>
+        <Atrakcja id="0">Bałtowski Park Jurajski, Fabryka Porcelany Ćmielów, Krzemionki Opatowskie</Atrakcja>
+        <Atrakcja id="1">Kielce: Pałac Biskupów Krakowskich, Bazylika Katedralna, Muzeum Zabawek i Zabawy, Park Linowy, Amfiteatr Kadzielnia, rezerwat Kadzielnia, Wietrznia, Geopark</Atrakcja>
+        <Atrakcja id="2">Muzeum Starożytnego Hutnictwa Świętokrzyskiego  im. Prof. Mieczysława Radwana w  Nowej Słupi</Atrakcja>
+        <Atrakcja id="3">Święty Krzyż: Przekaźnik telewizyjny, Muzeum Przyrodnicze ŚPN na Świętym Krzyżu (ekspozycja przyrodnicza i więzienna), Bazylika mniejsza pw. Trójcy Świętej i sanktuarium Relikwii Drzewa Krzyża Świętego</Atrakcja>
+        <Atrakcja id="4">Park Etnograficzny, Muzeum Wsi Kieleckiej w Tokarni</Atrakcja>
+        <Atrakcja id="5">Zamek w Chęcinach, Jaskinia Raj</Atrakcja>
+        <Atrakcja id="6">Centrum Nauki Leonardo da Vinci Podzamcze Chęcińskie</Atrakcja>
     </Województwo>
     <Województwo nazwa="małopolskie">
         

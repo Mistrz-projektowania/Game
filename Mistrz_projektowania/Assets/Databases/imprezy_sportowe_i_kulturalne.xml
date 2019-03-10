@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ImprezySportoweiKulturalne>
-    <Impreza id="1">
+    <Impreza id="0">
         <Nazwa>Wytopki Ołowiu w Tokarni</Nazwa>
         <Termin></Termin>
     </Impreza>
-    <Impreza id="2">
+    <Impreza id="1">
         <Nazwa>Dymarki Świętokrzyskie</Nazwa>
         <Termin></Termin>
     </Impreza>
-    <Impreza id="3">
+    <Impreza id="2">
         <Nazwa>Mecz piłki ręcznej Vive Turon Kielce</Nazwa>
         <Termin></Termin>
     </Impreza>
-    <Impreza id="4">
+    <Impreza id="3">
         <Nazwa>Płocka Noc Kabaretowa</Nazwa>
         <Termin></Termin>
     </Impreza>
-    <Impreza id="5">
+    <Impreza id="4">
         <Nazwa>Święto Pomidora w Dwikozach</Nazwa>
         <Termin></Termin>
     </Impreza>
-    <Impreza id="6">
+    <Impreza id="5">
         <Nazwa>Międzynarodowy Harcerski Festiwal Kultury Młodzieży Szkolnej w Kielcach</Nazwa>
         <Termin></Termin>
     </Impreza>
-    <Impreza id="7">
+    <Impreza id="6">
         <Nazwa>Święto Śliwki w Szydłowie</Nazwa>
         <Termin></Termin>
     </Impreza>
-    <Impreza id="8">
+    <Impreza id="7">
         <Nazwa>Świętokrzyska Gala Kabaretowa</Nazwa>
         <Termin></Termin>
     </Impreza>
-    <Impreza id="9">
+    <Impreza id="8">
         <Nazwa>Dzień Chleba w Staszowie</Nazwa>
         <Termin></Termin>
     </Impreza>
-    <Impreza id="10">
+    <Impreza id="9">
         <Nazwa>Labirynt Kukurydzy w Kurozwękach</Nazwa>
         <Termin>lipiec - wrzesień 2016 r.</Termin>
     </Impreza>
-    <Impreza id="11">
+    <Impreza id="10">
         <Nazwa>Targi Dni dla Biznesu</Nazwa>
         <Termin>21-22.10.2016</Termin>
-    </Impreza>
-    <Impreza id="12">
-        <Nazwa></Nazwa>
-        <Termin></Termin>
     </Impreza>
 </ImprezySportoweiKulturalne>

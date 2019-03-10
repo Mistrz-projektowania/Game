@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Trasy>
-    <Trasa id="1">
+    <Trasa id="0">
     <NazwaTrasy>Trasa A:</NazwaTrasy>
     <OpisTrasy>Chęciny – Podzamcze Chęcińskie (Centrum Nauki Leonardo da Vinci) – Kielce – Nowa Słupia – Święty Krzyż – Kielce – Dobrzączka (Jaskinia Raj)</OpisTrasy>
     </Trasa>
-    <Trasa id="2">
+    <Trasa id="1">
     <NazwaTrasy>Trasa B:</NazwaTrasy>
     <OpisTrasy>Kielce - Park Etnograficzny Muzeum Wsi Kieleckiej w Tokarni - Kielce</OpisTrasy>
     </Trasa>
-    <Trasa id="3">
+    <Trasa id="2">
     <NazwaTrasy>Trasa C:</NazwaTrasy>
     <OpisTrasy>Kielce – Nowa Słupia Dymarki Świętokrzyskie - Kielce</OpisTrasy>
     </Trasa>
-    <Trasa id="4">
+    <Trasa id="3">
     <NazwaTrasy>Trasa D:</NazwaTrasy>
     <OpisTrasy>Kielce - Międzynarodowy Harcerski Festiwal Kultury Młodzieży Szkolnej w Kielcach</OpisTrasy>
     </Trasa>
-    <Trasa id="5">
+    <Trasa id="4">
     <NazwaTrasy></NazwaTrasy>
     <OpisTrasy></OpisTrasy>
     </Trasa>

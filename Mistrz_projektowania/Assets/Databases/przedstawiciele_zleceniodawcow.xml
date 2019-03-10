@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <PrzedstawicieleZleceniodawcow>
-    <Przedstawiciel id="1">
+    <Przedstawiciel id="0">
         <Nazwa>Anna Gwizdowska</Nazwa>
         <Adres></Adres>
         <Telefon>14 637 12 23</Telefon>
         <Fax>14 637 12 23</Fax>
         <TelefonKomorkowy>689 890 456</TelefonKomorkowy>
     </Przedstawiciel>
-    <Przedstawiciel id="2">
+    <Przedstawiciel id="1">
         <Nazwa>Alina Malinowska</Nazwa>
         <Adres>25-067 Kielce, ul. H. Sienkiewicza 12</Adres>
         <Telefon>41 345-87-99</Telefon>
         <Fax>41 345-87-80</Fax>
         <TelefonKomorkowy>789 890 456</TelefonKomorkowy>
     </Przedstawiciel>
-    <Przedstawiciel id="3">
+    <Przedstawiciel id="2">
         <Nazwa>Marcin Wyka</Nazwa>
         <Adres>ul. Armii Krajowej 75, 00-830 Wrocław</Adres>
         <Telefon>(071) 821 63 47</Telefon>
         <Fax>(071) 821 63 47</Fax>
         <TelefonKomorkowy>505 429 096</TelefonKomorkowy>
-    </Przedstawiciel>
-    <Przedstawiciel id="4">
-        <Nazwa></Nazwa>
-        <Adres></Adres>
-        <Telefon></Telefon>
-        <Fax></Fax>
-        <TelefonKomorkowy></TelefonKomorkowy>
     </Przedstawiciel>
 </PrzedstawicieleZleceniodawcow>
