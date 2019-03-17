@@ -14,38 +14,54 @@ public class questionsDataController : MonoBehaviour {
 	Dropdown ptDropdown;
 	Dropdown vehDropdown;
 	Dropdown tlDropdown;
+
+	string tripNameDatabaseName = "tripName";
+	string participantsNrDatabaseName = "participantsNr";
+	string notPayingParticipantsNrDatabaseName = "notPayingParticipantsNr";
+	string participantsTypeDatabaseName = "participantsType";
+	string vehicleDatabaseName = "vehicle";
+	string tripLengthDatabaseName = "tripLength";
+
 	// Use this for initialization
 	void Start () {
 		dataLoader = GameObject.Find ("QuestionsDataController").GetComponent<XMLDataLoader> ();
 
 		tNameDropdown = GameObject.Find ("DropdownTripName").GetComponent<Dropdown> ();
-		tNameDropdown.AddOptions (dataLoader.getQuestionsData ("tripName"));
+		tNameDropdown.AddOptions (dataLoader.getQuestionsData (tripNameDatabaseName));
+		GameplayModel.gameTripName = dataLoader.getGameData (tripNameDatabaseName, tNameDropdown.value);
+
 		pNrDropdown = GameObject.Find ("DropdownParticipantsNr").GetComponent<Dropdown> ();
-		pNrDropdown.AddOptions (dataLoader.getQuestionsData ("participantsNr"));
+		pNrDropdown.AddOptions (dataLoader.getQuestionsData (participantsNrDatabaseName));
+		GameplayModel.gameParticipantsNr = int.Parse(dataLoader.getGameData( participantsNrDatabaseName, pNrDropdown.value));
+
 		nppNrDropdown = GameObject.Find ("DropdownNotPayingParticipantsNr").GetComponent<Dropdown> ();
-		nppNrDropdown.AddOptions (dataLoader.getQuestionsData ("notPayingParticipantsNr"));
+		nppNrDropdown.AddOptions (dataLoader.getQuestionsData (notPayingParticipantsNrDatabaseName));
+		GameplayModel.gameNotPayingParticipantsNr = int.Parse(dataLoader.getGameData(notPayingParticipantsNrDatabaseName, nppNrDropdown.value));
+
 		ptDropdown = GameObject.Find ("DropdownParticipantsType").GetComponent<Dropdown> ();
-		ptDropdown.AddOptions (dataLoader.getQuestionsData ("participantsType"));
+		ptDropdown.AddOptions (dataLoader.getQuestionsData (participantsTypeDatabaseName));
 		vehDropdown = GameObject.Find ("DropdownVehicle").GetComponent<Dropdown> ();
-		vehDropdown.AddOptions (dataLoader.getQuestionsData ("vehicle"));
+		vehDropdown.AddOptions (dataLoader.getQuestionsData (vehicleDatabaseName));
 		tlDropdown = GameObject.Find ("DropdownTripLength").GetComponent<Dropdown> ();
-		tlDropdown.AddOptions (dataLoader.getQuestionsData ("tripLength"));
+		tlDropdown.AddOptions (dataLoader.getQuestionsData (tripLengthDatabaseName));
+		GameplayModel.gameTripLength = int.Parse(dataLoader.getGameData(tripLengthDatabaseName, tlDropdown.value));
 
 		countPoints ();
 
 		tNameDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
-			GameplayModel.gameTripName = tNameDropdown.options[tNameDropdown.value].text;
-			//Debug.Log (GameplayModel.gameTripName);
+			GameplayModel.gameTripName = dataLoader.getGameData (tripNameDatabaseName, tNameDropdown.value);
+			Debug.Log (GameplayModel.gameTripName);
 		});
 		pNrDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
-			GameplayModel.gameParticipantsNr = pNrDropdown.value;
-			//Debug.Log (GameplayModel.gameParticipantsNr);
+			GameplayModel.gameParticipantsNr = int.Parse(dataLoader.getGameData( participantsNrDatabaseName, pNrDropdown.value));
+			Debug.Log (GameplayModel.gameParticipantsNr);
 		});
 		nppNrDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
-			GameplayModel.gameNotPayingParticipantsNr = nppNrDropdown.value;
+			GameplayModel.gameNotPayingParticipantsNr = int.Parse(dataLoader.getGameData(notPayingParticipantsNrDatabaseName, nppNrDropdown.value));
+			Debug.Log (GameplayModel.gameNotPayingParticipantsNr);
 		});
 		ptDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
@@ -55,6 +71,9 @@ public class questionsDataController : MonoBehaviour {
 		});
 		tlDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
+			GameplayModel.gameTripLength = int.Parse(dataLoader.getGameData(tripLengthDatabaseName, tlDropdown.value));
+			Debug.Log("Length");
+			Debug.Log(GameplayModel.gameTripLength);
 		});
 
 

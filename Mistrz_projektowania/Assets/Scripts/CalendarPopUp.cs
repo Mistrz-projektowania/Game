@@ -57,7 +57,7 @@ public class CalendarPopUp : MonoBehaviour {
 
 	void CreateMonths()
 	{
-		chosenMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1); // The magical Line :)
+		chosenMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
 		HeaderLabel.text = Months[DateTime.Now.Month - 1] + " " + DateTime.Now.Year;
 		calendarMonth.text = (DateTime.Now.Month).ToString();
 		calendarYear.text = DateTime.Now.Year.ToString();

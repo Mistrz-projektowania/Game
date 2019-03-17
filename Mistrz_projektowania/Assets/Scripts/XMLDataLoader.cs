@@ -166,12 +166,55 @@ public class XMLDataLoader : MonoBehaviour {
 		return questionsData;
 	}
 
+	public string getGameData(string database, int id){
+		XmlDocument xmlDoc = new XmlDocument();
+		string itemData = "";
+		switch (database){
+		case "participantsNr":
+			xmlDoc.LoadXml (ParticipantsNrDatabase.text); 
+			XmlNode nodes = xmlDoc.SelectSingleNode ("LiczbaUczestnikowPlacacych");
+			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode ("LiczbaOsob").InnerText;
+			break;
+		case "notPayingParticipantsNr":
+			xmlDoc.LoadXml (notPayingParticipantsNrDatabase.text);
+			XmlNode participantsNodes = xmlDoc.SelectSingleNode("LiczbaUczestnikowNieplacacych");
+			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode("LiczbaOsob").InnerText;
+			break;
+		case "tripName":
+			xmlDoc.LoadXml (TripNameDatabase.text);
+			XmlNode tripNodes = xmlDoc.SelectSingleNode ("NazwyImprez");
+			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode("Nazwa").InnerText;
+			break;
+		case "participantsType":
+			xmlDoc.LoadXml (participantsTypeDatabase.text);
+			XmlNode participantsTypeNodes = xmlDoc.SelectSingleNode ("Uczestnicy");
+			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode("Nazwa").InnerText;
+			break;
+		case "vehicle":
+			xmlDoc.LoadXml (vehicleDatabase.text);
+			XmlNode vehicleNodes = xmlDoc.SelectSingleNode ("Transport");
+			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode("Nazwa").InnerText;
+			break;
+		case "tripLength":
+			xmlDoc.LoadXml (tripLengthDatabase.text);
+			XmlNode tripLengthNodes = xmlDoc.SelectSingleNode ("CzasyTrwania");
+			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode("Dni").InnerText;
+			break;
+		default:
+			break;
+		}
+		return itemData;
+	}
+
+
 	public int checkPoints(string database, int itemIndex){
 		int points = 0;
 		XmlDocument xmlDoc = getDatabaseData (database);
 		points = System.Xml.XmlConvert.ToInt32 (xmlDoc.SelectSingleNode ("//*[@id='" + itemIndex + "']").SelectSingleNode ("Punkty").InnerText);
 		return points;
 	}
+
+
 	XmlDocument getDatabaseData(string database){
 		XmlDocument xmlDoc = new XmlDocument();
 		switch (database) {

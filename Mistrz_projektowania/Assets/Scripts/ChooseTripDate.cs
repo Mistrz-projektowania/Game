@@ -37,7 +37,7 @@ public class ChooseTripDate : MonoBehaviour {
 			int m = int.Parse(calendarMonth.GetComponent<Text>().text);
 			int y = int.Parse(calendarYear.GetComponent<Text>().text);
 			chosenDate = new DateTime (y, m, d);
-			chosenEndDate = chosenDate.AddDays(tripLength);
+			chosenEndDate = chosenDate.AddDays(GameplayModel.gameTripLength - 1);
 			calendarButtonText.GetComponent<Text>().text = chosenDate.Day + "/" + chosenDate.Month + "/" + chosenDate.Year + " - " + chosenEndDate.Day + "/" + chosenEndDate.Month + "/" + chosenEndDate.Year ;
 		}
 	}
