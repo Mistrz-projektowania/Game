@@ -9,6 +9,8 @@ public class GameplayModel : MonoBehaviour {
 	static public int gameParticipantsNr = 0;
 	static public int gameNotPayingParticipantsNr = 0;
 	static public int gameTripLength = 1;
+	static public string gameVehicleType = "";
+	static public string gameParticipantsType = "";
 
 	static public int gamePoints = 0;
 

@@ -26,59 +26,78 @@ public class questionsDataController : MonoBehaviour {
 	void Start () {
 		dataLoader = GameObject.Find ("QuestionsDataController").GetComponent<XMLDataLoader> ();
 
-		tNameDropdown = GameObject.Find ("DropdownTripName").GetComponent<Dropdown> ();
-		tNameDropdown.AddOptions (dataLoader.getQuestionsData (tripNameDatabaseName));
-		GameplayModel.gameTripName = dataLoader.getGameData (tripNameDatabaseName, tNameDropdown.value);
-
-		pNrDropdown = GameObject.Find ("DropdownParticipantsNr").GetComponent<Dropdown> ();
-		pNrDropdown.AddOptions (dataLoader.getQuestionsData (participantsNrDatabaseName));
-		GameplayModel.gameParticipantsNr = int.Parse(dataLoader.getGameData( participantsNrDatabaseName, pNrDropdown.value));
-
-		nppNrDropdown = GameObject.Find ("DropdownNotPayingParticipantsNr").GetComponent<Dropdown> ();
-		nppNrDropdown.AddOptions (dataLoader.getQuestionsData (notPayingParticipantsNrDatabaseName));
-		GameplayModel.gameNotPayingParticipantsNr = int.Parse(dataLoader.getGameData(notPayingParticipantsNrDatabaseName, nppNrDropdown.value));
-
-		ptDropdown = GameObject.Find ("DropdownParticipantsType").GetComponent<Dropdown> ();
-		ptDropdown.AddOptions (dataLoader.getQuestionsData (participantsTypeDatabaseName));
-		vehDropdown = GameObject.Find ("DropdownVehicle").GetComponent<Dropdown> ();
-		vehDropdown.AddOptions (dataLoader.getQuestionsData (vehicleDatabaseName));
-		tlDropdown = GameObject.Find ("DropdownTripLength").GetComponent<Dropdown> ();
-		tlDropdown.AddOptions (dataLoader.getQuestionsData (tripLengthDatabaseName));
-		GameplayModel.gameTripLength = int.Parse(dataLoader.getGameData(tripLengthDatabaseName, tlDropdown.value));
+		handleTripNameDropdown ();
+		handleParticipantsNrDropdown ();
+		handleNotPayingParticipantsNrDropdown ();
+		handleParticipantsTypeDropdown ();
+		handleVehicleTypeDropdown ();
+		handleTripLengthDropdown ();
 
 		countPoints ();
+	}
 
+	void handleTripNameDropdown(){
+		tNameDropdown = GameObject.Find ("DropdownTripName").GetComponent<Dropdown> ();
+		tNameDropdown.AddOptions (dataLoader.getQuestionsData (tripNameDatabaseName));
+		GameplayModel.gameTripName = setGlobalData(tripNameDatabaseName, tNameDropdown.value);
 		tNameDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
-			GameplayModel.gameTripName = dataLoader.getGameData (tripNameDatabaseName, tNameDropdown.value);
+			GameplayModel.gameTripName = setGlobalData(tripNameDatabaseName, tNameDropdown.value);
 			Debug.Log (GameplayModel.gameTripName);
 		});
+	}
+	void handleParticipantsNrDropdown(){
+		pNrDropdown = GameObject.Find ("DropdownParticipantsNr").GetComponent<Dropdown> ();
+		pNrDropdown.AddOptions (dataLoader.getQuestionsData (participantsNrDatabaseName));
+		GameplayModel.gameParticipantsNr = int.Parse(setGlobalData( participantsNrDatabaseName, pNrDropdown.value));
 		pNrDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
-			GameplayModel.gameParticipantsNr = int.Parse(dataLoader.getGameData( participantsNrDatabaseName, pNrDropdown.value));
+			GameplayModel.gameParticipantsNr = int.Parse(setGlobalData( participantsNrDatabaseName, pNrDropdown.value));
 			Debug.Log (GameplayModel.gameParticipantsNr);
 		});
+	}
+
+	void handleNotPayingParticipantsNrDropdown(){
+		nppNrDropdown = GameObject.Find ("DropdownNotPayingParticipantsNr").GetComponent<Dropdown> ();
+		nppNrDropdown.AddOptions (dataLoader.getQuestionsData (notPayingParticipantsNrDatabaseName));
+		GameplayModel.gameNotPayingParticipantsNr = int.Parse(setGlobalData(notPayingParticipantsNrDatabaseName, nppNrDropdown.value));
 		nppNrDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
-			GameplayModel.gameNotPayingParticipantsNr = int.Parse(dataLoader.getGameData(notPayingParticipantsNrDatabaseName, nppNrDropdown.value));
+			GameplayModel.gameNotPayingParticipantsNr = int.Parse(setGlobalData(notPayingParticipantsNrDatabaseName, nppNrDropdown.value));
 			Debug.Log (GameplayModel.gameNotPayingParticipantsNr);
 		});
+	}
+	void handleParticipantsTypeDropdown(){
+		ptDropdown = GameObject.Find ("DropdownParticipantsType").GetComponent<Dropdown> ();
+		ptDropdown.AddOptions (dataLoader.getQuestionsData (participantsTypeDatabaseName));
 		ptDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
+			GameplayModel.gameParticipantsType = setGlobalData(participantsTypeDatabaseName, ptDropdown.value);
 		});
+	}
+
+	void handleVehicleTypeDropdown(){
+		vehDropdown = GameObject.Find ("DropdownVehicle").GetComponent<Dropdown> ();
+		vehDropdown.AddOptions (dataLoader.getQuestionsData (vehicleDatabaseName));
+		GameplayModel.gameVehicleType = setGlobalData(vehicleDatabaseName, vehDropdown.value);
 		vehDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
+			GameplayModel.gameVehicleType = setGlobalData(vehicleDatabaseName, vehDropdown.value);
 		});
+	}
+
+	void handleTripLengthDropdown(){
+		tlDropdown = GameObject.Find ("DropdownTripLength").GetComponent<Dropdown> ();
+		tlDropdown.AddOptions (dataLoader.getQuestionsData (tripLengthDatabaseName));
+		GameplayModel.gameTripLength = int.Parse(setGlobalData(tripLengthDatabaseName, tlDropdown.value));
 		tlDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
-			GameplayModel.gameTripLength = int.Parse(dataLoader.getGameData(tripLengthDatabaseName, tlDropdown.value));
+			GameplayModel.gameTripLength = int.Parse(setGlobalData(tripLengthDatabaseName, tlDropdown.value));
 			Debug.Log("Length");
 			Debug.Log(GameplayModel.gameTripLength);
 		});
-
-
-
 	}
+
 
 	void countPoints(){
 		pointsSum = 0;
@@ -90,6 +109,10 @@ public class questionsDataController : MonoBehaviour {
 		pointsSum += dataLoader.checkPoints ("notPayingParticipantsNr", nppNrDropdown.value);
 		GameplayModel.gamePoints = pointsSum;
 		pointsText.text = "Punkty: " + pointsSum.ToString();
+	}
+
+	string setGlobalData(string databaseName, int id){
+		return dataLoader.getGameData (databaseName, id);
 	}
 	
 	// Update is called once per frame
