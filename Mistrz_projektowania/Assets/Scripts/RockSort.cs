@@ -13,7 +13,6 @@ public class RockSort : MonoBehaviour {
 	private int[] rockOrder;
 	private Image systemInfo;
 
-	private StateMachine stateMachine;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +21,6 @@ public class RockSort : MonoBehaviour {
 		rockController = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>();
 		dataOrder = gameController.getDataOrder ();
 		rockOrder = new int[dataOrder.Length];
-		stateMachine = GameObject.Find ("StateMachine").GetComponent<StateMachine> ();
 	}
 	
 	// Update is called once per frame
@@ -77,7 +75,7 @@ public class RockSort : MonoBehaviour {
 			yield return new WaitForSeconds (seconds);
 		}
 		StartCoroutine (gameController.fadeMessage (systemInfo, false, 0.5f));
-		stateMachine.setState (0);
+		StateMachine.setState (0);
 		/*
 		string arr = "";
 		for (int i = 0; i < n - 1; i++) {

@@ -10,7 +10,6 @@ public class WitchController : MonoBehaviour {
 	private Vector3 destinationPos;
 	private Quaternion rotation;
 	private Quaternion nextRotation;
-	private StateMachine stateMachine;
 
 	float speed = 2;
 	float rotateSpeed = 1.0f;
@@ -43,7 +42,6 @@ public class WitchController : MonoBehaviour {
 		rotation = nextRotation = transform.rotation;
 		ps = GameObject.Find ("WitchSpell").GetComponent<ParticleSystem> ();
 		ps.Stop ();
-		stateMachine = GameObject.Find ("StateMachine").GetComponent<StateMachine> ();
 		sound = GameObject.Find ("witchSound").GetComponent<AudioSource> ();
 	}
 
@@ -82,7 +80,7 @@ public class WitchController : MonoBehaviour {
 		setDestination(new Vector3(51.0f, 1.8f, 16.0f), new Vector3(0,100,0), flyingTime);// czarownica leci do tyłu
 		StartCoroutine (AudioFadeOut(sound, 2));
 		StartCoroutine (gameController.fadeMessage (systemInfo, false, 0.5f));
-		stateMachine.setState (0);
+		StateMachine.setState (0);
 	}
 	void swapRocksFewTimes(int times){
 		for (int i = 0; i < times; i++) {

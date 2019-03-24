@@ -15,6 +15,9 @@ public class PauseMenuController : MonoBehaviour {
 	void Start () {
 		pauseMenu.SetActive (false);
 		pauseMenuButton.onClick.AddListener(handlePauseMenu);
+		backToGameButton.onClick.AddListener(handlePauseMenu);
+		backToMenuButton.onClick.AddListener (backToMenu);
+		quitGameButton.onClick.AddListener (quitGame);
 	}
 	
 	// Update is called once per frame
@@ -26,6 +29,7 @@ public class PauseMenuController : MonoBehaviour {
 	}
 
 	void backToGame(){
+		StateMachine.setState (StateMachine.getPreviousState());
 		pauseMenu.SetActive (false);
 	}
 	void backToMenu(){
@@ -37,13 +41,15 @@ public class PauseMenuController : MonoBehaviour {
 
 	void handlePauseMenu(){
 		if (pauseMenu.activeSelf == true) {
-			pauseMenu.SetActive (false);
+			backToGame ();
+			Debug.Log (StateMachine.getPreviousState());
+			Debug.Log (StateMachine.getState());
 
 		} else {
+			StateMachine.setState (8);
+			Debug.Log (StateMachine.getPreviousState());
+			Debug.Log (StateMachine.getState());
 			pauseMenu.SetActive (true);
-			backToGameButton.onClick.AddListener (backToGame);
-			backToMenuButton.onClick.AddListener (backToMenu);
-			quitGameButton.onClick.AddListener (quitGame);
 		}
 	}
 

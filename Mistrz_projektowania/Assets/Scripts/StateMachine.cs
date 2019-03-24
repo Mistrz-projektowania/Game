@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour {
 
-	public int currentState;
-	public int previousState;
+	public static int currentState;
+	public static int previousState;
 
 	WitchController witchCtrl;
 	SunMopController sunMopCtrl;
@@ -22,6 +22,7 @@ public class StateMachine : MonoBehaviour {
 		 * 5 - blok GTS
 		 * 6 - gracz odpowiada na pytania Quizu
 		 * 7 - koniec gry
+		 * 8 - pauza
 		 */
 		currentState = 0;
 		previousState = 0;
@@ -47,6 +48,10 @@ public class StateMachine : MonoBehaviour {
 			}
 		}
 		*/
+		if (currentState == 8) {
+			soundController.pauseAmbientGameplaySound ();
+		} else soundController.playAmbientGameplaySound ();
+
 		if(currentState == 2){
 			witchCtrl.runWitch ();
 
@@ -54,17 +59,20 @@ public class StateMachine : MonoBehaviour {
 		if (currentState == 3) {
 			sunMopCtrl.SunMopON ();
 		}
+
 	}
 
-	public void setState(int state){
+	public static void setState(int state){
 		previousState = currentState;
 		currentState = state;
 	}
 
-	public int getState(){
+	public static int getState(){
 		return currentState;
 	}
-
+	public static int getPreviousState(){
+		return previousState;
+	}
 	IEnumerator waitForAndDraw(int seconds){
 		yield return new WaitForSeconds (seconds);
 		if (currentState == 0) {

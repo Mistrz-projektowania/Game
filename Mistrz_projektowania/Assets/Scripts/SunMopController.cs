@@ -7,8 +7,6 @@ public class SunMopController : MonoBehaviour {
 	public GameObject SunMop;
 	public GameObject [] rocks;
 
-	private StateMachine stateMachine;
-
 	public ParticleSystem ps;
 
 	private Vector3 startPos;
@@ -32,7 +30,6 @@ public class SunMopController : MonoBehaviour {
 		startPos = destinationPos = stayPos = transform.position;
 		skyPos = stayPos + new Vector3 (0, 0, 0);
 		rocks = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>().rocks;
-		stateMachine = GameObject.Find ("StateMachine").GetComponent<StateMachine> ();
 	}
 	
 	// Update is called once per frame
@@ -46,7 +43,7 @@ public class SunMopController : MonoBehaviour {
 		}
 	}
 	public void SunMopON(){
-		stateMachine.setState (3);
+		StateMachine.setState (3);
 		SunMop.SetActive (true);
 		Debug.Log ("Sun Mop ON");
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
@@ -69,7 +66,7 @@ public class SunMopController : MonoBehaviour {
 	}
 
 	void SunMopOff(){
-		stateMachine.setState (0);
+		StateMachine.setState (0);
 	}
 
 	IEnumerator waitFor(int seconds){

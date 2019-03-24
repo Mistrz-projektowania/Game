@@ -4373,8 +4373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45242f88b9feb84aac79d58efd6e7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
-  previousState: 0
 --- !u!4 &242635357
 Transform:
   m_ObjectHideFlags: 0
@@ -5780,6 +5778,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 339450036}
+  - component: {fileID: 339450037}
   m_Layer: 0
   m_Name: Sounds
   m_TagString: Untagged
@@ -5804,6 +5803,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &339450037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 339450035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9779def7127e9bb4ca8470db14887275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &350032939
 GameObject:
   m_ObjectHideFlags: 0
@@ -23923,7 +23933,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1415497527}
   m_LocalRotation: {x: 0.73994213, y: 0.16636571, z: -0.19826692, w: 0.6208852}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 176, y: 167, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25223,7 +25233,7 @@ GameObject:
   - component: {fileID: 1476228379}
   - component: {fileID: 1476228378}
   m_Layer: 0
-  m_Name: Sound
+  m_Name: ambientGameplaySound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
