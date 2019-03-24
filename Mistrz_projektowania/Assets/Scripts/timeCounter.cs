@@ -21,7 +21,7 @@ public class timeCounter : MonoBehaviour {
 	}
 	public void UpdateTimerUI(){
 		secondsCount += Time.deltaTime;
-		timerText.text = "Czas: " + hourCount + ":" + minuteCount.ToString("00") + ":" + ((int)secondsCount).ToString("00");
+		timerText.text = hourCount + ":" + minuteCount.ToString("00") + ":" + ((int)secondsCount).ToString("00");
 		if(secondsCount >= 60){
 			minuteCount++;
 			secondsCount = 0;

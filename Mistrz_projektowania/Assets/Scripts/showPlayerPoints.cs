@@ -24,7 +24,7 @@ public class showPlayerPoints : MonoBehaviour {
 	}
 
 	public void UpdatePlayerPoints(){
-		playerPoints.text = "Punkty: " + points;
+		playerPoints.text = points.ToString();
 	}
 
 	public int getPlayerPoints(){
