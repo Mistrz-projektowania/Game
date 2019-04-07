@@ -49,6 +49,6 @@ public class ChooseCharacter : MonoBehaviour
     public void SelectButton()
     {
         PlayerPrefs.SetInt("Selected", person);
-        SceneManager.LoadScene("Level1");
+		SceneManager.LoadScene("Entry_questions_Level1");
     }
 }
