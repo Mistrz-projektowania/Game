@@ -5,7 +5,10 @@ using UnityEngine;
 public class GameplayModel : MonoBehaviour {
 
 	static public bool gamePause = true;
+
 	static public int gameLevel = 1;
+
+	static public int gameTripID = 1;
 	static public string gameTripName = "";
 	static public int gameParticipantsNr = 0;
 	static public int gameNotPayingParticipantsNr = 0;
