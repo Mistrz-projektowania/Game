@@ -7,21 +7,13 @@ public class LevelSelection : MonoBehaviour {
 
     public void selectLevel() {
         switch (this.gameObject.name) {
-		case "Level1Button":
+			case "Level1Button":
 				GameplayModel.gameLevel = 1;
-				SceneManager.LoadScene("Select Character");
                 break;
             case "Level2Button":
 				GameplayModel.gameLevel = 2;
-                SceneManager.LoadScene("Level2");
                 break;
-
         }
-
-
-      
-
-
-
+		SceneManager.LoadScene("Select Character");
     }
 }

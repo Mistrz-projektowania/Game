@@ -206,127 +206,127 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Body_Diffuse
-    second: {fileID: 2800000, guid: 49bc52266d0498049a43b4702f6fedaa, type: 3}
+    second: {fileID: 2800000, guid: 3e7a17742dc1c7c40aed5d6ff40bb0a7, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Body_Gloss
-    second: {fileID: 2800000, guid: 62615debf968f8340b77c41ccd7b7feb, type: 3}
+    second: {fileID: 2800000, guid: 87c4c2cc7b022764f83d714c032d08bd, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Body_Normal
-    second: {fileID: 2800000, guid: f08513808c1030e42a528063a32cf4fd, type: 3}
+    second: {fileID: 2800000, guid: 0a869209b72f70744add0078deecb2fc, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Body_Opacity
-    second: {fileID: 2800000, guid: 03d24de5b5998904e9852bd436bbb348, type: 3}
+    second: {fileID: 2800000, guid: 04c9e50e6b6fb6342bd6980ddfc2ffe5, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Body_Specular
-    second: {fileID: 2800000, guid: d3314baf1d2d5d24ba23dc5e6c3ae39f, type: 3}
+    second: {fileID: 2800000, guid: f082907e39394c241b17d2347297037b, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Bottom_Diffuse
-    second: {fileID: 2800000, guid: 8709bceffbbbcf247a59163eb5016258, type: 3}
+    second: {fileID: 2800000, guid: e7d56b88e69e1774d9bce408c4ca7e1e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Bottom_Gloss
-    second: {fileID: 2800000, guid: 84de7d2d69c3d5745b724cee402ecbac, type: 3}
+    second: {fileID: 2800000, guid: c56617c577d128a4cab18f5075934765, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Bottom_Normal
-    second: {fileID: 2800000, guid: 29e1df06b0f984f4d885806acf0e8ed5, type: 3}
+    second: {fileID: 2800000, guid: 5d970c0082eb04a41979c582c169f291, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Bottom_Opacity
-    second: {fileID: 2800000, guid: cb7d8b1087a3221419bd56c7498885e9, type: 3}
+    second: {fileID: 2800000, guid: d377adf6f437ae14591fc49a02111608, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Bottom_Specular
-    second: {fileID: 2800000, guid: fa2b39594fd5b924e8080caae459c262, type: 3}
+    second: {fileID: 2800000, guid: 3a5382a8f96b4524a9763d0209506bb7, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Hair_Diffuse
-    second: {fileID: 2800000, guid: 643d579972738f94ca9729edb00d4ef1, type: 3}
+    second: {fileID: 2800000, guid: 2d1e86fa2962e984cbc19b2a65571b87, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Hair_Gloss
-    second: {fileID: 2800000, guid: ef37a92f81f875f47ac6d6ed25001d2c, type: 3}
+    second: {fileID: 2800000, guid: e4322069092f1b14c8d4e3340f52eb68, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Hair_Normal
-    second: {fileID: 2800000, guid: 86d7d6c60c645764caa2bd9bb5c1c78e, type: 3}
+    second: {fileID: 2800000, guid: 23f54a43480032143aa8fa7ad8bea540, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Hair_Opacity
-    second: {fileID: 2800000, guid: 21982300f1b85c54f93e443f634384ea, type: 3}
+    second: {fileID: 2800000, guid: 4df9fe918c0f1a84993515cdf4f06b93, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Hair_Specular
-    second: {fileID: 2800000, guid: 697fc3dd8ef8446429b77d8bf9d98ea0, type: 3}
+    second: {fileID: 2800000, guid: 4fd98722aededa145892e496edf5a591, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Shoes_Diffuse
-    second: {fileID: 2800000, guid: e0baafbba7ac7674596bbc3f41be0b6b, type: 3}
+    second: {fileID: 2800000, guid: 100f8bd6af79c694a9e05142bacc5499, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Shoes_Gloss
-    second: {fileID: 2800000, guid: 700d81ac9cccd204389666ceef5efcda, type: 3}
+    second: {fileID: 2800000, guid: 6ee3904ff541a5343996288ee80a4f98, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Shoes_Normal
-    second: {fileID: 2800000, guid: 08e4e325e1bb37e4ca5b8c700b7bb8d4, type: 3}
+    second: {fileID: 2800000, guid: b065baf03da41a146820cda41683fbf9, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Shoes_Opacity
-    second: {fileID: 2800000, guid: 1e0108233d40c58438e24d8fb20b9c17, type: 3}
+    second: {fileID: 2800000, guid: a833be655e5f2b14487b811b4c3dd49f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Shoes_Specular
-    second: {fileID: 2800000, guid: bcc0f165250266547ac8c4b62977f14d, type: 3}
+    second: {fileID: 2800000, guid: 997ba49126fe5ce4293c49b80b392d71, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Top_Diffuse
-    second: {fileID: 2800000, guid: 61a904dbc6cc4984cac73c00be58b1c7, type: 3}
+    second: {fileID: 2800000, guid: 6490aa9851061b34e8e653b53658edcd, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Top_Gloss
-    second: {fileID: 2800000, guid: 165d34d85cdfa2d45bdfdd395809acf7, type: 3}
+    second: {fileID: 2800000, guid: e615efc8b42ee044d948c0bcefd017a3, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Top_Normal
-    second: {fileID: 2800000, guid: 1dd3a37b29ad87c44882952d94fb27eb, type: 3}
+    second: {fileID: 2800000, guid: 475548ee79f46e84685c55d3efd69a41, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Top_Opacity
-    second: {fileID: 2800000, guid: 8b534142abea42b4cb0d702b851cd904, type: 3}
+    second: {fileID: 2800000, guid: e94846a1cce50f648be5b6aac893600c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Urszula_Top_Specular
-    second: {fileID: 2800000, guid: 80365ec5f71733541b2e7999229f69aa, type: 3}
+    second: {fileID: 2800000, guid: ebd1b41a4bd4feb498f81415e1ecdbd8, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

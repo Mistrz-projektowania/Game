@@ -7,6 +7,7 @@ public class GameplayModel : MonoBehaviour {
 	static public bool gamePause = true;
 
 	static public int gameLevel = 1;
+	static public string gameCharacter = "Łukasz";
 
 	static public int gameTripID = 1;
 	static public string gameTripName = "";
