@@ -24,8 +24,8 @@ public class StateMachine : MonoBehaviour {
 		 * 7 - koniec gry
 		 * 8 - pauza
 		 */
-		currentState = 0;
-		previousState = 0;
+		currentState = 8;
+		previousState = 8;
 		witchCtrl = GameObject.Find ("Witch").GetComponent<WitchController> ();
 		sunMopCtrl = GameObject.Find ("SunMop").GetComponent<SunMopController> ();
 		witchStateControl ();

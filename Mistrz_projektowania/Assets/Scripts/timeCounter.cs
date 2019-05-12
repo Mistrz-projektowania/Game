@@ -20,15 +20,17 @@ public class timeCounter : MonoBehaviour {
 		UpdateTimerUI();
 	}
 	public void UpdateTimerUI(){
-		secondsCount += Time.deltaTime;
-		timerText.text = hourCount + ":" + minuteCount.ToString("00") + ":" + ((int)secondsCount).ToString("00");
-		if(secondsCount >= 60){
-			minuteCount++;
-			secondsCount = 0;
-		}else if(minuteCount >= 60){
-			hourCount++;
-			minuteCount = 0;
-		}    
+		if (StateMachine.currentState != 8) {
+			secondsCount += Time.deltaTime;
+			timerText.text = hourCount + ":" + minuteCount.ToString ("00") + ":" + ((int)secondsCount).ToString ("00");
+			if (secondsCount >= 60) {
+				minuteCount++;
+				secondsCount = 0;
+			} else if (minuteCount >= 60) {
+				hourCount++;
+				minuteCount = 0;
+			}    
+		}
 	}
     public void addTimeUI(int value)
     {
