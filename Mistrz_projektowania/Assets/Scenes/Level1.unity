@@ -19030,12 +19030,33 @@ MonoBehaviour:
   CustomerContactDatabase: {fileID: 4900000, guid: 0ab01a1f69b2df64fa879efc862b91c3,
     type: 3}
   tripPlanDatabase: {fileID: 4900000, guid: 2b9b776270749b34ea8c15dd782b9b1e, type: 3}
-  tripLengthDatabase: {fileID: 0}
+  tripLengthDatabase: {fileID: 4900000, guid: 43d9ef6ebe4a6804ab9cb425e45f0560, type: 3}
   hotelDatabase: {fileID: 4900000, guid: 7f004ddb70993d4419a164d6190b3b46, type: 3}
   restaurantDatabase: {fileID: 4900000, guid: e59dc58f00209f9478f24b1af30399ad, type: 3}
   servicesDatabase: {fileID: 4900000, guid: 4199ff70537a3c1458af93ce0e02c1dc, type: 3}
-  vehicleDatabase: {fileID: 0}
-  participantsTypeDatabase: {fileID: 0}
+  vehicleDatabase: {fileID: 4900000, guid: 7833558a2f2fa484a8c0d60189751f56, type: 3}
+  participantsTypeDatabase: {fileID: 4900000, guid: dfdbbedfa09fcea4bb0d9a55d797c55f,
+    type: 3}
+  L2_PlanDatabase: {fileID: 4900000, guid: 6e19f9d35c6170b41b7a0eb07f033698, type: 3}
+  L2_TripNameDatabase: {fileID: 4900000, guid: d4ffb9a6434ae78428fd381607962961, type: 3}
+  L2_TripNrDatabase: {fileID: 4900000, guid: 2627b387753fc99438208e2947cb917c, type: 3}
+  L2_CustomerDatabase: {fileID: 4900000, guid: 738dfc9bd3245334da5acf81021697c3, type: 3}
+  L2_ParticipantsNrDatabase: {fileID: 4900000, guid: 2526c47d862b3e541a1796d9c34c3f8e,
+    type: 3}
+  L2_notPayingParticipantsNrDatabase: {fileID: 4900000, guid: 9b530da911da5c340a254dab2e0c9c17,
+    type: 3}
+  L2_CustomerContactDatabase: {fileID: 4900000, guid: e4e6ff5a98b7bc24b91de2c2a2c3405d,
+    type: 3}
+  L2_tripPlanDatabase: {fileID: 4900000, guid: 6e19f9d35c6170b41b7a0eb07f033698, type: 3}
+  L2_tripLengthDatabase: {fileID: 4900000, guid: 3f0c9ca939c0e3445a522ca9f606cbcb,
+    type: 3}
+  L2_hotelDatabase: {fileID: 4900000, guid: 1afa00872eaeca9489462fe8729d4e56, type: 3}
+  L2_restaurantDatabase: {fileID: 4900000, guid: d7fd7e1cd7a763b4ea2fe86ef19d468c,
+    type: 3}
+  L2_servicesDatabase: {fileID: 4900000, guid: 45d82281d832b98418d4ef14eebba402, type: 3}
+  L2_vehicleDatabase: {fileID: 4900000, guid: 724fa545d83865343a3859286988847f, type: 3}
+  L2_participantsTypeDatabase: {fileID: 4900000, guid: cbac34cda517c9841b1284b48bb9d478,
+    type: 3}
   id: 1
   tagName: Plan
   rockText1: {fileID: 1946045193}

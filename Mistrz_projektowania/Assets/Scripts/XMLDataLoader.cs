@@ -22,6 +22,20 @@ public class XMLDataLoader : MonoBehaviour {
 	public TextAsset servicesDatabase;
 	public TextAsset vehicleDatabase;
 	public TextAsset participantsTypeDatabase;
+	public TextAsset L2_PlanDatabase;
+	public TextAsset L2_TripNameDatabase;
+	public TextAsset L2_TripNrDatabase;
+	public TextAsset L2_CustomerDatabase;
+	public TextAsset L2_ParticipantsNrDatabase;
+	public TextAsset L2_notPayingParticipantsNrDatabase;
+	public TextAsset L2_CustomerContactDatabase;
+	public TextAsset L2_tripPlanDatabase;
+	public TextAsset L2_tripLengthDatabase;
+	public TextAsset L2_hotelDatabase;
+	public TextAsset L2_restaurantDatabase;
+	public TextAsset L2_servicesDatabase;
+	public TextAsset L2_vehicleDatabase;
+	public TextAsset L2_participantsTypeDatabase;
 	public int id;
 	public string tagName;
 
