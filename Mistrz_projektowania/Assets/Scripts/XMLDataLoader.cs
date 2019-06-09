@@ -213,8 +213,7 @@ public class XMLDataLoader : MonoBehaviour {
 		points = System.Xml.XmlConvert.ToInt32 (xmlDoc.SelectSingleNode ("//*[@id='" + itemIndex + "']").SelectSingleNode ("Punkty").InnerText);
 		return points;
 	}
-
-
+		
 	XmlDocument getDatabaseData(string database){
 		XmlDocument xmlDoc = new XmlDocument();
 		switch (database) {

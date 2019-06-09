@@ -40,10 +40,12 @@ public class questionsDataController : MonoBehaviour {
 		tNameDropdown = GameObject.Find ("DropdownTripName").GetComponent<Dropdown> ();
 		tNameDropdown.AddOptions (dataLoader.getQuestionsData (tripNameDatabaseName));
 		GameplayModel.gameTripName = setGlobalData(tripNameDatabaseName, tNameDropdown.value);
+		GameplayModel.gameTripID = tNameDropdown.value;
 		tNameDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
 			GameplayModel.gameTripName = setGlobalData(tripNameDatabaseName, tNameDropdown.value);
 			Debug.Log (GameplayModel.gameTripName);
+			GameplayModel.gameTripID = tNameDropdown.value;
 		});
 	}
 	void handleParticipantsNrDropdown(){
@@ -65,6 +67,7 @@ public class questionsDataController : MonoBehaviour {
 			countPoints ();
 			GameplayModel.gameNotPayingParticipantsNr = int.Parse(setGlobalData(notPayingParticipantsNrDatabaseName, nppNrDropdown.value));
 			Debug.Log (GameplayModel.gameNotPayingParticipantsNr);
+
 		});
 	}
 	void handleParticipantsTypeDropdown(){
