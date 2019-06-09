@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PilocyImprez>
+    <Pilot id="0">
+        <Dane>Marzena Szwed</Dane>
+        <Uprawnienia>uprawnienia przewodnika wycieczek po Regionie Świętokrzyskim</Uprawnienia>
+    </Pilot>
+    <Pilot id="1">
+        <Dane>Krzysztof Waliszewski</Dane>
+        <Uprawnienia>uprawnienia przewodnika wycieczek po całej Polsce</Uprawnienia>
+    </Pilot>
+    <Pilot id="2">
+        <Dane>Teresa Adamus</Dane>
+        <Uprawnienia>uprawnienia przewodnika wycieczek po Regionie Świętokrzyskim</Uprawnienia>
+    </Pilot>
+    <Pilot id="3">
+        <Dane>Wojciech Zwierzyński</Dane>
+        <Uprawnienia>uprawnienia przewodnika wycieczek po Małopolsce</Uprawnienia>
+    </Pilot>
+    <Pilot id="4">
+        <Dane>Jarosław Bednarski</Dane>
+        <Uprawnienia>uprawnienia przewodnika wycieczek po Wielkopolsce</Uprawnienia>
+    </Pilot>
+</PilocyImprez>

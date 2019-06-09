@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Zleceniodawcy>
+    <Zleceniodawca id="0">
+        <NazwaZleceniodawcy>Zespół Szkół Niepublicznych</NazwaZleceniodawcy>
+        <Adres>
+            <Ulica>ul. Adama Asnyka 17</Ulica>
+            <Miejscowość>Tarnów</Miejscowość>
+            <KodPocztowy>33-100</KodPocztowy>
+        </Adres>
+        <NIP>778-62-23-220</NIP>
+        <Telefon>14 637 12 23</Telefon>
+        <Fax>14 637 12 23</Fax>
+    </Zleceniodawca>
+    <Zleceniodawca id="1">
+        <NazwaZleceniodawcy>Biuro Podróży Sun Tours</NazwaZleceniodawcy>
+        <Adres>
+            <Ulica>ul. H. Sienkiewicza 12</Ulica>
+            <Miejscowość>Kielce</Miejscowość>
+            <KodPocztowy>25-067</KodPocztowy>
+        </Adres>
+        <NIP>367-82-13-220</NIP>
+        <Telefon>41 345-87-99</Telefon>
+        <Fax>41 345-87-80</Fax>
+    </Zleceniodawca>
+    <Zleceniodawca id="2">
+        <NazwaZleceniodawcy>Biuro Turystyczne „ARKADIA”</NazwaZleceniodawcy>
+        <Adres>
+            <Ulica>ul. Śmiała 12</Ulica>
+            <Miejscowość>SOPOT</Miejscowość>
+            <KodPocztowy>84-648</KodPocztowy>
+        </Adres>
+        <NIP>777-62-23-220</NIP>
+        <Telefon>0-32 475-87-09</Telefon>
+        <Fax>0-32 665-57-60</Fax>
+    </Zleceniodawca>
+    <Zleceniodawca id="3">
+        <NazwaZleceniodawcy>Biuro Turystyczne „Pan-travel”</NazwaZleceniodawcy>
+        <Adres>
+            <Ulica>ul. A. Mickiewicza 10</Ulica>
+            <Miejscowość>Wrocław</Miejscowość>
+            <KodPocztowy>00-540</KodPocztowy>
+        </Adres>
+        <NIP>844-452-21-1</NIP>
+        <Telefon>(071) 821 63 47</Telefon>
+        <Fax>(071) 821 63 47</Fax>
+    </Zleceniodawca>
+</Zleceniodawcy>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LokaleGastronomiczne>
+    <Lokal id="0">
+        <Nazwa>Restauracja Roy Ben</Nazwa>
+        <Adres>ul. Sienkiewicza 21, Kielce 25-514</Adres>
+        <CenyPosilkow>negocjowana cena obiadu dla grup zorganizowanych – 30 zł</CenyPosilkow>
+    </Lokal>
+    <Lokal id="1">
+        <Nazwa>Bar PSS SPOŁEM „Jaś i Małgosia”</Nazwa>
+        <Adres>ul. Żeromskiego 20/22</Adres>
+        <CenyPosilkow>cena śniadania – 12 zł</CenyPosilkow>
+    </Lokal>
+</LokaleGastronomiczne>

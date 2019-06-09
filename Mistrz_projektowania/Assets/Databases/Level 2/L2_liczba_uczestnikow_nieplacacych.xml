@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<LiczbaUczestnikowNieplacacych>
+	<LiczbaUczestnikow id="0">
+		<LiczbaOsob>1</LiczbaOsob>
+		<Punkty>1</Punkty>
+	</LiczbaUczestnikow>
+	<LiczbaUczestnikow id="1">
+		<LiczbaOsob>2</LiczbaOsob>
+		<Punkty>1</Punkty>
+	</LiczbaUczestnikow>
+	<LiczbaUczestnikow id="2">
+		<LiczbaOsob>3</LiczbaOsob>
+		<Punkty>1</Punkty>
+	</LiczbaUczestnikow>
+	<LiczbaUczestnikow id="3">
+		<LiczbaOsob>4</LiczbaOsob>
+		<Punkty>1</Punkty>
+	</LiczbaUczestnikow>
+	<LiczbaUczestnikow id="4">
+		<LiczbaOsob>5</LiczbaOsob>
+		<Punkty>1</Punkty>
+	</LiczbaUczestnikow>
+</LiczbaUczestnikowNieplacacych>
