@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour {
 		StartCoroutine(fadeMessage(wrongOrderMessage, false, 0.0000001f));
 		StartCoroutine(fadeMessage(systemInfo, false, 0.0000001f));
 		noPointsMessageDisplay = false;
-		points = GameplayModel.gamePoints; /// trzeba połączyć to z pkt uzyskanymi z wypełnienia formularza przed grą
+		points = GameplayModel.gamePoints;
 		tripID = 0; // trzeba pobierać ID z ankiety przed rozpoczeciem gry
 		print (GameplayModel.gameTripName);
 
@@ -96,7 +96,8 @@ public class GameController : MonoBehaviour {
 				noPointsMessageDisplay = true;
 				//StartCoroutine (closePointsMessage(10f));
 			}
-		} 
+		}
+		GameplayModel.gamePoints = points;
 	}
     public void subtractPoints(int value)
     {
@@ -112,6 +113,7 @@ public class GameController : MonoBehaviour {
                 //StartCoroutine (closePointsMessage(10f));
             }
         }
+		GameplayModel.gamePoints = points;
     }
 
     public int getPoints(){
@@ -121,6 +123,14 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds (seconds);
 		StartCoroutine (fadeMessage (noPointsMessage, false, 0.5f));
 		noPointsMessageDisplay = false;
+	}
+	IEnumerator openPointsMessage(float seconds){
+		yield return new WaitForSeconds (seconds);
+		StartCoroutine (fadeMessage (noPointsMessage, true, 0.5f));
+		noPointsMessageDisplay = true;
+	}
+	public void showPointsMessage(){
+		StartCoroutine (openPointsMessage(10f));
 	}
 	public IEnumerator fadeMessage(Image message, bool fadeIn, float duration){
 		float counter = 0f;
