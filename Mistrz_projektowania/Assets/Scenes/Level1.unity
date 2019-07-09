@@ -17472,7 +17472,7 @@ GameObject:
   - component: {fileID: 1006291914}
   - component: {fileID: 1006291913}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Picture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17485,8 +17485,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1006291911}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 572, y: 244, z: -7.876644}
-  m_LocalScale: {x: 553, y: 350.56403, z: 350.56403}
+  m_LocalPosition: {x: 642.5, y: 309.4, z: -7.876644}
+  m_LocalScale: {x: 432.7, y: 267.2, z: 350.56403}
   m_Children: []
   m_Father: {fileID: 1021012816}
   m_RootOrder: 0
@@ -17554,7 +17554,6 @@ GameObject:
   - component: {fileID: 1021012816}
   - component: {fileID: 1021012819}
   - component: {fileID: 1021012818}
-  - component: {fileID: 1021012817}
   - component: {fileID: 1021012820}
   m_Layer: 5
   m_Name: PuzzlePanel
@@ -17582,25 +17581,6 @@ RectTransform:
   m_AnchoredPosition: {x: 10.4999695, y: -0.002532959}
   m_SizeDelta: {x: 21.000046, y: -0.0050049}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1021012817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1021012815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08491bcaf5c226144872e0c31d0bbda1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzlePrefab: {fileID: 114687860648556262, guid: 4caa6f922b621374191dcbb7ce5a6db3,
-    type: 2}
-  PuzzlePanel: {fileID: 1021012816}
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 256
-  FolderName: 
-  FullPicture: {fileID: 0}
 --- !u!114 &1021012818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28944,6 +28924,7 @@ GameObject:
   - component: {fileID: 1700418364}
   - component: {fileID: 1700418363}
   - component: {fileID: 1700418362}
+  - component: {fileID: 1700418365}
   m_Layer: 5
   m_Name: PuzzleCamera
   m_TagString: Untagged
@@ -29014,6 +28995,24 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1700418365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1700418360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08491bcaf5c226144872e0c31d0bbda1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzlePrefab: {fileID: 114687860648556262, guid: 4caa6f922b621374191dcbb7ce5a6db3,
+    type: 2}
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 256
+  Catalog: zamek-w-checinach
+  Picture: {fileID: 1006291911}
 --- !u!1 &1702630433
 GameObject:
   m_ObjectHideFlags: 0

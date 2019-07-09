@@ -7,10 +7,10 @@ public class GameManager : MonoBehaviour
 
     public Puzzle puzzlePrefab;
     private List<Puzzle> puzzleParts = new List<Puzzle>();
-    public Transform PuzzlePanel;
+    //public Transform PuzzlePanel; 
 
-    private Vector2 startPos = new Vector2(-5.5f, 2.77f);
-    private Vector2 offset = new Vector2(2.50f, 1.72f);
+    private Vector2 startPos = new Vector2(-5.55f, 2f);
+    private Vector2 offset = new Vector2(2.6f, 1.8f);
 
     public LayerMask collisionMask;
 
@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     private Vector3 collider_size;
     private Vector3 collider_centre; //the center point of the collider form which we gonna fire the rays
 
-    public string FolderName;
-    public GameObject FullPicture;
+    public string Catalog;
+    public GameObject Picture;
 
     // Use this for initialization
     void Start()
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < parts; i++)
         {
-            puzzleParts.Add(Instantiate(puzzlePrefab, new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 180.0f, 0.0f), PuzzlePanel) as Puzzle);
+            puzzleParts.Add(Instantiate(puzzlePrefab, new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 190.0f, 0.0f)) as Puzzle);
 
 
         }
@@ -95,8 +95,8 @@ public class GameManager : MonoBehaviour
 
 				ray_left = new Ray(new Vector2(x_left, y), new Vector2(-direction, 0f));
 				ray_right = new Ray(new Vector2(x_right, y), new Vector2(direction, 0f));
-                ray_up = new Ray(new Vector2(x, y_up), new Vector2(0, direction));
-                ray_down = new Ray(new Vector2(x, y_down), new Vector2(0, -direction));
+                ray_up = new Ray(new Vector2(x, y_up), new Vector2(0f, direction));
+                ray_down = new Ray(new Vector2(x, y_down), new Vector2(0f, -direction));
 
                 Debug.DrawRay(ray_up.origin, ray_up.direction);
                 Debug.DrawRay(ray_down.origin, ray_down.direction);
@@ -133,18 +133,18 @@ public class GameManager : MonoBehaviour
         string filePath;
 
         for (int i = 1; i <= puzzleParts.Count; i++) {
-            if (i > 2)
-                filePath = "Puzzles/" + FolderName + "/Cube" + (i + 1);
+            if (i > 3)
+                filePath = "Puzzles/" + Catalog + "/Part" + (i + 1);
             else
-                filePath = "Puzzles/" + FolderName + "/Cube" + i ;
+				filePath = "Puzzles/" + Catalog + "/Part" + i ;
 
             Texture2D mat = Resources.Load(filePath, typeof(Texture2D)) as Texture2D;
             puzzleParts[i - 1].GetComponent<Renderer>().material.mainTexture = mat;
 
         }
-        filePath = "Puzzles/" + FolderName + "/pic";
+		filePath = "Puzzles/" + Catalog + "/picture";
         Texture2D mat1 = Resources.Load(filePath, typeof(Texture2D)) as Texture2D;
-        FullPicture.GetComponent<Renderer>().material.mainTexture = mat1;
+        Picture.GetComponent<Renderer>().material.mainTexture = mat1;
 
     }
 }
