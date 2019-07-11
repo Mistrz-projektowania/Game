@@ -2143,6 +2143,7 @@ MonoBehaviour:
   roundGoodEndDisplay: {fileID: 710239065}
   roundBadEndDisplay: {fileID: 1190020471}
   RoundBadOverNoPointsPanel: {fileID: 0}
+  RoundBadOverNoQuestions: {fileID: 0}
   number: 0
   allRoundData:
   - questions:
@@ -2171,6 +2172,7 @@ MonoBehaviour:
         isCorrect: 0
       - answerText: ewe
         isCorrect: 0
+  gameController: {fileID: 0}
 --- !u!1 &1829308864
 GameObject:
   m_ObjectHideFlags: 0
