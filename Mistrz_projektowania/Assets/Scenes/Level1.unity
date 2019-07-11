@@ -29006,11 +29006,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08491bcaf5c226144872e0c31d0bbda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlePrefab: {fileID: 114687860648556262, guid: 4caa6f922b621374191dcbb7ce5a6db3,
-    type: 2}
   collisionMask:
     serializedVersion: 2
     m_Bits: 256
+  puzzlePrefab: {fileID: 114687860648556262, guid: 4caa6f922b621374191dcbb7ce5a6db3,
+    type: 2}
   Catalog: zamek-w-checinach
   Picture: {fileID: 1006291911}
 --- !u!1 &1702630433

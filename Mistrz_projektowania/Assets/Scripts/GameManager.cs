@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+	public LayerMask collisionMask;
     public Puzzle puzzlePrefab;
     private List<Puzzle> puzzleParts = new List<Puzzle>();
     //public Transform PuzzlePanel; 
@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     private Vector2 startPos = new Vector2(-5.55f, 2f);
     private Vector2 offset = new Vector2(2.6f, 1.8f);
 
-    public LayerMask collisionMask;
+    
 
     Ray ray_up, ray_down, ray_left, ray_right;
     RaycastHit hit;
@@ -26,9 +26,9 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        PuzzleGame(15);
+        PuzzleGame(8);
         StartPosition();
-        ApplyMaterial();
+        ApplyPictures();
 
     }
 
@@ -42,33 +42,22 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < parts; i++)
         {
-            puzzleParts.Add(Instantiate(puzzlePrefab, new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 190.0f, 0.0f)) as Puzzle);
-
-
+            puzzleParts.Add(Instantiate(puzzlePrefab, new Vector3(0.0f, 0.0f, 0.0f), new Quaternion(0.0f, 0.0f, 180.0f, 0.0f)) as Puzzle);
         }
     }
 
     void StartPosition()
     {
-
         puzzleParts[0].transform.position = new Vector3(startPos.x, startPos.y, 0.0f);
         puzzleParts[1].transform.position = new Vector3(startPos.x + offset.x, startPos.y, 0.0f);
-        puzzleParts[2].transform.position = new Vector3(startPos.x + (2* offset.x), startPos.y, 0.0f);
 
-        puzzleParts[3].transform.position = new Vector3(startPos.x, startPos.y - offset.y, 0.0f);
-        puzzleParts[4].transform.position = new Vector3(startPos.x + offset.x, startPos.y - offset.y, 0.0f);
-        puzzleParts[5].transform.position = new Vector3(startPos.x + (2 * offset.x), startPos.y - offset.y, 0.0f);
-		puzzleParts[6].transform.position = new Vector3(startPos.x + (3 * offset.x), startPos.y - offset.y, 0.0f);
+        puzzleParts[2].transform.position = new Vector3(startPos.x, startPos.y - offset.y, 0.0f);
+        puzzleParts[3].transform.position = new Vector3(startPos.x + offset.x, startPos.y - offset.y, 0.0f);
+        puzzleParts[4].transform.position = new Vector3(startPos.x + (2 * offset.x), startPos.y - offset.y, 0.0f);
 
-        puzzleParts[7].transform.position = new Vector3(startPos.x, startPos.y - (2 * offset.y), 0.0f);
-        puzzleParts[8].transform.position = new Vector3(startPos.x + offset.x, startPos.y - (2 * offset.y), 0.0f);
-        puzzleParts[9].transform.position = new Vector3(startPos.x + (2 * offset.x), startPos.y - (2 * offset.y), 0.0f);
-		puzzleParts[10].transform.position = new Vector3(startPos.x + (3 * offset.x), startPos.y - (2 * offset.y), 0.0f);
-
-		puzzleParts[11].transform.position = new Vector3(startPos.x, startPos.y - (3 * offset.y), 0.0f);
-		puzzleParts[12].transform.position = new Vector3(startPos.x + offset.x, startPos.y - (3 * offset.y), 0.0f);
-		puzzleParts[13].transform.position = new Vector3(startPos.x + (2 * offset.x), startPos.y - (3 * offset.y), 0.0f);
-		puzzleParts[14].transform.position = new Vector3(startPos.x + (3 * offset.x), startPos.y - (3 * offset.y), 0.0f);
+        puzzleParts[5].transform.position = new Vector3(startPos.x, startPos.y - (2 * offset.y), 0.0f);
+        puzzleParts[6].transform.position = new Vector3(startPos.x + offset.x, startPos.y - (2 * offset.y), 0.0f);
+        puzzleParts[7].transform.position = new Vector3(startPos.x + (2 * offset.x), startPos.y - (2 * offset.y), 0.0f);
     }
 
     void MovePuzzle()
@@ -103,24 +92,20 @@ public class GameManager : MonoBehaviour
                 Debug.DrawRay(ray_left.origin, ray_left.direction);
                 Debug.DrawRay(ray_right.origin, ray_right.direction);
 
-                if ((Physics.Raycast(ray_up, out hit, 1.0f, collisionMask) == false) && (puzzle.moved == false) && (puzzle.transform.position.y < startPos.y))
+				if ((Physics.Raycast(ray_up, out hit, 2.0f, collisionMask) == false)  && (puzzle.transform.position.y < startPos.y))
                 {
-                    Debug.Log("Move Up Allowed");
                     puzzle.go_up = true;
                 }
-				if ((Physics.Raycast(ray_down, out hit, 1.0f, collisionMask) == false) && (puzzle.moved == false) && (puzzle.transform.position.y > (startPos.y - 3 * offset.y)))
+				if ((Physics.Raycast(ray_down, out hit, 2.0f, collisionMask) == false) && (puzzle.transform.position.y > (startPos.y -2 * offset.y)))
                 {
-                    Debug.Log("Move Down Allowed");
                     puzzle.go_down = true;
                 }
-				if ((Physics.Raycast(ray_left, out hit, 1.0f, collisionMask) == false) && (puzzle.moved == false) && (puzzle.transform.position.x > startPos.x))
+				if ((Physics.Raycast(ray_left, out hit, 2.0f, collisionMask) == false) && (puzzle.transform.position.x > startPos.x))
                 {
-                    Debug.Log("Move Left Allowed");
                     puzzle.go_left = true;
                 }
-                if ((Physics.Raycast(ray_right, out hit, 1.0f, collisionMask) == false) && (puzzle.moved == false) && (puzzle.transform.position.x < (startPos.x + 3 * offset.x)))
+				if ((Physics.Raycast(ray_right, out hit, 2.0f, collisionMask) == false)  && (puzzle.transform.position.x < (startPos.x +2 * offset.x)))
                 {
-                    Debug.Log("Move Right Allowed");
                     puzzle.go_right = true;
                 }
 
@@ -129,7 +114,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void ApplyMaterial() {
+    void ApplyPictures() {
         string filePath;
 
         for (int i = 1; i <= puzzleParts.Count; i++) {
