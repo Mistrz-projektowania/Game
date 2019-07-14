@@ -13,4 +13,13 @@ public class PuzzlePictures : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	public GameObject Puzzle;
+	public GameObject PuzzleMenu;
+
+	private void OnMouseDown() {
+		GameManager.Catalog = gameObject.name;
+		Puzzle.SetActive(true);
+
+	}
 }

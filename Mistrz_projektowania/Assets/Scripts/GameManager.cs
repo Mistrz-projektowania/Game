@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 	private List<int> randomPositions = new List<int>();
 	private List<Vector3> partsPosition = new List<Vector3>();
 
-    
+
 
     Ray ray_up, ray_down, ray_left, ray_right;
     RaycastHit hit;
@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour
     private Vector3 collider_size;
     private Vector3 collider_centre; //the center point of the collider form which we gonna fire the rays
 
-    public string Catalog;
-    public GameObject Picture;
+	public static string Catalog;
+	public GameObject Picture;
 
     // Use this for initialization
     void Start()
@@ -128,14 +128,14 @@ public class GameManager : MonoBehaviour
 
 	}
 
-    void ApplyPictures() {
+   public void ApplyPictures() {
         string filePath;
 
         for (int i = 1; i <= puzzleParts.Count; i++) {
             if (i > 3)
                 filePath = "Puzzles/" + Catalog + "/Part" + (i + 1);
             else
-				filePath = "Puzzles/" + Catalog + "/Part" + i ;
+				filePath = "Puzzles/" + Catalog + "/Part" + i;
 
             Texture2D mat = Resources.Load(filePath, typeof(Texture2D)) as Texture2D;
             puzzleParts[i - 1].GetComponent<Renderer>().material.mainTexture = mat;

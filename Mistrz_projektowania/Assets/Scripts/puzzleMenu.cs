@@ -18,15 +18,15 @@ public class puzzleMenu : MonoBehaviour {
 		leftArrow = GameObject.Find ("LeftArrow");
 		rightArrow = GameObject.Find ("RightArrow");
 
-		/*if (PuzzlesPictures.activeInHierarchy == false) {
+		 if (PuzzlesPictures.activeSelf == false) {
 			rightArrow.SetActive (false);
 			leftArrow.SetActive (true);
 		}
 
-		if (PuzzlesPictures2.activeInHierarchy == false) {
+		if (PuzzlesPictures2.activeSelf == false) {
 			leftArrow.SetActive (false);
 			rightArrow.SetActive (true);
-		} */
+		}  
 	}
 
 	public void PlayPuzzle() { 

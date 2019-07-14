@@ -7366,6 +7366,7 @@ GameObject:
   - component: {fileID: 413850108}
   - component: {fileID: 413850107}
   - component: {fileID: 413850106}
+  - component: {fileID: 413850105}
   m_Layer: 5
   m_Name: RightArrow
   m_TagString: Untagged
@@ -7392,6 +7393,18 @@ RectTransform:
   m_AnchoredPosition: {x: 177.5, y: -354.7}
   m_SizeDelta: {x: 152, y: 152}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &413850105
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 413850103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &413850106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9092,6 +9105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c119045689c4b34da6e21a5c887c0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Puzzle: {fileID: 949002304}
+  PuzzleMenu: {fileID: 1035165140}
 --- !u!1 &496001849
 GameObject:
   m_ObjectHideFlags: 0
@@ -11979,6 +11994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c119045689c4b34da6e21a5c887c0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Puzzle: {fileID: 949002304}
+  PuzzleMenu: {fileID: 1035165140}
 --- !u!1 &653988108
 GameObject:
   m_ObjectHideFlags: 0
@@ -12056,6 +12073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 665549598}
   - component: {fileID: 665549599}
+  - component: {fileID: 665549600}
   m_Layer: 5
   m_Name: zamek-w-checinach
   m_TagString: Untagged
@@ -12120,6 +12138,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &665549600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 665549597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c119045689c4b34da6e21a5c887c0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Puzzle: {fileID: 949002304}
+  PuzzleMenu: {fileID: 1035165140}
 --- !u!1 &666087045
 GameObject:
   m_ObjectHideFlags: 0
@@ -14298,6 +14329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c119045689c4b34da6e21a5c887c0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Puzzle: {fileID: 949002304}
+  PuzzleMenu: {fileID: 1035165140}
 --- !u!1 &791988323
 GameObject:
   m_ObjectHideFlags: 0
@@ -22833,6 +22866,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c119045689c4b34da6e21a5c887c0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Puzzle: {fileID: 949002304}
+  PuzzleMenu: {fileID: 1035165140}
 --- !u!1 &1200212078
 GameObject:
   m_ObjectHideFlags: 0
@@ -23594,6 +23629,7 @@ GameObject:
   - component: {fileID: 1261228383}
   - component: {fileID: 1261228385}
   - component: {fileID: 1261228384}
+  - component: {fileID: 1261228386}
   m_Layer: 5
   m_Name: "Szyd\u0142\xF3w"
   m_TagString: Untagged
@@ -23670,6 +23706,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1261228386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1261228382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c119045689c4b34da6e21a5c887c0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Puzzle: {fileID: 949002304}
+  PuzzleMenu: {fileID: 1035165140}
 --- !u!1 &1265503382
 GameObject:
   m_ObjectHideFlags: 0
@@ -26498,6 +26547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c119045689c4b34da6e21a5c887c0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Puzzle: {fileID: 949002304}
+  PuzzleMenu: {fileID: 1035165140}
 --- !u!1 &1396993899
 GameObject:
   m_ObjectHideFlags: 0
@@ -28517,7 +28568,6 @@ GameObject:
   - component: {fileID: 1502033318}
   - component: {fileID: 1502033317}
   - component: {fileID: 1502033316}
-  - component: {fileID: 1502033315}
   - component: {fileID: 1502033319}
   m_Layer: 5
   m_Name: PuzzleMenuCamera
@@ -28539,24 +28589,6 @@ Transform:
   m_Father: {fileID: 1156623184}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1502033315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1502033313}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08491bcaf5c226144872e0c31d0bbda1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 256
-  puzzlePrefab: {fileID: 114687860648556262, guid: 4caa6f922b621374191dcbb7ce5a6db3,
-    type: 2}
-  Catalog: zamek-w-checinach
-  Picture: {fileID: 1006291911}
 --- !u!81 &1502033316
 AudioListener:
   m_ObjectHideFlags: 0
@@ -30830,6 +30862,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c119045689c4b34da6e21a5c887c0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Puzzle: {fileID: 949002304}
+  PuzzleMenu: {fileID: 1035165140}
 --- !u!1 &1616281347
 GameObject:
   m_ObjectHideFlags: 0
@@ -31803,7 +31837,6 @@ MonoBehaviour:
     m_Bits: 256
   puzzlePrefab: {fileID: 114687860648556262, guid: 4caa6f922b621374191dcbb7ce5a6db3,
     type: 2}
-  Catalog: zamek-w-checinach
   Picture: {fileID: 1006291911}
 --- !u!1 &1702630433
 GameObject:
@@ -33871,6 +33904,7 @@ GameObject:
   - component: {fileID: 1836607919}
   - component: {fileID: 1836607918}
   - component: {fileID: 1836607917}
+  - component: {fileID: 1836607916}
   m_Layer: 5
   m_Name: LeftArrow
   m_TagString: Untagged
@@ -33897,6 +33931,18 @@ RectTransform:
   m_AnchoredPosition: {x: -193.5, y: -354.7}
   m_SizeDelta: {x: 152, y: 152}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &1836607916
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836607914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1836607917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35040,6 +35086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c119045689c4b34da6e21a5c887c0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Puzzle: {fileID: 949002304}
+  PuzzleMenu: {fileID: 1035165140}
 --- !u!1 &1866536422
 GameObject:
   m_ObjectHideFlags: 0
@@ -37969,6 +38017,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c119045689c4b34da6e21a5c887c0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Puzzle: {fileID: 949002304}
+  PuzzleMenu: {fileID: 1035165140}
 --- !u!4 &2029245499
 Transform:
   m_ObjectHideFlags: 0
