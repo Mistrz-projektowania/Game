@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+	public Puzzle puzzlePrefab;
 	public LayerMask collisionMask;
-    public Puzzle puzzlePrefab;
     private List<Puzzle> puzzleParts = new List<Puzzle>();
     //public Transform PuzzlePanel; 
 
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
                 ray_up = new Ray(new Vector2(x, y_up), new Vector2(0f, direction));
                 ray_down = new Ray(new Vector2(x, y_down), new Vector2(0f, -direction));
 
-				float maxDistanceToCheck = 2.0f;
+				float maxDistanceToCheck = 2.3f;
 
 				if ((puzzle.transform.position.y < startPos.y) && (Physics.Raycast(ray_up, out hit, maxDistanceToCheck, collisionMask) == false) )
                 {
