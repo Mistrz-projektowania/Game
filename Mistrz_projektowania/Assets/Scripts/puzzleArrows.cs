@@ -5,19 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class puzzleArrows : MonoBehaviour {
 
-	public GameObject PuzzleMenu;
-	public GameObject PuzzleMenu2;
+	public GameObject PuzzleMenu; 
+	public GameObject PuzzlesPictures;
+	public GameObject PuzzlesPictures2;
 
-	private void OnMouseDown () {
-		if (gameObject.name == "LeftArrow") {
-			PuzzleMenu2.SetActive(false);
-			PuzzleMenu.SetActive(true);
-		}
+	 
 
-		if (gameObject.name == "RightArrow") {
-			PuzzleMenu.SetActive(false);
-			PuzzleMenu2.SetActive(true);
-		}
+	public void GoLeftMenu() { 
+			PuzzlesPictures2.SetActive(false);
+			PuzzlesPictures.SetActive(true);
+		 
+	}
 
+	public void GoRightMenu() {  
+			PuzzlesPictures.SetActive(false);
+			PuzzlesPictures2.SetActive(true);
+	 
 	}
 }

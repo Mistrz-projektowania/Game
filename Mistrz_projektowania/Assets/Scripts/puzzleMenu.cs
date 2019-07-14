@@ -5,17 +5,48 @@ using UnityEngine.SceneManagement;
 
 public class puzzleMenu : MonoBehaviour {
 
-	private GameObject leftArrow;
-	private GameObject rightArrow;
+	public GameObject leftArrow;
+	public GameObject rightArrow;
 	private GameObject PuzzleMenu;
-	private GameObject PuzzleMenu2;
+	public GameObject EntryPanel;
+	public GameObject PuzzlesPictures;
+	public GameObject PuzzlesPictures2;
 
 
 	void Start() {
-		leftArrow = GameObject.Find("LeftArrow");
-		rightArrow = GameObject.Find("RightArrow");
+		/*PuzzlesPictures.SetActive(false);
+		PuzzlesPictures2.SetActive(false);
+		leftArrow = GameObject.Find ("LeftArrow");
+		rightArrow = GameObject.Find ("RightArrow");
 
-	 
+		if (PuzzlesPictures.activeInHierarchy == false) {
+			rightArrow.SetActive (false);
+			leftArrow.SetActive (true);
+		}
+
+		if (PuzzlesPictures2.activeInHierarchy == false) {
+			leftArrow.SetActive (false);
+			rightArrow.SetActive (true);
+		}*/
+
+
+	}
+
+	public void PlayPuzzle() { 
+		EntryPanel.SetActive(false);
+		PuzzleMenu.SetActive(true);
+	}
+
+	public void GoLeftMenu() { 
+		PuzzlesPictures2.SetActive(false);
+		PuzzlesPictures.SetActive(true);
+
+	}
+
+	public void GoRightMenu() {  
+		PuzzlesPictures.SetActive(false);
+		PuzzlesPictures2.SetActive(true);
+
 	}
 
 	void Update() {
