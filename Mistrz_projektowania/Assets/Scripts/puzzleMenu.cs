@@ -14,12 +14,11 @@ public class puzzleMenu : MonoBehaviour {
 
 
 	void Start() {
-		/*PuzzlesPictures.SetActive(false);
-		PuzzlesPictures2.SetActive(false);
+		 
 		leftArrow = GameObject.Find ("LeftArrow");
 		rightArrow = GameObject.Find ("RightArrow");
 
-		if (PuzzlesPictures.activeInHierarchy == false) {
+		/*if (PuzzlesPictures.activeInHierarchy == false) {
 			rightArrow.SetActive (false);
 			leftArrow.SetActive (true);
 		}
@@ -27,26 +26,23 @@ public class puzzleMenu : MonoBehaviour {
 		if (PuzzlesPictures2.activeInHierarchy == false) {
 			leftArrow.SetActive (false);
 			rightArrow.SetActive (true);
-		}*/
-
-
+		} */
 	}
 
 	public void PlayPuzzle() { 
 		EntryPanel.SetActive(false);
 		PuzzleMenu.SetActive(true);
+		PuzzlesPictures.SetActive(true);
 	}
 
 	public void GoLeftMenu() { 
 		PuzzlesPictures2.SetActive(false);
 		PuzzlesPictures.SetActive(true);
-
 	}
 
 	public void GoRightMenu() {  
 		PuzzlesPictures.SetActive(false);
 		PuzzlesPictures2.SetActive(true);
-
 	}
 
 	void Update() {

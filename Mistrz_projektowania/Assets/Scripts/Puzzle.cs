@@ -30,38 +30,40 @@ public class Puzzle : MonoBehaviour {
 
     }
 
+	private void OnMouseUp()
+	{
+		clicked = false;
+	}
+
     private void OnMouseDown() //preimplemented by unity
     {
         clicked = true;
     }
-    private void OnMouseUp()
-    {
-        clicked = false;
-    }
+   
 
     void MovePuzzle()
     {
         if (go_left == true)
         {
-            transform.position = new Vector3(transform.position.x - move_amount.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x - 3.0f, transform.position.y, transform.position.z);
             go_left = false;
             moved = true;
         }
         if (go_right == true)
         {
-            transform.position = new Vector3(transform.position.x + move_amount.x, transform.position.y, transform.position.z);
+			transform.position = new Vector3(transform.position.x + 3.0f, transform.position.y, transform.position.z);
             go_right = false;
             moved = true;
         }
         if (go_up == true)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y + move_amount.y, transform.position.z);
+			transform.position = new Vector3(transform.position.x, transform.position.y + 2.2f, transform.position.z);
             go_up = false;
             moved = true;
         }
         if (go_down == true)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y - move_amount.y, transform.position.z);
+			transform.position = new Vector3(transform.position.x, transform.position.y - 2.2f, transform.position.z);
             go_down = false;
             moved = true;
         }

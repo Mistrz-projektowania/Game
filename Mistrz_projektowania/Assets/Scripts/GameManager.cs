@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
     private List<Puzzle> puzzleParts = new List<Puzzle>();
     //public Transform PuzzlePanel; 
 
-    private Vector2 startPos = new Vector2(-5.55f, 2f);
-    private Vector2 offset = new Vector2(2.6f, 1.8f);
+    private Vector2 startPos = new Vector2(-5.55f, 2.0f);
+    private Vector2 offset = new Vector2(3f, 2.2f);
+	private List<int> randomPositions = new List<int>();
+	private List<Vector3> partsPosition = new List<Vector3>();
 
     
 
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
         PuzzleGame(8);
         StartPosition();
         ApplyPictures();
+		EntryRandomPositions();
 
     }
 
@@ -68,51 +71,62 @@ public class GameManager : MonoBehaviour
 
             if (puzzle.clicked)
             {
-                collider = puzzle.GetComponent<BoxCollider>();
-                collider_size = collider.size;
-                collider_centre = collider.center;
+                collider = puzzle.GetComponent<BoxCollider>(); 
 
-                float move_amount = offset.x;
-                float direction = Mathf.Sign(move_amount);
-
-                float x = (puzzle.transform.position.x + collider_centre.x - collider_size.x / 2) + collider_size.x / 2;
-				float y = (puzzle.transform.position.y + collider_centre.y - collider_size.y / 2) + collider_size.y / 2;
-				float x_right = puzzle.transform.position.x + collider_centre.x + collider_size.x / 2 * direction;
-				float x_left = puzzle.transform.position.x + collider_centre.x + collider_size.x / 2 * -direction;
-                float y_up = puzzle.transform.position.y + collider_centre.y + collider_size.y / 2 * direction;
-                float y_down = puzzle.transform.position.y + collider_centre.y + collider_size.y / 2 * -direction;
+				float direction = Mathf.Sign(offset.x);
+                float x = (puzzle.transform.position.x + collider.center.x - collider.size.x / 2) + collider.size.x / 2;
+				float y = (puzzle.transform.position.y + collider.center.y - collider.size.y / 2) + collider.size.y / 2;
+				float x_right = puzzle.transform.position.x + collider.center.x + collider.size.x / 2 * direction;
+				float x_left = puzzle.transform.position.x + collider.center.x + collider.size.x / 2 * -direction;
+                float y_up = puzzle.transform.position.y + collider.center.y + collider.size.y / 2 * direction;
+                float y_down = puzzle.transform.position.y + collider.center.y + collider.size.y / 2 * -direction;
 
 				ray_left = new Ray(new Vector2(x_left, y), new Vector2(-direction, 0f));
 				ray_right = new Ray(new Vector2(x_right, y), new Vector2(direction, 0f));
                 ray_up = new Ray(new Vector2(x, y_up), new Vector2(0f, direction));
                 ray_down = new Ray(new Vector2(x, y_down), new Vector2(0f, -direction));
 
-                Debug.DrawRay(ray_up.origin, ray_up.direction);
-                Debug.DrawRay(ray_down.origin, ray_down.direction);
-                Debug.DrawRay(ray_left.origin, ray_left.direction);
-                Debug.DrawRay(ray_right.origin, ray_right.direction);
+				float maxDistanceToCheck = 2.0f;
 
-				if ((Physics.Raycast(ray_up, out hit, 2.0f, collisionMask) == false)  && (puzzle.transform.position.y < startPos.y))
+				if ((puzzle.transform.position.y < startPos.y) && (Physics.Raycast(ray_up, out hit, maxDistanceToCheck, collisionMask) == false) )
                 {
                     puzzle.go_up = true;
                 }
-				if ((Physics.Raycast(ray_down, out hit, 2.0f, collisionMask) == false) && (puzzle.transform.position.y > (startPos.y -2 * offset.y)))
+				if ((puzzle.transform.position.y > (startPos.y -2 * offset.y)) && (Physics.Raycast(ray_down, out hit, maxDistanceToCheck, collisionMask) == false))
                 {
                     puzzle.go_down = true;
                 }
-				if ((Physics.Raycast(ray_left, out hit, 2.0f, collisionMask) == false) && (puzzle.transform.position.x > startPos.x))
+				if ((puzzle.transform.position.x > startPos.x) && (Physics.Raycast(ray_left, out hit, maxDistanceToCheck, collisionMask) == false))
                 {
                     puzzle.go_left = true;
                 }
-				if ((Physics.Raycast(ray_right, out hit, 2.0f, collisionMask) == false)  && (puzzle.transform.position.x < (startPos.x +2 * offset.x)))
+				if ((puzzle.transform.position.x < (startPos.x +2 * offset.x)) && (Physics.Raycast(ray_right, out hit, maxDistanceToCheck, collisionMask) == false))
                 {
                     puzzle.go_right = true;
                 }
-
-
             }
         }
     }
+
+	void EntryRandomPositions () {
+		int randomPart;
+
+		foreach (Puzzle p in puzzleParts) {
+			partsPosition.Add (p.transform.position);
+		}
+
+		foreach (Puzzle p in puzzleParts) {
+			randomPart = Random.Range (0, puzzleParts.Count);
+
+			while (randomPositions.Contains (randomPart)) {
+				randomPart = Random.Range (0, puzzleParts.Count);
+			}
+			randomPositions.Add (randomPart);
+			p.transform.position = partsPosition [randomPart];
+
+		}
+
+	}
 
     void ApplyPictures() {
         string filePath;
