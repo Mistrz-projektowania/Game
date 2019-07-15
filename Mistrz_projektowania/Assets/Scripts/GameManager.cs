@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
 	public Puzzle puzzlePrefab;
 	public LayerMask collisionMask;
+	public GameObject CompletedMenu;	
+	public GameObject Puzzle;
+
     private List<Puzzle> puzzleParts = new List<Puzzle>();
     //public Transform PuzzlePanel; 
 
@@ -13,6 +16,7 @@ public class GameManager : MonoBehaviour
     private Vector2 offset = new Vector2(3f, 2.2f);
 	private List<int> randomPositions = new List<int>();
 	private List<Vector3> partsPosition = new List<Vector3>();
+
 
 
 
@@ -28,16 +32,20 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		CompletedMenu.SetActive (false);
         PuzzleGame(8);
         StartPosition();
         ApplyPictures();
-		EntryRandomPositions();
+		EntryRandomPositions(); 
 
     }
 
     // Update is called once per frame
     void Update()
-    {
+	{	
+		if (PuzzleCompleted () == true) {
+			CompletedMenu.SetActive (true); 
+		} 
         MovePuzzle();
     }
 
@@ -126,6 +134,14 @@ public class GameManager : MonoBehaviour
 
 		}
 
+	}
+
+	bool PuzzleCompleted()  { 
+		foreach (Puzzle p in puzzleParts) {
+			if (p.transform.position == p.completedPos) {
+				return true; 
+			}  
+		} return false;
 	}
 
    public void ApplyPictures() {
