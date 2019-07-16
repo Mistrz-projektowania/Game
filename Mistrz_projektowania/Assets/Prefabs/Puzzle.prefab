@@ -113,4 +113,4 @@ MonoBehaviour:
   go_up: 0
   go_down: 0
   move_amount: {x: 0, y: 0}
-  moved: 0
+  completedPos: {x: 0, y: 0, z: 0}

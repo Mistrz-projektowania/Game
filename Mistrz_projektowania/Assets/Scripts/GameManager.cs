@@ -8,10 +8,14 @@ public class GameManager : MonoBehaviour
 	public LayerMask collisionMask;
 	public GameObject CompletedMenu;	
 	public GameObject Puzzle;
+	private List<int> randoms = new List<int> ();
+	private List<Vector3> puzzlePositions = new List<Vector3> ();
+
+	[HideInInspector]
+	public static PuzzleState puzzle_state = new PuzzleState ();
+
 
     private List<Puzzle> puzzleParts = new List<Puzzle>();
-    //public Transform PuzzlePanel; 
-
     private Vector2 startPos = new Vector2(-5.55f, 2.0f);
     private Vector2 offset = new Vector2(3f, 2.2f);
 	private List<int> randomPositions = new List<int>();
@@ -36,17 +40,33 @@ public class GameManager : MonoBehaviour
         PuzzleGame(8);
         StartPosition();
         ApplyPictures();
-		EntryRandomPositions(); 
+		//RightPos ();
+		//EntryRandomPositions(); 
 
     }
 
     // Update is called once per frame
     void Update()
 	{	
-		if (PuzzleCompleted () == true) {
-			CompletedMenu.SetActive (true); 
-		} 
-        MovePuzzle();
+		switch (puzzle_state.state) {
+			case PuzzleState.State.beforeStart: 
+				break;
+			case PuzzleState.State.start:
+				SetRandoms (); 
+				puzzle_state.state = PuzzleState.State.play;
+				break;
+			case PuzzleState.State.play: 
+					if (PuzzleCompleted () == true) {
+						CompletedMenu.SetActive (true); 
+						Puzzle.SetActive (false); 
+					} 
+				MovePuzzle ();
+				
+				break;
+		}
+
+
+        
     }
 
     private void PuzzleGame(int parts)
@@ -116,32 +136,36 @@ public class GameManager : MonoBehaviour
         }
     }
 
-	void EntryRandomPositions () {
-		int randomPart;
-
+	void RightPos() {
 		foreach (Puzzle p in puzzleParts) {
 			partsPosition.Add (p.transform.position);
 		}
+	}
+		
+	public void SetRandoms() {
+		int i;
 
 		foreach (Puzzle p in puzzleParts) {
-			randomPart = Random.Range (0, puzzleParts.Count);
-
-			while (randomPositions.Contains (randomPart)) {
-				randomPart = Random.Range (0, puzzleParts.Count);
-			}
-			randomPositions.Add (randomPart);
-			p.transform.position = partsPosition [randomPart];
-
+			puzzlePositions.Add (p.transform.position);
 		}
 
+		foreach (Puzzle p in puzzleParts) {
+			i = Random.Range (0, puzzleParts.Count);
+
+			while (randoms.Contains (i)) {
+				i = Random.Range (0, puzzleParts.Count);
+			}
+			randoms.Add (i);
+			p.transform.position = puzzlePositions [i];
+		}
 	}
 
 	bool PuzzleCompleted()  { 
 		foreach (Puzzle p in puzzleParts) {
-			if (p.transform.position == p.completedPos) {
-				return true; 
+			if (p.transform.position != p.completedPos) {
+				return false; 
 			}  
-		} return false;
+		} return true;
 	}
 
    public void ApplyPictures() {
