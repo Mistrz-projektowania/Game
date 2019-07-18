@@ -11,10 +11,11 @@ public class puzzleMenu : MonoBehaviour {
 	public GameObject EntryPanel;
 	public GameObject PuzzlesPictures;
 	public GameObject PuzzlesPictures2;
+	public GameObject Puzzle;
 
 
 	void Start() {
-		 
+		Puzzle.SetActive (false);
 		leftArrow = GameObject.Find ("LeftArrow");
 		rightArrow = GameObject.Find ("RightArrow");
 
@@ -31,8 +32,10 @@ public class puzzleMenu : MonoBehaviour {
 
 	public void PlayPuzzle() { 
 		EntryPanel.SetActive(false);
+		Puzzle.SetActive (false);
 		PuzzleMenu.SetActive(true);
 		PuzzlesPictures.SetActive(true);
+	
 	}
 
 	public void GoLeftMenu() { 

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PuzzleCompleted : MonoBehaviour {
 
+	public GameObject PuzzleGame;
+	public GameObject GUI;
+	public GameObject Game;
+	public GameObject IntroPanel;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,5 +20,15 @@ public class PuzzleCompleted : MonoBehaviour {
 
 	public enum Completed {
 		win,
+	}
+
+	public void PuzzleDone() {
+		PuzzleGame.SetActive (false);
+		GUI.SetActive (true);
+		Game.SetActive (true);
+		GameObject panel = GameObject.Find("Intro");
+		panel.SetActive (false);
+		StateMachine.setState (0);
+
 	}
 }
