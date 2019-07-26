@@ -25,7 +25,6 @@ public class ChangeCamera : MonoBehaviour {
     public void ShowMainView()
     {
         mainCamera.SetActive(true);
-        puzzleCamera.SetActive(false);
         leftGUI.SetActive(true);
         Game.SetActive(true);
         rockLabels.SetActive(true);

@@ -8,14 +8,19 @@ public class puzzleMenu : MonoBehaviour {
 	public GameObject leftArrow;
 	public GameObject rightArrow;
 	private GameObject PuzzleMenu;
+	public GameObject puzzleCamera;
 	public GameObject EntryPanel;
 	public GameObject PuzzlesPictures;
 	public GameObject PuzzlesPictures2;
 	public GameObject Puzzle;
+	public GameObject EndGame;
+	public GameObject GUI;
+
 
 
 	void Start() {
 		Puzzle.SetActive (false);
+		EndGame.SetActive (false);
 		leftArrow = GameObject.Find ("LeftArrow");
 		rightArrow = GameObject.Find ("RightArrow");
 
@@ -33,8 +38,10 @@ public class puzzleMenu : MonoBehaviour {
 	public void PlayPuzzle() { 
 		EntryPanel.SetActive(false);
 		Puzzle.SetActive (false);
+		puzzleCamera.SetActive(true);
 		PuzzleMenu.SetActive(true);
 		PuzzlesPictures.SetActive(true);
+		EndGame.SetActive (false);
 	
 	}
 
@@ -46,6 +53,27 @@ public class puzzleMenu : MonoBehaviour {
 	public void GoRightMenu() {  
 		PuzzlesPictures.SetActive(false);
 		PuzzlesPictures2.SetActive(true);
+	}
+
+	public void GiveUp() {  
+		PuzzlesPictures.SetActive(false);
+		PuzzlesPictures2.SetActive(true);
+		EndGame.SetActive (true);
+		PuzzleMenu.SetActive(false);
+		Puzzle.SetActive (false);
+	}
+
+	public void GiveUpUltimately() {  
+		PuzzleMenu.SetActive(true);
+		EndGame.SetActive (false);
+	}
+
+	public void OtherPicture() {  
+		PuzzlesPictures.SetActive(false);
+		PuzzlesPictures2.SetActive(true);
+		EndGame.SetActive (false);
+		Puzzle.SetActive (false);
+		GUI.SetActive(true);
 	}
 
 	void Update() {

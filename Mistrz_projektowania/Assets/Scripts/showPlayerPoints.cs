@@ -7,7 +7,7 @@ public class showPlayerPoints : MonoBehaviour {
 
 	public Text playerPoints;
 	public GameController gameController;
-	private int points;
+	public int points;
 	// Use this for initialization
 	void Start () {
 		GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
