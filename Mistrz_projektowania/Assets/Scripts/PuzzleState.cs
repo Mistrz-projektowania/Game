@@ -9,6 +9,7 @@ public class PuzzleState : MonoBehaviour {
 		beforeStart,
 		start,
 		play,
+		win,
 	}
 
 	public State state;

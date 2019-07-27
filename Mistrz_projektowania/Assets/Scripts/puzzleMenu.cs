@@ -76,6 +76,7 @@ public class puzzleMenu : MonoBehaviour {
 		GUI.SetActive(true);
 	}
 
+
 	void Update() {
 	}
 }

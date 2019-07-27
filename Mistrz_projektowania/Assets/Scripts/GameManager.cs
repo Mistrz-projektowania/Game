@@ -52,16 +52,18 @@ public class GameManager : MonoBehaviour
 			case PuzzleState.State.beforeStart: 
 				break;
 			case PuzzleState.State.start:
-				SetRandoms (); 
+				SetRandoms ();
 				puzzle_state.state = PuzzleState.State.play;
 				break;
 			case PuzzleState.State.play: 
 					if (PuzzleCompleted () == true) {
-						CompletedMenu.SetActive (true); 
-						Puzzle.SetActive (false); 
+				puzzle_state.state = PuzzleState.State.win;
 					} 
 				MovePuzzle ();
-				
+				break;
+			case PuzzleState.State.win: 
+				CompletedMenu.SetActive (true); 
+				Puzzle.SetActive (false); 
 				break;
 		}
 
@@ -168,11 +170,12 @@ public class GameManager : MonoBehaviour
 		} return true;
 	}
 
+
    public void ApplyPictures() {
         string filePath;
 
         for (int i = 1; i <= puzzleParts.Count; i++) {
-            if (i > 3)
+            if (i > 2)
                 filePath = "Puzzles/" + Catalog + "/Part" + (i + 1);
             else
 				filePath = "Puzzles/" + Catalog + "/Part" + i;

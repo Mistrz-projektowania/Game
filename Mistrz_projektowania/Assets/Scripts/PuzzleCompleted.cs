@@ -26,9 +26,6 @@ public class PuzzleCompleted : MonoBehaviour {
 		PuzzleGame.SetActive (false);
 		GUI.SetActive (true);
 		Game.SetActive (true);
-		GameObject panel = GameObject.Find("Intro");
-		panel.SetActive (false);
-		StateMachine.setState (0);
 
 	}
 }
