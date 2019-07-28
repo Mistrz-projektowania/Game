@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
 	public static string Catalog;
 	public GameObject Picture;
 	public GameObject Flashcard;
+	public Text FlashcardText;
 	public GameObject PanelPlay;
 
     // Use this for initialization
@@ -181,7 +184,7 @@ public class GameManager : MonoBehaviour
 		
 	}
 
-
+	public string myTxt;
    public void ApplyPictures() {
         string filePath;
 
@@ -198,6 +201,14 @@ public class GameManager : MonoBehaviour
 		filePath = "Puzzles/" + Catalog + "/picture";
         Texture2D mat1 = Resources.Load(filePath, typeof(Texture2D)) as Texture2D;
         Picture.GetComponent<Renderer>().material.mainTexture = mat1;
+
+		string filePath2;
+		filePath2 = "Puzzles/" + Catalog + "/flashcard";
+		Text myTxt = (Text)Resources.Load (filePath2, typeof(Text)) as Text;
+		//TextAsset myTxt = (TextAsset)Resources.Load("flashcard");
+		Debug.Log(myTxt);
+		FlashcardText.GetComponent<Text> ().text =myTxt.ToString();
+
 
     }
 }
