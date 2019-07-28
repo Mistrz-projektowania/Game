@@ -32,10 +32,13 @@ public class GameManager : MonoBehaviour
 
 	public static string Catalog;
 	public GameObject Picture;
+	public GameObject Flashcard;
+	public GameObject PanelPlay;
 
     // Use this for initialization
     void Start()
-    {
+	{	Flashcard.SetActive (false); 
+		PanelPlay.SetActive (false); 
 		CompletedMenu.SetActive (false);
         PuzzleGame(8);
         StartPosition();
@@ -50,6 +53,7 @@ public class GameManager : MonoBehaviour
 	{	
 		switch (puzzle_state.state) {
 			case PuzzleState.State.beforeStart: 
+				PanelPlay.SetActive (true); 
 				break;
 			case PuzzleState.State.start:
 				SetRandoms ();
@@ -62,8 +66,7 @@ public class GameManager : MonoBehaviour
 				MovePuzzle ();
 				break;
 			case PuzzleState.State.win: 
-				CompletedMenu.SetActive (true); 
-				Puzzle.SetActive (false); 
+				Flashcard.SetActive (true); 
 				break;
 		}
 
@@ -168,6 +171,14 @@ public class GameManager : MonoBehaviour
 				return false; 
 			}  
 		} return true;
+	}
+
+	public void PuzzleCompleted2()  { 
+		for (int i = 0; i < puzzleParts.Count; i++) {
+			puzzleParts [i].transform.position = puzzlePositions [i];
+		}
+		
+		
 	}
 
 
