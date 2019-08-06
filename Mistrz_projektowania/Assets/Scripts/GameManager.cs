@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
 
     private List<Puzzle> puzzleParts = new List<Puzzle>();
-    private Vector2 startPos = new Vector2(-5.55f, 2.0f);
+    private Vector2 startPos = new Vector2(-5.5f, 2.0f);
     private Vector2 offset = new Vector2(3f, 2.2f);
 	private List<int> randomPositions = new List<int>();
 	private List<Vector3> partsPosition = new List<Vector3>();
@@ -123,22 +123,27 @@ public class GameManager : MonoBehaviour
                 ray_down = new Ray(new Vector2(x, y_down), new Vector2(0f, -direction));
 
 				float maxDistanceToCheck = 2.3f;
+			
 
 				if ((puzzle.transform.position.y < startPos.y) && (Physics.Raycast(ray_up, out hit, maxDistanceToCheck, collisionMask) == false) )
                 {
-                    puzzle.go_up = true;
+					Debug.Log ("up" + puzzle.transform.position.y);
+                    puzzle.go_up = true; 
                 }
 				if ((puzzle.transform.position.y > (startPos.y -2 * offset.y)) && (Physics.Raycast(ray_down, out hit, maxDistanceToCheck, collisionMask) == false))
                 {
-                    puzzle.go_down = true;
+					Debug.Log ("down" + puzzle.transform.position.y);
+                    puzzle.go_down = true; 
                 }
 				if ((puzzle.transform.position.x > startPos.x) && (Physics.Raycast(ray_left, out hit, maxDistanceToCheck, collisionMask) == false))
                 {
-                    puzzle.go_left = true;
+					Debug.Log ("left" + puzzle.transform.position.x);
+                    puzzle.go_left = true; 
                 }
 				if ((puzzle.transform.position.x < (startPos.x +2 * offset.x)) && (Physics.Raycast(ray_right, out hit, maxDistanceToCheck, collisionMask) == false))
                 {
-                    puzzle.go_right = true;
+					Debug.Log ("right" + puzzle.transform.position.x);
+                    puzzle.go_right = true; 
                 }
             }
         }
