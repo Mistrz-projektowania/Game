@@ -155,27 +155,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allRoundData:
   - questions:
-    - questionText: pierwsze pytanbnie
+    - questionText: 1sfsfsdf
+      timeAddedForBadAnswer: 2
+      pointsDeductedForBadAnswer: 3
+      answers:
+      - answerText: edgdfg
+        isCorrect: 1
+      - answerText: hfgh
+        isCorrect: 0
+    - questionText: 
+      timeAddedForBadAnswer: 0
+      pointsDeductedForBadAnswer: 0
+      answers: []
+  - questions:
+    - questionText: fgergteetegehg
       timeAddedForBadAnswer: 0
       pointsDeductedForBadAnswer: 0
       answers:
-      - answerText: 'P1 '
+      - answerText: d
+        isCorrect: 0
+      - answerText: fsd
         isCorrect: 1
-      - answerText: P2
-        isCorrect: 0
-      - answerText: P3
-        isCorrect: 0
-      - answerText: P4
-        isCorrect: 0
-    - questionText: drugie pytanbnie
-      timeAddedForBadAnswer: 0
+    - questionText: hrth
+      timeAddedForBadAnswer: 3
       pointsDeductedForBadAnswer: 0
-      answers:
-      - answerText: 'P1 '
-        isCorrect: 1
-      - answerText: P2
-        isCorrect: 0
-      - answerText: P3
-        isCorrect: 0
-      - answerText: P4
-        isCorrect: 0
+      answers: []
+  QuestionPanel: {fileID: 0}
+  questions: {fileID: 0}

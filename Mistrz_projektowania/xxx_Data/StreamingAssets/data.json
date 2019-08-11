@@ -1,0 +1,10 @@
+{
+	"allRoundData": [{
+	"name": "Animals", 
+	"timeLimitInSeconds" : 20,
+	"pointsAddedForCorrectAnswer": 10,
+	"questions": [{"questionText: "sdgdg"
+		"answers": [{"answerText": "tttt", "isCorrect": true}, {"answerText": "ttdddtt", "isCorrect": false} ]
+	}]
+}]	
+}

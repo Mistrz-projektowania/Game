@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964128, b: 0.5748173, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -148,8 +148,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -520.3, y: 19.4}
-  m_SizeDelta: {x: 418.90002, y: 170}
+  m_AnchoredPosition: {x: -910, y: -104}
+  m_SizeDelta: {x: 950, y: 154}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &161499822
 MonoBehaviour:
@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.8235294, g: 0.7176471, b: 0.5803922, a: 1}
-    m_PressedColor: {r: 0.85490197, g: 0.7294118, b: 0.5686275, a: 1}
+    m_HighlightedColor: {r: 0.8602941, g: 0.72719455, b: 0.5566609, a: 1}
+    m_PressedColor: {r: 0.9485294, g: 0.75324076, b: 0.4812392, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -947,8 +947,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 520.3, y: 19.4}
-  m_SizeDelta: {x: 418.90002, y: 170}
+  m_AnchoredPosition: {x: 1010, y: 109.29999}
+  m_SizeDelta: {x: 950, y: 154}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470706088
 MonoBehaviour:
@@ -970,8 +970,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.8235294, g: 0.71735317, b: 0.58131486, a: 1}
-    m_PressedColor: {r: 0.854902, g: 0.7294118, b: 0.5686275, a: 1}
+    m_HighlightedColor: {r: 0.8602941, g: 0.72719455, b: 0.5566609, a: 1}
+    m_PressedColor: {r: 0.9485294, g: 0.75324076, b: 0.4812392, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

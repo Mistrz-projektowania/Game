@@ -23,18 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 75f7f817ab9d2aa4684155131ca58794
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Helpful questions/Persistent.unity
     guid: 5e0a89c719e919e49a53c98c48e84abb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Helpful questions/Helpful_questions.unity
     guid: c5f7c9026095e494b970b3ae3fab8986
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Helpful questions/questions.unity
     guid: 00c65204ad301a94fae361937df121e7
-  - enabled: 1
-    path: Assets/Scenes/PuzzleMenu.unity
-    guid: 237f5468af68f3941ae82706e5045051
-  - enabled: 1
-    path: Assets/Scenes/PuzzleMenuSecond.unity
-    guid: 8498d4a0361e23f4ca4076fef5262519
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000

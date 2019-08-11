@@ -18,6 +18,7 @@ public class GameControll : MonoBehaviour
 
     public SimpleObjectPool answerButtonObjectPool;
     public Transform answerButtonParent;
+	public GameObject AnswerPanel;
     public GameObject questionDisplay;
     public GameObject roundGoodEndDisplay;
     public GameObject roundBadEndDisplay;
@@ -66,7 +67,7 @@ public class GameControll : MonoBehaviour
     private void ShowQuestion()
     {
         RemoveAnswerButtons();
-
+		AnswerPanel.SetActive (true);
 
         QuestionData questionData = questionPool[questionIndex];
         questionDisplayText.text = questionData.questionText;
@@ -94,13 +95,15 @@ public class GameControll : MonoBehaviour
 
     public void AnswerButtonClicked(bool isCorrect)
     {
+		AnswerPanel.SetActive (false);
        
 
         if (!isCorrect)
         {
             int i = questionIndex;
-
-                gameController.subtractPoints(i + 1);
+			int a = 0;
+				roundBadEndDisplay.SetActive(true);
+                gameController.subtractPoints(a);
             if (gameController.getPoints() < questionIndex)
             {
                 RoundBadOverNoPointsPanel.SetActive(true);
@@ -116,7 +119,7 @@ public class GameControll : MonoBehaviour
            else {
                 RoundBadOverNoQuestions.SetActive(true);
                 
-            }
+			} a++;
         }
       
         else
@@ -125,17 +128,12 @@ public class GameControll : MonoBehaviour
             questionIndex++;
             ShowQuestion();
             roundGoodEndDisplay.SetActive(true);
-           
-             
-            
         }
 
     }
     public void EndRound2()
     {
         isRoundActive = true;
-
-        
         roundBadEndDisplay.SetActive(true);
         
         questionIndex++;

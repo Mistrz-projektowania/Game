@@ -7,19 +7,20 @@ using System.IO;
 public class DataController : MonoBehaviour
 {
 
-    private Quiz[] allRoundData;
+    public Quiz[] allRoundData;
     public GameObject QuestionPanel;
     public GameObject questions;
     private string gameDataFileName = "data.json";
 
     public void Start()
     {
-        // DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
+		SceneManager.LoadScene("Helpful_questions");
         LoadGameData();
-       questions.SetActive(false);
-        QuestionPanel.SetActive(true);
+       //questions.SetActive(false);
+       // QuestionPanel.SetActive(true);
 
-        //  SceneManager.LoadScene("Helpful_questions");
+          
     }
 
     public Quiz GetCurrentRoundData()
