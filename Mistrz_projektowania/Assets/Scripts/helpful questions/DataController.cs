@@ -14,7 +14,7 @@ public class DataController : MonoBehaviour
 
     public void Start()
     {
-        DontDestroyOnLoad(gameObject);
+      //  DontDestroyOnLoad(gameObject);
 		SceneManager.LoadScene("Helpful_questions");
         LoadGameData();
        //questions.SetActive(false);

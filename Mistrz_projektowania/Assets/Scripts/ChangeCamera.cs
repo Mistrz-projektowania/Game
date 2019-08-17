@@ -21,6 +21,7 @@ public class ChangeCamera : MonoBehaviour {
     public GameObject roundBadEndDisplay;
     public GameObject AnswerPanel;
     public GameObject roundGoodOverDisplay;
+	public GameObject HelpsInGame;
 
     public void ShowMainView()
     {
@@ -35,6 +36,7 @@ public class ChangeCamera : MonoBehaviour {
         questionsCamera.GetComponent<AudioListener>().enabled = false;
         GTSBtn.SetActive(true);
         HelpfulQuestionsButton.SetActive(true);
+		HelpsInGame.SetActive (false);
         
 
 
@@ -52,12 +54,13 @@ public class ChangeCamera : MonoBehaviour {
         QuestionPanel.SetActive(false);
         questions.SetActive(false);
         questionsCamera.SetActive(false);
+		HelpsInGame.SetActive (false);
 
     }
 
     public void ShowQuestionsView()
     {
-        
+		HelpsInGame.SetActive (false);
         leftGUI.SetActive(false);
         GTSBtn.SetActive(false);
         HelpfulQuestionsButton.SetActive(false);
@@ -80,7 +83,15 @@ public class ChangeCamera : MonoBehaviour {
     public void ShowNextQuestionView() {
        
         roundBadEndDisplay.SetActive(false);
+		HelpsInGame.SetActive (false);
     }
+
+	public void ShowHelpsInGame() {
+
+		HelpsInGame.SetActive (true);
+		leftGUI.SetActive(false);
+		HelpfulQuestionsButton.SetActive(false);
+	}
 }
 
  
