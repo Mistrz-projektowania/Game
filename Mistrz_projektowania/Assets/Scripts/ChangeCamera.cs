@@ -13,10 +13,12 @@ public class ChangeCamera : MonoBehaviour {
     public GameObject wrongInputMEssage;
     public GameObject QuestionPanel;
     public GameObject questions;
+	public GameObject Quiz;
     public GameObject questionsCamera;
     public GameObject GTSBtn;
     public GameObject HelpfulQuestionsButton;
     public GameObject RoundGoodOverPanel;
+	public GameObject PuzzleGame;
     public GameObject questionDisplay;
     public GameObject roundBadEndDisplay;
     public GameObject AnswerPanel;
@@ -37,7 +39,8 @@ public class ChangeCamera : MonoBehaviour {
         GTSBtn.SetActive(true);
         HelpfulQuestionsButton.SetActive(true);
 		HelpsInGame.SetActive (false);
-        
+		PuzzleGame.SetActive (false);
+		Quiz.SetActive (false);
 
 
     }
@@ -47,14 +50,16 @@ public class ChangeCamera : MonoBehaviour {
         leftGUI.SetActive(false);
         Game.SetActive(false);
         mainCamera.SetActive(false);
-        rockLabels.SetActive(false);
         noPointMessage.SetActive(false);
         wrongInputMEssage.SetActive(false);
         puzzleCamera.SetActive(true);
+		PuzzleGame.SetActive (true);
         QuestionPanel.SetActive(false);
+		GTSBtn.SetActive(false);
         questions.SetActive(false);
         questionsCamera.SetActive(false);
 		HelpsInGame.SetActive (false);
+		Quiz.SetActive (false);
 
     }
 
@@ -67,11 +72,12 @@ public class ChangeCamera : MonoBehaviour {
         Game.SetActive(false);
         mainCamera.SetActive(false);
         questionsCamera.SetActive(true);
-        rockLabels.SetActive(false);
+		PuzzleGame.SetActive (false);
         noPointMessage.SetActive(false);
         wrongInputMEssage.SetActive(false);
         puzzleCamera.SetActive(false);
         QuestionPanel.SetActive(true);
+		Quiz.SetActive (true);
         questions.SetActive(false);
         roundGoodOverDisplay.SetActive(false);
         roundBadEndDisplay.SetActive(false);
@@ -91,6 +97,10 @@ public class ChangeCamera : MonoBehaviour {
 		HelpsInGame.SetActive (true);
 		leftGUI.SetActive(false);
 		HelpfulQuestionsButton.SetActive(false);
+		PuzzleGame.SetActive (false);
+		Quiz.SetActive (false);
+		GTSBtn.SetActive(false);
+		rockLabels.SetActive(false);
 	}
 }
 

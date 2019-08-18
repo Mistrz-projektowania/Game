@@ -23,9 +23,12 @@ public class PuzzleCompleted : MonoBehaviour {
 	}
 
 	public void PuzzleDone() {
+
+		keyG keyG = new keyG();
 		PuzzleGame.SetActive (false);
 		GUI.SetActive (true);
 		Game.SetActive (true);
+		keyG.GTSon ();
 
 	}
 }
