@@ -28,7 +28,7 @@ public class PuzzleCompleted : MonoBehaviour {
 		PuzzleGame.SetActive (false);
 		GUI.SetActive (true);
 		Game.SetActive (true);
-		keyG.GTSon ();
+		StateMachine.setState (4);
 
 	}
 }
