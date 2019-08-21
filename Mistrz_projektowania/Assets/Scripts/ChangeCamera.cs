@@ -24,6 +24,7 @@ public class ChangeCamera : MonoBehaviour {
     public GameObject AnswerPanel;
     public GameObject roundGoodOverDisplay;
 	public GameObject HelpsInGame;
+	public GameObject puzzleMenu;
 
     public void ShowMainView()
     {
@@ -53,6 +54,7 @@ public class ChangeCamera : MonoBehaviour {
         noPointMessage.SetActive(false);
         wrongInputMEssage.SetActive(false);
         puzzleCamera.SetActive(true);
+		puzzleMenu.SetActive(true);
 		PuzzleGame.SetActive (true);
         QuestionPanel.SetActive(false);
 		GTSBtn.SetActive(false);
