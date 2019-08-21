@@ -37,10 +37,12 @@ public class GameManager : MonoBehaviour
 	public GameObject Flashcard;
 	public Text FlashcardText;
 	public GameObject PanelPlay;
+	public GameObject PuzzleMenu;
 
     // Use this for initialization
     void Start()
-	{	Flashcard.SetActive (false); 
+	{	PuzzleMenu.SetActive (true);
+		Flashcard.SetActive (false); 
 		PanelPlay.SetActive (false); 
 		CompletedMenu.SetActive (false);
         PuzzleGame(8);
@@ -55,8 +57,9 @@ public class GameManager : MonoBehaviour
     void Update()
 	{	
 		switch (puzzle_state.state) {
-			case PuzzleState.State.beforeStart: 
-				PanelPlay.SetActive (true); 
+		case PuzzleState.State.beforeStart: 
+			PanelPlay.SetActive (true); 
+			StartPosition ();
 				break;
 			case PuzzleState.State.start:
 				SetRandoms ();

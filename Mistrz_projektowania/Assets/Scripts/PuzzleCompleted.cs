@@ -10,6 +10,7 @@ public class PuzzleCompleted : MonoBehaviour {
 	public GameObject GUI;
 	public GameObject Game;
 	public GameObject IntroPanel;
+	PuzzleState state; 
 	// Use this for initialization
 	void Start () {
 		
@@ -34,5 +35,6 @@ public class PuzzleCompleted : MonoBehaviour {
 		Debug.Log (StateMachine.getState());
 		Puzzle.SetActive (false);
 		PuzzleComplete.SetActive (false);
+		state.StartGame();
 	}
 }
