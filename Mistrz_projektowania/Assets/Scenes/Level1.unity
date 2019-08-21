@@ -20015,7 +20015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &949002305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21589,6 +21589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clicked: 0
+  moved: 0
   go_left: 0
   go_right: 0
   go_up: 0
@@ -31668,6 +31669,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PuzzleGame: {fileID: 1156623183}
+  Puzzle: {fileID: 949002304}
+  PuzzleComplete: {fileID: 572652008}
   GUI: {fileID: 2135390249}
   Game: {fileID: 78464701}
   IntroPanel: {fileID: 1243150158}
@@ -32528,7 +32531,6 @@ GameObject:
   - component: {fileID: 1536744104}
   - component: {fileID: 1536744103}
   - component: {fileID: 1536744102}
-  - component: {fileID: 1536744101}
   m_Layer: 5
   m_Name: GTSBtn (1)
   m_TagString: Untagged
@@ -32555,28 +32557,6 @@ RectTransform:
   m_AnchoredPosition: {x: -818.6499, y: 316.7}
   m_SizeDelta: {x: 192.69992, y: 85.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1536744101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1536744099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64ef85327dbac3047a5c65fac39fe919, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputKey: 71
-  GTSbutton: {fileID: 1536744102}
-  GTS: {fileID: 1870406938}
-  rocks:
-  - {fileID: 1606676964}
-  - {fileID: 442135595}
-  - {fileID: 461080975}
-  - {fileID: 22540726}
-  - {fileID: 1560172311}
-  - {fileID: 801352896}
-  - {fileID: 1404226258}
 --- !u!114 &1536744102
 MonoBehaviour:
   m_ObjectHideFlags: 0

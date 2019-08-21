@@ -122,25 +122,25 @@ public class GameManager : MonoBehaviour
                 ray_up = new Ray(new Vector2(x, y_up), new Vector2(0f, direction));
                 ray_down = new Ray(new Vector2(x, y_down), new Vector2(0f, -direction));
 
-				float maxDistanceToCheck = 2.3f;
-			
+				float maxDistanceToCheck = 2.35f;
 
-				if ((puzzle.transform.position.y < startPos.y) && (Physics.Raycast(ray_up, out hit, maxDistanceToCheck, collisionMask) == false) )
+				if ((puzzle.transform.position.y < startPos.y) && (puzzle.transform.position.y < 1.5f) &&  (Physics.Raycast(ray_up, out hit, maxDistanceToCheck, collisionMask) == false) && (puzzle.moved == false) )
                 {
 					Debug.Log ("up" + puzzle.transform.position.y);
                     puzzle.go_up = true; 
+				
                 }
-				if ((puzzle.transform.position.y > (startPos.y -2 * offset.y)) && (Physics.Raycast(ray_down, out hit, maxDistanceToCheck, collisionMask) == false))
+				if ((puzzle.transform.position.y > (startPos.y -2 * offset.y)) && (Physics.Raycast(ray_down, out hit, maxDistanceToCheck, collisionMask) == false) && (puzzle.moved == false) )
                 {
 					Debug.Log ("down" + puzzle.transform.position.y);
                     puzzle.go_down = true; 
                 }
-				if ((puzzle.transform.position.x > startPos.x) && (Physics.Raycast(ray_left, out hit, maxDistanceToCheck, collisionMask) == false))
+				if ((puzzle.transform.position.x > startPos.x) && (Physics.Raycast(ray_left, out hit, maxDistanceToCheck, collisionMask) == false) && (puzzle.moved == false) )
                 {
 					Debug.Log ("left" + puzzle.transform.position.x);
                     puzzle.go_left = true; 
                 }
-				if ((puzzle.transform.position.x < (startPos.x +2 * offset.x)) && (Physics.Raycast(ray_right, out hit, maxDistanceToCheck, collisionMask) == false))
+				if ((puzzle.transform.position.x < (startPos.x + 2 * offset.x)) && (Physics.Raycast(ray_right, out hit, maxDistanceToCheck, collisionMask) == false) && (puzzle.moved == false) )
                 {
 					Debug.Log ("right" + puzzle.transform.position.x);
                     puzzle.go_right = true; 

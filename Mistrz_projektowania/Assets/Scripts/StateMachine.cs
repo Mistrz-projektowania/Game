@@ -9,6 +9,7 @@ public class StateMachine : MonoBehaviour {
 
 	WitchController witchCtrl;
 	SunMopController sunMopCtrl;
+	keyG gts;
 
 
 	// Use this for initialization
@@ -58,6 +59,10 @@ public class StateMachine : MonoBehaviour {
 		}
 		if (currentState == 3) {
 			sunMopCtrl.SunMopON ();
+		}
+
+		if (currentState == 4) {
+			gts.GTSon ();
 		}
 
 	}
