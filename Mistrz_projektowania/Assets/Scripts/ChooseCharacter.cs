@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ChooseCharacter : MonoBehaviour
@@ -89,6 +90,12 @@ public class ChooseCharacter : MonoBehaviour
 			PlayerPrefs.SetInt ("Selected_1", person);
 		 else
 			PlayerPrefs.SetInt ("Selected_2", person);
+		GameplayModel.gamePlayerName = getPlayerName ();
 		SceneManager.LoadScene("Entry_questions_Level1");
     }
+
+	private string getPlayerName(){
+		InputField playerName = GameObject.Find ("PlayerNameInput").GetComponent<InputField>();
+		return playerName.text.ToString();
+	}
 }
