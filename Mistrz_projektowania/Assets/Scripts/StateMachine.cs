@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StateMachine : MonoBehaviour {
 
 	public static int currentState;
 	public static int previousState;
+	public Button buttonHelp;
 
 	WitchController witchCtrl;
 	SunMopController sunMopCtrl;
@@ -29,6 +31,7 @@ public class StateMachine : MonoBehaviour {
 		previousState = 8;
 		witchCtrl = GameObject.Find ("Witch").GetComponent<WitchController> ();
 		sunMopCtrl = GameObject.Find ("SunMop").GetComponent<SunMopController> ();
+		buttonHelp = GameObject.Find ("HelpfulQuestionsButton").GetComponent<Button> ();
 		witchStateControl ();
 	}
 	
@@ -49,6 +52,12 @@ public class StateMachine : MonoBehaviour {
 			}
 		}
 		*/
+
+		if (currentState != 0) {
+			buttonHelp.interactable = false;
+		} else
+			buttonHelp.interactable = true;
+		
 		if (currentState == 8) {
 			soundController.pauseAmbientGameplaySound ();
 		} else soundController.playAmbientGameplaySound ();
