@@ -14,7 +14,7 @@ public class keyG : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//GameObject.Find ("Afterburner").SetActive (false);
-		 GTSbutton = GetComponent<Button> ();
+		GTSbutton = GetComponent<Button> ();
 		ps = GameObject.Find ("Afterburner").GetComponent<ParticleSystem> ();
 		ps.Stop ();
 		GTSbutton.onClick.AddListener(GTSon);

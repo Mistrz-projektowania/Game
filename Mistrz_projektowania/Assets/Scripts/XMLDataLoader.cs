@@ -133,42 +133,42 @@ public class XMLDataLoader : MonoBehaviour {
 		List<string> questionsData = new List<string>();
 		switch(dropdownName){
 			case "participantsNr":
-				xmlDoc.LoadXml (ParticipantsNrDatabase.text); // load the file.
+				xmlDoc = getDatabaseData("participantsNr"); 
 				XmlNode nodes = xmlDoc.SelectSingleNode("LiczbaUczestnikowPlacacych");
 				foreach (XmlNode tNode in nodes) { 
 				questionsData.Add(tNode.SelectSingleNode("LiczbaOsob").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
 				}
 				break;
 		case "notPayingParticipantsNr":
-			xmlDoc.LoadXml (notPayingParticipantsNrDatabase.text); // load the file.
+			xmlDoc = getDatabaseData("notPayingParticipantsNr"); 
 			XmlNode participantsNodes = xmlDoc.SelectSingleNode("LiczbaUczestnikowNieplacacych");
 			foreach (XmlNode tNode in participantsNodes) { 
 				questionsData.Add(tNode.SelectSingleNode("LiczbaOsob").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
 			}
 			break;
 		case "tripName":
-			xmlDoc.LoadXml (TripNameDatabase.text);
+			xmlDoc = getDatabaseData("tripName");
 			XmlNode tripNodes = xmlDoc.SelectSingleNode ("NazwyImprez");
 			foreach (XmlNode tNode in tripNodes) { 
 				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
 			}
 			break;
 		case "participantsType":
-			xmlDoc.LoadXml (participantsTypeDatabase.text);
+			xmlDoc = getDatabaseData("participantsType");
 			XmlNode participantsTypeNodes = xmlDoc.SelectSingleNode ("Uczestnicy");
 			foreach (XmlNode tNode in participantsTypeNodes) { 
 				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
 			}
 			break;
 		case "vehicle":
-			xmlDoc.LoadXml (vehicleDatabase.text);
+			xmlDoc = getDatabaseData("vehicle");
 			XmlNode vehicleNodes = xmlDoc.SelectSingleNode ("Transport");
 			foreach (XmlNode tNode in vehicleNodes) { 
 				questionsData.Add(tNode.SelectSingleNode("Nazwa").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
 			}
 			break;
 		case "tripLength":
-			xmlDoc.LoadXml (tripLengthDatabase.text);
+			xmlDoc = getDatabaseData("tripLength");
 			XmlNode tripLengthNodes = xmlDoc.SelectSingleNode ("CzasyTrwania");
 			foreach (XmlNode tNode in tripLengthNodes) { 
 				questionsData.Add(tNode.SelectSingleNode("Czas").InnerText + " (" + tNode.SelectSingleNode("Punkty").InnerText + " pkt)");
@@ -185,32 +185,32 @@ public class XMLDataLoader : MonoBehaviour {
 		string itemData = "";
 		switch (database){
 		case "participantsNr":
-			xmlDoc.LoadXml (ParticipantsNrDatabase.text); 
+			xmlDoc = getDatabaseData("participantsNr");
 			XmlNode nodes = xmlDoc.SelectSingleNode ("LiczbaUczestnikowPlacacych");
 			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode ("LiczbaOsob").InnerText;
 			break;
 		case "notPayingParticipantsNr":
-			xmlDoc.LoadXml (notPayingParticipantsNrDatabase.text);
+			xmlDoc = getDatabaseData("notPayingParticipantsNr");
 			XmlNode participantsNodes = xmlDoc.SelectSingleNode("LiczbaUczestnikowNieplacacych");
 			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode("LiczbaOsob").InnerText;
 			break;
 		case "tripName":
-			xmlDoc.LoadXml (TripNameDatabase.text);
+			xmlDoc = getDatabaseData("tripName");
 			XmlNode tripNodes = xmlDoc.SelectSingleNode ("NazwyImprez");
 			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode("Nazwa").InnerText;
 			break;
 		case "participantsType":
-			xmlDoc.LoadXml (participantsTypeDatabase.text);
+			xmlDoc = getDatabaseData("participantsType");
 			XmlNode participantsTypeNodes = xmlDoc.SelectSingleNode ("Uczestnicy");
 			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode("Nazwa").InnerText;
 			break;
 		case "vehicle":
-			xmlDoc.LoadXml (vehicleDatabase.text);
+			xmlDoc = getDatabaseData("vehicle");
 			XmlNode vehicleNodes = xmlDoc.SelectSingleNode ("Transport");
 			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode("Nazwa").InnerText;
 			break;
 		case "tripLength":
-			xmlDoc.LoadXml (tripLengthDatabase.text);
+			xmlDoc = getDatabaseData("tripLength");
 			XmlNode tripLengthNodes = xmlDoc.SelectSingleNode ("CzasyTrwania");
 			itemData = xmlDoc.SelectSingleNode ("//*[@id='" + id + "']").SelectSingleNode("Dni").InnerText;
 			break;
@@ -232,28 +232,48 @@ public class XMLDataLoader : MonoBehaviour {
 		XmlDocument xmlDoc = new XmlDocument();
 		switch (database) {
 		case "participantsNr":
-			xmlDoc.LoadXml (ParticipantsNrDatabase.text); // load the file.
+			if (GameplayModel.gameLevel == 1) 
+				xmlDoc.LoadXml (ParticipantsNrDatabase.text);
+			else
+				xmlDoc.LoadXml (L2_ParticipantsNrDatabase.text);
 			break;
 		case "notPayingParticipantsNr":
-			xmlDoc.LoadXml (notPayingParticipantsNrDatabase.text); // load the file.
+			if (GameplayModel.gameLevel == 1)
+				xmlDoc.LoadXml (notPayingParticipantsNrDatabase.text);
+			else
+				xmlDoc.LoadXml (L2_notPayingParticipantsNrDatabase.text);
 			break;
 		case "tripName":
-			xmlDoc.LoadXml (TripNameDatabase.text);	
+			if (GameplayModel.gameLevel == 1)
+				xmlDoc.LoadXml (TripNameDatabase.text);	
+			else
+				xmlDoc.LoadXml (L2_TripNameDatabase.text);	
 			break;
 		case "participantsType":
-			xmlDoc.LoadXml (participantsTypeDatabase.text);
+			if (GameplayModel.gameLevel == 1)
+				xmlDoc.LoadXml (participantsTypeDatabase.text);
+			else
+				xmlDoc.LoadXml (L2_participantsTypeDatabase.text);
 			break;
 		case "vehicle":
-			xmlDoc.LoadXml (vehicleDatabase.text);
+			if (GameplayModel.gameLevel == 1)
+				xmlDoc.LoadXml (vehicleDatabase.text);
+			else
+				xmlDoc.LoadXml (L2_vehicleDatabase.text);
 			break;
 		case "tripLength":
-			xmlDoc.LoadXml (tripLengthDatabase.text);
+			if (GameplayModel.gameLevel == 1)
+				xmlDoc.LoadXml (tripLengthDatabase.text);
+			else 
+				xmlDoc.LoadXml (L2_tripLengthDatabase.text);
 			break;
 		default:
 			break;
 		}
 		return xmlDoc;
 	}
+
+	// TODO: connect to getDatabaseData()
 	public void GetData(int id, string tagName){
 		XmlDocument xmlDoc = new XmlDocument(); // xmlDoc is the new xml document.
 		xmlDoc.LoadXml(PlanDatabase.text); // load the file.

@@ -60,7 +60,6 @@ public class finishGameController : MonoBehaviour {
 		{
 			counter += Time.deltaTime;
 			float alpha = Mathf.Lerp(a, b, counter / duration);
-			//Debug.Log(alpha);
 
 			selectedButton.alpha = alpha;
 
@@ -72,7 +71,7 @@ public class finishGameController : MonoBehaviour {
 		string playerName; ///////////////////////////////////// Pobrac imie gracza
 		string playerTime, playerPoints;
 		string [] fields;
-		playerName = "Ola";
+		playerName = GameplayModel.gamePlayerName;
 		addDataToPlayerDataList ("Gracz", playerName);
 
 		playerTime = GameObject.Find ("timerText").GetComponent<timeCounter> ().getTimerValue ();
@@ -84,7 +83,7 @@ public class finishGameController : MonoBehaviour {
 		GetFieldData fieldData = GameObject.Find ("GameController").GetComponent<GetFieldData> ();
 		fields = new string[fieldData.getFieldsSize ()];
 
-		for (int i = 0; i < fields.Length-1; i++) { //////////////////// zlikwidowac pozniej -1
+		for (int i = 0; i < fields.Length; i++) {
 			fields [i] = fieldData.getFieldData (i);
 		}
 		addDataToTripDataList ("Nr imprezy", fields [0]);

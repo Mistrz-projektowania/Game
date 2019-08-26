@@ -8,6 +8,7 @@ public class GameplayModel : MonoBehaviour {
 
 	static public int gameLevel = 1;
 	static public string gameCharacter = "Łukasz";
+	static public string gamePlayerName = "Gracz 1";
 
 	static public int gameTripID = 0;
 	static public string gameTripName = "";
