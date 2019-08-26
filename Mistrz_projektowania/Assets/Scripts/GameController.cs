@@ -138,7 +138,10 @@ public class GameController : MonoBehaviour {
 		float a, b;
 		if (fadeIn)
 		{
-			message.transform.position = new Vector3 (Screen.width / 2, 120,0.0f);
+			if (message == systemInfo)
+				message.transform.position = new Vector3 (Screen.width / 2, Screen.height - 80,0.0f);
+			else
+				message.transform.position = new Vector3 (Screen.width / 2, 120,0.0f);
 			a = 0;
 			b = 1;
 		}
@@ -154,7 +157,6 @@ public class GameController : MonoBehaviour {
 		{
 			counter += Time.deltaTime;
 			float alpha = Mathf.Lerp(a, b, counter / duration);
-			//Debug.Log(alpha);
 
 			selectedMessage.alpha = alpha;
 
@@ -167,7 +169,7 @@ public class GameController : MonoBehaviour {
 
 	public static int[] drawTheOrder(int n,int k)
 	{
-		//Debug.Log("DRAW THE ORDER");
+		// Debug.Log("DRAW THE ORDER");
 		int[] order = new int[k];
 		// wypełnianie tablicy liczbami 1,2...n
 		int[] numbers = new int[n];
