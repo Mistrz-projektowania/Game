@@ -11,6 +11,7 @@ public class StateMachine : MonoBehaviour {
 
 	WitchController witchCtrl;
 	SunMopController sunMopCtrl;
+	RockSort sorting;
 	keyG gts;
 
 
@@ -26,6 +27,7 @@ public class StateMachine : MonoBehaviour {
 		 * 6 - gracz odpowiada na pytania Quizu
 		 * 7 - koniec gry
 		 * 8 - pauza
+		 * 9 - wybór podpowiedzi
 		 */
 		currentState = 8;
 		previousState = 8;
@@ -37,8 +39,8 @@ public class StateMachine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//Debug.Log ("Previous State: " + previousState);
-		//Debug.Log ("Current State: " + currentState);
+		Debug.Log ("Previous State: " + previousState);
+		Debug.Log ("Current State: " + currentState);
 		/*
 		if (Input.GetKeyDown (KeyCode.W)){
 			if (currentState == 0) {
@@ -52,7 +54,6 @@ public class StateMachine : MonoBehaviour {
 			}
 		}
 		*/
-
 		if (currentState != 0) {
 			buttonHelp.interactable = false;
 		} else
@@ -62,7 +63,7 @@ public class StateMachine : MonoBehaviour {
 			soundController.pauseAmbientGameplaySound ();
 		} else soundController.playAmbientGameplaySound ();
 
-		if(currentState == 2){
+		if(currentState == 2 && currentState != 5 && currentState != 6){
 			witchCtrl.runWitch ();
 
 		}

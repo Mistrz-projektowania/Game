@@ -11,6 +11,7 @@ public class PuzzleCompleted : MonoBehaviour {
 	public GameObject Game;
 	public GameObject IntroPanel;
 	PuzzleState state; 
+	keyG gts;
 	GameManager manager;
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,6 @@ public class PuzzleCompleted : MonoBehaviour {
 	}
 
 	public void PuzzleDone() {
-
 	//	keyG keyG = new keyG();
 		PuzzleGame.SetActive (false);
 		GUI.SetActive (true);
@@ -37,5 +37,6 @@ public class PuzzleCompleted : MonoBehaviour {
 		Puzzle.SetActive (false);
 		PuzzleComplete.SetActive (false);
 		state.StartGame(); 
+
 	}
 }

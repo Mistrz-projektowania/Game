@@ -193,12 +193,14 @@ public class GameManager : MonoBehaviour
 	}
 
 	public string myTxt;
-   public void ApplyPictures() {
+   	public void ApplyPictures() {
         string filePath;
 
         for (int i = 1; i <= puzzleParts.Count; i++) {
-            if (i > 2)
-                filePath = "Puzzles/" + Catalog + "/Part" + (i + 1);
+			if (i > 2) {
+				filePath = "Puzzles/" + Catalog + "/Part" + (i + 1);
+				Debug.Log (filePath);
+			}
             else
 				filePath = "Puzzles/" + Catalog + "/Part" + i;
 
