@@ -20017,7 +20017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &949002305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20104,7 +20104,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 949002304}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &949074243
 GameObject:
   m_ObjectHideFlags: 0
@@ -24507,6 +24507,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1156623184}
+  - component: {fileID: 1156623185}
   m_Layer: 5
   m_Name: PuzzleGame
   m_TagString: Untagged
@@ -24533,6 +24534,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1156623185
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1156623183}
+  m_Enabled: 1
 --- !u!1 &1168702906
 GameObject:
   m_ObjectHideFlags: 0
@@ -31701,7 +31709,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1502033313}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1502033317
 Behaviour:
   m_ObjectHideFlags: 0
@@ -32552,6 +32560,7 @@ GameObject:
   - component: {fileID: 1536744104}
   - component: {fileID: 1536744103}
   - component: {fileID: 1536744102}
+  - component: {fileID: 1536744101}
   m_Layer: 5
   m_Name: GTSBtn (1)
   m_TagString: Untagged
@@ -32578,6 +32587,28 @@ RectTransform:
   m_AnchoredPosition: {x: -818.6499, y: 316.7}
   m_SizeDelta: {x: 192.69992, y: 85.3}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1536744101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1536744099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ef85327dbac3047a5c65fac39fe919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputKey: 71
+  GTSbutton: {fileID: 1536744102}
+  GTS: {fileID: 1870406938}
+  rocks:
+  - {fileID: 1606676964}
+  - {fileID: 442135595}
+  - {fileID: 461080975}
+  - {fileID: 22540726}
+  - {fileID: 1560172311}
+  - {fileID: 801352896}
+  - {fileID: 1404226258}
 --- !u!114 &1536744102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32630,17 +32661,6 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1502033315}
         m_MethodName: PuzzleDone
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2113261441}
-        m_MethodName: GTSon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35504,7 +35524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1700418361
 Transform:
   m_ObjectHideFlags: 0
@@ -35524,7 +35544,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1700418360}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1700418363
 Behaviour:
   m_ObjectHideFlags: 0
@@ -39121,7 +39141,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1858195848}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1858195851
 Behaviour:
   m_ObjectHideFlags: 0

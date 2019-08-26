@@ -10,9 +10,10 @@ public class keyG : MonoBehaviour {
 	public GameObject GTS;
 	public GameObject [] rocks;
 	ParticleSystem ps;
+	 
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 		//GameObject.Find ("Afterburner").SetActive (false);
 		GTSbutton = GetComponent<Button> ();
 		ps = GameObject.Find ("Afterburner").GetComponent<ParticleSystem> ();

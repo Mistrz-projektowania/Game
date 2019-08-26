@@ -47,7 +47,7 @@ public class ChangeCamera : MonoBehaviour {
     }
 
     public void ShowPuzzleView()
-    {
+	{	StateMachine.setState (5);
         leftGUI.SetActive(false);
         Game.SetActive(false);
         mainCamera.SetActive(false);
@@ -67,6 +67,7 @@ public class ChangeCamera : MonoBehaviour {
 
     public void ShowQuestionsView()
     {
+		StateMachine.setState (6);
 		HelpsInGame.SetActive (false);
         leftGUI.SetActive(false);
         GTSBtn.SetActive(false);
@@ -95,7 +96,8 @@ public class ChangeCamera : MonoBehaviour {
     }
 
 	public void ShowHelpsInGame() {
-
+		
+		StateMachine.setState (9);
 		HelpsInGame.SetActive (true);
 		leftGUI.SetActive(false);
 		HelpfulQuestionsButton.SetActive(false);
