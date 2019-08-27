@@ -24,6 +24,9 @@ public class questionsDataController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if(GameplayModel.gameLevel == 2){
+			Debug.Log ("LEEEVEL 2");
+		}
 		dataLoader = GameObject.Find ("QuestionsDataController").GetComponent<XMLDataLoader> ();
 
 		handleTripNameDropdown ();

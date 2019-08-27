@@ -90,7 +90,8 @@ public class ChooseCharacter : MonoBehaviour
 			PlayerPrefs.SetInt ("Selected_1", person);
 		 else
 			PlayerPrefs.SetInt ("Selected_2", person);
-		GameplayModel.gamePlayerName = getPlayerName ();
+		if(getPlayerName() != "") 
+			GameplayModel.gamePlayerName = getPlayerName ();
 		SceneManager.LoadScene("Entry_questions_Level1");
     }
 

@@ -230,53 +230,111 @@ public class XMLDataLoader : MonoBehaviour {
 		
 	XmlDocument getDatabaseData(string database){
 		XmlDocument xmlDoc = new XmlDocument();
-		switch (database) {
-		case "participantsNr":
-			if (GameplayModel.gameLevel == 1) 
-				xmlDoc.LoadXml (ParticipantsNrDatabase.text);
-			else
+		Debug.Log ("getDatabaseData");
+		if (GameplayModel.gameLevel == 1) {
+			Debug.Log (GameplayModel.gameLevel);
+			switch (database) {
+				case "plan":
+					xmlDoc.LoadXml (PlanDatabase.text);
+					break;
+				case "participantsNr":
+					xmlDoc.LoadXml (ParticipantsNrDatabase.text);
+					break;
+				case "notPayingParticipantsNr":
+					xmlDoc.LoadXml (notPayingParticipantsNrDatabase.text);
+					break;
+				case "tripName":
+					xmlDoc.LoadXml (TripNameDatabase.text);
+					break;
+				case "tripNr":
+					xmlDoc.LoadXml (TripNrDatabase.text);
+					break;
+				case "participantsType":
+					xmlDoc.LoadXml (participantsTypeDatabase.text);
+					break;
+				case "vehicle":
+					xmlDoc.LoadXml (vehicleDatabase.text);
+					break;
+				case "tripLength":
+					xmlDoc.LoadXml (tripLengthDatabase.text);
+					break;
+				case "tripPlan":
+					xmlDoc.LoadXml (tripPlanDatabase.text);
+					break;
+				case "customer":
+					xmlDoc.LoadXml (CustomerDatabase.text);
+					break;
+				case "customerContact":
+					xmlDoc.LoadXml (CustomerContactDatabase.text);
+					break;
+				case "hotel":
+					xmlDoc.LoadXml (hotelDatabase.text);
+					break;
+				case "restaurants":
+					xmlDoc.LoadXml (restaurantDatabase.text);
+					break;
+				case "services":
+					xmlDoc.LoadXml (servicesDatabase.text);
+					break;
+				default:
+					break;
+			}
+		} else {
+			Debug.Log (GameplayModel.gameLevel);
+			switch (database) {
+			case "plan":
+				xmlDoc.LoadXml (L2_PlanDatabase.text);
+				break;
+			case "participantsNr":
 				xmlDoc.LoadXml (L2_ParticipantsNrDatabase.text);
-			break;
-		case "notPayingParticipantsNr":
-			if (GameplayModel.gameLevel == 1)
-				xmlDoc.LoadXml (notPayingParticipantsNrDatabase.text);
-			else
+				break;
+			case "notPayingParticipantsNr":
 				xmlDoc.LoadXml (L2_notPayingParticipantsNrDatabase.text);
-			break;
-		case "tripName":
-			if (GameplayModel.gameLevel == 1)
-				xmlDoc.LoadXml (TripNameDatabase.text);	
-			else
-				xmlDoc.LoadXml (L2_TripNameDatabase.text);	
-			break;
-		case "participantsType":
-			if (GameplayModel.gameLevel == 1)
-				xmlDoc.LoadXml (participantsTypeDatabase.text);
-			else
+				break;
+			case "tripName":
+				xmlDoc.LoadXml (L2_TripNameDatabase.text);
+				Debug.Log (xmlDoc);
+				break;
+			case "tripNr":
+				xmlDoc.LoadXml (L2_TripNrDatabase.text);
+				break;
+			case "participantsType":
 				xmlDoc.LoadXml (L2_participantsTypeDatabase.text);
-			break;
-		case "vehicle":
-			if (GameplayModel.gameLevel == 1)
-				xmlDoc.LoadXml (vehicleDatabase.text);
-			else
+				break;
+			case "vehicle":
 				xmlDoc.LoadXml (L2_vehicleDatabase.text);
-			break;
-		case "tripLength":
-			if (GameplayModel.gameLevel == 1)
-				xmlDoc.LoadXml (tripLengthDatabase.text);
-			else 
+				break;
+			case "tripLength":
 				xmlDoc.LoadXml (L2_tripLengthDatabase.text);
-			break;
-		default:
-			break;
+				break;
+			case "tripPlan":
+				xmlDoc.LoadXml (L2_tripPlanDatabase.text);
+				break;
+			case "customer":
+				xmlDoc.LoadXml (L2_CustomerDatabase.text);
+				break;
+			case "customerContact":
+				xmlDoc.LoadXml (L2_CustomerContactDatabase.text);
+				break;
+			case "hotel":
+				xmlDoc.LoadXml (L2_hotelDatabase.text);
+				break;
+			case "restaurants":
+				xmlDoc.LoadXml (L2_restaurantDatabase.text);
+				break;
+			case "services":
+				xmlDoc.LoadXml (L2_servicesDatabase.text);
+				break;
+			default:
+				break;
+			}
 		}
 		return xmlDoc;
 	}
-
-	// TODO: connect to getDatabaseData()
+		
 	public void GetData(int id, string tagName){
-		XmlDocument xmlDoc = new XmlDocument(); // xmlDoc is the new xml document.
-		xmlDoc.LoadXml(PlanDatabase.text); // load the file.
+		XmlDocument xmlDoc = new XmlDocument();
+		xmlDoc = getDatabaseData("plan");
 		//XmlNodeList CustomerList = xmlDoc.GetElementsByTagName(tagName); 
 
 		XmlNode planNode = xmlDoc.SelectSingleNode("//*[@id='"+ id + "']");
@@ -290,7 +348,7 @@ public class XMLDataLoader : MonoBehaviour {
 				int tripNameId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
 
 				XmlDocument DBname = new XmlDocument(); 
-				DBname.LoadXml(TripNameDatabase.text); 
+				DBname = getDatabaseData("tripName");
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ tripNameId + "']");
 				foreach (XmlNode tNode in nodeName){ 
@@ -308,7 +366,7 @@ public class XMLDataLoader : MonoBehaviour {
 				int tripNrId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
 
 				XmlDocument DBname = new XmlDocument(); 
-				DBname.LoadXml(TripNrDatabase.text); 
+				DBname = getDatabaseData("tripNr"); 
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ tripNrId + "']");
 				foreach (XmlNode tNode in nodeName){ 
@@ -322,7 +380,7 @@ public class XMLDataLoader : MonoBehaviour {
 				int tripCustomerId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
 
 				XmlDocument DBname = new XmlDocument(); 
-				DBname.LoadXml(CustomerDatabase.text); 
+				DBname = getDatabaseData("customer"); 
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ tripCustomerId + "']");
 				foreach (XmlNode tNode in nodeName){ 
@@ -337,7 +395,7 @@ public class XMLDataLoader : MonoBehaviour {
 				int customerContactId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
 
 				XmlDocument DBname = new XmlDocument(); 
-				DBname.LoadXml(CustomerContactDatabase.text); 
+				DBname = getDatabaseData("customerContact");
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ customerContactId + "']");
 				foreach (XmlNode tNode in nodeName){ 
@@ -351,7 +409,7 @@ public class XMLDataLoader : MonoBehaviour {
 				int tripPlanId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
 
 				XmlDocument DBname = new XmlDocument(); 
-				DBname.LoadXml(tripPlanDatabase.text); 
+				DBname = getDatabaseData("tripPlan");
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ tripPlanId + "']");
 				foreach (XmlNode tNode in nodeName){ 
@@ -365,7 +423,7 @@ public class XMLDataLoader : MonoBehaviour {
 				int hotelId = System.Xml.XmlConvert.ToInt32(Node.InnerText);
 
 				XmlDocument DBname = new XmlDocument(); 
-				DBname.LoadXml(hotelDatabase.text); 
+				DBname = getDatabaseData("hotel");
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ hotelId + "']");
 				foreach (XmlNode tNode in nodeName){ 
@@ -378,7 +436,7 @@ public class XMLDataLoader : MonoBehaviour {
 			if(Node.Name == "IdWyzywienia")
 			{
 				XmlDocument DBname = new XmlDocument(); 
-				DBname.LoadXml(restaurantDatabase.text); 
+				DBname = getDatabaseData("restaurants"); 
 				foreach (XmlNode tNode in Node) {
 					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					List<Dictionary<string,string>> restaurant = new List<Dictionary<string,string>> ();
@@ -403,7 +461,7 @@ public class XMLDataLoader : MonoBehaviour {
 			if(Node.Name == "IdUslug")
 			{
 				XmlDocument DBname = new XmlDocument(); 
-				DBname.LoadXml(servicesDatabase.text); 
+				DBname = getDatabaseData("services"); 
 				foreach (XmlNode tNode in Node) {
 					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					List<Dictionary<string,string>> restaurant = new List<Dictionary<string,string>> ();
@@ -417,10 +475,8 @@ public class XMLDataLoader : MonoBehaviour {
 					}
 					//restaurant.Add (restaurantData);
 					obj.Add("Usługa" + tNode.InnerText, serviceData);
-					//Debug.Log("Usługa" + tNode.InnerText + ": " + serviceData);
 				}
-
-
+					
 
 				//obj.Add(tNode.Name, tNode.InnerText);
 				obj.Add("Typ", "Usługi");

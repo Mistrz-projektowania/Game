@@ -1,47 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <NazwyImprez>
 	<NazwaImprezy id="0">
-		<Nazwa>Tajemnice Gór Świętokrzyskich</Nazwa>
-		<Punkty>8</Punkty>
-	</NazwaImprezy>
-	<NazwaImprezy id="1">
-		<Nazwa>Historia i nauka w Górach Świętokrzyskich</Nazwa>
-		<Punkty>7</Punkty>
-	</NazwaImprezy>
-	<NazwaImprezy id="2">
-		<Nazwa>Na koneckim szlaku rowerowym</Nazwa>
-		<Punkty>5</Punkty>
-	</NazwaImprezy>
-	<NazwaImprezy id="3">
-		<Nazwa>Zaczarowane Świętokrzyskie</Nazwa>
-		<Punkty>8</Punkty>
-	</NazwaImprezy>
-	<NazwaImprezy id="4">
-		<Nazwa>Śladami Stefana Żeromskiego</Nazwa>
-		<Punkty>10</Punkty>
-	</NazwaImprezy>
-	<NazwaImprezy id="5">
-		<Nazwa>Historyczne obiekty przemysłowe w Regionie Świętokrzyskim</Nazwa>
-		<Punkty>10</Punkty>
-	</NazwaImprezy>
-	<NazwaImprezy id="6">
-		<Nazwa>Poznajemy twórców ludowych Ziemi Świętokrzyskiej</Nazwa>
-		<Punkty>5</Punkty>
-	</NazwaImprezy>
-	<NazwaImprezy id="7">
-		<Nazwa>Co kryją rezerwaty na terenie województwa świętokrzyskiego?</Nazwa>
-		<Punkty>6</Punkty>
-	</NazwaImprezy>
-	<NazwaImprezy id="8">
-		<Nazwa>Rajd rowerowy „Szukamy wiosny w Górach Świętokrzyskich”</Nazwa>
-		<Punkty>4</Punkty>
-	</NazwaImprezy>
-	<NazwaImprezy id="9">
-		<Nazwa>Weekend na świętokrzyskich szlakach</Nazwa>
-		<Punkty>7</Punkty>
-	</NazwaImprezy>
-	<NazwaImprezy id="10">
-		<Nazwa>Wakacje historyczne w Kielcach</Nazwa>
+		<Nazwa>Cudowny Paryż</Nazwa>
 		<Punkty>10</Punkty>
 	</NazwaImprezy>
 </NazwyImprez>
