@@ -15,6 +15,7 @@ public class puzzleMenu : MonoBehaviour {
 	public GameObject Puzzle;
 	public GameObject EndGame;
 	public GameObject GUI;
+	public GameObject Flashcard;
 	public GameObject CompletedMenu;
 
 
@@ -81,6 +82,7 @@ public class puzzleMenu : MonoBehaviour {
 	public void GoToCompletePanel() {  
 		CompletedMenu.SetActive (true);
 		Puzzle.SetActive (false);
+		Flashcard.SetActive (false);
 	}
 
 

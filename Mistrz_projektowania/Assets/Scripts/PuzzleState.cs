@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PuzzleState : MonoBehaviour {
-	public GameObject PanelStart;
+	public GameObject PanelStart; 
+	public GameObject Flashcard;
 
 	public enum State {
 		beforeStart,
 		start,
 		play,
 		win,
+		afterWin,
 	}
+
+
 
 	public State state;
 	public PuzzleState() {
@@ -20,8 +24,10 @@ public class PuzzleState : MonoBehaviour {
 
 	public void StartGame() {
 		//Destroy(PanelStart);
-		PanelStart.SetActive(false);
 		GameManager.puzzle_state.state = PuzzleState.State.start;
+		PanelStart.SetActive(false);
+		Flashcard.SetActive (false);
+
 	}
 
 

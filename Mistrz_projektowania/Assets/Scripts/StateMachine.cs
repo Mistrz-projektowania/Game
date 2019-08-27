@@ -72,7 +72,7 @@ public class StateMachine : MonoBehaviour {
 		}
 
 		if (currentState == 4) {
-			gts.GTSon ();
+			//gts.GTSon ();
 		}
 
 	}
