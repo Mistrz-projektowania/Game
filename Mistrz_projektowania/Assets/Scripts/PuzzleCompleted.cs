@@ -33,8 +33,7 @@ public class PuzzleCompleted : MonoBehaviour {
 		PuzzleGame.SetActive (false);
 		GUI.SetActive (true);
 		Game.SetActive (true);
-		StateMachine.setState (0);
-		Debug.Log (StateMachine.getState());
+		StateMachine.setState (0); 
 		Puzzle.SetActive (false);
 		PuzzleComplete.SetActive (false);   
 

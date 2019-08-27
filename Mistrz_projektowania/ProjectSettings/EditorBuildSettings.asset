@@ -20,9 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: ed75726a1a80e9549901b3878b96c1c3
-  - enabled: 1
-    path: Assets/Scenes/Level2.unity
-    guid: 75f7f817ab9d2aa4684155131ca58794
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Helpful questions/Persistent.unity
     guid: 5e0a89c719e919e49a53c98c48e84abb

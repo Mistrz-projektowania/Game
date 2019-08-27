@@ -59,40 +59,34 @@ public class GameManager : MonoBehaviour
     void Update()
 	{	
 		switch (puzzle_state.state) {
-		case PuzzleState.State.beforeStart:  
-			PanelPlay.SetActive (true);
-			StartPosition();
-			ApplyPictures();
 
+			case PuzzleState.State.beforeStart:  
+				PanelPlay.SetActive (true);
+				StartPosition();
+				ApplyPictures();
 				break;
-			case PuzzleState.State.start:
-				SetRandoms ();
+
+			case PuzzleState.State.start: 
+			
 				puzzle_state.state = PuzzleState.State.play;
+				SetRandoms ();
 				break;
-			case PuzzleState.State.play: 
-					if (PuzzleCompleted () == true) {
-				puzzle_state.state = PuzzleState.State.win;
-					} 
+
+		case PuzzleState.State.play: 
+			
+				if (PuzzleCompleted () == true) {
+					puzzle_state.state = PuzzleState.State.win;
+				} 
 				MovePuzzle ();
 				break;
+
 			case PuzzleState.State.win: 
 				Flashcard.SetActive (true);   
 				puzzle_state.state = PuzzleState.State.beforeStart; 
 				break; 
 		}
-
-
         
     }
-
-	public void StartGa() {
-		//Destroy(PanelStart);
-		SetRandoms ();
-		puzzle_state.state = PuzzleState.State.play;
-		PanelPlay.SetActive(false);
-		Flashcard.SetActive (false);
-
-	}
 
     private void PuzzleGame(int parts)
     {
@@ -213,7 +207,6 @@ public class GameManager : MonoBehaviour
         for (int i = 1; i <= puzzleParts.Count; i++) {
 			if (i > 2) {
 				filePath = "Puzzles/" + Catalog + "/Part" + (i + 1);
-				Debug.Log (filePath);
 			}
             else
 				filePath = "Puzzles/" + Catalog + "/Part" + i;
