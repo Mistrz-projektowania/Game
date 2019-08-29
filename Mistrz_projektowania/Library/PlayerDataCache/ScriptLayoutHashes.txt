@@ -3,6 +3,7 @@ PlayerPath?
 M:/2019/Game/Mistrz_projektowania/xxx.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
+Assets/Scenes/Tutorial.unity
 Assets/Scenes/Select Level.unity
 Assets/Scenes/Entry_questions_Level1.unity
 Assets/Scenes/Select Character.unity
@@ -346,3 +347,4 @@ d7d898a41bfcb3ba623efc342ac1f39e Assembly-CSharp.dll:.SunMopController
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
+53e245573a809d3a36b04e3996eda9c3 Assembly-CSharp.dll:.Tutorial

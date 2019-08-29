@@ -36,6 +36,19 @@ public class Tutorial : MonoBehaviour {
 		
 	}
 
+	public void GoTo1() {
+		Panel1.SetActive (true);
+		Panel2.SetActive (false);
+		Panel3.SetActive (false);
+		Panel4.SetActive (false);
+		Panel5.SetActive (false);
+		Panel6.SetActive (false);
+		Panel7.SetActive (false);
+		Panel8.SetActive (false);
+		Panel9.SetActive (false);
+	}
+
+
 	public void GoTo2() {
 		Panel1.SetActive (false);
 		Panel2.SetActive (true);
@@ -121,6 +134,22 @@ public class Tutorial : MonoBehaviour {
 	}
 
 	public void GoTo9() {
+		Panel1.SetActive (false);
+		Panel2.SetActive (false);
+		Panel3.SetActive (false);
+		Panel4.SetActive (false);
+		Panel5.SetActive (false);
+		Panel6.SetActive (false);
+		Panel7.SetActive (false);
+		Panel8.SetActive (false);
+		Panel9.SetActive (true);
+	}
+
+	public void GoToGame() {
 		SceneManager.LoadScene ("Select Level");
+	}
+
+	public void GoToMenu() {
+		SceneManager.LoadScene ("Main menu");
 	}
 }
