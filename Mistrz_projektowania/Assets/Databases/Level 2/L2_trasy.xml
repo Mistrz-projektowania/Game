@@ -2,22 +2,22 @@
 <Trasy>
     <Trasa id="0">
     <NazwaTrasy>Trasa A:</NazwaTrasy>
-    <OpisTrasy>Chęciny – Podzamcze Chęcińskie (Centrum Nauki Leonardo da Vinci) – Kielce – Nowa Słupia – Święty Krzyż – Kielce – Dobrzączka (Jaskinia Raj)</OpisTrasy>
+    <OpisTrasy>La Cite: katedra Notre Dame, pałac Sprawiedliwości, Saint Chapelle, Dzielnica Łacińska - Ogrody i Pałac Luksemburski; Panteon, Sorbona. Spacer przez ogrody Tuilieres do Luwru </OpisTrasy>
     </Trasa>
     <Trasa id="1">
     <NazwaTrasy>Trasa B:</NazwaTrasy>
-    <OpisTrasy>Kielce - Park Etnograficzny Muzeum Wsi Kieleckiej w Tokarni - Kielce</OpisTrasy>
+    <OpisTrasy>Muzeum Perfum, Opera Garnier, Plac Vandome, Plac Pigalle, Moulin Rouge, Plac du Tertre, Bazylika Sacre-Coeur, spacer wieczorny po wzgórzu Montmarte </OpisTrasy>
     </Trasa>
     <Trasa id="2">
     <NazwaTrasy>Trasa C:</NazwaTrasy>
-    <OpisTrasy>Kielce – Nowa Słupia Dymarki Świętokrzyskie - Kielce</OpisTrasy>
+    <OpisTrasy>Łuk Triumfalny i spacer po Champs Elysees, Pałac Inwalidów z grobem Napoleona. Plac Tocadero, przejście pod Wiezę Eifflea. Rejs po Sekwanie. Przejazd do La Defense - najnowocześniejszej dzielnicy Paryża z Grande Arche.</OpisTrasy>
     </Trasa>
     <Trasa id="3">
     <NazwaTrasy>Trasa D:</NazwaTrasy>
-    <OpisTrasy>Kielce - Międzynarodowy Harcerski Festiwal Kultury Młodzieży Szkolnej w Kielcach</OpisTrasy>
+    <OpisTrasy>Centrum Kulturalne G.Pompidou, Hotel de Ville. Wyspa Cite z Katedrą Notre Dame, Pałacem Sprawiedliwości, Świętą Kaplicą Conciergerie - dawne więzienie. Przejście do dzielnicy Łacińskiej. Zwiedzanie Panteonu. Przejście do Ogrodu Luksemburskiego.</OpisTrasy>
     </Trasa>
     <Trasa id="4">
-    <NazwaTrasy></NazwaTrasy>
-    <OpisTrasy></OpisTrasy>
+    <NazwaTrasy>Trasa E:</NazwaTrasy>
+    <OpisTrasy>Wersal - zwiedzanie ogrodów i pałacu. Przejazd do współczesnej atrakcji Paryża do dzielnicy XXI wieku "La Défense"- największego centrum biznesu i handlu. Powrót do centrum miasta, Łuk Triumfalny, spacer po Champs Elysees - najsłynniejszej alei świata. Trocadero, Hotel des Invalides z grobem Napoleona, Pola Marsowe, Wieża Eiffla</OpisTrasy>
     </Trasa>
 </Trasy>

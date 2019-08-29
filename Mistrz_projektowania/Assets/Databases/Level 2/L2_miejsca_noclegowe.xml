@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <MiejscaNoclegowe>
     <MiejsceNoclegowe id="0">
-        <Nazwa>Szkolne Schronisko Młodzieżowe „Wędrowiec”</Nazwa>
-        <Adres>ul. Szymanowskiego 5, 25-361 Kielce</Adres>
-        <Cennik>pokój 2 osobowy z łazienką 65 zł od osoby za dobę - pok. 1-3 osobowy bez łazienki 25 zł od osoby za dobę - pokoje wieloosobowe: pierwsza doba - 20 zł od osoby następne doby - 14,50 zł od osoby</Cennik>
-        <Pokoje>1, 3, 6 i 7 osobowe</Pokoje>
+        <Nazwa>hotelF1 Paris Porte de Châtillon</Nazwa>
+        <Adres>23 Avenue de la Porte de Châtillon, 75014 Paris, Francja</Adres>
+        <Cennik>pokój 250zł za dobę</Cennik>
+        <Pokoje>1, 2, 4 osobowe</Pokoje>
     </MiejsceNoclegowe>
     <MiejsceNoclegowe id="1">
-        <Nazwa></Nazwa>
-        <Adres></Adres>
-        <Cennik></Cennik>
-        <Pokoje></Pokoje>
+        <Nazwa>ART hotel paris est</Nazwa>
+        <Adres>23-25 Rue Scandicci, 93500 Pantin, Francja</Adres>
+        <Cennik>pokój 199zł za dobę</Cennik>
+        <Pokoje>1, 2, 4 osobowe</Pokoje>
     </MiejsceNoclegowe>
 </MiejscaNoclegowe>
