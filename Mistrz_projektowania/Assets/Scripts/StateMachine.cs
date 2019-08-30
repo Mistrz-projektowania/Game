@@ -28,6 +28,7 @@ public class StateMachine : MonoBehaviour {
 		 * 7 - koniec gry
 		 * 8 - pauza
 		 * 9 - wybór podpowiedzi
+		 * 10 - przegrana
 		 */
 		currentState = 8;
 		previousState = 8;
