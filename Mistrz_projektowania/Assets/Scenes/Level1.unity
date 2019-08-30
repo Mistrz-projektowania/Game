@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657832, g: 0.49641216, b: 0.5748164, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964133, b: 0.57481736, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4323,7 +4323,7 @@ GameObject:
   - component: {fileID: 176645195}
   - component: {fileID: 176645194}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14064,7 +14064,7 @@ GameObject:
   - component: {fileID: 666087048}
   - component: {fileID: 666087047}
   m_Layer: 5
-  m_Name: Text (6)
+  m_Name: Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17057,7 +17057,7 @@ GameObject:
   - component: {fileID: 821699415}
   - component: {fileID: 821699414}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19505,7 +19505,7 @@ GameObject:
   - component: {fileID: 917127466}
   - component: {fileID: 917127465}
   m_Layer: 5
-  m_Name: Text (5)
+  m_Name: Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24718,7 +24718,7 @@ GameObject:
   - component: {fileID: 1171234176}
   - component: {fileID: 1171234175}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24754,7 +24754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -29074,7 +29074,7 @@ GameObject:
   - component: {fileID: 1375685499}
   - component: {fileID: 1375685498}
   m_Layer: 5
-  m_Name: Text (4)
+  m_Name: Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38939,7 +38939,7 @@ GameObject:
   - component: {fileID: 1849732937}
   - component: {fileID: 1849732936}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
