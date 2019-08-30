@@ -369,7 +369,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0a05fcffc0cafdffb063feff629cffff2cf7ffff9efbffff00000000b04a00001a4e0000884e0000fc4f0000ee5000008e530000d0530000b4550000e25500007e56000094cc010054e1010022e50100
+    m_ExpandedIDs: 06d2fcffa83afdffd67bfdffda9ffdff8a06feffe02afeff0c61feffe697feffb8a2feff6cabfeff5eecfeff4e02ffffec1cffff982affff9233ffff6e80ffffb283ffff98fbffff00000000babc0000cebc0000eebd000072c0000018c40000f6c9000008ca000088cc00006acd0000ccce000002e200001ee20000de2d0100fe2e010082310100f234010028350100063b0100183b0100dc3f0100da8201008c830100048401005e92010026930100ca960100709a01004ea0010060a0010024a50100c63602007a1703008e170300ba1a0300321b0300be1d0300681e030086220300b6240300d82703000e280300302903008c290300
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -420,7 +420,7 @@ MonoBehaviour:
     height: 709
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 2006.9903305999999
+  lastFramingTime: 36109.272149699995
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
@@ -463,7 +463,7 @@ MonoBehaviour:
     speed: 2
     m_Value: 1
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0.14698477, y: -0.6341034, z: 0.12445766, w: 0.7488783}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -603,7 +603,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000022c0000343b0000723d00009c330000183a0000165300004e2b0000a87700003a2c0000c83b00000a2b000014350000f4580000602b000000000000
+    m_ExpandedInstanceIDs: c6230000022c0000343b0000723d00009c330000183a0000165300004e2b0000a87700003a2c0000c83b00000a2b000014350000f4580000602b000000000000762b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -627,7 +627,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 277}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 438
 --- !u!114 &17
