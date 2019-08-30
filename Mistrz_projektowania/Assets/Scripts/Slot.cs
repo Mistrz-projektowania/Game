@@ -59,6 +59,7 @@ public class Slot : MonoBehaviour , IDropHandler
 			AudioSource sound = GameObject.Find ("errorSound").GetComponent<AudioSource> ();
 			sound.Play ();
 		}
+		StateMachine.setState (0);
 	}
 	#endregion
 	IEnumerator waitAndHideMessage(GameObject message){

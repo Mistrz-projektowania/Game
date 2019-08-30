@@ -91,7 +91,8 @@ public class GameController : MonoBehaviour {
 		//Debug.Log (points);
 		if (points <= 0) {
 			points = 0;
-			if (noPointsMessageDisplay == false) {
+			if (noPointsMessageDisplay == false && StateMachine.getState() != 7) {
+				StateMachine.setState (10);
 				StartCoroutine (fadeMessage (noPointsMessage, true, 0.5f));
 				noPointsMessageDisplay = true;
 				//StartCoroutine (closePointsMessage(10f));

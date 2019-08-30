@@ -37,6 +37,12 @@ public class RockTextController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		Debug.Log ("------------------------------------------------------------");
+		if (StateMachine.getState() == 2) {
+			Debug.Log ("Czarownica przeszkadza");
+			StartCoroutine (fadeButton (button, false, 1.0f));
+			displayInfo = false;
+		}
 		/*
 		if (Input.GetKeyDown (KeyCode.Escape)) 
                 {
@@ -46,13 +52,15 @@ public class RockTextController : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		if (gameController.getPoints () > 0) {
+		if (gameController.getPoints () > 0 && StateMachine.getState() == 0) {
 			//displayInfo = !displayInfo;
 
 			if (displayInfo == false) {
 				AudioSource sound = GameObject.Find ("onClickSound").GetComponent<AudioSource> ();
 				sound.Play ();
 				StartCoroutine (fadeButton (button, true, fadeTime));
+				GameplayModel.gameChosenRock = int.Parse(buttonOb.transform.parent.transform.parent.Find("Index").GetComponent<Text>().text);
+				Debug.Log (GameplayModel.gameChosenRock);
 				displayInfo = true;
 				gameController.changePoints (-2);
 

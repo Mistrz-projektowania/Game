@@ -19,9 +19,7 @@ public class slotHandler : MonoBehaviour , IDropHandler
 	#region IdropHandler implementation
 	public void OnDrop(PointerEventData eventData)
 	{
-		if (!item) {
-			//DragHandler.item.transform.SetParent(transform);
-		}
+		StateMachine.setState (0);
 	}
 	#endregion
 }﻿

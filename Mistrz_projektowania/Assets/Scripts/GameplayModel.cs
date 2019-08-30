@@ -19,6 +19,7 @@ public class GameplayModel : MonoBehaviour {
 	static public string gameParticipantsType = "";
 
 	static public int gamePoints = 0;
+	static public int gameChosenRock = -1;
 
 	// Use this for initialization
 	void Start () {
