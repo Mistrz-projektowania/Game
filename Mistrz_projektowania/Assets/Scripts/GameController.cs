@@ -139,7 +139,9 @@ public class GameController : MonoBehaviour {
 		float a, b;
 		if (fadeIn)
 		{
-			if (message == systemInfo)
+			if(message == noPointsMessage) 
+				message.transform.position = new Vector3 (0.0f, Screen.height, 0.0f);
+			else if (message == systemInfo)
 				message.transform.position = new Vector3 (Screen.width / 2, Screen.height - 80,0.0f);
 			else
 				message.transform.position = new Vector3 (Screen.width / 2, 120,0.0f);

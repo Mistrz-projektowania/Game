@@ -33,7 +33,7 @@ public class PauseMenuController : MonoBehaviour {
 		pauseMenu.SetActive (false);
 	}
 	void backToMenu(){
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(0);
 	}
 	void quitGame(){
 		Application.Quit ();
