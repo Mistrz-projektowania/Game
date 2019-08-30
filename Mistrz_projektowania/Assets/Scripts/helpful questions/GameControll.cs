@@ -66,7 +66,7 @@ public class GameControll : MonoBehaviour
 
     private void ShowQuestion()
     {
-         
+		RemoveAnswerButtons ();
 		AnswerPanel.SetActive (true);
 
         Question question = questionPool[questionIndex];
