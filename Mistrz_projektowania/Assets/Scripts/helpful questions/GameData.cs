@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameData {
 
-    public Quiz[] allRoundData;	 
+    public Quiz[] allLevels;	 
 	
  
 }

@@ -9,5 +9,5 @@ public class Quiz
     // public int number;
     //   public int timeAddedForBadAnswer;
     //   public int pointsDeductedForBadAnswer;
-    public QuestionData[] questions;
+    public Question[] questions;
 }

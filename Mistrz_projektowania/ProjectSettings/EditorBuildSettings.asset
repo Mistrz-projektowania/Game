@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Helpful questions/Helpful_questions.unity
     guid: c5f7c9026095e494b970b3ae3fab8986
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Helpful questions/questions.unity
     guid: 00c65204ad301a94fae361937df121e7
   - enabled: 0

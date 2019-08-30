@@ -5,9 +5,10 @@ SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/Tutorial.unity
 Assets/Scenes/Select Level.unity
-Assets/Scenes/Entry_questions_Level1.unity
 Assets/Scenes/Select Character.unity
+Assets/Scenes/Entry_questions_Level1.unity
 Assets/Scenes/Level1.unity
+Assets/Scenes/Helpful questions/questions.unity
 SceneListEnd?
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexZoom
 c906602d9b43cc5e075f80e1d8ae7c79 Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI

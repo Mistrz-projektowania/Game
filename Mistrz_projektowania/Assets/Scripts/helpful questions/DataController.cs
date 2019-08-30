@@ -7,7 +7,7 @@ using System.IO;
 public class DataController : MonoBehaviour
 {
 
-    public Quiz[] allRoundData;
+    public Quiz[] allLevels;
     public GameObject QuestionPanel;
     public GameObject questions;
     private string gameDataFileName = "data.json";
@@ -16,16 +16,16 @@ public class DataController : MonoBehaviour
     {
       //  DontDestroyOnLoad(gameObject);
 		SceneManager.LoadScene("Helpful_questions");
-        LoadGameData();
+	//	LoadFromFile();
        //questions.SetActive(false);
        // QuestionPanel.SetActive(true);
 
           
     }
 
-    public Quiz GetCurrentRoundData()
+    public Quiz GetCurrentLevel()
     {
-        return allRoundData[0];
+		return allLevels[0];
     }
 
 
@@ -34,14 +34,14 @@ public class DataController : MonoBehaviour
 
     }
 
-    private void LoadGameData() {
+    private void LoadFromFile() {
         string filePath = Path.Combine(Application.streamingAssetsPath, gameDataFileName);
         if (File.Exists(filePath))
         {
             string dataAsJson = File.ReadAllText(filePath);
             GameData loadedData = JsonUtility.FromJson<GameData>(dataAsJson);
 
-            allRoundData = loadedData.allRoundData;
+			allLevels = loadedData.allLevels;
         }
         else
         {

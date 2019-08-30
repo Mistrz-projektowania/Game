@@ -27,13 +27,13 @@ public class GameControll : MonoBehaviour
     private DataController dataController;
     private Quiz currentRoundData;
 
-    private QuestionData[] questionPool;
+    private Question[] questionPool;
     public int number;
     private bool isRoundActive;
     private float addedTime;
     private int questionIndex;
     private int roundIndex;
-    public Quiz[] allRoundData;
+    public Quiz[] allLevels;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
     public GameController gameController;
     
@@ -53,10 +53,10 @@ public class GameControll : MonoBehaviour
         //Losowanie (10, 10);
 
         dataController = FindObjectOfType<DataController>();
-        currentRoundData = dataController.GetCurrentRoundData();
+        currentRoundData = dataController.GetCurrentLevel();
         questionPool = currentRoundData.questions;
         //timeCounter addTimeUI = new timeCounter();
-        //  addedTime.secondsCount += QuestionData.timeAddedForBadAnswer;
+        //  addedTime.secondsCount += Question.timeAddedForBadAnswer;
 
         questionIndex = 0;
         number = 0;
@@ -66,21 +66,22 @@ public class GameControll : MonoBehaviour
 
     private void ShowQuestion()
     {
-        RemoveAnswerButtons();
+         
 		AnswerPanel.SetActive (true);
 
-        QuestionData questionData = questionPool[questionIndex];
-        questionDisplayText.text = questionData.questionText;
-
-        for (int i = 0; i < questionData.answers.Length; i++)
+        Question question = questionPool[questionIndex];
+        questionDisplayText.text = question.textQuestion;
+		Debug.Log (question.answers.Length);
+        for (int i = 0; i < question.answers.Length; i++)
         {
+			
             GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
             answerButtonGameObjects.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent);
 
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
-            answerButton.Setup(questionData.answers[i]);
+            answerButton.Setup(question.answers[i]);
         }
     }
 
@@ -93,12 +94,12 @@ public class GameControll : MonoBehaviour
         }
     }
 
-    public void AnswerButtonClicked(bool isCorrect)
+    public void AnswerButtonClicked(bool correctAnswer)
     {
 		AnswerPanel.SetActive (false);
        
 
-        if (!isCorrect)
+		if (!correctAnswer)
         {
             int i = questionIndex;
 			int a = 0;

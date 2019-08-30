@@ -7,9 +7,12 @@ public class HelpfulQuestionsController : MonoBehaviour {
 
      
     public GameObject QuestionPanel;
+	public GameObject questions;
 
     public void StartHelpfulQuestions() {
-        //QuestionPanel.SetActive(false);
-		SceneManager.LoadScene("questions");
+         QuestionPanel.SetActive(false);
+		questions.SetActive (true);
+
+	//	SceneManager.LoadScene("questions");
     }
 }

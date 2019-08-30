@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class AnswerButton : MonoBehaviour
 {
 
-    public Text answerText;
+    public Text textAnswer;
 
-    private AnswerData answerData;
+    private Answer answer;
     private GameControll gameControll;
 
     // Use this for initialization
@@ -16,15 +16,15 @@ public class AnswerButton : MonoBehaviour
         gameControll = FindObjectOfType<GameControll>();
     }
 
-    public void Setup(AnswerData data)
+    public void Setup(Answer data)
     {
-        answerData = data;
-        answerText.text = answerData.answerText;
+        answer = data;
+		textAnswer.text = answer.textAnswer;
     }
 
 
     public void HandleClick()
     {
-        gameControll.AnswerButtonClicked(answerData.isCorrect);
+		gameControll.AnswerButtonClicked(answer.correctAnswer);
     }
 }

@@ -150,6 +150,6 @@ public class Tutorial : MonoBehaviour {
 	}
 
 	public void GoToMenu() {
-		SceneManager.LoadScene ("Main menu");
+		SceneManager.LoadScene ("Menu");
 	}
 }
