@@ -36,11 +36,11 @@ public class GameControll : MonoBehaviour
     public Quiz[] allLevels;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
     public GameController gameController;
-    
+	public timeCounter timeCount;
 
-    void Start()
+   public void Start()
     {
-
+		StateMachine.setState (6); 
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
         if (gameControllerObject != null)
         {
@@ -55,7 +55,7 @@ public class GameControll : MonoBehaviour
         dataController = FindObjectOfType<DataController>();
         currentRoundData = dataController.GetCurrentLevel();
         questionPool = currentRoundData.questions;
-        //timeCounter addTimeUI = new timeCounter();
+		timeCounter timeCount = new timeCounter();
         //  addedTime.secondsCount += Question.timeAddedForBadAnswer;
 
         questionIndex = 0;
@@ -98,39 +98,51 @@ public class GameControll : MonoBehaviour
     {
 		AnswerPanel.SetActive (false);
        
-
+		int pointsSubtract = questionIndex;
+		int timeAddedForBadAnsw;
 		if (!correctAnswer)
         {
             int i = questionIndex;
-			int a = 0;
+
+
+			int a = 1;
+			if (questionIndex > 0) {
+				timeAddedForBadAnsw = 10;
+			} timeAddedForBadAnsw = 30;
+
 				roundBadEndDisplay.SetActive(true);
-                gameController.subtractPoints(a);
+				gameController.subtractPoints(pointsSubtract+1);
+				timeCount.addTimeUI (timeAddedForBadAnsw);
+
             if (gameController.getPoints() < questionIndex)
             {
+				pointsSubtract = 0;
                 RoundBadOverNoPointsPanel.SetActive(true);
             }
 
             if (questionPool.Length > questionIndex + 1)
             {
+				i++;
                 roundBadEndDisplay.SetActive(true);
                 questionIndex++;
                 ShowQuestion();
-               
             }
+
            else {
+				pointsSubtract = 0;
                 RoundBadOverNoQuestions.SetActive(true);
                 
 			} a++;
         }
       
         else
-        {
-
+		{
+			pointsSubtract = 0;  
             questionIndex++;
             ShowQuestion();
             roundGoodEndDisplay.SetActive(true);
-        }
 
+        }
     }
     public void EndRound2()
     {

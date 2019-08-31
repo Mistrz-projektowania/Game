@@ -10187,6 +10187,7 @@ MonoBehaviour:
   - questions: []
   - questions: []
   gameController: {fileID: 0}
+  timeCount: {fileID: 834559192}
 --- !u!4 &464505754
 Transform:
   m_ObjectHideFlags: 0
@@ -17381,7 +17382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &811030066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30126,6 +30127,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: Start
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1388189518
@@ -31995,6 +32007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuestionPanel: {fileID: 1487759636}
   questions: {fileID: 1841596158}
+  timeCount: {fileID: 834559192}
 --- !u!4 &1469290857
 Transform:
   m_ObjectHideFlags: 0

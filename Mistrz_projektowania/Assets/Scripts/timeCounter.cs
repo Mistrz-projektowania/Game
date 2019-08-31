@@ -19,7 +19,10 @@ public class timeCounter : MonoBehaviour {
 	void Update () {
 		UpdateTimerUI();
 	}
+
+
 	public void UpdateTimerUI(){
+		 
 		if (StateMachine.currentState != 8 && StateMachine.currentState != 10) {
 			secondsCount += Time.deltaTime;
 			timerText.text = hourCount + ":" + minuteCount.ToString ("00") + ":" + ((int)secondsCount).ToString ("00");
@@ -32,9 +35,10 @@ public class timeCounter : MonoBehaviour {
 			}    
 		}
 	}
-    public void addTimeUI(int value)
+	public void addTimeUI(int value)
     {
-        secondsCount += (Time.deltaTime +value);
+		secondsCount += Time.deltaTime + value;
+		//secondsCount + = 10f;
        
     }
 
