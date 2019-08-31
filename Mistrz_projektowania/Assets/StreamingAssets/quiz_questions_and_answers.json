@@ -1,0 +1,30 @@
+{"allLevels":
+[{
+	"name":"firstLevel",
+	"addSeconds":20,
+	"pointsDeductedForCorrectAnswer":2,
+			"questions":[
+				{"textQuestion":"Długość trasy wycieczki autokarowej z Łodzi w Góry Świętokrzyskie wyniosła 550 km. Oblicz, ile wyniesie koszt transportu, jeżeli stawka za 1 km wynosi 5 zł? a",
+					"answers":[
+						{"textAnswer":"2550 zł","correctAnswer":false},
+						{"textAnswer":"2750 zł","correctAnswer":true},
+						{"textAnswer":"25500 zł","correctAnswer":false},
+						{"textAnswer":"27500 zł","correctAnswer":false}
+					]},
+				{"textQuestion":"Firma BŁYSK z o.o. zaplanowała 2-dniową imprezę turystyczną dla swoich 23 pracowników. Ile trzeba zapłacić za noclegi, jeżeli było jeszcze 2 osoby (kierowca i pilot), a 20 osób nocowało w pokojach 2osobowych 60 zł/osobę, zaś pozostałe w pokojach 1-osobowych 100 zł/osobę? ",
+					"answers":[
+						{"textAnswer":"1700 zł","correctAnswer":true},
+						{"textAnswer":"1100 zł","correctAnswer":false},
+						{"textAnswer":"1500 zł","correctAnswer":false},
+						{"textAnswer":"1305 zł ","correctAnswer":false}
+					]},
+				{"textQuestion":"Ile wynosi koszt VAT 22% imprezy turystycznej dla 20 osób, skoro koszt całkowity wynosi 13200 zŁ, a marża 10%? ",
+					"answers":[
+						{"textAnswer":"1320 zŁ","correctAnswer":false},
+						{"textAnswer":"2904 zŁ","correctAnswer":true},
+						{"textAnswer":"3194,40 zł","correctAnswer":false},
+						{"textAnswer":"319,44 zł","correctAnswer":false}
+					]}
+				]
+}]
+}
