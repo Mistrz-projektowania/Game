@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour {
 	public Image wrongOrderMessage;
 	public Image systemInfo;
 	private int tripID;
+
   
 	public XMLDataLoader dataLoader;
 	public List<Dictionary<string,string>> thisLevelTrip;
@@ -59,7 +60,6 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-      
 	}
 
 	public void printDataOrder(){
@@ -120,6 +120,8 @@ public class GameController : MonoBehaviour {
     public int getPoints(){
 		return points;
 	}
+
+
 	IEnumerator closePointsMessage(float seconds){
 		yield return new WaitForSeconds (seconds);
 		StartCoroutine (fadeMessage (noPointsMessage, false, 0.5f));
@@ -195,4 +197,5 @@ public class GameController : MonoBehaviour {
 			//Debug.Log("-----------------");
 		return order;
 	}
+
 }

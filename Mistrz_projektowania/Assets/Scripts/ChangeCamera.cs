@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChangeCamera : MonoBehaviour {
 
@@ -25,6 +26,7 @@ public class ChangeCamera : MonoBehaviour {
     public GameObject roundGoodOverDisplay;
 	public GameObject HelpsInGame;
 	public GameObject puzzleMenu;
+
 
     public void ShowMainView()
     {
@@ -105,6 +107,8 @@ public class ChangeCamera : MonoBehaviour {
 		Quiz.SetActive (false);
 		GTSBtn.SetActive(false);
 		rockLabels.SetActive(false);
+ 
+		
 	}
 
 	public void SetState0() {

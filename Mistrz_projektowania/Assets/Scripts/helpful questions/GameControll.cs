@@ -36,7 +36,8 @@ public class GameControll : MonoBehaviour
     public Quiz[] allLevels;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
     public GameController gameController;
-	public timeCounter timeCount;
+	public timeCounter timeCount; 
+	public Button sunMopOn;
 
    public void Start()
     {
@@ -144,6 +145,11 @@ public class GameControll : MonoBehaviour
 
         }
     }
+
+	public void SubtractTwoPoints() {
+		gameController.subtractPoints(2);
+	}
+
     public void EndRound2()
     {
         isRoundActive = true;
@@ -188,6 +194,11 @@ public class GameControll : MonoBehaviour
             //  timeCounter Time = new timeCounter();
             //   Time.UpdateTimerUI();
         }
+
+		if (gameController.getPoints () < 2) {
+			sunMopOn.interactable = false;
+		}
+		else sunMopOn.interactable = true;
 
     }
 
