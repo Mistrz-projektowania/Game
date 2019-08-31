@@ -20,7 +20,7 @@ public class timeCounter : MonoBehaviour {
 		UpdateTimerUI();
 	}
 	public void UpdateTimerUI(){
-		if (StateMachine.currentState != 8) {
+		if (StateMachine.currentState != 8 && StateMachine.currentState != 10) {
 			secondsCount += Time.deltaTime;
 			timerText.text = hourCount + ":" + minuteCount.ToString ("00") + ":" + ((int)secondsCount).ToString ("00");
 			if (secondsCount >= 60) {
