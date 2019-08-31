@@ -106,6 +106,10 @@ public class ChangeCamera : MonoBehaviour {
 		GTSBtn.SetActive(false);
 		rockLabels.SetActive(false);
 	}
+
+	public void SetState0() {
+		StateMachine.setState (0);
+	}
 }
 
  
