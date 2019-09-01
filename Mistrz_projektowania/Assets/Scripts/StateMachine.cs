@@ -41,7 +41,7 @@ public class StateMachine : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log ("Previous State: " + previousState);
-		//Debug.Log ("Current State: " + currentState);
+		Debug.Log ("Current State: " + currentState);
 		/*
 		if (Input.GetKeyDown (KeyCode.W)){
 			if (currentState == 0) {
@@ -64,7 +64,7 @@ public class StateMachine : MonoBehaviour {
 			soundController.pauseAmbientGameplaySound ();
 		} else soundController.playAmbientGameplaySound ();
 
-		if(currentState == 2 && currentState != 5 && currentState != 6){
+		if(currentState == 2 && currentState != 5 && currentState != 6 && currentState != 4){
 			witchCtrl.runWitch ();
 
 		}

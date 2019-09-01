@@ -44,8 +44,6 @@ public class ChangeCamera : MonoBehaviour {
 		HelpsInGame.SetActive (false);
 		PuzzleGame.SetActive (false);
 		Quiz.SetActive (false);
-
-
     }
 
     public void ShowPuzzleView()
@@ -64,7 +62,6 @@ public class ChangeCamera : MonoBehaviour {
         questionsCamera.SetActive(false);
 		HelpsInGame.SetActive (false);
 		Quiz.SetActive (false);
-
     }
 
     public void ShowQuestionsView()
@@ -88,7 +85,6 @@ public class ChangeCamera : MonoBehaviour {
         roundBadEndDisplay.SetActive(false);
         mainCamera.GetComponent<AudioListener>().enabled = false;
         questionsCamera.GetComponent<AudioListener>().enabled = true;
-
     }
 
     public void ShowNextQuestionView() {
@@ -107,12 +103,34 @@ public class ChangeCamera : MonoBehaviour {
 		Quiz.SetActive (false);
 		GTSBtn.SetActive(false);
 		rockLabels.SetActive(false);
- 
-		
+	}
+
+	public void ShowScoreboardView()
+	{	
+		leftGUI.SetActive(false);
+		Game.SetActive(false);
+		mainCamera.SetActive(false);
+		noPointMessage.SetActive(false);
+		wrongInputMEssage.SetActive(false);
+		puzzleCamera.SetActive(false);
+		puzzleMenu.SetActive(false);
+		PuzzleGame.SetActive (false);
+		QuestionPanel.SetActive(false);
+		GTSBtn.SetActive(false);
+		questions.SetActive(false);
+		questionsCamera.SetActive(false);
+		HelpsInGame.SetActive (false);
+		Quiz.SetActive (false);
+		Scoreboard.SetActive (true);
+
 	}
 
 	public void SetState0() {
 		StateMachine.setState (0);
+	}
+
+	public void SetState3() {
+		StateMachine.setState (3);
 	}
 }
 

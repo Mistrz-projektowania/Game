@@ -30,12 +30,14 @@ public class PuzzleCompleted : MonoBehaviour {
 
 	public void PuzzleDone() {
 	//	keyG keyG = new keyG();
+		StateMachine.setState (4); 
 		PuzzleGame.SetActive (false);
 		GUI.SetActive (true);
 		Game.SetActive (true);
-		StateMachine.setState (0); 
+
 		Puzzle.SetActive (false);
 		PuzzleComplete.SetActive (false);   
+
 
 	}
 }

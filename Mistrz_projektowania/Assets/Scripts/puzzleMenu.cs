@@ -17,6 +17,7 @@ public class puzzleMenu : MonoBehaviour {
 	public GameObject GUI;
 	public GameObject Flashcard;
 	public GameObject CompletedMenu;
+	public GameController gameController;
 
 
 
@@ -59,6 +60,7 @@ public class puzzleMenu : MonoBehaviour {
 	}
 
 	public void GiveUp() {  
+		gameController.subtractPoints(3);
 		PuzzlesPictures.SetActive(false);
 		PuzzlesPictures2.SetActive(true);
 		EndGame.SetActive (true);
