@@ -68,9 +68,6 @@ public class StateMachine : MonoBehaviour {
 			witchCtrl.runWitch ();
 
 		}
-		if (currentState == 3) {
-			sunMopCtrl.SunMopON ();
-		}
 
 		if (currentState == 4) {
 			gts.GTSon ();
@@ -93,7 +90,6 @@ public class StateMachine : MonoBehaviour {
 		yield return new WaitForSeconds (seconds);
 		if (currentState == 0) {
 			int r = Random.Range (0, 2);
-			//Debug.Log ("LOSUJEMY " + r);
 			if (r == 1) {
 				setState (2);
 			}
