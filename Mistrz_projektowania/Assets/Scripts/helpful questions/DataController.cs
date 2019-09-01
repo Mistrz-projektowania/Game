@@ -14,11 +14,7 @@ public class DataController : MonoBehaviour
 
     public void Start()
     {
-      //  DontDestroyOnLoad(gameObject);
-		//SceneManager.LoadScene("Helpful_questions");
 		LoadFromFile();
-       //questions.SetActive(false);
-       // QuestionPanel.SetActive(true);
 
     }
 

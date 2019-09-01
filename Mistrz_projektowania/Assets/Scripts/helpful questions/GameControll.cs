@@ -49,16 +49,10 @@ public class GameControll : MonoBehaviour
         }
         
 
-
-
-        //Losowanie (10, 10);
-
         dataController = FindObjectOfType<DataController>();
         currentRoundData = dataController.GetCurrentLevel();
         questionPool = currentRoundData.questions;
 		timeCounter timeCount = new timeCounter();
-        //  addedTime.secondsCount += Question.timeAddedForBadAnswer;
-
         questionIndex = 0;
         number = 0;
         ShowQuestion();
@@ -72,14 +66,12 @@ public class GameControll : MonoBehaviour
 
         Question question = questionPool[questionIndex];
         questionDisplayText.text = question.textQuestion;
-		Debug.Log (question.answers.Length);
+
         for (int i = 0; i < question.answers.Length; i++)
         {
-			
             GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
             answerButtonGameObjects.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent);
-
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
             answerButton.Setup(question.answers[i]);
@@ -104,7 +96,6 @@ public class GameControll : MonoBehaviour
 		if (!correctAnswer)
         {
             int i = questionIndex;
-
 
 			int a = 1;
 			if (questionIndex > 0) {
@@ -142,72 +133,24 @@ public class GameControll : MonoBehaviour
             questionIndex++;
             ShowQuestion();
             roundGoodEndDisplay.SetActive(true);
-
         }
     }
 
 	public void SubtractTwoPoints() {
 		gameController.subtractPoints(2);
 	}
-
-    public void EndRound2()
-    {
-        isRoundActive = true;
-        roundBadEndDisplay.SetActive(true);
-        
-        questionIndex++;
-        ShowQuestion();
-
-    }
-
-    public void EndRound3()
-    {
-        isRoundActive = false;
-        questionIndex++;
-        roundBadEndDisplay.SetActive(true);
-       
-         
-
-    }
-
-    public void EndRound()
-    {
-        isRoundActive = true;
-        questionIndex++;
-
-        roundGoodEndDisplay.SetActive(true);
-     
-    }
-
-    public void ReturnToMenu()
-    {
-        SceneManager.LoadScene("questions");
-    }
-
-
+		
     // Update is called once per frame
     void Update()
     {
-
-        if (isRoundActive)
-        {
-            //  timeCounter Time = new timeCounter();
-            //   Time.UpdateTimerUI();
-        }
-
 		if (gameController.getPoints () < 2) {
 			sunMopOn.interactable = false;
 		}
 		else sunMopOn.interactable = true;
-
     }
-
-
-
+		
     public int getPoints()
     {
         return points;
     }
-
-
 }
