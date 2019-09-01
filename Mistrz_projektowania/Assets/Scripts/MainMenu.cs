@@ -21,6 +21,11 @@ public class MainMenu : MonoBehaviour {
 		SceneManager.LoadScene("Settings");
 	}
 
+	public void GoToAuthors()
+	{
+		SceneManager.LoadScene("Authors");
+	}
+
 	public void BackToMenu(){
 		SceneManager.LoadScene("Menu");
 	}
