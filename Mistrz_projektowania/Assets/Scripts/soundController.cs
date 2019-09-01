@@ -8,6 +8,7 @@ public class soundController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		ambientGameplaySound = GameObject.Find ("ambientGameplaySound").GetComponent<AudioSource> ();
+		AudioListener.volume = GameplayModel.gameVolume;
 	}
 	
 	// Update is called once per frame

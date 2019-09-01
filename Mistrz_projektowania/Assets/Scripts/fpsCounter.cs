@@ -7,7 +7,6 @@ public class fpsCounter : MonoBehaviour {
 	float deltaTime = 0.0f;
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -29,7 +28,7 @@ public class fpsCounter : MonoBehaviour {
 		style.alignment = TextAnchor.UpperLeft;
 		style.fontSize = h * 2 / 100;
 		style.normal.textColor = new Color (1.0f, 0.0f, 0.0f, 1.0f);
-		string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
+		string text = string.Format("{1:0.} fps ({0:0.0} ms)", msec, fps);
 		GUI.Label(rect, text, style);
 	}
 }

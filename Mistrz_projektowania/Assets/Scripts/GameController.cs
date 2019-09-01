@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour {
 		//Debug.Log ("DATA ORDER: " + dataOrderString);
 		dataLoader.setDataSlots (dataOrder);
 
-		showFPS (true);
+		showFPS (GameplayModel.gameFPSOn);
     }
 		
 
