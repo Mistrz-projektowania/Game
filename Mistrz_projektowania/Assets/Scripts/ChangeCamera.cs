@@ -26,6 +26,7 @@ public class ChangeCamera : MonoBehaviour {
     public GameObject roundGoodOverDisplay;
 	public GameObject HelpsInGame;
 	public GameObject puzzleMenu;
+	public GameObject Scoreboard;
 
 
     public void ShowMainView()
