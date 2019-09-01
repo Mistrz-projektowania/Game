@@ -21,6 +21,9 @@ public class GameplayModel : MonoBehaviour {
 	static public int gamePoints = 0;
 	static public int gameChosenRock = -1;
 
+	static public float gameVolume = 1.0f;
+	static public bool gameFPSOn = false;
+
 	// Use this for initialization
 	void Start () {
 		
