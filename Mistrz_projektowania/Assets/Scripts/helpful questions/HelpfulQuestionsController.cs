@@ -7,7 +7,6 @@ public class HelpfulQuestionsController : MonoBehaviour {
      
     public GameObject QuestionPanel;
 	public GameObject questions;
-	public timeCounter timeCount;
     public void StartHelpfulQuestions() {
         QuestionPanel.SetActive(false);
 		questions.SetActive (true);

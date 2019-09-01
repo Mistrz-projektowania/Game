@@ -15,7 +15,6 @@ public class DataController : MonoBehaviour
     public void Start()
     {
 		LoadFromFile();
-
     }
 
 	private void LoadFromFile() {

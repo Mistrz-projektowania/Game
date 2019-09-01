@@ -7310,7 +7310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &305395115
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30467,18 +30467,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 882375238}
-        m_MethodName: Start
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 359636899}
         m_MethodName: Start
         m_Mode: 1
         m_Arguments:
@@ -30842,7 +30831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1399026910
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32358,7 +32347,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuestionPanel: {fileID: 1487759636}
   questions: {fileID: 1841596158}
-  timeCount: {fileID: 834559192}
 --- !u!4 &1469290857
 Transform:
   m_ObjectHideFlags: 0
@@ -39906,7 +39894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1841596159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40837,7 +40825,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 535.33
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -40874,7 +40862,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1858195848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -485}
+  m_LocalPosition: {x: 0, y: 0, z: -225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2126462944}
@@ -47186,7 +47174,7 @@ Canvas:
   m_GameObject: {fileID: 2126462941}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 1858195849}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
