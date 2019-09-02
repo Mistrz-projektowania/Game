@@ -45,4 +45,8 @@ public class timeCounter : MonoBehaviour {
     public string getTimerValue(){
 		return(hourCount + ":" + minuteCount.ToString ("00") + ":" + ((int)secondsCount).ToString ("00"));
 	}
+
+	public string getTimerValueAsANumber(){
+		return(hourCount + minuteCount.ToString ("00") + ((int)secondsCount).ToString ("00"));
+	}
 }

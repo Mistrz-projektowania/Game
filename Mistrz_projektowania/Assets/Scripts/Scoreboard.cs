@@ -4,138 +4,131 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
 
-public class PlayerScore {
+public class GameScore {
 	public string playerName;
 	public int playerScore;
+	public int gamePlayTime;
 
-	public PlayerScore (string playerName, int playerScore) {
+	public GameScore (string playerName, int playerScore, int gamePlayTime) {
 		this.playerName = playerName;
 		this.playerScore = playerScore;
+		this.gamePlayTime = gamePlayTime;
 	}
 
-	public string GetFormat() {
-		return playerName + "~S~" + playerScore;
+	public string Row() {
+		return playerName + "-" + playerScore + "-" + gamePlayTime;
 	}
 }
 
 public class Scoreboard : MonoBehaviour {
 
-	public InputField inputPlayerName;
 	public Text name;
 	public Text time;
-	public GameObject scoreObject;
-	public GameObject scoreRoot;
-	public Text textName, textScore;
-	public Text inputPlayerScore;
+	public Text timeAsNumber;
+	public GameObject scoreRow;
+	public GameObject scoreObjectParent;
+	public Text textName, textScore, textTime;
+	public Text gamePlayScore;
 	public int scoresNumber = 50;
 	static Scoreboard scoreboard;
-	static string separator = "~S~";
+	string playerTime;
+	string playerTimeAsNumber;
+	static string divider = "-";
 
 	// Use this for initialization
-	void Start () {
-		scoreboard = this;
-
+	public void Start () {
 		name.text = GameplayModel.gamePlayerName;
-		//time.text = GameObject.Find ("timerText").GetComponent<timeCounter> ().getTimerValue ();
+		scoreboard = this;
+		playerTime = GameObject.Find ("timerText").GetComponent<timeCounter> ().getTimerValue ();
+		playerTimeAsNumber = GameObject.Find ("timerText").GetComponent<timeCounter> ().getTimerValueAsANumber ();
+		time.text = playerTime;
+		timeAsNumber.text = playerTimeAsNumber.ToString();
+		print (playerTimeAsNumber);
 	}
-
-
-
-	public void SaveScoreNow() {
-		SaveScore (name.text, int.Parse (inputPlayerScore.text));
-	}
+		
 
 	public void ShowScoreOnScoreboard(){
 		StartCoroutine (addScoreToScoreboard ());
 	}
 
 	IEnumerator addScoreToScoreboard() {
-		while (scoreRoot.transform.childCount > 0) {
-			Destroy (scoreRoot.transform.GetChild (0).gameObject);
+		while (scoreObjectParent.transform.childCount > 0) {
+			Destroy (scoreObjectParent.transform.GetChild (0).gameObject);
 			yield return null;
 		}
 
-		List<PlayerScore> playerScore = GetScore ();
+		List<GameScore> playerScore = LoadScoreboard ();
 
-		foreach (PlayerScore score in playerScore) {
+		foreach (GameScore score in playerScore) {
 			textName.text = score.playerName;
 			textScore.text = score.playerScore.ToString();
+			textTime.text = score.gamePlayTime.ToString();
 
-			GameObject instantiatedScore = Instantiate (scoreObject);
-			instantiatedScore.SetActive (true);
+			GameObject templateRow = Instantiate (scoreRow);
+			templateRow.SetActive (true);
 
-			instantiatedScore.transform.SetParent (scoreRoot.transform);
-
-
-
+			templateRow.transform.SetParent (scoreObjectParent.transform);
+			print (textTime.text);
 		}
 	}
 
-	public static void SaveScore(string name, int score) {
-		List<PlayerScore> playerScores = new List<PlayerScore>();
+	public void ConfirmPlayerData() {
+		AddScore (name.text, int.Parse (gamePlayScore.text), int.Parse (timeAsNumber.text));
+	}
+
+
+	public static void AddScore(string name, int score, int time) {
+		List<GameScore> gameScores = new List<GameScore>();
 
 		for (int i = 0; i < scoreboard.scoresNumber; i++) {
 			if (PlayerPrefs.HasKey("wynik" + i)) {
-				string[] scoreFormat =  PlayerPrefs.GetString("wynik" + i).Split(new string[] {separator}, System.StringSplitOptions.RemoveEmptyEntries);
-				playerScores.Add(new PlayerScore(scoreFormat[0], int.Parse(scoreFormat[1])));
+				string[] scoreFormat =  PlayerPrefs.GetString("wynik" + i).Split(new string[] {divider}, System.StringSplitOptions.RemoveEmptyEntries);
+				gameScores.Add(new GameScore(scoreFormat[0], int.Parse(scoreFormat[1]), int.Parse(scoreFormat[2])));
 			} else 
 				{
 					break;
 				}
 		}
 
-		if (playerScores.Count <  1){
-			PlayerPrefs.SetString("wynik0", name + separator + score);
-			print("check");
+		if (gameScores.Count <  1){
+			PlayerPrefs.SetString("wynik0", name + divider + score + divider + time);
 			return;
 		}
 
-		playerScores.Add (new PlayerScore (name, score));
-		playerScores = playerScores.OrderByDescending (o => o.playerScore).ToList ();
+		gameScores.Add (new GameScore (name, score, time));
+		gameScores = gameScores.OrderByDescending (o => o.playerScore).ToList ();
 	
 		for (int i = 0; i < scoreboard.scoresNumber; i++) {
-			if (i >=  playerScores.Count) {
+			if (i >=  gameScores.Count) {
 				break;
 			}
-			PlayerPrefs.SetString("wynik" + i, playerScores[i].GetFormat());
+			PlayerPrefs.SetString("wynik" + i, gameScores[i].Row());
 
 		}
 	}
 
-	public List<PlayerScore> GetScore() {
+	public List<GameScore> LoadScoreboard() {
 		
-		List<PlayerScore> playerScores = new List<PlayerScore> ();
+		List<GameScore> gameScores = new List<GameScore> ();
 		for (int i = 0; i < scoreboard.scoresNumber; i++) {
 			if (PlayerPrefs.HasKey ("wynik" + i)) {
-				string[] scoreFormat = PlayerPrefs.GetString ("wynik" + i).Split (new string[] { separator }, System.StringSplitOptions.RemoveEmptyEntries);
-				playerScores.Add (new PlayerScore (scoreFormat [0], int.Parse (scoreFormat [1])));
+				string[] scoreFormat = PlayerPrefs.GetString ("wynik" + i).Split (new string[] { divider }, System.StringSplitOptions.RemoveEmptyEntries);
+				gameScores.Add (new GameScore (scoreFormat [0], int.Parse (scoreFormat [1]), int.Parse (scoreFormat [2])));
 			} else {
 				break;
 			}
 ;
 		}
 
-		return playerScores;
+		return gameScores;
 	}
 
 
 
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.S)) {
-			SaveScore ("aaa", 100);
-			SaveScore ("dfgdfg", 40);
-			SaveScore ("awwwaa", 30);
-			SaveScore ("44444", 20);
-		}
-
-		if (Input.GetKeyDown (KeyCode.P)) {
-			List<PlayerScore> playerScores = GetScore ();
-
-			foreach (PlayerScore p in playerScores) {
-				print (p.playerName + "      " + p.playerScore);
-			}
-		}
+		 
+		 
 
 	}
 

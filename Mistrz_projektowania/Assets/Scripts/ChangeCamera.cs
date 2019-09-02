@@ -113,7 +113,7 @@ public class ChangeCamera : MonoBehaviour {
 	}
 
 	public void ShowScoreboardView()
-	{	
+	{	StateMachine.setState (7);
 		GUI.SetActive(false);
 		Game.SetActive(false);
 		PuzzleGame.SetActive (false);
@@ -133,6 +133,7 @@ public class ChangeCamera : MonoBehaviour {
 	public void SetState3() {
 		StateMachine.setState (3);
 	}
+
 }
 
  
