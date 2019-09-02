@@ -23,8 +23,11 @@ public class Scoreboard : MonoBehaviour {
 	public InputField inputPlayerName;
 	public Text name;
 	public Text time;
+	public GameObject scoreObject;
+	public GameObject scoreRoot;
+	public Text textName, textScore;
 	public Text inputPlayerScore;
-	public int scoresNumber = 10;
+	public int scoresNumber = 50;
 	static Scoreboard scoreboard;
 	static string separator = "~S~";
 
@@ -33,13 +36,39 @@ public class Scoreboard : MonoBehaviour {
 		scoreboard = this;
 
 		name.text = GameplayModel.gamePlayerName;
-		time.text = GameObject.Find ("timerText").GetComponent<timeCounter> ().getTimerValue ();
+		//time.text = GameObject.Find ("timerText").GetComponent<timeCounter> ().getTimerValue ();
 	}
 
 
 
-	public void SaveScore() {
+	public void SaveScoreNow() {
 		SaveScore (name.text, int.Parse (inputPlayerScore.text));
+	}
+
+	public void ShowScoreOnScoreboard(){
+		StartCoroutine (addScoreToScoreboard ());
+	}
+
+	IEnumerator addScoreToScoreboard() {
+		while (scoreRoot.transform.childCount > 0) {
+			Destroy (scoreRoot.transform.GetChild (0).gameObject);
+			yield return null;
+		}
+
+		List<PlayerScore> playerScore = GetScore ();
+
+		foreach (PlayerScore score in playerScore) {
+			textName.text = score.playerName;
+			textScore.text = score.playerScore.ToString();
+
+			GameObject instantiatedScore = Instantiate (scoreObject);
+			instantiatedScore.SetActive (true);
+
+			instantiatedScore.transform.SetParent (scoreRoot.transform);
+
+
+
+		}
 	}
 
 	public static void SaveScore(string name, int score) {
@@ -56,7 +85,7 @@ public class Scoreboard : MonoBehaviour {
 		}
 
 		if (playerScores.Count <  1){
-			PlayerPrefs.SetString("wynik1", name + separator + score);
+			PlayerPrefs.SetString("wynik0", name + separator + score);
 			print("check");
 			return;
 		}
@@ -65,7 +94,7 @@ public class Scoreboard : MonoBehaviour {
 		playerScores = playerScores.OrderByDescending (o => o.playerScore).ToList ();
 	
 		for (int i = 0; i < scoreboard.scoresNumber; i++) {
-			if (i >  playerScores.Count) {
+			if (i >=  playerScores.Count) {
 				break;
 			}
 			PlayerPrefs.SetString("wynik" + i, playerScores[i].GetFormat());
