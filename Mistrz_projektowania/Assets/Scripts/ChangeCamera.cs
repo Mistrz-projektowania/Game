@@ -15,6 +15,7 @@ public class ChangeCamera : MonoBehaviour {
     public GameObject QuestionPanel;
     public GameObject questions;
 	public GameObject Quiz;
+	public GameObject GUI;
     public GameObject questionsCamera;
     public GameObject GTSBtn;
     public GameObject HelpfulQuestionsButton;
@@ -27,6 +28,7 @@ public class ChangeCamera : MonoBehaviour {
 	public GameObject HelpsInGame;
 	public GameObject puzzleMenu;
 	public GameObject Scoreboard;
+	public GameObject ScoreBoardPanelEnterName;
 
 
     public void ShowMainView()
@@ -45,6 +47,7 @@ public class ChangeCamera : MonoBehaviour {
 		HelpsInGame.SetActive (false);
 		PuzzleGame.SetActive (false);
 		Quiz.SetActive (false);
+		Scoreboard.SetActive (false);
     }
 
     public void ShowPuzzleView()
@@ -63,6 +66,7 @@ public class ChangeCamera : MonoBehaviour {
         questionsCamera.SetActive(false);
 		HelpsInGame.SetActive (false);
 		Quiz.SetActive (false);
+		Scoreboard.SetActive (false);
     }
 
     public void ShowQuestionsView()
@@ -85,6 +89,7 @@ public class ChangeCamera : MonoBehaviour {
         roundGoodOverDisplay.SetActive(false);
         roundBadEndDisplay.SetActive(false);
         mainCamera.GetComponent<AudioListener>().enabled = false;
+		Scoreboard.SetActive (false);
         questionsCamera.GetComponent<AudioListener>().enabled = true;
     }
 
@@ -104,26 +109,21 @@ public class ChangeCamera : MonoBehaviour {
 		Quiz.SetActive (false);
 		GTSBtn.SetActive(false);
 		rockLabels.SetActive(false);
+		Scoreboard.SetActive (false);
 	}
 
 	public void ShowScoreboardView()
 	{	
-		leftGUI.SetActive(false);
+		GUI.SetActive(false);
 		Game.SetActive(false);
-		mainCamera.SetActive(false);
-		noPointMessage.SetActive(false);
-		wrongInputMEssage.SetActive(false);
-		puzzleCamera.SetActive(false);
-		puzzleMenu.SetActive(false);
 		PuzzleGame.SetActive (false);
-		QuestionPanel.SetActive(false);
-		GTSBtn.SetActive(false);
-		questions.SetActive(false);
-		questionsCamera.SetActive(false);
-		HelpsInGame.SetActive (false);
 		Quiz.SetActive (false);
 		Scoreboard.SetActive (true);
+	}
 
+	public void ScoreboardSave()
+	{	
+		ScoreBoardPanelEnterName.SetActive (false);
 	}
 
 	public void SetState0() {

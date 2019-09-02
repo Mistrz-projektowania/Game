@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class PlayerScore {
 	public string playerName;
@@ -19,6 +20,10 @@ public class PlayerScore {
 
 public class Scoreboard : MonoBehaviour {
 
+	public InputField inputPlayerName;
+	public Text name;
+	public Text time;
+	public Text inputPlayerScore;
 	public int scoresNumber = 10;
 	static Scoreboard scoreboard;
 	static string separator = "~S~";
@@ -27,13 +32,21 @@ public class Scoreboard : MonoBehaviour {
 	void Start () {
 		scoreboard = this;
 
+		name.text = GameplayModel.gamePlayerName;
+		time.text = GameObject.Find ("timerText").GetComponent<timeCounter> ().getTimerValue ();
+	}
 
+
+
+	public void SaveScore() {
+		SaveScore (name.text, int.Parse (inputPlayerScore.text));
 	}
 
 	public static void SaveScore(string name, int score) {
 		List<PlayerScore> playerScores = new List<PlayerScore>();
+
 		for (int i = 0; i < scoreboard.scoresNumber; i++) {
-			if (PlayerPrefs.HasKey("wynik" + 1 )) {
+			if (PlayerPrefs.HasKey("wynik" + i)) {
 				string[] scoreFormat =  PlayerPrefs.GetString("wynik" + i).Split(new string[] {separator}, System.StringSplitOptions.RemoveEmptyEntries);
 				playerScores.Add(new PlayerScore(scoreFormat[0], int.Parse(scoreFormat[1])));
 			} else 
@@ -42,11 +55,11 @@ public class Scoreboard : MonoBehaviour {
 				}
 		}
 
-				if (playerScores.Count <  1){
-					PlayerPrefs.SetString("wynik1", name + separator + score);
+		if (playerScores.Count <  1){
+			PlayerPrefs.SetString("wynik1", name + separator + score);
 			print("check");
-				return;
-				}
+			return;
+		}
 
 		playerScores.Add (new PlayerScore (name, score));
 		playerScores = playerScores.OrderByDescending (o => o.playerScore).ToList ();
