@@ -8,15 +8,17 @@ public class GameScore {
 	public string playerName;
 	public int playerScore;
 	public int gamePlayTime;
+	public string realGamePlayTime;
 
-	public GameScore (string playerName, int playerScore, int gamePlayTime) {
+	public GameScore (string playerName, int playerScore, int gamePlayTime, string realGamePlayTime) {
 		this.playerName = playerName;
 		this.playerScore = playerScore;
 		this.gamePlayTime = gamePlayTime;
+		this.realGamePlayTime = realGamePlayTime;
 	}
 
 	public string Row() {
-		return playerName + "-" + playerScore + "-" + gamePlayTime;
+		return playerName + "-" + playerScore + "-" + gamePlayTime + "-" + realGamePlayTime;
 	}
 }
 
@@ -27,7 +29,7 @@ public class Scoreboard : MonoBehaviour {
 	public Text timeAsNumber;
 	public GameObject scoreRow;
 	public GameObject scoreObjectParent;
-	public Text textName, textScore, textTime;
+	public Text textName, textScore, textTime, realTextTime;
 	public Text gamePlayScore;
 	public int scoresNumber = 50;
 	static Scoreboard scoreboard;
@@ -41,7 +43,7 @@ public class Scoreboard : MonoBehaviour {
 		scoreboard = this;
 		playerTime = GameObject.Find ("timerText").GetComponent<timeCounter> ().getTimerValue ();
 		playerTimeAsNumber = GameObject.Find ("timerText").GetComponent<timeCounter> ().getTimerValueAsANumber ();
-		time.text = playerTime;
+		time.text = playerTime.ToString();
 		timeAsNumber.text = playerTimeAsNumber.ToString();
 		print (playerTimeAsNumber);
 	}
@@ -63,6 +65,7 @@ public class Scoreboard : MonoBehaviour {
 			textName.text = score.playerName;
 			textScore.text = score.playerScore.ToString();
 			textTime.text = score.gamePlayTime.ToString();
+			realTextTime.text = score.realGamePlayTime;
 
 			GameObject templateRow = Instantiate (scoreRow);
 			templateRow.SetActive (true);
@@ -73,17 +76,17 @@ public class Scoreboard : MonoBehaviour {
 	}
 
 	public void ConfirmPlayerData() {
-		AddScore (name.text, int.Parse (gamePlayScore.text), int.Parse (timeAsNumber.text));
+		AddScore (name.text, int.Parse (gamePlayScore.text), int.Parse (timeAsNumber.text), time.text);
 	}
 
 
-	public static void AddScore(string name, int score, int time) {
+	public static void AddScore(string name, int score, int time, string realtime) {
 		List<GameScore> gameScores = new List<GameScore>();
 
 		for (int i = 0; i < scoreboard.scoresNumber; i++) {
 			if (PlayerPrefs.HasKey("wynik" + i)) {
 				string[] scoreFormat =  PlayerPrefs.GetString("wynik" + i).Split(new string[] {divider}, System.StringSplitOptions.RemoveEmptyEntries);
-				gameScores.Add(new GameScore(scoreFormat[0], int.Parse(scoreFormat[1]), int.Parse(scoreFormat[2])));
+				gameScores.Add(new GameScore(scoreFormat[0], int.Parse(scoreFormat[1]), int.Parse(scoreFormat[2]), scoreFormat [3]));
 			} else 
 				{
 					break;
@@ -91,12 +94,12 @@ public class Scoreboard : MonoBehaviour {
 		}
 
 		if (gameScores.Count <  1){
-			PlayerPrefs.SetString("wynik0", name + divider + score + divider + time);
+			PlayerPrefs.SetString("wynik0", name + divider + score + divider + time  + divider + realtime);
 			return;
 		}
 
-		gameScores.Add (new GameScore (name, score, time));
-		gameScores = gameScores.OrderByDescending (o => o.playerScore).ToList ();
+		gameScores.Add (new GameScore (name, score, time, realtime));
+		gameScores = gameScores.OrderByDescending (o => o.playerScore).ThenBy(o => o.gamePlayTime).ToList ();
 	
 		for (int i = 0; i < scoreboard.scoresNumber; i++) {
 			if (i >=  gameScores.Count) {
@@ -113,7 +116,7 @@ public class Scoreboard : MonoBehaviour {
 		for (int i = 0; i < scoreboard.scoresNumber; i++) {
 			if (PlayerPrefs.HasKey ("wynik" + i)) {
 				string[] scoreFormat = PlayerPrefs.GetString ("wynik" + i).Split (new string[] { divider }, System.StringSplitOptions.RemoveEmptyEntries);
-				gameScores.Add (new GameScore (scoreFormat [0], int.Parse (scoreFormat [1]), int.Parse (scoreFormat [2])));
+				gameScores.Add (new GameScore (scoreFormat [0], int.Parse (scoreFormat [1]), int.Parse (scoreFormat [2]), scoreFormat [3]));
 			} else {
 				break;
 			}

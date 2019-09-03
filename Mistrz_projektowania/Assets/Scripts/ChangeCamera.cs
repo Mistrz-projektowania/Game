@@ -28,8 +28,8 @@ public class ChangeCamera : MonoBehaviour {
 	public GameObject HelpsInGame;
 	public GameObject puzzleMenu;
 	public GameObject Scoreboard;
-	public GameObject ScoreBoardPanelEnterName;
-
+	public GameObject ScoreBoardPanelEnterName; 
+	public GameObject endButton;
 
     public void ShowMainView()
     {
@@ -114,12 +114,15 @@ public class ChangeCamera : MonoBehaviour {
 
 	public void ShowScoreboardView()
 	{	StateMachine.setState (7);
-		GUI.SetActive(false);
-		Game.SetActive(false);
-		PuzzleGame.SetActive (false);
-		Quiz.SetActive (false);
+		//GUI.SetActive(false);
+		//Game.SetActive(false);
+		//PuzzleGame.SetActive (false);
+		//Quiz.SetActive (false);
 		Scoreboard.SetActive (true);
+		Time.timeScale = 0;
+		endButton.SetActive (false);
 	}
+
 
 	public void ScoreboardSave()
 	{	
@@ -132,6 +135,10 @@ public class ChangeCamera : MonoBehaviour {
 
 	public void SetState3() {
 		StateMachine.setState (3);
+	}
+
+	public void ShowEndButton() {
+		endButton.SetActive (true);
 	}
 
 }
