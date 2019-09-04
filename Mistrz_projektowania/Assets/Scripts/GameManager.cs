@@ -46,13 +46,6 @@ public class GameManager : MonoBehaviour
 		Flashcard.SetActive (false);  
 		CompletedMenu.SetActive (false);
         PuzzleGame(8);
-
-
-        
-       
-		//RightPos ();
-		//EntryRandomPositions(); 
-
     }
 
     // Update is called once per frame
@@ -68,13 +61,11 @@ public class GameManager : MonoBehaviour
 				break;
 
 			case PuzzleState.State.start: 
-			
 				puzzle_state.state = PuzzleState.State.play;
 				SetRandoms ();
 				break;
 
 		case PuzzleState.State.play: 
-			
 				if (PuzzleCompleted () == true) {
 					puzzle_state.state = PuzzleState.State.win;
 				} 
@@ -82,13 +73,11 @@ public class GameManager : MonoBehaviour
 				break;
 
 		case PuzzleState.State.win: 
-			Flashcard.SetActive (true);   
-		
+				Flashcard.SetActive (true);   
 				puzzle_state.state = PuzzleState.State.beforeStart; 
 				break; 
 
 		case PuzzleState.State.loose: 
-
 			puzzle_state.state = PuzzleState.State.beforeStart; 
 			RightPos ();
 			PanelPlay.SetActive (true);
@@ -147,23 +136,19 @@ public class GameManager : MonoBehaviour
 
 				if ((puzzle.transform.position.y < startPos.y) && (puzzle.transform.position.y < 1.5f) &&  (Physics.Raycast(ray_up, out hit, maxDistanceToCheck, collisionMask) == false) && (puzzle.moved == false) )
                 {
-					Debug.Log ("up" + puzzle.transform.position.y);
                     puzzle.go_up = true; 
 				
                 }
 				if ((puzzle.transform.position.y > (startPos.y -2 * offset.y)) && (Physics.Raycast(ray_down, out hit, maxDistanceToCheck, collisionMask) == false) && (puzzle.moved == false) )
                 {
-					Debug.Log ("down" + puzzle.transform.position.y);
                     puzzle.go_down = true; 
                 }
 				if ((puzzle.transform.position.x > startPos.x) && (Physics.Raycast(ray_left, out hit, maxDistanceToCheck, collisionMask) == false) && (puzzle.moved == false) )
                 {
-					Debug.Log ("left" + puzzle.transform.position.x);
                     puzzle.go_left = true; 
                 }
 				if ((puzzle.transform.position.x < (startPos.x + 2 * offset.x)) && (Physics.Raycast(ray_right, out hit, maxDistanceToCheck, collisionMask) == false) && (puzzle.moved == false) )
                 {
-					Debug.Log ("right" + puzzle.transform.position.x);
                     puzzle.go_right = true; 
                 }
             }
@@ -233,6 +218,7 @@ public class GameManager : MonoBehaviour
 		filePath2 = "Puzzles/" + Catalog + "/flashcard";
 		TextAsset myTxt = (TextAsset)Resources.Load(filePath2, typeof (TextAsset));
 		FlashcardText.GetComponent<Text>().text= myTxt.text;
+		Debug.Log (filePath2);
 
 
     }
