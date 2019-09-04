@@ -25,6 +25,7 @@ public class puzzleMenu : MonoBehaviour {
 	void Start() {
 		Puzzle.SetActive (false);
 		EndGame.SetActive (false);
+		PuzzlesPictures.SetActive(true);
 		leftArrow = GameObject.Find ("LeftArrow");
 		rightArrow = GameObject.Find ("RightArrow");
 
@@ -46,6 +47,7 @@ public class puzzleMenu : MonoBehaviour {
 		PuzzleMenu.SetActive(true);
 		PuzzlesPictures.SetActive(true);
 		EndGame.SetActive (false);
+
 	
 	}
 
@@ -66,6 +68,7 @@ public class puzzleMenu : MonoBehaviour {
 		EndGame.SetActive (true);
 		PuzzleMenu.SetActive(false);
 		Puzzle.SetActive (false);
+		PuzzlesPictures.SetActive(true);
 	}
 
 	public void GiveUpUltimately() {  
@@ -85,6 +88,7 @@ public class puzzleMenu : MonoBehaviour {
 		CompletedMenu.SetActive (true);
 		Puzzle.SetActive (false);
 		Flashcard.SetActive (false);
+		PuzzlesPictures.SetActive(true);
 	}
 
 

@@ -9231,6 +9231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359636900}
   - component: {fileID: 359636899}
+  - component: {fileID: 359636901}
   m_Layer: 0
   m_Name: DataController
   m_TagString: Untagged
@@ -9252,6 +9253,7 @@ MonoBehaviour:
   allLevels: []
   QuestionPanel: {fileID: 1487759636}
   questions: {fileID: 1841596158}
+  fileWithData: quiz_questions_and_answers.json
 --- !u!4 &359636900
 Transform:
   m_ObjectHideFlags: 0
@@ -9265,6 +9267,20 @@ Transform:
   m_Father: {fileID: 811030068}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &359636901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 359636898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2164a1424aaa28d4ba86cfa02dbcd469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allLevels: []
+  QuestionPanel: {fileID: 1487759636}
+  questions: {fileID: 1841596158}
 --- !u!1 &362546802
 GameObject:
   m_ObjectHideFlags: 0
@@ -15723,7 +15739,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 665549597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -252, y: 289.3, z: 370.72003}
+  m_LocalPosition: {x: -261.98, y: 286.6, z: 370.72003}
   m_LocalScale: {x: 32.45056, y: 40.11171, z: 108}
   m_Children: []
   m_Father: {fileID: 306439720}
@@ -19449,6 +19465,7 @@ MonoBehaviour:
   allLevels: []
   QuestionPanel: {fileID: 1487759636}
   questions: {fileID: 1841596158}
+  fileWithData: quiz_questions_and_answers.json
 --- !u!1 &834559190
 GameObject:
   m_ObjectHideFlags: 0
@@ -20937,6 +20954,7 @@ MonoBehaviour:
   allLevels: []
   QuestionPanel: {fileID: 1487759636}
   questions: {fileID: 1841596158}
+  fileWithData: quiz_questions_and_answers.json
 --- !u!1 &885691622
 GameObject:
   m_ObjectHideFlags: 0
@@ -29085,7 +29103,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1261228382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -614.7, y: 288.4, z: 370.72003}
+  m_LocalPosition: {x: -614.7, y: 286.6, z: 370.72003}
   m_LocalScale: {x: 34.100357, y: 36.96351, z: 108}
   m_Children: []
   m_Father: {fileID: 306439720}
