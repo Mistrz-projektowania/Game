@@ -11,7 +11,7 @@ public class PuzzleState : MonoBehaviour {
 		start,
 		play,
 		win,
-		afterWin,
+		loose,
 	}
 
 

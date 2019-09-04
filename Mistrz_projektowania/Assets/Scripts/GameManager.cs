@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
 		switch (puzzle_state.state) {
 
 			case PuzzleState.State.beforeStart:  
+				randoms.Clear ();
 				PanelPlay.SetActive (true);
 				StartPosition();
 				ApplyPictures();
@@ -80,10 +81,19 @@ public class GameManager : MonoBehaviour
 				MovePuzzle ();
 				break;
 
-			case PuzzleState.State.win: 
-				Flashcard.SetActive (true);   
+		case PuzzleState.State.win: 
+			Flashcard.SetActive (true);   
+		
 				puzzle_state.state = PuzzleState.State.beforeStart; 
 				break; 
+
+		case PuzzleState.State.loose: 
+
+			puzzle_state.state = PuzzleState.State.beforeStart; 
+			RightPos ();
+			PanelPlay.SetActive (true);
+			Puzzle.SetActive (false);
+			break; 
 		}
         
     }
@@ -169,7 +179,7 @@ public class GameManager : MonoBehaviour
 	public void SetRandoms() {
 		int i;
 
-		foreach (Puzzle p in puzzleParts) {
+	 	foreach (Puzzle p in puzzleParts) {
 			puzzlePositions.Add (p.transform.position);
 		}
 

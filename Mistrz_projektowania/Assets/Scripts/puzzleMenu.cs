@@ -63,12 +63,14 @@ public class puzzleMenu : MonoBehaviour {
 
 	public void GiveUp() {  
 		gameController.subtractPoints(3);
-		PuzzlesPictures.SetActive(false);
-		PuzzlesPictures2.SetActive(true);
+		GameManager.puzzle_state.state = PuzzleState.State.loose;
+		PuzzlesPictures.SetActive(true);
+		PuzzlesPictures2.SetActive(false);
 		EndGame.SetActive (true);
 		PuzzleMenu.SetActive(false);
 		Puzzle.SetActive (false);
 		PuzzlesPictures.SetActive(true);
+
 	}
 
 	public void GiveUpUltimately() {  

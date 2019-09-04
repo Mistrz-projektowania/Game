@@ -9250,10 +9250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f46370549a50f46a2b64b4433d19e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allLevels: []
-  QuestionPanel: {fileID: 1487759636}
-  questions: {fileID: 1841596158}
-  fileWithData: quiz_questions_and_answers.json
 --- !u!4 &359636900
 Transform:
   m_ObjectHideFlags: 0
@@ -19462,10 +19458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f46370549a50f46a2b64b4433d19e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allLevels: []
-  QuestionPanel: {fileID: 1487759636}
-  questions: {fileID: 1841596158}
-  fileWithData: quiz_questions_and_answers.json
 --- !u!1 &834559190
 GameObject:
   m_ObjectHideFlags: 0
@@ -20951,10 +20943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f46370549a50f46a2b64b4433d19e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allLevels: []
-  QuestionPanel: {fileID: 1487759636}
-  questions: {fileID: 1841596158}
-  fileWithData: quiz_questions_and_answers.json
 --- !u!1 &885691622
 GameObject:
   m_ObjectHideFlags: 0
@@ -37392,6 +37380,7 @@ MonoBehaviour:
   Scoreboard: {fileID: 551863488}
   ScoreBoardPanelEnterName: {fileID: 807465850}
   endButton: {fileID: 290807477}
+  EndGame: {fileID: 1866788466}
 --- !u!224 &1592819660
 RectTransform:
   m_ObjectHideFlags: 0

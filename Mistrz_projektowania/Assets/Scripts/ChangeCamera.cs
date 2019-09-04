@@ -30,6 +30,7 @@ public class ChangeCamera : MonoBehaviour {
 	public GameObject Scoreboard;
 	public GameObject ScoreBoardPanelEnterName; 
 	public GameObject endButton;
+	public GameObject EndGame;
 
     public void ShowMainView()
     {
@@ -42,7 +43,7 @@ public class ChangeCamera : MonoBehaviour {
         questionsCamera.SetActive(false);
         mainCamera.GetComponent<AudioListener>().enabled = true;
         questionsCamera.GetComponent<AudioListener>().enabled = false;
-        GTSBtn.SetActive(true);
+		GTSBtn.SetActive(false);
         HelpfulQuestionsButton.SetActive(true);
 		HelpsInGame.SetActive (false);
 		PuzzleGame.SetActive (false);
@@ -67,6 +68,7 @@ public class ChangeCamera : MonoBehaviour {
 		HelpsInGame.SetActive (false);
 		Quiz.SetActive (false);
 		Scoreboard.SetActive (false);
+		EndGame.SetActive (false);
     }
 
     public void ShowQuestionsView()
