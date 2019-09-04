@@ -114,15 +114,10 @@ public class ChangeCamera : MonoBehaviour {
 
 	public void ShowScoreboardView()
 	{	StateMachine.setState (7);
-		//GUI.SetActive(false);
-		//Game.SetActive(false);
-		//PuzzleGame.SetActive (false);
-		//Quiz.SetActive (false);
 		Scoreboard.SetActive (true);
 		Time.timeScale = 0;
 		endButton.SetActive (false);
 	}
-
 
 	public void ScoreboardSave()
 	{	

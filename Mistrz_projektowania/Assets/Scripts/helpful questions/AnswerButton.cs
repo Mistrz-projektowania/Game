@@ -6,7 +6,6 @@ public class AnswerButton : MonoBehaviour
 {
 
     public Text textAnswer;
-
     private Answer answer;
     private GameControll gameControll;
 

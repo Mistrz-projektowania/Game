@@ -16,7 +16,7 @@ public class GameControll : MonoBehaviour
     //for helpful questions
     public Text questionDisplayText;
 
-    public SimpleObjectPool answerButtonObjectPool;
+	public ObjectsPrefabsPool answerButtonsPool;
     public Transform answerButtonParent;
 	public GameObject AnswerPanel;
     public GameObject questionDisplay;
@@ -24,7 +24,7 @@ public class GameControll : MonoBehaviour
     public GameObject roundBadEndDisplay;
     public GameObject RoundBadOverNoPointsPanel;
     public GameObject RoundBadOverNoQuestions;
-    private DataController dataController;
+	private JsonLoader jsonLoader;
     private Quiz currentRoundData;
 
     private Question[] questionPool;
@@ -34,7 +34,7 @@ public class GameControll : MonoBehaviour
     private int questionIndex;
     private int roundIndex;
     public Quiz[] allLevels;
-    private List<GameObject> answerButtonGameObjects = new List<GameObject>();
+    private List<GameObject> answerButtons = new List<GameObject>();
     public GameController gameController;
 	public timeCounter timeCount; 
 	public Button sunMopOn;
@@ -49,8 +49,8 @@ public class GameControll : MonoBehaviour
         }
         
 
-        dataController = FindObjectOfType<DataController>();
-        currentRoundData = dataController.GetCurrentLevel();
+		jsonLoader = FindObjectOfType<JsonLoader>();
+		currentRoundData = jsonLoader.GetCurrentLevel();
         questionPool = currentRoundData.questions;
 		timeCounter timeCount = new timeCounter();
         questionIndex = 0;
@@ -69,8 +69,8 @@ public class GameControll : MonoBehaviour
 
         for (int i = 0; i < question.answers.Length; i++)
         {
-            GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
-            answerButtonGameObjects.Add(answerButtonGameObject);
+			GameObject answerButtonGameObject = answerButtonsPool.GetObject();
+            answerButtons.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent);
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
@@ -80,10 +80,10 @@ public class GameControll : MonoBehaviour
 
     private void RemoveAnswerButtons()
     {
-        while (answerButtonGameObjects.Count > 0)
+        while (answerButtons.Count > 0)
         {
-            answerButtonObjectPool.ReturnObject(answerButtonGameObjects[0]);
-            answerButtonGameObjects.RemoveAt(0);
+			answerButtonsPool.ReturnPrefabInstance(answerButtons[0]);
+            answerButtons.RemoveAt(0);
         }
     }
 
