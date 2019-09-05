@@ -117,7 +117,7 @@ public class ChangeCamera : MonoBehaviour {
 	public void ShowScoreboardView()
 	{	StateMachine.setState (7);
 		Scoreboard.SetActive (true);
-		Time.timeScale = 0;
+		//Time.timeScale = 0;
 		endButton.SetActive (false);
 	}
 

@@ -36,6 +36,35 @@
 						{"textAnswer":"13194 zł","correctAnswer":false},
 						{"textAnswer":"16060 zŁ","correctAnswer":true},
 						{"textAnswer":"10190 zł","correctAnswer":false}
+					]},
+				{"textQuestion":"Długość trasy wycieczki autokarowej z Łodzi do Krzemionek Opatowskich wyniosła 196 km. Oblicz, ile wyniesie koszt transportu, jeżeli stawka za 1 km wynosi 8 zł?",
+					"answers":[
+						{"textAnswer":"3550 zł","correctAnswer":false},
+						{"textAnswer":"1568 zł","correctAnswer":true},
+						{"textAnswer":"2900 zł","correctAnswer":false},
+						{"textAnswer":"900 zł","correctAnswer":false}
+					]},
+				{"textQuestion":"Firma Koziołek z o.o. organizuje 3-dniową wycieczkę turystyczną dla swoich 15 pracowników. Ile trzeba zapłacić za noclegi, jeżeli 10 osób nocowało w pokojach 2osobowych 60 zł/osobę, zaś pozostałe w pokojach 1-osobowych 100 zł/osobę? ",
+					"answers":[
+						{"textAnswer":"2200 zł","correctAnswer":true},
+						{"textAnswer":"1100 zł","correctAnswer":false},
+						{"textAnswer":"3500 zł","correctAnswer":false},
+						{"textAnswer":"1305 zł ","correctAnswer":false}
+					]},
+				{"textQuestion":"Ile wynosi koszt VAT 22% imprezy turystycznej dla 29 osób, skoro koszt całkowity wynosi 13000 zŁ, a marża 10%? ",
+					"answers":[
+						{"textAnswer":"2320 zŁ","correctAnswer":false},
+						{"textAnswer":"3190 zł","correctAnswer":false},
+						{"textAnswer":"2860 zŁ","correctAnswer":true},
+						{"textAnswer":"1060 zł","correctAnswer":false}
+					]},
+
+				{"textQuestion":"Długość trasy wycieczki samochodowej z Łodzi do Jaskini Raj wyniosła 159 km. Oblicz, ile wyniesie koszt transportu, jeżeli stawka za 1 km wynosi 3 zł?",
+					"answers":[
+						{"textAnswer":"350 zł","correctAnswer":false},
+						{"textAnswer":"477 zł","correctAnswer":true},
+						{"textAnswer":"1000 zł","correctAnswer":false},
+						{"textAnswer":"200 zł","correctAnswer":false}
 					]}
 				]
 }]

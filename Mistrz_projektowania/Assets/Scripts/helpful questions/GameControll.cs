@@ -109,10 +109,10 @@ public class GameControll : MonoBehaviour
             if (gameController.getPoints() < questionIndex)
             {
 				pointsSubtract = 0;
-                RoundBadOverNoPointsPanel.SetActive(true);
+				RoundBadOverNoPointsPanel.SetActive(true);
             }
 
-            if (questionPool.Length > questionIndex + 1)
+            if (questionPool.Length > questionIndex )
             {
 				i++;
                 roundBadEndDisplay.SetActive(true);
@@ -120,7 +120,7 @@ public class GameControll : MonoBehaviour
                 ShowQuestion();
             }
 
-           else {
+			if (questionPool.Length == questionIndex + 1 ) {
 				pointsSubtract = 0;
                 RoundBadOverNoQuestions.SetActive(true);
                 
@@ -134,6 +134,9 @@ public class GameControll : MonoBehaviour
             ShowQuestion();
             roundGoodEndDisplay.SetActive(true);
         }
+
+		Debug.Log ("questionIndex" + questionIndex);
+		Debug.Log ("questionPool" + questionPool.Length);
     }
 
 	public void SubtractTwoPoints() {
@@ -143,10 +146,10 @@ public class GameControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (gameController.getPoints () < 2) {
+		/*if (gameController.getPoints () < 2) {
 			sunMopOn.interactable = false;
 		}
-		else sunMopOn.interactable = true;
+		else sunMopOn.interactable = true;*/
     }
 		
     public int getPoints()

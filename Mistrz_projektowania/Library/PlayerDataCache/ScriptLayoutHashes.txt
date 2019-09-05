@@ -8,12 +8,12 @@ Assets/Scenes/Select Level.unity
 Assets/Scenes/Select Character.unity
 Assets/Scenes/Entry_questions_Level1.unity
 Assets/Scenes/Level1.unity
+Assets/Scenes/Settings.unity
 SceneListEnd?
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexZoom
 c906602d9b43cc5e075f80e1d8ae7c79 Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI
 7ba1e84ad3d2d8813486668e75f842ce Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.ExtinguishableParticleSystem
 2a081d781100f2e381901392f9c8aadc Assembly-CSharp.dll:.setRockPlaces
-9e6e58a51a7ed0e9fcb7172c8e18341e Assembly-CSharp.dll:.DataController
 29971996efb2b1f1aaffa5dca80e4e83 Assembly-CSharp.dll:.finishGameController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 4b12dd839b2293f8457cd67cc3610b85 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -27,6 +27,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+2fc2ef3bf10086fe51b1c2c12158d51d Assembly-CSharp.dll:.SettingsController
 7ba1e84ad3d2d8813486668e75f842ce Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.ParticleSystemMultiplier
 0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.ThirdPerson.AICharacterControl
 7481472d4e57e8477d484d43a43b79dc Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.FirstPerson.FirstPersonController
@@ -77,6 +78,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 aa13baec1c19c8fa869cb21cb01a3767 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.WaterBase
 31c10fb98c5a5865dbf4992dc232bcfb Assembly-CSharp.dll:.keyG
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LevelSelection
+9e6e58a51a7ed0e9fcb7172c8e18341e Assembly-CSharp.dll:.JsonLoader
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -131,7 +133,6 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-f1b04b42258b96532fc34ed433d02c62 Assembly-CSharp.dll:.SimpleObjectPool
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.fillOutOrderController
 76015de5fcb247eeb8df66c001d5a22d Assembly-CSharp.dll:TMPro.Examples.TMP_UiFrameRateCounter
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexJitter
@@ -190,6 +191,7 @@ a7d1b018e127cc7b6d0f33718ce64a53 Assembly-CSharp.dll:.PuzzlePictures
 78ebae5ed9b3edeb216da437b99754a4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
 149e538468c9a609cf26b23682c996c7 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.PlatformSpecificContent
 37bf4d6a6d424731cb4a9b998783e5c6 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter
+6975ba2a8bdc5a72c0ea7305343ac7ec Assembly-CSharp.dll:.Scoreboard
 020550babdb991365f61c5bffe1f4f52 Assembly-CSharp.dll:TMPro.Examples.Benchmark03
 4df86f437a61b08c14fd0adff88ddf71 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.ActivateTrigger
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameplayModel
@@ -214,7 +216,6 @@ e763036081c708b34f78f5a56f72c23d TextMeshPro-2017.3-Runtime.dll:TMPro.TMP_StyleS
 5833a86cc374f497ae8d9fb9d8c3e5f4 TextMeshPro-2017.3-Runtime.dll:TMPro.TMP_SubMeshUI
 22bb40270d2bfc0d0884e2aefd3d1c60 TextMeshPro-2017.3-Runtime.dll:TMPro.TMP_Text
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.participantsNrController
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.levelCharacterController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_A
 96e7294f11e4ae1fe77dd4bcd658b56d Assembly-CSharp-firstpass.dll:UnityStandardAssets.Cameras.LookatTarget
 b900ead596b2fb1093b31cb63a678767 Assembly-CSharp.dll:TMPro.Examples.TextMeshProFloatingText
@@ -255,7 +256,7 @@ cf63d8d71504596055eb9fbddb11e181 Assembly-CSharp.dll:.GTSRotation
 e97ff9540a49b92b779792c195839d33 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.AfterburnerPhysicsForce
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ChooseTripDate
 2e08aaf8f8b658a79e6329bdc6f8dd38 Assembly-CSharp.dll:.PauseMenuController
-17198f2b1bd7ed9c73e9aace4eeeb102 Assembly-CSharp.dll:.puzzleMenu
+3fbf1356f52426b1579e2181caa0e499 Assembly-CSharp.dll:.puzzleMenu
 8a50d3d11bf0cc541f5c35347dd25633 Assembly-CSharp.dll:TMPro.Examples.ShaderPropAnimator
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.WaterBasic
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.FireLight
@@ -300,7 +301,8 @@ e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 aa9d1bd0cc771545f2ae1f63a6d0ed6a Assembly-CSharp.dll:TMPro.Examples.TMP_TextEventCheck
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Slot
-2095ac76e729cc436cac35a2cb2c735d Assembly-CSharp.dll:.GameControll
+f1b04b42258b96532fc34ed433d02c62 Assembly-CSharp.dll:.ObjectsPrefabsPool
+ffb1ffe0345f13d05e06d48001f07323 Assembly-CSharp.dll:.GameControll
 9e0ef5bf862444b5dc48b5a99554ce7c UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
@@ -318,13 +320,12 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 ab232dc3d94359ca42eabb9c72cbbb82 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.WaterHoseParticles
 48a9dee325686d1924a2646b71c83f08 Assembly-CSharp.dll:TMPro.Examples.Benchmark01
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-0c9aab82950438f8cc1b6144b303516f Assembly-CSharp.dll:.HelpfulQuestionsController
+069b3ce68cac28ba87b4c66a2d718875 Assembly-CSharp.dll:.HelpfulQuestionsController
 c9576c6a51e2e71bc5caab85a96801e8 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.SmokeParticles
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameDataEditor
 db3b233e35a88802fed1717d19c3d9ec Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FollowTarget
 885f4b6e443e9d1e21c86aa11e62ac4f Assembly-CSharp.dll:.XMLDataLoader
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.TextConsoleSimulator
-987e123098606a403cec475b844e7c2d Assembly-CSharp.dll:.ChangeCamera
+77d9002509a018f865af0759cfe86dfa Assembly-CSharp.dll:.ChangeCamera
 73cedff45ef9b001a58ab7ef9284f066 Assembly-CSharp.dll:.Puzzle
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 d744a5c9109845861a8645fec356ce62 Assembly-CSharp.dll:.InfoPanelController
