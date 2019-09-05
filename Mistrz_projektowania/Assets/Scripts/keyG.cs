@@ -32,7 +32,7 @@ public class keyG : MonoBehaviour {
 	}
 
 	public void GTSon(){
-		StateMachine.setState (4);
+		//StateMachine.setState (4);
 		Debug.Log ("GTS ON");
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
 		checkFieldFillOutOrder.checkIfEmpty ();

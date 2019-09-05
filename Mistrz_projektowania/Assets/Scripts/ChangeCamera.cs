@@ -134,6 +134,10 @@ public class ChangeCamera : MonoBehaviour {
 		StateMachine.setState (3);
 	}
 
+	public void SetState4() {
+		StateMachine.setState (4);
+	}
+
 	public void ShowEndButton() {
 		endButton.SetActive (true);
 	}
