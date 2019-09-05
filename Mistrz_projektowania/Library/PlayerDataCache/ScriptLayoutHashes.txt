@@ -325,7 +325,7 @@ c9576c6a51e2e71bc5caab85a96801e8 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 db3b233e35a88802fed1717d19c3d9ec Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FollowTarget
 885f4b6e443e9d1e21c86aa11e62ac4f Assembly-CSharp.dll:.XMLDataLoader
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.TextConsoleSimulator
-77d9002509a018f865af0759cfe86dfa Assembly-CSharp.dll:.ChangeCamera
+c3dedc3c1567f8683375c28aac141e85 Assembly-CSharp.dll:.ChangeCamera
 73cedff45ef9b001a58ab7ef9284f066 Assembly-CSharp.dll:.Puzzle
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 d744a5c9109845861a8645fec356ce62 Assembly-CSharp.dll:.InfoPanelController
@@ -350,3 +350,4 @@ d7d898a41bfcb3ba623efc342ac1f39e Assembly-CSharp.dll:.SunMopController
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
+641932373038f888a535d49c21beed05 Assembly-CSharp.dll:.helpsInGame

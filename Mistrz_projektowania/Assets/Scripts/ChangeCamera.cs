@@ -31,6 +31,8 @@ public class ChangeCamera : MonoBehaviour {
 	public GameObject ScoreBoardPanelEnterName; 
 	public GameObject endButton;
 	public GameObject EndGame;
+	public Button sunMopOn;
+	public GameController gameController;
 
     public void ShowMainView()
     {
@@ -141,6 +143,8 @@ public class ChangeCamera : MonoBehaviour {
 	public void ShowEndButton() {
 		endButton.SetActive (true);
 	}
+
+
 
 }
 

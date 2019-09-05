@@ -135,8 +135,6 @@ public class GameControll : MonoBehaviour
             roundGoodEndDisplay.SetActive(true);
         }
 
-		Debug.Log ("questionIndex" + questionIndex);
-		Debug.Log ("questionPool" + questionPool.Length);
     }
 
 	public void SubtractTwoPoints() {
@@ -146,10 +144,7 @@ public class GameControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		/*if (gameController.getPoints () < 2) {
-			sunMopOn.interactable = false;
-		}
-		else sunMopOn.interactable = true;*/
+		
     }
 		
     public int getPoints()
