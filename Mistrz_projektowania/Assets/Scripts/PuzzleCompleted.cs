@@ -29,10 +29,10 @@ public class PuzzleCompleted : MonoBehaviour {
 	}
 
 	public void PuzzleDone() {
-		StateMachine.setState (4); 
 		PuzzleGame.SetActive (false);
 		GUI.SetActive (true);
 		Game.SetActive (true);
+		StateMachine.setState (4); 
 	
 		Puzzle.SetActive (false);
 		PuzzleComplete.SetActive (false);   

@@ -39,6 +39,9 @@ public class CurrentFieldController : MonoBehaviour {
 	public int getNextRockIndex(){
 		for (int i = 0; i < fieldsEmpty.Length; i++) {
 			if (fieldsEmpty[i] == 1) {
+				Debug.Log ("Next rock index: " + i);
+				if (i > 2)
+					i -= 1;
 				return i;
 			}
 		}

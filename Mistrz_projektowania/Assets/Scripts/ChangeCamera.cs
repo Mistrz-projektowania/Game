@@ -106,6 +106,7 @@ public class ChangeCamera : MonoBehaviour {
 	public void ShowHelpsInGame() {
 		
 		StateMachine.setState (9);
+		Debug.Log (StateMachine.getState ());
 		HelpsInGame.SetActive (true);
 		leftGUI.SetActive(false);
 		HelpfulQuestionsButton.SetActive(false);
