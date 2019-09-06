@@ -15,10 +15,9 @@ public class keyG : MonoBehaviour {
 	// Use this for initialization
 	public void Start () {
 		//GameObject.Find ("Afterburner").SetActive (false);
-		GTSbutton = GetComponent<Button> ();
-		ps = GameObject.Find ("Afterburner").GetComponent<ParticleSystem> ();
-		ps.Stop ();
-		GTSbutton.onClick.AddListener(GTSon);
+		//GTSbutton = GetComponent<Button> ();
+
+		//GTSbutton.onClick.AddListener(GTSon);
 	}
 	
 	// Update is called once per frame
@@ -33,6 +32,8 @@ public class keyG : MonoBehaviour {
 
 	public void GTSon(){
 		//StateMachine.setState (4);
+		ps = GameObject.Find ("Afterburner").GetComponent<ParticleSystem> ();
+		ps.Stop ();
 		Debug.Log ("GTS ON");
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
 		checkFieldFillOutOrder.checkIfEmpty ();

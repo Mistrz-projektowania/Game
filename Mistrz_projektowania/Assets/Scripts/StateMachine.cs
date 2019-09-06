@@ -35,6 +35,7 @@ public class StateMachine : MonoBehaviour {
 		witchCtrl = GameObject.Find ("Witch").GetComponent<WitchController> ();
 		sunMopCtrl = GameObject.Find ("SunMop").GetComponent<SunMopController> ();
 		buttonHelp = GameObject.Find ("HelpfulQuestionsButton").GetComponent<Button> ();
+		gts = GameObject.Find("GameController").GetComponent<keyG>();
 		witchStateControl ();
 	}
 	
