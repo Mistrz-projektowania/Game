@@ -41,8 +41,8 @@ public class GameManager : MonoBehaviour
 
     // Use this for initialization
    public void Start()
-	{	PuzzleMenu.SetActive (true);
-		
+	{	
+		PuzzleMenu.SetActive (true);
 		Flashcard.SetActive (false);  
 		CompletedMenu.SetActive (false);
         PuzzleGame(8);
