@@ -6154,7 +6154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 940, y: -48.333496}
+  m_AnchoredPosition: {x: 940, y: -48.333984}
   m_SizeDelta: {x: 1860, y: 76.666664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234037053
@@ -26179,6 +26179,7 @@ MonoBehaviour:
   - {fileID: 1560172311}
   - {fileID: 801352896}
   - {fileID: 1404226258}
+  ps: {fileID: 2006690480}
 --- !u!1 &1100204627
 GameObject:
   m_ObjectHideFlags: 0
@@ -39775,6 +39776,7 @@ MonoBehaviour:
   - {fileID: 1560172311}
   - {fileID: 801352896}
   - {fileID: 1404226258}
+  ps: {fileID: 0}
 --- !u!1 &1701968585
 GameObject:
   m_ObjectHideFlags: 0
@@ -47572,6 +47574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8efadb05c31b24e4a8dd9b50e2b2760d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ps: {fileID: 2006690480}
 --- !u!1 &1874592520
 GameObject:
   m_ObjectHideFlags: 0
@@ -50242,6 +50245,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2004702509}
+--- !u!198 &2006690480 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19800000, guid: d8c41be67f41aa545ae053b0b927f821,
+    type: 2}
+  m_PrefabInternal: {fileID: 1944249201}
 --- !u!1001 &2007316242
 Prefab:
   m_ObjectHideFlags: 0
@@ -53145,6 +53153,7 @@ MonoBehaviour:
   - {fileID: 1560172311}
   - {fileID: 801352896}
   - {fileID: 1404226258}
+  ps: {fileID: 0}
 --- !u!1 &2115523929
 GameObject:
   m_ObjectHideFlags: 0

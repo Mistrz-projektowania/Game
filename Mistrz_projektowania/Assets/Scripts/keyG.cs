@@ -9,7 +9,7 @@ public class keyG : MonoBehaviour {
 	public Button GTSbutton;
 	public GameObject GTS;
 	public GameObject [] rocks;
-	ParticleSystem ps;
+	public ParticleSystem ps;
 	 
 
 	// Use this for initialization
@@ -32,8 +32,7 @@ public class keyG : MonoBehaviour {
 
 	public void GTSon(){
 		//StateMachine.setState (4);
-		ps = GameObject.Find ("Afterburner").GetComponent<ParticleSystem> ();
-		ps.Stop ();
+		//ps.Stop ();
 		Debug.Log ("GTS ON");
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
 		checkFieldFillOutOrder.checkIfEmpty ();
@@ -43,6 +42,6 @@ public class keyG : MonoBehaviour {
 
 	IEnumerator waitFor(int seconds){
 		yield return new WaitForSeconds (seconds);
-		ps.Play ();
+		//ps.Play ();
 	}
 }

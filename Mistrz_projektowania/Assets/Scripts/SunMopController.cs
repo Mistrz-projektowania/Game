@@ -64,6 +64,7 @@ public class SunMopController : MonoBehaviour {
 	}
 
 	void SunMopOff(){
+		Debug.Log ("SUN MOP state 0");
 		StateMachine.setState (0);
 	}
 

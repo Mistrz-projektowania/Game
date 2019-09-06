@@ -8,6 +8,7 @@ public class RockSort : MonoBehaviour {
 	// Use this for initialization
 	setRockRandomPlaces rockController;
 	GameController gameController;
+	public ParticleSystem ps;
 
 	private int[] dataOrder;
 	private int[] rockOrder;
@@ -16,6 +17,7 @@ public class RockSort : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//ps.Stop ();
 		gameController = GameObject.Find ("GameController").GetComponent<GameController> ();
 		systemInfo = gameController.systemInfo;
 		rockController = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>();
@@ -75,7 +77,9 @@ public class RockSort : MonoBehaviour {
 			yield return new WaitForSeconds (seconds);
 		}
 		StartCoroutine (gameController.fadeMessage (systemInfo, false, 0.5f));
+		Debug.Log ("SETTING state 0");
 		StateMachine.setState (0);
+		//ps.Stop ();
 		/*
 		string arr = "";
 		for (int i = 0; i < n - 1; i++) {
