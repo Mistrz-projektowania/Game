@@ -19,77 +19,77 @@
 	</Plan>
     <Plan id="1">
 		<IdNazwaImprezy>1</IdNazwaImprezy>
-		<IdNrImprezy>0</IdNrImprezy>
-		<IdZleceniodawcy>0</IdZleceniodawcy>
-		<IdPrzedstawicielaZleceniodawcy>0</IdPrzedstawicielaZleceniodawcy>
-		<IdTrasyImprezy>0</IdTrasyImprezy>
+		<IdNrImprezy>1</IdNrImprezy>
+		<IdZleceniodawcy>1</IdZleceniodawcy>
+		<IdPrzedstawicielaZleceniodawcy>1</IdPrzedstawicielaZleceniodawcy>
+		<IdTrasyImprezy>1</IdTrasyImprezy>
 		<IdMiejscaNoclegowego>0</IdMiejscaNoclegowego>
 		<IdWyzywienia>
 			<id>0</id>
 			<id>1</id>
 		</IdWyzywienia>
 		<IdUslug>
-			<id>0</id>
 			<id>1</id>
+			<id>2</id>
 		</IdUslug>
 		<IdUbezpieczenia>0</IdUbezpieczenia>
 	</Plan>
     <Plan id="2">
 		<IdNazwaImprezy>2</IdNazwaImprezy>
-		<IdNrImprezy>0</IdNrImprezy>
-		<IdZleceniodawcy>0</IdZleceniodawcy>
-		<IdPrzedstawicielaZleceniodawcy>0</IdPrzedstawicielaZleceniodawcy>
-		<IdTrasyImprezy>0</IdTrasyImprezy>
+		<IdNrImprezy>2</IdNrImprezy>
+		<IdZleceniodawcy>1</IdZleceniodawcy>
+		<IdPrzedstawicielaZleceniodawcy>2</IdPrzedstawicielaZleceniodawcy>
+		<IdTrasyImprezy>2</IdTrasyImprezy>
 		<IdMiejscaNoclegowego>0</IdMiejscaNoclegowego>
 		<IdWyzywienia>
 			<id>0</id>
 			<id>1</id>
 		</IdWyzywienia>
 		<IdUslug>
-			<id>0</id>
-			<id>1</id>
+			<id>2</id>
+			<id>3</id>
 		</IdUslug>
 		<IdUbezpieczenia>0</IdUbezpieczenia>
 	</Plan>
     <Plan id="3">
 		<IdNazwaImprezy>3</IdNazwaImprezy>
-		<IdNrImprezy>0</IdNrImprezy>
-		<IdZleceniodawcy>0</IdZleceniodawcy>
+		<IdNrImprezy>3</IdNrImprezy>
+		<IdZleceniodawcy>2</IdZleceniodawcy>
 		<IdPrzedstawicielaZleceniodawcy>0</IdPrzedstawicielaZleceniodawcy>
-		<IdTrasyImprezy>0</IdTrasyImprezy>
+		<IdTrasyImprezy>3</IdTrasyImprezy>
 		<IdMiejscaNoclegowego>0</IdMiejscaNoclegowego>
 		<IdWyzywienia>
 			<id>0</id>
 			<id>1</id>
 		</IdWyzywienia>
 		<IdUslug>
-			<id>0</id>
-			<id>1</id>
+			<id>3</id>
+			<id>4</id>
 		</IdUslug>
 		<IdUbezpieczenia>0</IdUbezpieczenia>
 	</Plan>
     <Plan id="4">
 		<IdNazwaImprezy>4</IdNazwaImprezy>
-		<IdNrImprezy>0</IdNrImprezy>
-		<IdZleceniodawcy>0</IdZleceniodawcy>
-		<IdPrzedstawicielaZleceniodawcy>0</IdPrzedstawicielaZleceniodawcy>
-		<IdTrasyImprezy>0</IdTrasyImprezy>
+		<IdNrImprezy>4</IdNrImprezy>
+		<IdZleceniodawcy>2</IdZleceniodawcy>
+		<IdPrzedstawicielaZleceniodawcy>1</IdPrzedstawicielaZleceniodawcy>
+		<IdTrasyImprezy>4</IdTrasyImprezy>
 		<IdMiejscaNoclegowego>0</IdMiejscaNoclegowego>
 		<IdWyzywienia>
 			<id>0</id>
 			<id>1</id>
 		</IdWyzywienia>
 		<IdUslug>
-			<id>0</id>
-			<id>1</id>
+			<id>4</id>
+			<id>5</id>
 		</IdUslug>
 		<IdUbezpieczenia>0</IdUbezpieczenia>
 	</Plan>
     <Plan id="5">
 		<IdNazwaImprezy>5</IdNazwaImprezy>
-		<IdNrImprezy>0</IdNrImprezy>
-		<IdZleceniodawcy>0</IdZleceniodawcy>
-		<IdPrzedstawicielaZleceniodawcy>0</IdPrzedstawicielaZleceniodawcy>
+		<IdNrImprezy>5</IdNrImprezy>
+		<IdZleceniodawcy>3</IdZleceniodawcy>
+		<IdPrzedstawicielaZleceniodawcy>2</IdPrzedstawicielaZleceniodawcy>
 		<IdTrasyImprezy>0</IdTrasyImprezy>
 		<IdMiejscaNoclegowego>0</IdMiejscaNoclegowego>
 		<IdWyzywienia>
@@ -97,34 +97,34 @@
 			<id>1</id>
 		</IdWyzywienia>
 		<IdUslug>
-			<id>0</id>
-			<id>1</id>
+			<id>5</id>
+			<id>6</id>
 		</IdUslug>
 		<IdUbezpieczenia>0</IdUbezpieczenia>
 	</Plan>
     <Plan id="6">
 		<IdNazwaImprezy>6</IdNazwaImprezy>
-		<IdNrImprezy>0</IdNrImprezy>
-		<IdZleceniodawcy>0</IdZleceniodawcy>
+		<IdNrImprezy>6</IdNrImprezy>
+		<IdZleceniodawcy>3</IdZleceniodawcy>
 		<IdPrzedstawicielaZleceniodawcy>0</IdPrzedstawicielaZleceniodawcy>
-		<IdTrasyImprezy>0</IdTrasyImprezy>
+		<IdTrasyImprezy>1</IdTrasyImprezy>
 		<IdMiejscaNoclegowego>0</IdMiejscaNoclegowego>
 		<IdWyzywienia>
 			<id>0</id>
 			<id>1</id>
 		</IdWyzywienia>
 		<IdUslug>
-			<id>0</id>
-			<id>1</id>
+			<id>6</id>
+			<id>7</id>
 		</IdUslug>
 		<IdUbezpieczenia>0</IdUbezpieczenia>
 	</Plan>
     <Plan id="7">
 		<IdNazwaImprezy>7</IdNazwaImprezy>
-		<IdNrImprezy>0</IdNrImprezy>
+		<IdNrImprezy>7</IdNrImprezy>
 		<IdZleceniodawcy>0</IdZleceniodawcy>
-		<IdPrzedstawicielaZleceniodawcy>0</IdPrzedstawicielaZleceniodawcy>
-		<IdTrasyImprezy>0</IdTrasyImprezy>
+		<IdPrzedstawicielaZleceniodawcy>1</IdPrzedstawicielaZleceniodawcy>
+		<IdTrasyImprezy>2</IdTrasyImprezy>
 		<IdMiejscaNoclegowego>0</IdMiejscaNoclegowego>
 		<IdWyzywienia>
 			<id>0</id>
@@ -138,43 +138,43 @@
 	</Plan>
     <Plan id="8">
 		<IdNazwaImprezy>8</IdNazwaImprezy>
-		<IdNrImprezy>0</IdNrImprezy>
-		<IdZleceniodawcy>0</IdZleceniodawcy>
-		<IdPrzedstawicielaZleceniodawcy>0</IdPrzedstawicielaZleceniodawcy>
-		<IdTrasyImprezy>0</IdTrasyImprezy>
+		<IdNrImprezy>8</IdNrImprezy>
+		<IdZleceniodawcy>1</IdZleceniodawcy>
+		<IdPrzedstawicielaZleceniodawcy>2</IdPrzedstawicielaZleceniodawcy>
+		<IdTrasyImprezy>3</IdTrasyImprezy>
 		<IdMiejscaNoclegowego>0</IdMiejscaNoclegowego>
 		<IdWyzywienia>
 			<id>0</id>
 			<id>1</id>
 		</IdWyzywienia>
 		<IdUslug>
-			<id>0</id>
 			<id>1</id>
+			<id>2</id>
 		</IdUslug>
 		<IdUbezpieczenia>0</IdUbezpieczenia>
 	</Plan>
     <Plan id="9">
 		<IdNazwaImprezy>9</IdNazwaImprezy>
-		<IdNrImprezy>0</IdNrImprezy>
-		<IdZleceniodawcy>0</IdZleceniodawcy>
+		<IdNrImprezy>9</IdNrImprezy>
+		<IdZleceniodawcy>1</IdZleceniodawcy>
 		<IdPrzedstawicielaZleceniodawcy>0</IdPrzedstawicielaZleceniodawcy>
-		<IdTrasyImprezy>0</IdTrasyImprezy>
+		<IdTrasyImprezy>4</IdTrasyImprezy>
 		<IdMiejscaNoclegowego>0</IdMiejscaNoclegowego>
 		<IdWyzywienia>
 			<id>0</id>
 			<id>1</id>
 		</IdWyzywienia>
 		<IdUslug>
-			<id>0</id>
-			<id>1</id>
+			<id>2</id>
+			<id>3</id>
 		</IdUslug>
 		<IdUbezpieczenia>0</IdUbezpieczenia>
 	</Plan>
     <Plan id="10">
 		<IdNazwaImprezy>10</IdNazwaImprezy>
-		<IdNrImprezy>0</IdNrImprezy>
-		<IdZleceniodawcy>0</IdZleceniodawcy>
-		<IdPrzedstawicielaZleceniodawcy>0</IdPrzedstawicielaZleceniodawcy>
+		<IdNrImprezy>10</IdNrImprezy>
+		<IdZleceniodawcy>2</IdZleceniodawcy>
+		<IdPrzedstawicielaZleceniodawcy>1</IdPrzedstawicielaZleceniodawcy>
 		<IdTrasyImprezy>0</IdTrasyImprezy>
 		<IdMiejscaNoclegowego>0</IdMiejscaNoclegowego>
 		<IdWyzywienia>
@@ -182,8 +182,8 @@
 			<id>1</id>
 		</IdWyzywienia>
 		<IdUslug>
-			<id>0</id>
-			<id>1</id>
+			<id>3</id>
+			<id>5</id>
 		</IdUslug>
 		<IdUbezpieczenia>0</IdUbezpieczenia>
 	</Plan>

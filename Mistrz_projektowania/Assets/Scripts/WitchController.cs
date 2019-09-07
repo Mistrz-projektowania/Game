@@ -52,6 +52,7 @@ public class WitchController : MonoBehaviour {
 	}
 
 	public void runWitch(){
+		StateMachine.witchRunning = true;
 		if (Time.time - lastKeyWPressedTime > animationTime * swapNr + 4 * flyingTime) {
 			
 			sound.Play ();

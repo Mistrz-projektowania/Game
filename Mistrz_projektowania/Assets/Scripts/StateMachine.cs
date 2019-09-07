@@ -7,6 +7,8 @@ public class StateMachine : MonoBehaviour {
 
 	public static int currentState;
 	public static int previousState;
+	public static bool GTSrunning;
+	public static bool witchRunning;
 	public Button buttonHelp;
 
 	WitchController witchCtrl;
@@ -32,6 +34,8 @@ public class StateMachine : MonoBehaviour {
 		 */
 		currentState = 8;
 		previousState = 8;
+		GTSrunning = false;
+		witchRunning = false;
 		witchCtrl = GameObject.Find ("Witch").GetComponent<WitchController> ();
 		sunMopCtrl = GameObject.Find ("SunMop").GetComponent<SunMopController> ();
 		buttonHelp = GameObject.Find ("HelpfulQuestionsButton").GetComponent<Button> ();
@@ -65,13 +69,20 @@ public class StateMachine : MonoBehaviour {
 			soundController.pauseAmbientGameplaySound ();
 		} else soundController.playAmbientGameplaySound ();
 
-		if(currentState == 2 && currentState != 5 && currentState != 6 && currentState != 4 && currentState != 7){
+		if(currentState == 2 && witchRunning == false && currentState != 5 && currentState != 6 && currentState != 4 && currentState != 7){
 			witchCtrl.runWitch ();
 
 		}
+		if (currentState != 2) {
+			witchRunning = false;
+		}
 
-		if (currentState == 4) {
+		if (currentState == 4 && GTSrunning == false) {
 			gts.GTSon ();
+		}
+
+		if (currentState != 4) {
+			GTSrunning = false;
 		}
 
 	}
@@ -87,16 +98,18 @@ public class StateMachine : MonoBehaviour {
 	public static int getState(){
 		return currentState;
 	}
+
 	public static int getPreviousState(){
 		return previousState;
 	}
+
 	IEnumerator waitForAndDraw(int seconds){
 		yield return new WaitForSeconds (seconds);
 		if (currentState == 0) {
 			int r = Random.Range (0, 2);
 			if (r == 1) {
 				setState (2);
-
+				Debug.Log ("Ruch czarownicy");
 			}
 		}
 		witchStateControl ();
