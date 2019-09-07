@@ -30,12 +30,11 @@ public class PuzzleCompleted : MonoBehaviour {
 
 	public void PuzzleDone() {
 		PuzzleGame.SetActive (false);
+		//Puzzle.SetActive (false);
+		PuzzleComplete.SetActive (false);  
 		GUI.SetActive (true);
-		Game.SetActive (true);
-		StateMachine.setState (4); 
-	
-		Puzzle.SetActive (false);
-		PuzzleComplete.SetActive (false);   
+		Game.SetActive (true); 
+		StateMachine.setState (4);
 
 
 	}

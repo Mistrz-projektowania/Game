@@ -37,7 +37,7 @@ public class RockTextController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("------------------------------------------------------------");
+		//Debug.Log ("------------------------------------------------------------");
 		if (StateMachine.getState() == 2) {
 			Debug.Log ("Czarownica przeszkadza");
 			StartCoroutine (fadeButton (button, false, 1.0f));

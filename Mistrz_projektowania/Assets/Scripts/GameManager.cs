@@ -218,7 +218,6 @@ public class GameManager : MonoBehaviour
 		filePath2 = "Puzzles/" + Catalog + "/flashcard";
 		TextAsset myTxt = (TextAsset)Resources.Load(filePath2, typeof (TextAsset));
 		FlashcardText.GetComponent<Text>().text= myTxt.text;
-		Debug.Log (filePath2);
 
 
     }

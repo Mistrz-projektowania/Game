@@ -7,10 +7,33 @@ public class helpsInGame : MonoBehaviour {
 
 	public Button sunMopOn;
 	public GameController gameController;
-
+	public GameObject leftGUI;
+	public GameObject HelpfulQuestionsButton;
+	public GameObject PuzzleGame;
+	public GameObject Quiz;
+	public GameObject GTS;
+	public GameObject Scoreboard;
+	public GameObject rockLabels;
+	public GameObject HelpsInGame;
 	// Use this for initialization
 	void Start () {
 		
+	}
+
+	public void ShowHelpsInGame() {
+
+		Debug.Log ("weszło do show helps in game");
+		HelpsInGame.SetActive (true);
+
+		leftGUI.SetActive(false);
+		HelpfulQuestionsButton.SetActive(false);
+		PuzzleGame.SetActive (false);
+		Quiz.SetActive (false);
+		//GTSBtn.SetActive(false);
+		rockLabels.SetActive(false);
+		Scoreboard.SetActive (false);
+		GTS.SetActive (true);
+		StateMachine.setState (9);
 	}
 	
 	// Update is called once per frame

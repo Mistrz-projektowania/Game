@@ -77,9 +77,11 @@ public class StateMachine : MonoBehaviour {
 	}
 
 	public static void setState(int state){
+		Debug.Log ("wchodzi do setstate ");
 		previousState = currentState;
 		currentState = state;
-		Debug.Log ("Current State: " + currentState);
+		Debug.Log ("set State: " + currentState);
+
 	}
 
 	public static int getState(){
@@ -94,6 +96,7 @@ public class StateMachine : MonoBehaviour {
 			int r = Random.Range (0, 2);
 			if (r == 1) {
 				setState (2);
+
 			}
 		}
 		witchStateControl ();
