@@ -9,6 +9,7 @@ public class ChooseCharacter : MonoBehaviour
     private int person;
     private GameObject[] characters;
 	private GameObject[] buttons;
+	public Text nameText;
 
     private void Start()
     {
@@ -53,6 +54,24 @@ public class ChooseCharacter : MonoBehaviour
 			}
 			characters [person].SetActive (true);
 		}
+		setName (person);
+	}
+
+	private void setName(int id){
+		switch(id){
+		case 0:
+			nameText.text = "Łukasz";
+			break;
+		case 1:
+			nameText.text = "Natalia";
+			break;
+		case 2:
+			nameText.text = "Urszula";
+			break;
+		case 3:
+			nameText.text = "Andrzej";
+			break;
+		}
 	}
 		
     public void ChooseŁukasz()
@@ -60,6 +79,7 @@ public class ChooseCharacter : MonoBehaviour
         characters[person].SetActive(false);
         person = 0;
         characters[person].SetActive(true);
+		setName (person);
     }
 
 	public void ChooseNatalia()
@@ -67,6 +87,7 @@ public class ChooseCharacter : MonoBehaviour
 		characters[person].SetActive(false);
 		person = 1;
 		characters[person].SetActive(true);
+		setName (person);
 	}
 		
 	public void ChooseUrszula()
@@ -74,6 +95,7 @@ public class ChooseCharacter : MonoBehaviour
 		characters[person].SetActive(false);
 		person = 2;
 		characters[person].SetActive(true);
+		setName (person);
 	}
 
 
@@ -82,6 +104,7 @@ public class ChooseCharacter : MonoBehaviour
 		characters[person].SetActive(false);
 		person = 3;
 		characters[person].SetActive(true);
+		setName (person);
 	}
 
     public void SelectButton()

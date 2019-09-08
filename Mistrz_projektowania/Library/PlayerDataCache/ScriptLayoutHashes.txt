@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-M:/2019/Game/Mistrz_projektowania/xxx.exe
+D:/Dokumenty/Praca magisterska/DZIALAJ/Game/Mistrz_projektowania/Test_EXE/test.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/Tutorial.unity
@@ -38,7 +38,7 @@ a1b7a27f480d657da1fcd20cc4ee031d Assembly-CSharp.dll:.GetFieldData
 6e314052037f50102c4d76ec5215e37e Assembly-CSharp.dll:.startPuzzle
 53e245573a809d3a36b04e3996eda9c3 Assembly-CSharp.dll:.Tutorial
 609883ba9b3462e00c79080cdb51d119 Assembly-CSharp-firstpass.dll:.iTween
-16b7a70b37526e02e2c46063c6ed6e17 Assembly-CSharp.dll:.setRockRandomPlaces
+2fea525398e4e594c149a19976066d5b Assembly-CSharp.dll:.setRockRandomPlaces
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.EventSystemChecker
 3b945a83fa61133bbb7c61d4d7012fd9 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.Hose
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -347,7 +347,7 @@ f4b175ffc1eeca85d2783436b4c764a7 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 020550babdb991365f61c5bffe1f4f52 Assembly-CSharp.dll:TMPro.Examples.TextMeshSpawner
 af7666733efcc974926d7d470e1732a6 Assembly-CSharp.dll:TMPro.Examples.SkewTextExample
 8fe7df0247524fc0b1ebc306deed8d48 Assembly-CSharp.dll:.showPlayerPoints
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ChooseCharacter
+71bbe28622ed1f2f40b55ff92916a190 Assembly-CSharp.dll:.ChooseCharacter
 d7d898a41bfcb3ba623efc342ac1f39e Assembly-CSharp.dll:.SunMopController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.StartGame
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin

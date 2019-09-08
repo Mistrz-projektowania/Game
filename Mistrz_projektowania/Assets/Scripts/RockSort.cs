@@ -8,6 +8,7 @@ public class RockSort : MonoBehaviour {
 	// Use this for initialization
 	setRockRandomPlaces rockController;
 	GameController gameController;
+	GTSRotation gtsController;
 	public ParticleSystem ps;
 
 	private int[] dataOrder;
@@ -21,6 +22,7 @@ public class RockSort : MonoBehaviour {
 		gameController = GameObject.Find ("GameController").GetComponent<GameController> ();
 		systemInfo = gameController.systemInfo;
 		rockController = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>();
+		gtsController = GameObject.Find ("Frisbee").GetComponent<GTSRotation> ();
 		dataOrder = gameController.getDataOrder ();
 		rockOrder = new int[dataOrder.Length];
 	}
@@ -32,7 +34,7 @@ public class RockSort : MonoBehaviour {
 	public void sort(){
 		systemInfo.GetComponentInChildren<Text>().text = "GTS włączony";
 		StartCoroutine (gameController.fadeMessage (systemInfo, true, 0.5f));
-
+		gtsController.setDestination (new Vector3(54.0f, 2.5f, 8.0f), 2.0f);
 		dataOrder = gameController.getDataOrder ();
 		findRockOrder ();
 		StartCoroutine(selectionSort (2));
@@ -54,6 +56,7 @@ public class RockSort : MonoBehaviour {
 	}
 
 	IEnumerator selectionSort(float seconds){
+		yield return new WaitForSeconds (1);
 		Debug.Log ("Sortujemy");
 		int n = rockOrder.Length;
 
@@ -76,10 +79,11 @@ public class RockSort : MonoBehaviour {
 
 			yield return new WaitForSeconds (seconds);
 		}
+		gtsController.setDestination (new Vector3(54.0f, 2.8f, 16.0f), 2.0f);
 		StartCoroutine (gameController.fadeMessage (systemInfo, false, 0.5f));
 		Debug.Log ("SETTING state 0");
 		StateMachine.setState (0);
-		//ps.Stop ();
+		ps.Stop ();
 		/*
 		string arr = "";
 		for (int i = 0; i < n - 1; i++) {

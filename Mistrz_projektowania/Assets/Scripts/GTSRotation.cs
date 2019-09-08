@@ -24,9 +24,11 @@ public class GTSRotation : MonoBehaviour {
 		rotateSpeed = 100;
 		startPos = destinationPos = transform.position;
 	}
+
 	public void setNewStartPos(Vector3 pos){
 		startPos = pos;
 	}
+
 	public void setDestinationPosition(Vector3 pos){
 		destinationPos = pos;
 	}
