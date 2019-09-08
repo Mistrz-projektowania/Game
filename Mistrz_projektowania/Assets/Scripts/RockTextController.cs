@@ -20,9 +20,6 @@ public class RockTextController : MonoBehaviour {
 	void Start () {
 		infoUsed = false;
 		allButtons = GameObject.FindGameObjectsWithTag ("rockInfo");
-		//myText.color = Color.clear;
-		//Screen.showCursor = false;
-		//Screen.lockCursor = true;
 		StartCoroutine(fadeButton(button, false, 0.0000001f));
 
 		GameObject gameControllerObject = GameObject.FindWithTag ("GameController");
@@ -37,30 +34,32 @@ public class RockTextController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		//Debug.Log ("------------------------------------------------------------");
 		if (StateMachine.getState() == 2) {
-			Debug.Log ("Czarownica przeszkadza");
 			StartCoroutine (fadeButton (button, false, 1.0f));
 			displayInfo = false;
-		}
-		/*
-		if (Input.GetKeyDown (KeyCode.Escape)) 
-                {
-                        Screen.lockCursor = false;
-                }
-          */      
+		}    
 	}
 
 	void OnMouseDown() {
 		if (gameController.getPoints () > 0 && StateMachine.getState() == 0) {
-			//displayInfo = !displayInfo;
 
 			if (displayInfo == false) {
 				AudioSource sound = GameObject.Find ("onClickSound").GetComponent<AudioSource> ();
 				sound.Play ();
 				StartCoroutine (fadeButton (button, true, fadeTime));
-				GameplayModel.gameChosenRock = int.Parse(buttonOb.transform.parent.transform.parent.Find("Index").GetComponent<Text>().text);
-				Debug.Log (GameplayModel.gameChosenRock);
+
+				if (buttonOb) {
+					if (buttonOb.transform.parent.transform.parent.Find ("Index")) {
+						string buttonId = buttonOb.transform.parent.transform.parent.Find ("Index").GetComponent<Text> ().text;
+						GameplayModel.gameChosenRock = int.Parse (buttonId);
+					} else {
+						Debug.Log ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+						Debug.Log ("NOT found");
+						Debug.Log ("null rock");
+						gameController.showNoDataMessage ();
+					}
+
+				}
 				displayInfo = true;
 				gameController.changePoints (-2);
 
@@ -80,12 +79,7 @@ public class RockTextController : MonoBehaviour {
 
 	}
 
-	void OnMouseExit() {
-		
-	}
-
 	IEnumerator fadeButton(Button button, bool fadeIn, float duration){
-		//Debug.Log (button.enabled);
 		float counter = 0f;
 
 		float a, b;
@@ -115,7 +109,6 @@ public class RockTextController : MonoBehaviour {
 				}
 				counter += Time.deltaTime;
 				float alpha = Mathf.Lerp (a, b, counter / duration);
-				//Debug.Log(alpha);
 
 				selectedButton.alpha = alpha;
 

@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
 	private bool noPointsMessageDisplay;
 	public Image wrongInputMessage;
 	public Image wrongOrderMessage;
+	public Image noDataMessage;
 	public Image systemInfo;
 	private int tripID;
 
@@ -32,6 +33,7 @@ public class GameController : MonoBehaviour {
 		StartCoroutine(fadeMessage(noPointsMessage, false, 0.0000001f));
 		StartCoroutine(fadeMessage(wrongInputMessage, false, 0.0000001f));
 		StartCoroutine(fadeMessage(wrongOrderMessage, false, 0.0000001f));
+		StartCoroutine(fadeMessage(noDataMessage, false, 0.0000001f));
 		StartCoroutine(fadeMessage(systemInfo, false, 0.0000001f));
 		noPointsMessageDisplay = false;
 		points = GameplayModel.gamePoints;
@@ -127,14 +129,33 @@ public class GameController : MonoBehaviour {
 		StartCoroutine (fadeMessage (noPointsMessage, false, 0.5f));
 		noPointsMessageDisplay = false;
 	}
+
 	IEnumerator openPointsMessage(float seconds){
 		yield return new WaitForSeconds (seconds);
 		StartCoroutine (fadeMessage (noPointsMessage, true, 0.5f));
 		noPointsMessageDisplay = true;
 	}
+
 	public void showPointsMessage(){
 		StartCoroutine (openPointsMessage(10f));
 	}
+
+	public void showNoDataMessage(){
+		StartCoroutine (openNoDataMessage(2f));
+	}
+
+	IEnumerator openNoDataMessage(float seconds){
+		StartCoroutine (fadeMessage (noDataMessage, true, 0.5f));
+		yield return new WaitForSeconds (seconds);
+		StartCoroutine (closeNoDataMessage(seconds));
+	}
+
+	IEnumerator closeNoDataMessage(float seconds){
+		yield return new WaitForSeconds (seconds);
+		StartCoroutine (fadeMessage (noDataMessage, false, 0.5f));
+	}
+
+
 	public IEnumerator fadeMessage(Image message, bool fadeIn, float duration){
 		float counter = 0f;
 

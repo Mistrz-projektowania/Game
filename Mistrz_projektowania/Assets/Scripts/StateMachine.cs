@@ -106,6 +106,7 @@ public class StateMachine : MonoBehaviour {
 	IEnumerator waitForAndDraw(int seconds){
 		yield return new WaitForSeconds (seconds);
 		if (currentState == 0) {
+			Debug.Log ("Losujemy stan");
 			int r = Random.Range (0, 2);
 			if (r == 1) {
 				setState (2);
@@ -116,6 +117,7 @@ public class StateMachine : MonoBehaviour {
 	}
 
 	void witchStateControl(){
+		Debug.Log ("witch state control running");
 		if (GameObject.Find ("Witch") != null) {
 			if (GameObject.Find ("Witch").activeSelf == true) {
 				StartCoroutine (waitForAndDraw (15));
