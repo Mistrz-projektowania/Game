@@ -30,7 +30,7 @@ public class SunMopController : MonoBehaviour {
 		speed = 2;
 		rotateSpeed = 2;
 		startPos = destinationPos = stayPos = transform.position;
-		skyPos = stayPos + new Vector3 (0, 10, 0);
+		skyPos = stayPos + new Vector3 (0, 0, 0);
 		rocks = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>().rocks;
 	}
 	
@@ -52,7 +52,7 @@ public class SunMopController : MonoBehaviour {
 		checkFieldFillOutOrder.checkIfEmpty ();
 
 		int[] dataOrder = GameObject.Find ("GameController").GetComponent<GameController> ().getDataOrder();
-		int minIndex = checkFieldFillOutOrder.getNextRockIndex();
+		int minIndex = checkFieldFillOutOrder.getNextRockIndexForSunMop();
 		int minIndexPosition = dataOrder[minIndex];
 
 		rocks = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>().rocks;
