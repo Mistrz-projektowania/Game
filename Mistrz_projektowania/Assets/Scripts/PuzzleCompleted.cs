@@ -10,7 +10,9 @@ public class PuzzleCompleted : MonoBehaviour {
 	public GameObject GUI;
 	public GameObject Game;
 	public GameObject IntroPanel;
+	public GameObject mainCamera;
 	public GameObject PuzzlePrefab;
+	public GameObject PuzzleCamera;
 	PuzzleState state; 
 	keyG gts;
 	GameManager manager;
@@ -29,12 +31,17 @@ public class PuzzleCompleted : MonoBehaviour {
 	}
 
 	public void PuzzleDone() {
-		PuzzleGame.SetActive (false);
-		//Puzzle.SetActive (false);
-		PuzzleComplete.SetActive (false);  
+		PuzzleCamera.SetActive (false);
 		GUI.SetActive (true);
-		Game.SetActive (true); 
-		StateMachine.setState (4);
+		mainCamera.SetActive (true);
+
+		PuzzleComplete.SetActive (false); 
+		Puzzle.SetActive (false);
+		PuzzleGame.SetActive (false);
+
+		 
+
+		//StateMachine.setState (0);
 
 
 	}

@@ -21,48 +21,55 @@ public class ChangeCamera : MonoBehaviour {
     public GameObject HelpfulQuestionsButton;
     public GameObject RoundGoodOverPanel;
 	public GameObject PuzzleGame;
+	public GameObject Puzzle;
+	public GameObject PuzzleCompleted;
     public GameObject questionDisplay;
     public GameObject roundBadEndDisplay;
     public GameObject AnswerPanel;
     public GameObject roundGoodOverDisplay;
+	public GameObject PuzzlePictures1;
+	public GameObject PuzzlePictures2;
 	public GameObject HelpsInGame;
 	public GameObject puzzleMenu;
 	public GameObject Scoreboard;
 	public GameObject ScoreBoardPanelEnterName; 
 	public GameObject endButton;
 	public GameObject EndGame;
+	public GameObject textNoPoints;
+	public GameObject textNoQuestions;
 	public Button sunMopOn;
 	public GameController gameController;
 
     public void ShowMainView()
     {
         mainCamera.SetActive(true);
-        leftGUI.SetActive(true);
-        Game.SetActive(true);
-        rockLabels.SetActive(true);
-        QuestionPanel.SetActive(false);
-        questions.SetActive(false);
-        questionsCamera.SetActive(false);
-        mainCamera.GetComponent<AudioListener>().enabled = true;
-        questionsCamera.GetComponent<AudioListener>().enabled = false;
-		GTSBtn.SetActive(false);
-        HelpfulQuestionsButton.SetActive(true);
+		HelpfulQuestionsButton.SetActive(true);
+		leftGUI.SetActive(true);
+		Game.SetActive(true);
 		HelpsInGame.SetActive (false);
-		PuzzleGame.SetActive (false);
+		rockLabels.SetActive(true);
+		QuestionPanel.SetActive(false);
+		questions.SetActive(false);
+		mainCamera.GetComponent<AudioListener>().enabled = true;
+		questionsCamera.GetComponent<AudioListener>().enabled = false;
+		GTSBtn.SetActive(false);
 		Quiz.SetActive (false);
 		Scoreboard.SetActive (false);
+		EndGame.SetActive (false);
+		PuzzleGame.SetActive (false);
     }
 
     public void ShowPuzzleView()
 	{	StateMachine.setState (5);
         leftGUI.SetActive(false);
-        Game.SetActive(false);
+       // Game.SetActive(false);
         mainCamera.SetActive(false);
         noPointMessage.SetActive(false);
         wrongInputMEssage.SetActive(false);
         puzzleCamera.SetActive(true);
 		puzzleMenu.SetActive(true);
 		PuzzleGame.SetActive (true);
+		Puzzle.SetActive (false);
         QuestionPanel.SetActive(false);
 		GTSBtn.SetActive(false);
         questions.SetActive(false);
@@ -71,6 +78,8 @@ public class ChangeCamera : MonoBehaviour {
 		Quiz.SetActive (false);
 		Scoreboard.SetActive (false);
 		EndGame.SetActive (false);
+		PuzzlePictures1.SetActive (true);
+		PuzzlePictures2.SetActive (false);
     }
 
     public void ShowQuestionsView()
@@ -143,6 +152,14 @@ public class ChangeCamera : MonoBehaviour {
 
 	public void ShowEndButton() {
 		endButton.SetActive (true);
+	}
+
+	public void beforeRoundBadOverNoPoints() {
+		textNoPoints.SetActive (false);
+	}
+
+	public void beforeRoundBadOverNoQuestions() {
+		textNoQuestions.SetActive (false);
 	}
 
 

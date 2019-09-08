@@ -1,0 +1,71 @@
+{"allLevels":
+[{
+	"name":"firstLevel",  
+			"questions":[
+				{"textQuestion":"Długość trasy wycieczki autokarowej z Łodzi w Góry Świętokrzyskie wyniosła 550 km. Oblicz, ile wyniesie koszt transportu, jeżeli stawka za 1 km wynosi 5 zł?",
+					"answers":[
+						{"textAnswer":"2550 zł","correctAnswer":false},
+						{"textAnswer":"2750 zł","correctAnswer":true},
+						{"textAnswer":"25500 zł","correctAnswer":false},
+						{"textAnswer":"27500 zł","correctAnswer":false}
+					]},
+				{"textQuestion":"Firma BŁYSK z o.o. zaplanowała 2-dniową imprezę turystyczną dla swoich 23 pracowników. Ile trzeba zapłacić za noclegi, jeżeli było jeszcze 2 osoby (kierowca i pilot), a 20 osób nocowało w pokojach 2osobowych 60 zł/osobę, zaś pozostałe w pokojach 1-osobowych 100 zł/osobę? ",
+					"answers":[
+						{"textAnswer":"1700 zł","correctAnswer":true},
+						{"textAnswer":"1100 zł","correctAnswer":false},
+						{"textAnswer":"1500 zł","correctAnswer":false},
+						{"textAnswer":"1305 zł ","correctAnswer":false}
+					]},
+				{"textQuestion":"Ile wynosi koszt VAT 22% imprezy turystycznej dla 20 osób, skoro koszt całkowity wynosi 13200 zŁ, a marża 10%? ",
+					"answers":[
+						{"textAnswer":"1320 zŁ","correctAnswer":false},
+						{"textAnswer":"2904 zŁ","correctAnswer":true},
+						{"textAnswer":"3194,40 zł","correctAnswer":false},
+						{"textAnswer":"319,44 zł","correctAnswer":false}
+					]},
+				{"textQuestion":"Firma Safari z o.o. zorganizowała 5-dniową imprezę turystyczną dla 11 pracowników. Jaki był koszt noclegów, jeżeli 5 osób nocowało w pokojach 2osobowych 50 zł/osobę, a pozostałe w pokojach 1-osobowych 80 zł/osobę? ",
+					"answers":[
+						{"textAnswer":"3500 zł","correctAnswer":false},
+						{"textAnswer":"2920zł","correctAnswer":true},
+						{"textAnswer":"1150 zł","correctAnswer":false},
+						{"textAnswer":"2505 zł ","correctAnswer":false}
+					]},
+				{"textQuestion":"Ile wynosi koszt VAT 22% imprezy turystycznej dla 8 osób, skoro koszt całkowity wynosi 73000 zŁ, a marża 10%? ",
+					"answers":[
+						{"textAnswer":"2320 zŁ","correctAnswer":false},
+						{"textAnswer":"13194 zł","correctAnswer":false},
+						{"textAnswer":"16060 zŁ","correctAnswer":true},
+						{"textAnswer":"10190 zł","correctAnswer":false}
+					]},
+				{"textQuestion":"Długość trasy wycieczki autokarowej z Łodzi do Krzemionek Opatowskich wyniosła 196 km. Oblicz, ile wyniesie koszt transportu, jeżeli stawka za 1 km wynosi 8 zł?",
+					"answers":[
+						{"textAnswer":"3550 zł","correctAnswer":false},
+						{"textAnswer":"1568 zł","correctAnswer":true},
+						{"textAnswer":"2900 zł","correctAnswer":false},
+						{"textAnswer":"900 zł","correctAnswer":false}
+					]},
+				{"textQuestion":"Firma Koziołek z o.o. organizuje 3-dniową wycieczkę turystyczną dla swoich 15 pracowników. Ile trzeba zapłacić za noclegi, jeżeli 10 osób nocowało w pokojach 2osobowych 60 zł/osobę, zaś pozostałe w pokojach 1-osobowych 100 zł/osobę? ",
+					"answers":[
+						{"textAnswer":"2200 zł","correctAnswer":true},
+						{"textAnswer":"1100 zł","correctAnswer":false},
+						{"textAnswer":"3500 zł","correctAnswer":false},
+						{"textAnswer":"1305 zł ","correctAnswer":false}
+					]},
+				{"textQuestion":"Ile wynosi koszt VAT 22% imprezy turystycznej dla 29 osób, skoro koszt całkowity wynosi 13000 zŁ, a marża 10%? ",
+					"answers":[
+						{"textAnswer":"2320 zŁ","correctAnswer":false},
+						{"textAnswer":"3190 zł","correctAnswer":false},
+						{"textAnswer":"2860 zŁ","correctAnswer":true},
+						{"textAnswer":"1060 zł","correctAnswer":false}
+					]},
+
+				{"textQuestion":"Długość trasy wycieczki samochodowej z Łodzi do Jaskini Raj wyniosła 159 km. Oblicz, ile wyniesie koszt transportu, jeżeli stawka za 1 km wynosi 3 zł?",
+					"answers":[
+						{"textAnswer":"350 zł","correctAnswer":false},
+						{"textAnswer":"477 zł","correctAnswer":true},
+						{"textAnswer":"1000 zł","correctAnswer":false},
+						{"textAnswer":"200 zł","correctAnswer":false}
+					]}
+				]
+}]
+}
