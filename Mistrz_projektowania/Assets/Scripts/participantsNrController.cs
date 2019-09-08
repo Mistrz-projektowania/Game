@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class participantsNrController : MonoBehaviour {
 	private string participantsNr;
+
 	// Use this for initialization
 	void Start () {
 		participantsNr = (GameplayModel.gameParticipantsNr + GameplayModel.gameNotPayingParticipantsNr).ToString();

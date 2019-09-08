@@ -26,7 +26,6 @@ public class finishGameController : MonoBehaviour {
 	void Update () {
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
 		if (checkFieldFillOutOrder.checkIfAllFilled () == true) {
-			//Debug.Log("MOZNA SKONCZYC GRE");
 			showFinishButton ();
 			finishButton.onClick.AddListener (showFinishData);
 		}
@@ -107,18 +106,14 @@ public class finishGameController : MonoBehaviour {
 	void printPlayerData(){
 		string data = "";
 			foreach (KeyValuePair<string, string> kvp in playerData) {
-				//Debug.Log (kvp.Key + " " + kvp.Value);
-				data += string.Format ("{0}: {1}\n", kvp.Key, kvp.Value);
-				//data += string.Format("{0}\n", kvp.Value);	
+				data += string.Format ("{0}: {1}\n", kvp.Key, kvp.Value);	
 		}
 		Debug.Log (data);
 	}
 	void printTripData(){
 		string data = "";
 			foreach (KeyValuePair<string, string> kvp in tripData) {
-				//Debug.Log (kvp.Key + " " + kvp.Value);
-				data += string.Format ("{0}: {1}\n", kvp.Key, kvp.Value);
-				//data += string.Format("{0}\n", kvp.Value);	
+				data += string.Format ("{0}: {1}\n", kvp.Key, kvp.Value);	
 		}
 		Debug.Log (data);
 	}

@@ -13,15 +13,14 @@ public class ChooseTripDate : MonoBehaviour {
 	GameObject calendarButtonText;
 	private DateTime chosenDate;
 	private DateTime chosenEndDate;
-	// Use this for initialization
+
 	void Start () {
 		tripLength = 3;
 
 		
 		this.GetComponent<Button> ().onClick.AddListener (getDate);
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		
 	}

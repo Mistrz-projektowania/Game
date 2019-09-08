@@ -11,13 +11,12 @@ public class setRockRandomPlaces : MonoBehaviour {
 
 	float animationTime;
 	float lastKeyWPressedTime;
+
 	// Use this for initialization
 	void Start () {
 		lastKeyWPressedTime = Time.time;
 		animationTime = 3.0f;
 		rockPlaces = new Vector3[rocks.Length];
-		//Debug.Log (rockPlaces.Length);
-
 	}
 	
 	// Update is called once per frame
@@ -29,31 +28,23 @@ public class setRockRandomPlaces : MonoBehaviour {
 		for (int i = 0; i < rocks.Length; i++) {
 			rocksArr += rocks [i];
 		}
-		Debug.Log (rocksArr);
 	}
 	public void transformRockOrderToSwapRocks(int index1, int index2, float timeToMove){
 	}
 	public void swapRocks(int index1, int index2, float timeToMove){
 		GameObject rock1 = rocks [index1];
 		GameObject rock2 = rocks [index2];
-		////////////////////////////////////////////
+
 		rocks[index1] = rock2;
 		rocks[index2] = rock1;
 
 		rock1.transform.Find ("Rock_Medium_02 1").GetComponent<MeshRenderer>().material = rockHighlight;
 		rock2.transform.Find ("Rock_Medium_02 1").GetComponent<MeshRenderer>().material = rockHighlight;
-		/*
-		 for (int i = 0; i < rocks.Length; i++) {
-			Debug.Log ("rocks- " + rocks [i]);
-		}
-		*/
-		/// /////////////////////////////////////////
+
 		GameObject.Find ("GameController").GetComponent<GameController> ().swapDataOrder(findDataOrderIndex (index1),findDataOrderIndex (index2));
 		GameObject.Find ("GameController").GetComponent<GameController> ().printDataOrder ();
 		Vector3 startPos1 = rock1.transform.position;
 		Vector3 startPos2 = rock2.transform.position;
-		//Debug.Log (startPos1);
-		//Debug.Log (startPos2);
 		float firstMoveTime, lastMoveTime, changePlaceTime;
 		firstMoveTime = lastMoveTime = 0.5f;
 		changePlaceTime = timeToMove - firstMoveTime - lastMoveTime;

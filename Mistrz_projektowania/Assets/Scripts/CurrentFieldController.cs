@@ -8,6 +8,7 @@ public class CurrentFieldController : MonoBehaviour {
 	public GameObject[] fields;
 	public int currentField = 0;
 	private int[] fieldsEmpty;
+
 	// Use this for initialization
 	void Start () {
 		fieldsEmpty = new int[fields.Length];
@@ -16,17 +17,14 @@ public class CurrentFieldController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		checkIfEmpty ();
-		//emptyFieldsArray ();
 	}
 
 	public void checkIfEmpty(){
 		
 		for(int i = 0; i<fields.Length; i++){
 			if (fields[i].transform.childCount > 0) {
-				//Debug.Log (fields[i].name + i +" ma " + fields[i].transform.childCount + " dzieci");
 				fieldsEmpty[i] = 0;
 			} else {
-				//Debug.Log (fields[i].name + i + " nie ma dzieci");
 				fieldsEmpty[i] = 1;
 			}
 		}
@@ -62,7 +60,7 @@ public class CurrentFieldController : MonoBehaviour {
 		for (int i = 0; i < fieldsEmpty.Length; i++) {
 			sum += fieldsEmpty [i];
 		}
-		if (sum == 0) // później zmienić na 0
+		if (sum == 0)
 			return true;
 		else
 			return false;

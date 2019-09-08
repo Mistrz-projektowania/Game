@@ -8,6 +8,7 @@ public class InfoPanelController : MonoBehaviour {
 	public GameObject infoPanel;
 	public Button openInfo;
 	public Button closeInfo;
+
 	// Use this for initialization
 	void Start () {
 		infoPanel.SetActive (false);
@@ -23,6 +24,7 @@ public class InfoPanelController : MonoBehaviour {
 		infoPanel.SetActive (true);
 		closeInfo.onClick.AddListener (panelHide);
 	}
+
 	void panelHide(){
 		infoPanel.SetActive (false);
 	}

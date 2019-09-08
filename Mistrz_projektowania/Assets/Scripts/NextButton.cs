@@ -10,6 +10,5 @@ public class NextButton : MonoBehaviour
     {
 		SceneManager.LoadScene("Level1");   
     }
-
-    
+		  
 }

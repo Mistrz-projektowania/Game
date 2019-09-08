@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-M:/2019/Game/Mistrz_projektowania/build.exe
+D:/Dokumenty/Praca magisterska/DZIALAJ/Game/Mistrz_projektowania/Build/Mistrz_projektowania_imprez_turystycznych.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/Tutorial.unity

@@ -43,16 +43,12 @@ public class GameController : MonoBehaviour {
 		dataLoader = GetComponent<XMLDataLoader> ();      
 		dataLoader.GetData(tripID, "Plan");
 		thisLevelTrip = dataLoader.getCurrentTripData();
-		//Debug.Log ((thisLevelTrip [1]) ["Nr"]);
-		//Debug.Log ((thisLevelTrip [2]) ["NazwaZleceniodawcy"]);
-		//Debug.Log ((thisLevelTrip [0]) ["Nr"]);
 		dataOrder = drawTheOrder(7, 7);
 		string dataOrderString = "";
 		for (int i = 0; i < dataOrder.Length; i++) {
 			dataOrderString += dataOrder [i];
 			dataOrderString += ", ";
 		}
-		//Debug.Log ("DATA ORDER: " + dataOrderString);
 		dataLoader.setDataSlots (dataOrder);
 
 		showFPS (GameplayModel.gameFPSOn);
@@ -90,14 +86,12 @@ public class GameController : MonoBehaviour {
 
 	public void changePoints(int value){
 		points += value;
-		//Debug.Log (points);
 		if (points <= 0) {
 			points = 0;
 			if (noPointsMessageDisplay == false && StateMachine.getState() != 7) {
 				StateMachine.setState (10);
 				StartCoroutine (fadeMessage (noPointsMessage, true, 0.5f));
 				noPointsMessageDisplay = true;
-				//StartCoroutine (closePointsMessage(10f));
 			}
 		}
 		GameplayModel.gamePoints = points;
@@ -113,7 +107,6 @@ public class GameController : MonoBehaviour {
             {
                 StartCoroutine(fadeMessage(noPointsMessage, true, 0.5f));
                 noPointsMessageDisplay = true;
-                //StartCoroutine (closePointsMessage(10f));
             }
         }
 		GameplayModel.gamePoints = points;
@@ -195,7 +188,6 @@ public class GameController : MonoBehaviour {
 
 	public static int[] drawTheOrder(int n,int k)
 	{
-		// Debug.Log("DRAW THE ORDER");
 		int[] order = new int[k];
 		// wypełnianie tablicy liczbami 1,2...n
 		int[] numbers = new int[n];
@@ -215,7 +207,6 @@ public class GameController : MonoBehaviour {
 			numbers[r] = numbers[n - 1];
 			n--;
 		}
-			//Debug.Log("-----------------");
 		return order;
 	}
 

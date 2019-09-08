@@ -18,7 +18,7 @@ public class RockSort : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//ps.Stop ();
+		ps.Stop ();
 		gameController = GameObject.Find ("GameController").GetComponent<GameController> ();
 		systemInfo = gameController.systemInfo;
 		rockController = GameObject.Find("Rocks").GetComponent<setRockRandomPlaces>();
@@ -52,12 +52,10 @@ public class RockSort : MonoBehaviour {
 			rockOrderString += rockOrder [i];
 			rockOrderString += ", ";
 		}
-		//Debug.Log (rockOrderString);
 	}
 
 	IEnumerator selectionSort(float seconds){
 		yield return new WaitForSeconds (1);
-		Debug.Log ("Sortujemy");
 		int n = rockOrder.Length;
 
 		for (int i = 0; i < n - 1; i++)
@@ -72,7 +70,6 @@ public class RockSort : MonoBehaviour {
 			int temp = rockOrder[minIndex];
 			rockOrder[minIndex] = rockOrder[i];
 			rockOrder[i] = temp;
-			//Debug.Log ("SWAP rocks: " + minIndex + ", " + i);
 			if (minIndex != i) {
 				rockController.swapRocks (minIndex, i, seconds);
 			}
@@ -81,15 +78,7 @@ public class RockSort : MonoBehaviour {
 		}
 		gtsController.setDestination (new Vector3(54.0f, 2.8f, 16.0f), 2.0f);
 		StartCoroutine (gameController.fadeMessage (systemInfo, false, 0.5f));
-		Debug.Log ("SETTING state 0");
 		StateMachine.setState (0);
 		ps.Stop ();
-		/*
-		string arr = "";
-		for (int i = 0; i < n - 1; i++) {
-			arr += rockOrder [i];
-		}
-		Debug.Log (arr);
-		*/
 	}
 }

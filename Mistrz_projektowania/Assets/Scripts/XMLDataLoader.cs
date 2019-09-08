@@ -95,8 +95,6 @@ public class XMLDataLoader : MonoBehaviour {
 			//Debug.Log (order);
 			if (kvp.Key != "Punkty") {
 				if (kvp.Key != "Typ"){
-					//Debug.Log (kvp.Key + " " + kvp.Value);
-				//data += string.Format("{0}: {1}\n", kvp.Key, kvp.Value);
 					data += string.Format("{0}\n", kvp.Value);	
 				}
 			}
@@ -113,12 +111,9 @@ public class XMLDataLoader : MonoBehaviour {
 	}
 	public void setDataSlots(int [] order){
 		addTextToList ();
-		//string data = "";
-		//int i = 0;
-		//Debug.Log(order.Length);
+
 		for(int i = 0; i < order.Length; i++){
 			rockTexts [order[i]].text = getDataString (rockTexts [order[i]], rockTypeTexts[order[i]], i);
-			// Debug.Log ("i: " + i + ", order[i]: " + order [i] + ", text: " + rockTexts [order [i]].text);
 		}
 			
 	}
@@ -335,13 +330,11 @@ public class XMLDataLoader : MonoBehaviour {
 	public void GetData(int id, string tagName){
 		XmlDocument xmlDoc = new XmlDocument();
 		xmlDoc = getDatabaseData("plan");
-		//XmlNodeList CustomerList = xmlDoc.GetElementsByTagName(tagName); 
 
 		XmlNode planNode = xmlDoc.SelectSingleNode("//*[@id='"+ id + "']");
 		obj = new Dictionary<string,string>();
-		//obj.Add("id", id.ToString());
+
 		foreach (XmlNode Node in planNode){ 
-			//Debug.Log(Node.Name);
 
 			if(Node.Name == "IdNazwaImprezy")
 			{
@@ -352,7 +345,6 @@ public class XMLDataLoader : MonoBehaviour {
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ tripNameId + "']");
 				foreach (XmlNode tNode in nodeName){ 
-					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					obj.Add(tNode.Name, tNode.InnerText);
 					if (tNode.Name == "Nazwa") {
 						GameObject tripName = GameObject.Find("TripTitle");
@@ -370,7 +362,6 @@ public class XMLDataLoader : MonoBehaviour {
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ tripNrId + "']");
 				foreach (XmlNode tNode in nodeName){ 
-					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					obj.Add(tNode.Name, tNode.InnerText);
 				}
 				obj.Add("Typ", "Nr imprezy");
@@ -399,7 +390,6 @@ public class XMLDataLoader : MonoBehaviour {
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ customerContactId + "']");
 				foreach (XmlNode tNode in nodeName){ 
-					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					obj.Add(tNode.Name, tNode.InnerText);
 				}
 				obj.Add("Typ", "Kontakt zleceniodawcy");
@@ -427,7 +417,6 @@ public class XMLDataLoader : MonoBehaviour {
 
 				XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ hotelId + "']");
 				foreach (XmlNode tNode in nodeName){ 
-					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					obj.Add(tNode.Name, tNode.InnerText);
 				}
 				obj.Add("Typ", "Hotel");
@@ -438,24 +427,16 @@ public class XMLDataLoader : MonoBehaviour {
 				XmlDocument DBname = new XmlDocument(); 
 				DBname = getDatabaseData("restaurants"); 
 				foreach (XmlNode tNode in Node) {
-					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					List<Dictionary<string,string>> restaurant = new List<Dictionary<string,string>> ();
 					int restaurantId = System.Xml.XmlConvert.ToInt32(tNode.InnerText);
 					XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ restaurantId + "']");
 					string restaurantData = "";
 					foreach (XmlNode ttNode in nodeName){ 
-						//Debug.Log(ttNode.Name + ": " + ttNode.InnerText);
 						restaurantData += ttNode.InnerText + " ";
 				
 					}
-					//restaurant.Add (restaurantData);
 					obj.Add("Lokal" + tNode.InnerText, restaurantData);
-					//Debug.Log("Lokal" + tNode.InnerText + ": " + restaurantData);
 				}
-
-
-
-				//obj.Add(tNode.Name, tNode.InnerText);
 				obj.Add("Typ", "Wyżywienie");
 			}
 			if(Node.Name == "IdUslug")
@@ -463,22 +444,16 @@ public class XMLDataLoader : MonoBehaviour {
 				XmlDocument DBname = new XmlDocument(); 
 				DBname = getDatabaseData("services"); 
 				foreach (XmlNode tNode in Node) {
-					//Debug.Log(tNode.Name + ": " + tNode.InnerText);
 					List<Dictionary<string,string>> restaurant = new List<Dictionary<string,string>> ();
 					int serviceId = System.Xml.XmlConvert.ToInt32(tNode.InnerText);
 					XmlNode nodeName = DBname.SelectSingleNode("//*[@id='"+ serviceId + "']");
 					string serviceData = "";
 					foreach (XmlNode ttNode in nodeName){ 
-						//Debug.Log(ttNode.Name + ": " + ttNode.InnerText);
 						serviceData += ttNode.InnerText + " ";
-
 					}
-					//restaurant.Add (restaurantData);
 					obj.Add("Usługa" + tNode.InnerText, serviceData);
 				}
 					
-
-				//obj.Add(tNode.Name, tNode.InnerText);
 				obj.Add("Typ", "Usługi");
 			}
 			Trips.Add(obj);

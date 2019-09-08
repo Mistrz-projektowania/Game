@@ -5,6 +5,7 @@ using UnityEngine;
 public class soundController : MonoBehaviour {
 
 	private static AudioSource ambientGameplaySound;
+
 	// Use this for initialization
 	void Start () {
 		ambientGameplaySound = GameObject.Find ("ambientGameplaySound").GetComponent<AudioSource> ();

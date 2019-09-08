@@ -22,21 +22,17 @@ public class Slot : MonoBehaviour , IDropHandler
 		
 		GameObject parentObject = this.transform.parent.gameObject;
 		string inputDropped = parentObject.GetComponentInChildren<Text> ().text;
-		//Debug.Log ("Input dropped = " + inputDropped);
 		if (!item) {
-			//GameObject parentObject = this.transform.parent.gameObject;
 			Text textObject = parentObject.GetComponentInChildren<Text> ();
 			string dragType = DragHandler.item.GetComponentsInChildren<Text> () [1].text;
-			//Debug.Log ("Drag type = " + dragType);
 			string inputType = parentObject.GetComponentInChildren<Text> ().text;
-			//Debug.Log ("Input type = " + inputType);
+
 			if (dragType == inputType) {
 				fillOutOrderController fill = GameObject.Find ("GameController").GetComponent<fillOutOrderController> ();
 				if (fill.wrongField (inputType) == false) {
 					DragHandler.item.transform.SetParent (transform);
 					Destroy (DragHandler.item.GetComponent<CanvasGroup> ());
 				} else {
-					//Debug.Log ("ZŁA kolejnosc");
 					GameObject message = GameObject.Find ("WrongOrderMessage");
 					AudioSource sound = GameObject.Find ("errorSound").GetComponent<AudioSource> ();
 					sound.Play ();
@@ -45,7 +41,6 @@ public class Slot : MonoBehaviour , IDropHandler
 				}
 
 			} else {
-				//Debug.Log ("Nie to pole");
 				GameObject message = GameObject.Find ("WrongInputMessage");
 				AudioSource sound = GameObject.Find ("errorSound").GetComponent<AudioSource> ();
 				sound.Play ();
@@ -55,7 +50,6 @@ public class Slot : MonoBehaviour , IDropHandler
 			}
 
 		} else {
-			Debug.Log ("Pole zajęte!");
 			AudioSource sound = GameObject.Find ("errorSound").GetComponent<AudioSource> ();
 			sound.Play ();
 		}
@@ -88,7 +82,6 @@ public class Slot : MonoBehaviour , IDropHandler
 		{
 			counter += Time.deltaTime;
 			float alpha = Mathf.Lerp(a, b, counter / duration);
-			//Debug.Log(alpha);
 
 			selectedMessage.alpha = alpha;
 

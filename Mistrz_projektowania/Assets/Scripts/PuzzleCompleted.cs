@@ -16,6 +16,7 @@ public class PuzzleCompleted : MonoBehaviour {
 	PuzzleState state; 
 	keyG gts;
 	GameManager manager;
+
 	// Use this for initialization
 	void Start () {
 		

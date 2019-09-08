@@ -47,7 +47,7 @@ public class SunMopController : MonoBehaviour {
 	public void SunMopON(){
 		StateMachine.setState (3);
 		SunMop.SetActive (true);
-		Debug.Log ("Sun Mop ON");
+
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
 		checkFieldFillOutOrder.checkIfEmpty ();
 
@@ -89,7 +89,6 @@ public class SunMopController : MonoBehaviour {
 		yield return new WaitForSeconds (2);
 		setDestination(skyPos, 2);
 		yield return new WaitForSeconds (2);
-		Debug.Log ("SUN MOP END");
 		SunMopOff ();
 	}
 

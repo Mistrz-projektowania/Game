@@ -23,7 +23,6 @@ public class GetFieldData : MonoBehaviour {
 	public string getFieldData(int index){
 		
 		if (fields [index].GetComponentsInChildren<Text> () != null) {
-			//Debug.Log (fields [index].GetComponentsInChildren<Text> () [0].text);
 			return fields [index].GetComponentsInChildren<Text> () [0].text;
 		} else
 			return "";

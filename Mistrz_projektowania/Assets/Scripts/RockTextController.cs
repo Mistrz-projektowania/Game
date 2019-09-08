@@ -26,10 +26,6 @@ public class RockTextController : MonoBehaviour {
 		if(gameControllerObject != null){
 			gameController = gameControllerObject.GetComponent<GameController>();	
 		}
-
-		if(gameControllerObject == null){
-			Debug.Log ("Nie działa :<");
-		}
 	}
 
 	// Update is called once per frame
@@ -42,7 +38,6 @@ public class RockTextController : MonoBehaviour {
 
 	void OnMouseDown() {
 		if (gameController.getPoints () > 0 && StateMachine.getState() == 0) {
-
 			if (displayInfo == false) {
 				AudioSource sound = GameObject.Find ("onClickSound").GetComponent<AudioSource> ();
 				sound.Play ();
@@ -53,9 +48,6 @@ public class RockTextController : MonoBehaviour {
 						string buttonId = buttonOb.transform.parent.transform.parent.Find ("Index").GetComponent<Text> ().text;
 						GameplayModel.gameChosenRock = int.Parse (buttonId);
 					} else {
-						Debug.Log ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-						Debug.Log ("NOT found");
-						Debug.Log ("null rock");
 						gameController.showNoDataMessage ();
 					}
 
@@ -66,17 +58,8 @@ public class RockTextController : MonoBehaviour {
 				for (int i = 0; i < otherButtons.Length; i++) {
 					StartCoroutine(fadeButton(otherButtons [i].GetComponent<Button> (), false, 1.0f));
 				}
-			} else {
-				// StartCoroutine (fadeButton (button, false, fadeTime));
-				//myText.color = Color.Lerp (myText.color, Color.clear, fadeTime * Time.deltaTime);
 			}
-		} else {
-			if (displayInfo) {
-				//StartCoroutine (fadeButton (button, false, fadeTime));
-				//displayInfo = false;
-			}
-		}
-
+		} 
 	}
 
 	IEnumerator fadeButton(Button button, bool fadeIn, float duration){

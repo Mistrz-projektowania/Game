@@ -48,7 +48,6 @@ public class WitchController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		fly ();
-		//Debug.Log (transform.position);
 	}
 
 	public void runWitch(){
@@ -101,7 +100,6 @@ public class WitchController : MonoBehaviour {
 
 		transform.position = Vector3.Lerp (startPos, destinationPos + (Vector3.right * Mathf.Sin (Time.timeSinceLevelLoad / 2 * speed) * xScale - Vector3.up * Mathf.Sin (Time.timeSinceLevelLoad * speed) * yScale), t);
 		if (transform.position == destinationPos) {
-			//transform.Rotate (Vector3.right * Mathf.Sin(Time.timeSinceLevelLoad/2*speed)*xScale - Vector3.up * Mathf.Sin(Time.timeSinceLevelLoad * speed)*yScale);
 			transform.position = startPos + (Vector3.right * Mathf.Sin(Time.timeSinceLevelLoad/2*speed)*xScale - Vector3.up * Mathf.Sin(Time.timeSinceLevelLoad * speed)*yScale);
 		}
 	}
@@ -111,8 +109,6 @@ public class WitchController : MonoBehaviour {
 		startPos = transform.position;
 		timeToReachDestination = time;
 		destinationPos = destination;
-		//Debug.Log ("startPos: " + startPos);
-		//Debug.Log ("destinationPos: " + destinationPos);
 
 		rotation = transform.localRotation;
 		nextRotation = Quaternion.Euler(rot.x,rot.y,rot.z);

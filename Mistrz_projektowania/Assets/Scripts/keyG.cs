@@ -14,10 +14,7 @@ public class keyG : MonoBehaviour {
 
 	// Use this for initialization
 	public void Start () {
-		//GameObject.Find ("Afterburner").SetActive (false);
-		//GTSbutton = GetComponent<Button> ();
 
-		//GTSbutton.onClick.AddListener(GTSon);
 	}
 	
 	// Update is called once per frame
@@ -31,8 +28,6 @@ public class keyG : MonoBehaviour {
 	}
 
 	public void GTSon(){
-		//StateMachine.setState (4);
-
 		StateMachine.GTSrunning = true;
 		Debug.Log ("GTS ON");
 		CurrentFieldController checkFieldFillOutOrder = GameObject.Find ("GameController").GetComponent<CurrentFieldController> ();
@@ -43,6 +38,6 @@ public class keyG : MonoBehaviour {
 
 	IEnumerator waitFor(int seconds){
 		yield return new WaitForSeconds (seconds);
-		//ps.Play ();
+		ps.Play ();
 	}
 }

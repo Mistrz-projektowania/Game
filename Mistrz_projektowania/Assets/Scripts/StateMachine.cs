@@ -45,21 +45,7 @@ public class StateMachine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//Debug.Log ("Previous State: " + previousState);
-		//Debug.Log ("Current State: " + currentState);
-		/*
-		if (Input.GetKeyDown (KeyCode.W)){
-			if (currentState == 0) {
-				setState (2);
-			}
-		}
-		if (Input.GetKeyDown (KeyCode.S)) {
-			Debug.Log ("Kliknales S");
-			if (currentState == 0) {
-				setState (3);
-			}
-		}
-		*/
+		
 		if (currentState != 0) {
 			buttonHelp.interactable = false;
 		} else
@@ -73,6 +59,7 @@ public class StateMachine : MonoBehaviour {
 			witchCtrl.runWitch ();
 
 		}
+
 		if (currentState != 2) {
 			witchRunning = false;
 		}
@@ -88,11 +75,8 @@ public class StateMachine : MonoBehaviour {
 	}
 
 	public static void setState(int state){
-		Debug.Log ("wchodzi do setstate ");
 		previousState = currentState;
 		currentState = state;
-		Debug.Log ("set State: " + currentState);
-
 	}
 
 	public static int getState(){
@@ -106,18 +90,15 @@ public class StateMachine : MonoBehaviour {
 	IEnumerator waitForAndDraw(int seconds){
 		yield return new WaitForSeconds (seconds);
 		if (currentState == 0) {
-			Debug.Log ("Losujemy stan");
 			int r = Random.Range (0, 2);
 			if (r == 1) {
 				setState (2);
-				Debug.Log ("Ruch czarownicy");
 			}
 		}
 		witchStateControl ();
 	}
 
 	void witchStateControl(){
-		Debug.Log ("witch state control running");
 		if (GameObject.Find ("Witch") != null) {
 			if (GameObject.Find ("Witch").activeSelf == true) {
 				StartCoroutine (waitForAndDraw (15));

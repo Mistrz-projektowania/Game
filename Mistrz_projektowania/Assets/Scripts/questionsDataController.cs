@@ -24,9 +24,6 @@ public class questionsDataController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(GameplayModel.gameLevel == 2){
-			Debug.Log ("LEEEVEL 2");
-		}
 		dataLoader = GameObject.Find ("QuestionsDataController").GetComponent<XMLDataLoader> ();
 
 		handleTripNameDropdown ();
@@ -47,7 +44,6 @@ public class questionsDataController : MonoBehaviour {
 		tNameDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
 			GameplayModel.gameTripName = setGlobalData(tripNameDatabaseName, tNameDropdown.value);
-			Debug.Log (GameplayModel.gameTripName);
 			GameplayModel.gameTripID = tNameDropdown.value;
 		});
 	}
@@ -58,7 +54,6 @@ public class questionsDataController : MonoBehaviour {
 		pNrDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
 			GameplayModel.gameParticipantsNr = int.Parse(setGlobalData( participantsNrDatabaseName, pNrDropdown.value));
-			Debug.Log (GameplayModel.gameParticipantsNr);
 		});
 	}
 
@@ -69,8 +64,6 @@ public class questionsDataController : MonoBehaviour {
 		nppNrDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
 			GameplayModel.gameNotPayingParticipantsNr = int.Parse(setGlobalData(notPayingParticipantsNrDatabaseName, nppNrDropdown.value));
-			Debug.Log (GameplayModel.gameNotPayingParticipantsNr);
-
 		});
 	}
 	void handleParticipantsTypeDropdown(){
@@ -99,8 +92,6 @@ public class questionsDataController : MonoBehaviour {
 		tlDropdown.onValueChanged.AddListener(delegate {
 			countPoints ();
 			GameplayModel.gameTripLength = int.Parse(setGlobalData(tripLengthDatabaseName, tlDropdown.value));
-			Debug.Log("Length");
-			Debug.Log(GameplayModel.gameTripLength);
 		});
 	}
 

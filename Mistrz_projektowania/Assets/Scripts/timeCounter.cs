@@ -37,9 +37,7 @@ public class timeCounter : MonoBehaviour {
 	}
 	public void addTimeUI(int value)
     {
-		secondsCount += Time.deltaTime + value;
-		//secondsCount + = 10f;
-       
+		secondsCount += Time.deltaTime + value;     
     }
 
     public string getTimerValue(){

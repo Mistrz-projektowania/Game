@@ -11,6 +11,7 @@ public class PauseMenuController : MonoBehaviour {
 	public Button backToGameButton;
 	public Button backToMenuButton;
 	public Button quitGameButton;
+
 	// Use this for initialization
 	void Start () {
 		pauseMenu.SetActive (false);

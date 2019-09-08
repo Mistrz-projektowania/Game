@@ -15,6 +15,7 @@ public class helpsInGame : MonoBehaviour {
 	public GameObject Scoreboard;
 	public GameObject rockLabels;
 	public GameObject HelpsInGame;
+
 	// Use this for initialization
 	void Start () {
 		

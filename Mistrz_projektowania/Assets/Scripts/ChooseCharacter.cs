@@ -58,19 +58,21 @@ public class ChooseCharacter : MonoBehaviour
 	}
 
 	private void setName(int id){
-		switch(id){
-		case 0:
-			nameText.text = "Łukasz";
-			break;
-		case 1:
-			nameText.text = "Natalia";
-			break;
-		case 2:
-			nameText.text = "Urszula";
-			break;
-		case 3:
-			nameText.text = "Andrzej";
-			break;
+		if (nameText != null) {
+			switch (id) {
+			case 0:
+				nameText.text = "Łukasz";
+				break;
+			case 1:
+				nameText.text = "Natalia";
+				break;
+			case 2:
+				nameText.text = "Urszula";
+				break;
+			case 3:
+				nameText.text = "Andrzej";
+				break;
+			}
 		}
 	}
 		
