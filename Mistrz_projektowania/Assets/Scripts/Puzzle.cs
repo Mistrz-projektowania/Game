@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class Puzzle : MonoBehaviour {
 
-    [HideInInspector]
-    public bool clicked = false;
+	[HideInInspector]
+	public Vector2 move_amount;
 
 	[HideInInspector]
-	public bool moved = false;
-
+	public bool go_up;
     [HideInInspector]
     public bool go_left;
     [HideInInspector]
     public bool go_right;
     [HideInInspector]
-    public bool go_up;
-    [HideInInspector]
     public bool go_down;
-    [HideInInspector]
-    public Vector2 move_amount;
 
     [HideInInspector] 
 	public Vector3 completedPos;
-    // Use this for initialization
+
+	[HideInInspector]
+	public bool clicked = false;
+
+	[HideInInspector]
+	public bool moved = false;
 
     void Start () {
 		completedPos = transform.position;
@@ -32,7 +32,6 @@ public class Puzzle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         MovePuzzle();
-
     }
 
 	private void OnMouseUp()
@@ -41,11 +40,10 @@ public class Puzzle : MonoBehaviour {
 		moved = false;
 	}
 
-    private void OnMouseDown() //preimplemented by unity
+    private void OnMouseDown()
     {
         clicked = true;
     }
-   
 
     void MovePuzzle()
     {

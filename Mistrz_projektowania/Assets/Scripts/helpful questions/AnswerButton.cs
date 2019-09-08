@@ -20,8 +20,7 @@ public class AnswerButton : MonoBehaviour
         answer = data;
 		textAnswer.text = answer.textAnswer;
     }
-
-
+		
     public void HandleClick()
     {
 		gameControll.AnswerButtonClicked(answer.correctAnswer);

@@ -38,11 +38,5 @@ public class PuzzleCompleted : MonoBehaviour {
 		PuzzleComplete.SetActive (false); 
 		Puzzle.SetActive (false);
 		PuzzleGame.SetActive (false);
-
-		 
-
-		//StateMachine.setState (0);
-
-
 	}
 }

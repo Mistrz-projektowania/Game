@@ -23,25 +23,12 @@ public class puzzleMenu : MonoBehaviour {
 	public Button giveUpButton;
 
 
-
-
 	void Start() {
 		Puzzle.SetActive (false);
 		EndGame.SetActive (false);
 		PuzzlesPictures.SetActive(true);
 		leftArrow = GameObject.Find ("LeftArrow");
 		rightArrow = GameObject.Find ("RightArrow");
-
-		/*if (PuzzlesPictures.activeSelf == false) {
-			rightArrow.SetActive (false);
-			leftArrow.SetActive (true);
-		}
-
-
-		if (PuzzlesPictures2.activeSelf == false) {
-			leftArrow.SetActive (false);
-			rightArrow.SetActive (true);
-		} */
 	}
 
 	public void PlayPuzzle() { 
@@ -51,8 +38,6 @@ public class puzzleMenu : MonoBehaviour {
 		PuzzleMenu.SetActive(true);
 		PuzzlesPictures.SetActive(true);
 		EndGame.SetActive (false);
-
-	
 	}
 
 	public void GoLeftMenu() { 
@@ -73,7 +58,6 @@ public class puzzleMenu : MonoBehaviour {
 		EndGame.SetActive (true);
 		Puzzle.SetActive (false);
 		PuzzlesPictures.SetActive(true);
-
 	}
 
 	public void GiveUpUltimately() {  
@@ -95,14 +79,10 @@ public class puzzleMenu : MonoBehaviour {
 		Flashcard.SetActive (false);
 		PuzzlesPictures.SetActive(false);
 	}
-
-
+		
 	void Update() {
-
 		if (PanelPlay.activeSelf == true) {
 			giveUpButton.interactable = false;
 		} else giveUpButton.interactable = true;
-
-
 	}
 }

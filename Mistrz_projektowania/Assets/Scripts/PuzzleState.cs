@@ -13,15 +13,12 @@ public class PuzzleState : MonoBehaviour {
 		win,
 		loose,
 	}
-
-
-
+		
 	public State state;
 	public PuzzleState() {
 		state = State.beforeStart;
 	}
-
-
+		
 	public void StartGame() {
 		//Destroy(PanelStart);
 		GameManager.puzzle_state.state = PuzzleState.State.start;
@@ -29,6 +26,4 @@ public class PuzzleState : MonoBehaviour {
 		Flashcard.SetActive (false);
 
 	}
-
-
 }

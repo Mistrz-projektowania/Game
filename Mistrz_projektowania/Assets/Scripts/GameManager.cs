@@ -15,29 +15,23 @@ public class GameManager : MonoBehaviour
 
 	[HideInInspector]
 	public static PuzzleState puzzle_state = new PuzzleState ();
-
-
     private List<Puzzle> puzzleParts = new List<Puzzle>();
     private Vector2 startPos = new Vector2(-5.5f, 2.0f);
     private Vector2 offset = new Vector2(3f, 2.2f);
 	private List<int> randomPositions = new List<int>();
 	private List<Vector3> partsPosition = new List<Vector3>();
 
-
-
-
     Ray ray_up, ray_down, ray_left, ray_right;
-    RaycastHit hit;
     private BoxCollider collider;
-    private Vector3 collider_size;
-    private Vector3 collider_centre; //the center point of the collider form which we gonna fire the rays
-
 	public static string Catalog;
 	public GameObject Picture;
 	public GameObject Flashcard;
 	public Text FlashcardText;
 	public GameObject PanelPlay;
 	public GameObject PuzzleMenu;
+	private Vector3 collider_size;
+	private Vector3 collider_centre;
+	RaycastHit hit;
 
     // Use this for initialization
    public void Start()
@@ -191,8 +185,6 @@ public class GameManager : MonoBehaviour
 		for (int i = 0; i < puzzleParts.Count; i++) {
 			puzzleParts [i].transform.position = puzzlePositions [i];
 		}
-		
-		
 	}
 
 	public string myTxt;
@@ -218,7 +210,5 @@ public class GameManager : MonoBehaviour
 		filePath2 = "Puzzles/" + Catalog + "/flashcard";
 		TextAsset myTxt = (TextAsset)Resources.Load(filePath2, typeof (TextAsset));
 		FlashcardText.GetComponent<Text>().text= myTxt.text;
-
-
     }
 }

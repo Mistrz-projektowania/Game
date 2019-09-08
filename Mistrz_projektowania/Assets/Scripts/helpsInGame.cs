@@ -21,15 +21,11 @@ public class helpsInGame : MonoBehaviour {
 	}
 
 	public void ShowHelpsInGame() {
-
-		Debug.Log ("weszło do show helps in game");
 		HelpsInGame.SetActive (true);
-
 		leftGUI.SetActive(false);
 		HelpfulQuestionsButton.SetActive(false);
 		PuzzleGame.SetActive (false);
 		Quiz.SetActive (false);
-		//GTSBtn.SetActive(false);
 		rockLabels.SetActive(false);
 		Scoreboard.SetActive (false);
 		GTS.SetActive (true);
