@@ -5938,6 +5938,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da47e811431e9146a82f75c24b1fb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rockDefault: {fileID: 2100000, guid: b2236429d0e289741b5c5903f2179448, type: 2}
+  rockHighlight: {fileID: 2100000, guid: 6c48111c7272a544382876cc6f1312bd, type: 2}
   rocks:
   - {fileID: 1606676964}
   - {fileID: 442135595}
@@ -18760,6 +18762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3cac5f9065bd345a40f22475b991d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 0}
 --- !u!1 &802910289
 GameObject:
   m_ObjectHideFlags: 0
@@ -22109,6 +22112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da47e811431e9146a82f75c24b1fb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rockDefault: {fileID: 2100000, guid: b2236429d0e289741b5c5903f2179448, type: 2}
+  rockHighlight: {fileID: 2100000, guid: 6c48111c7272a544382876cc6f1312bd, type: 2}
   rocks:
   - {fileID: 1606676964}
   - {fileID: 442135595}

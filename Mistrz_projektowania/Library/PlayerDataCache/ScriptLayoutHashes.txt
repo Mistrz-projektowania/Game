@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-M:/2019/Game/Mistrz_projektowania/xxx.exe
+D:/Dokumenty/Praca magisterska/DZIALAJ/Game/Mistrz_projektowania/Test_EXE/test.exe
 SceneListBegin?
 Assets/Scenes/Menu.unity
 Assets/Scenes/Tutorial.unity
@@ -9,6 +9,7 @@ Assets/Scenes/Select Character.unity
 Assets/Scenes/Entry_questions_Level1.unity
 Assets/Scenes/Level1.unity
 Assets/Scenes/Settings.unity
+Assets/Scenes/Authors.unity
 SceneListEnd?
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexZoom
 c906602d9b43cc5e075f80e1d8ae7c79 Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI
@@ -31,12 +32,13 @@ df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.T
 7ba1e84ad3d2d8813486668e75f842ce Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.ParticleSystemMultiplier
 0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.ThirdPerson.AICharacterControl
 7481472d4e57e8477d484d43a43b79dc Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.FirstPerson.FirstPersonController
-6e2feb2c55ca4c5acbe021226fca1cc4 Assembly-CSharp.dll:.GameController
+97746e49d967dd26889684d3697be3a3 Assembly-CSharp.dll:.GameController
 a1b7a27f480d657da1fcd20cc4ee031d Assembly-CSharp.dll:.GetFieldData
 430c1729d7a445aa5df470ced463fca9 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.ExplosionPhysicsForce
+6e314052037f50102c4d76ec5215e37e Assembly-CSharp.dll:.startPuzzle
 53e245573a809d3a36b04e3996eda9c3 Assembly-CSharp.dll:.Tutorial
 609883ba9b3462e00c79080cdb51d119 Assembly-CSharp-firstpass.dll:.iTween
-16b7a70b37526e02e2c46063c6ed6e17 Assembly-CSharp.dll:.setRockRandomPlaces
+2fea525398e4e594c149a19976066d5b Assembly-CSharp.dll:.setRockRandomPlaces
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.EventSystemChecker
 3b945a83fa61133bbb7c61d4d7012fd9 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Effects.Hose
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -76,7 +78,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 9b91b604d110b9579661e8748c2fa095 Assembly-CSharp.dll:.questionsDataController
 8e9f5b922979e9356a11d2ee2b32ee60 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TiltInput
 aa13baec1c19c8fa869cb21cb01a3767 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.WaterBase
-31c10fb98c5a5865dbf4992dc232bcfb Assembly-CSharp.dll:.keyG
+313bd229e634927c3d45433adfd3b8cf Assembly-CSharp.dll:.keyG
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LevelSelection
 9e6e58a51a7ed0e9fcb7172c8e18341e Assembly-CSharp.dll:.JsonLoader
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -156,6 +158,7 @@ db782f22d720a4e9886ccd9125d81b92 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.TMP_PhoneNumberValidator
 e3434cf8772c3fe2391f1899ad60bbec Assembly-CSharp.dll:.CalendarPopUp
 1957a9369e72d2661ae9d0de26e7d064 Assembly-CSharp.dll:TMPro.Examples.WarpTextExample
+53c372318686c731e8d9b4550680086d Assembly-CSharp.dll:.helpsInGame
 f4bd1aee67eeef7953cce6c44588b3d7 TextMeshPro-2017.3-Runtime.dll:TMPro.TextContainer
 bf22e89fa4b77e86d45d7ae313079474 TextMeshPro-2017.3-Runtime.dll:TMPro.TextMeshPro
 bcada89394089914d10ff70647b120da TextMeshPro-2017.3-Runtime.dll:TMPro.TextMeshProUGUI
@@ -183,7 +186,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RockSort
+5f3841e42137841985b11e5e582814f3 Assembly-CSharp.dll:.RockSort
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.DragRigidbody
 a7d1b018e127cc7b6d0f33718ce64a53 Assembly-CSharp.dll:.PuzzlePictures
 8a9ff0b7eb77fe9f000a48468d3871db Assembly-CSharp.dll:.PuzzleState
@@ -344,10 +347,9 @@ f4b175ffc1eeca85d2783436b4c764a7 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 020550babdb991365f61c5bffe1f4f52 Assembly-CSharp.dll:TMPro.Examples.TextMeshSpawner
 af7666733efcc974926d7d470e1732a6 Assembly-CSharp.dll:TMPro.Examples.SkewTextExample
 8fe7df0247524fc0b1ebc306deed8d48 Assembly-CSharp.dll:.showPlayerPoints
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ChooseCharacter
+71bbe28622ed1f2f40b55ff92916a190 Assembly-CSharp.dll:.ChooseCharacter
 d7d898a41bfcb3ba623efc342ac1f39e Assembly-CSharp.dll:.SunMopController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.StartGame
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-641932373038f888a535d49c21beed05 Assembly-CSharp.dll:.helpsInGame

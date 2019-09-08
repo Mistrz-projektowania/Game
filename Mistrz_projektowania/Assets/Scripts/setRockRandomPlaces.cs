@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class setRockRandomPlaces : MonoBehaviour {
+
+	public Material rockDefault;
+	public Material rockHighlight;
 	public GameObject[] rocks;
 	public Vector3[] rockPlaces;
 
@@ -36,6 +39,9 @@ public class setRockRandomPlaces : MonoBehaviour {
 		////////////////////////////////////////////
 		rocks[index1] = rock2;
 		rocks[index2] = rock1;
+
+		rock1.transform.Find ("Rock_Medium_02 1").GetComponent<MeshRenderer>().material = rockHighlight;
+		rock2.transform.Find ("Rock_Medium_02 1").GetComponent<MeshRenderer>().material = rockHighlight;
 		/*
 		 for (int i = 0; i < rocks.Length; i++) {
 			Debug.Log ("rocks- " + rocks [i]);
@@ -62,6 +68,8 @@ public class setRockRandomPlaces : MonoBehaviour {
 	IEnumerator waitAndSetDestination(float seconds, GameObject rock, Vector3 destination, float animationTime){
 		yield return new WaitForSeconds (seconds);
 		rock.GetComponent<setRockPlaces> ().setDestination (destination,animationTime);
+		yield return new WaitForSeconds (seconds);
+		rock.transform.Find ("Rock_Medium_02 1").GetComponent<MeshRenderer>().material = rockDefault;
 	}
 
 	int findDataOrderIndex(int rockIndex){
