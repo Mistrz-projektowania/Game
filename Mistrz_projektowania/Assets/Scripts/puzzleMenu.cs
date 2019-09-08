@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class puzzleMenu : MonoBehaviour {
@@ -17,7 +18,9 @@ public class puzzleMenu : MonoBehaviour {
 	public GameObject GUI;
 	public GameObject Flashcard;
 	public GameObject CompletedMenu;
+	public GameObject PanelPlay;
 	public GameController gameController;
+	public Button giveUpButton;
 
 
 
@@ -29,15 +32,16 @@ public class puzzleMenu : MonoBehaviour {
 		leftArrow = GameObject.Find ("LeftArrow");
 		rightArrow = GameObject.Find ("RightArrow");
 
-		 if (PuzzlesPictures.activeSelf == false) {
+		/*if (PuzzlesPictures.activeSelf == false) {
 			rightArrow.SetActive (false);
 			leftArrow.SetActive (true);
 		}
 
+
 		if (PuzzlesPictures2.activeSelf == false) {
 			leftArrow.SetActive (false);
 			rightArrow.SetActive (true);
-		}  
+		} */
 	}
 
 	public void PlayPuzzle() { 
@@ -67,7 +71,6 @@ public class puzzleMenu : MonoBehaviour {
 		PuzzlesPictures.SetActive(true);
 		PuzzlesPictures2.SetActive(false);
 		EndGame.SetActive (true);
-		PuzzleMenu.SetActive(false);
 		Puzzle.SetActive (false);
 		PuzzlesPictures.SetActive(true);
 
@@ -90,10 +93,16 @@ public class puzzleMenu : MonoBehaviour {
 		CompletedMenu.SetActive (true);
 		Puzzle.SetActive (false);
 		Flashcard.SetActive (false);
-		PuzzlesPictures.SetActive(true);
+		PuzzlesPictures.SetActive(false);
 	}
 
 
 	void Update() {
+
+		if (PanelPlay.activeSelf == true) {
+			giveUpButton.interactable = false;
+		} else giveUpButton.interactable = true;
+
+
 	}
 }
